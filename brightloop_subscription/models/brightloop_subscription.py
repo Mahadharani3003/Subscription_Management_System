@@ -47,6 +47,7 @@ class BrightloopSubscription(models.Model):
         string='Company',
         required=True,
         default=lambda self: self.env.company,
+        index=True,
         help="Company operating this subscription."
     )
     currency_id = fields.Many2one(
@@ -61,6 +62,7 @@ class BrightloopSubscription(models.Model):
         string='Account Manager',
         default=lambda self: self.env.user,
         tracking=True,
+        index=True,
         help="Internal manager handling this account."
     )
     state = fields.Selection(
@@ -86,6 +88,7 @@ class BrightloopSubscription(models.Model):
         default=fields.Date.context_today,
         required=True,
         tracking=True,
+        index=True,
         help="Date when the subscription officially commences."
     )
     trial_end_date = fields.Date(
@@ -103,6 +106,7 @@ class BrightloopSubscription(models.Model):
         string='Last Invoiced Date',
         readonly=True,
         copy=False,
+        index=True,
         help="Prevents duplicate invoice generation for the same billing window."
     )
     last_renewal_reminder_date = fields.Date(
@@ -114,6 +118,7 @@ class BrightloopSubscription(models.Model):
     end_date = fields.Date(
         string='End / Termination Date',
         tracking=True,
+        index=True,
         help="Final date of service contract if fixed-term or cancelled."
     )
     paused_date = fields.Date(
@@ -126,6 +131,7 @@ class BrightloopSubscription(models.Model):
         string='Auto Renew',
         default=True,
         tracking=True,
+        index=True,
         help="Flag indicating whether contract automatically recurs at cycle end."
     )
     line_ids = fields.One2many(
@@ -176,6 +182,7 @@ class BrightloopSubscription(models.Model):
         comodel_name='brightloop.churn.reason',
         string='Churn Reason',
         tracking=True,
+        index=True,
         help="Primary reason for cancellation or non-renewal."
     )
     cancellation_notes = fields.Text(
@@ -617,11 +624,16 @@ class BrightloopSubscription(models.Model):
     @api.model
     def _cron_check_grace_periods(self):
         """
-        Daily scheduler: Identify subscriptions with overdue unpaid invoices.
+        Daily scheduler: Identify subscriptions with overdue unpaid invoices using optimized SQL joins.
         Transitions state to 'past_due' and auto-cancels upon final threshold breach.
         """
         today = fields.Date.context_today(self)
-        active_or_due = self.search([('state', 'in', ('active', 'past_due'))])
+        # Optimized query: only fetch subscriptions that actually have posted unpaid invoices
+        active_or_due = self.search([
+            ('state', 'in', ('active', 'past_due')),
+            ('invoice_ids.state', '=', 'posted'),
+            ('invoice_ids.payment_state', 'in', ('not_paid', 'partial')),
+        ])
 
         for sub in active_or_due:
             unpaid_invoices = sub.invoice_ids.filtered(lambda inv: inv.state == 'posted' and inv.payment_state in ('not_paid', 'partial'))
@@ -658,7 +670,7 @@ class BrightloopSubscription(models.Model):
 
     @api.model
     def _cron_check_expirations(self):
-        """Daily scheduler: Transition expired fixed-term subscriptions to Closed."""
+        """Daily scheduler: Transition expired fixed-term subscriptions to Closed using indexed end_date."""
         today = fields.Date.context_today(self)
         expired_subs = self.search([
             ('state', 'in', ('active', 'past_due', 'paused')),
