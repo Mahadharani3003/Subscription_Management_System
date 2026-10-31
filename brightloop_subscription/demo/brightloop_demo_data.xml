@@ -115,7 +115,27 @@
             <field name="description">&lt;p&gt;Dedicated SLA, priority support, and multi-tenant capabilities billed annually.&lt;/p&gt;</field>
         </record>
 
-        <!-- 5. Realistic Subscriptions Across Diverse Lifecycle States -->
+        <!-- 5. Realistic Demonstration Accounts for Hackathon Judges -->
+        <!-- Role: Subscription Officer / Manager -->
+        <record id="user_demo_officer" model="res.users">
+            <field name="name">Alex Vance (Subscription Officer)</field>
+            <field name="login">officer</field>
+            <field name="password">officer123</field>
+            <field name="email">officer@brightloop.test</field>
+            <field name="groups_id" eval="[(6, 0, [ref('base.group_user'), ref('brightloop_subscription.group_brightloop_user')])]"/>
+        </record>
+
+        <!-- Role: Customer Portal Subscriber -->
+        <record id="user_demo_portal" model="res.users">
+            <field name="name">Sarah Connor (Subscriber)</field>
+            <field name="login">customer</field>
+            <field name="password">customer123</field>
+            <field name="email">customer@brightloop.test</field>
+            <field name="partner_id" ref="base.res_partner_1"/>
+            <field name="groups_id" eval="[(6, 0, [ref('base.group_portal')])]"/>
+        </record>
+
+        <!-- 6. Realistic Subscriptions Across Diverse Lifecycle States -->
         <!-- Subscription 1: Active Growth Plan with Extra Seats -->
         <record id="sub_demo_active_growth" model="brightloop.subscription">
             <field name="name">SUB/2026/00001</field>
