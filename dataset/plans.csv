@@ -1,0 +1,6 @@
+id,name,billing_interval,billing_interval_count,price,trial_period_days,grace_period_days,mrr,weight
+PLAN-STARTER-MO,Starter (Monthly),month,1,29.0,14,7,29.0,0.35
+PLAN-GROWTH-MO,Growth Pro (Monthly),month,1,99.0,14,7,99.0,0.3
+PLAN-SCALE-MO,Scale Up (Monthly),month,1,249.0,14,7,249.0,0.15
+PLAN-ENTERPRISE-YR,Enterprise (Annual),year,1,1999.0,30,14,166.58333333333334,0.12
+PLAN-EXECUTIVE-YR,Executive Premium (Annual),year,1,4999.0,30,14,416.5833333333333,0.08

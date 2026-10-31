@@ -1,0 +1,501 @@
+customer_id,name,email,phone,city,country,timezone,industry,created_date,is_synthetic,data_tag
+CUST-SYNTH-0001,[SYNTHETIC] Quasar Labs 35,billing@quasarlabs35.test,+1-555-242-2679,Dubai,UAE,Asia/Dubai,HealthTech & Life Sciences,2025-06-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0002,[SYNTHETIC] Titan Robotics 99,billing@titanrobotic.test,+1-555-130-2535,Sydney,Australia,Australia/Sydney,Digital Marketing & Media,2024-12-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0003,[SYNTHETIC] NovaPulse Software 527,billing@novapulsesof.test,+1-555-303-9928,Sydney,Australia,Australia/Sydney,SaaS & Cloud Services,2026-05-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0004,[SYNTHETIC] Cobalt Software 469,billing@cobaltsoftwa.test,+1-555-877-3615,Sydney,Australia,Australia/Sydney,Logistics & Supply Chain,2024-11-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0005,[SYNTHETIC] Dynamo Ventures 294,billing@dynamoventur.test,+1-555-204-2519,Mumbai,India,Asia/Kolkata,HealthTech & Life Sciences,2025-10-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0006,[SYNTHETIC] Aether Labs 377,billing@aetherlabs37.test,+1-555-847-8527,London,United Kingdom,Europe/London,Logistics & Supply Chain,2024-12-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0007,[SYNTHETIC] Kinetic Labs 954,billing@kineticlabs9.test,+1-555-400-6925,Berlin,Germany,Europe/Berlin,FinTech & Banking,2026-05-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0008,[SYNTHETIC] Matrix Media 731,billing@matrixmedia7.test,+1-555-333-5741,Bangalore,India,Asia/Kolkata,SaaS & Cloud Services,2026-09-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0009,[SYNTHETIC] Falcon Software 897,billing@falconsoftwa.test,+1-555-564-6977,Bangalore,India,Asia/Kolkata,Digital Marketing & Media,2025-08-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0010,[SYNTHETIC] Krypton Consulting 373,billing@kryptonconsu.test,+1-555-763-2169,Singapore,Singapore,Asia/Singapore,Logistics & Supply Chain,2026-09-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0011,[SYNTHETIC] Optima Systems 556,billing@optimasystem.test,+1-555-488-5422,Singapore,Singapore,Asia/Singapore,E-Commerce & Retail,2026-02-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0012,[SYNTHETIC] Quasar Robotics 234,billing@quasarroboti.test,+1-555-941-1525,London,United Kingdom,Europe/London,SaaS & Cloud Services,2025-06-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0013,[SYNTHETIC] Unified Platform 284,billing@unifiedplatf.test,+1-555-997-6155,Bangalore,India,Asia/Kolkata,HealthTech & Life Sciences,2026-06-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0014,[SYNTHETIC] NovaPulse Fintech 415,billing@novapulsefin.test,+1-555-242-5040,New York,United States,America/New_York,E-Commerce & Retail,2025-07-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0015,[SYNTHETIC] LogiTech Robotics 279,billing@logitechrobo.test,+1-555-508-6930,Sydney,Australia,Australia/Sydney,Digital Marketing & Media,2026-06-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0016,[SYNTHETIC] OmniLink Digital 531,billing@omnilinkdigi.test,+1-555-981-2796,New York,United States,America/New_York,FinTech & Banking,2024-12-18,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0017,[SYNTHETIC] Jupiter Systems 821,billing@jupitersyste.test,+1-555-490-8668,Berlin,Germany,Europe/Berlin,FinTech & Banking,2025-11-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0018,[SYNTHETIC] JetStream Analytics 576,billing@jetstreamana.test,+1-555-649-5371,Kochi,India,Asia/Kolkata,FinTech & Banking,2026-09-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0019,[SYNTHETIC] Resonant Ventures 124,billing@resonantvent.test,+1-555-564-1053,Dubai,UAE,Asia/Dubai,Digital Marketing & Media,2025-04-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0020,[SYNTHETIC] Quantum Security 790,billing@quantumsecur.test,+1-555-405-9317,Mumbai,India,Asia/Kolkata,FinTech & Banking,2026-08-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0021,[SYNTHETIC] Optima Media 166,billing@optimamedia1.test,+1-555-897-9689,London,United Kingdom,Europe/London,E-Commerce & Retail,2026-05-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0022,[SYNTHETIC] Apex Interactive 341,billing@apexinteract.test,+1-555-471-6038,New York,United States,America/New_York,SaaS & Cloud Services,2025-02-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0023,[SYNTHETIC] Prism Solutions 256,billing@prismsolutio.test,+1-555-849-8962,Sydney,Australia,Australia/Sydney,FinTech & Banking,2025-01-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0024,[SYNTHETIC] EchoSphere Robotics 794,billing@echospherero.test,+1-555-586-3705,Mumbai,India,Asia/Kolkata,E-Commerce & Retail,2026-09-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0025,[SYNTHETIC] Quantum Security 903,billing@quantumsecur.test,+1-555-652-4295,Sydney,Australia,Australia/Sydney,Digital Marketing & Media,2025-06-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0026,[SYNTHETIC] TerraData Platform 697,billing@terradatapla.test,+1-555-562-2982,London,United Kingdom,Europe/London,Manufacturing & IoT,2026-04-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0027,[SYNTHETIC] Prism Software 75,billing@prismsoftwar.test,+1-555-667-4770,London,United Kingdom,Europe/London,SaaS & Cloud Services,2026-06-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0028,[SYNTHETIC] Nexus Software 17,billing@nexussoftwar.test,+1-555-169-1514,Bangalore,India,Asia/Kolkata,SaaS & Cloud Services,2025-06-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0029,[SYNTHETIC] Vanguard Networks 536,billing@vanguardnetw.test,+1-555-597-4510,Singapore,Singapore,Asia/Singapore,Logistics & Supply Chain,2026-09-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0030,[SYNTHETIC] Kinetic Digital 750,billing@kineticdigit.test,+1-555-903-8749,Sydney,Australia,Australia/Sydney,Manufacturing & IoT,2025-07-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0031,[SYNTHETIC] Cobalt Media 106,billing@cobaltmedia1.test,+1-555-533-7735,Bangalore,India,Asia/Kolkata,Digital Marketing & Media,2025-10-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0032,[SYNTHETIC] Fortis Solutions 699,billing@fortissoluti.test,+1-555-845-6559,Bangalore,India,Asia/Kolkata,SaaS & Cloud Services,2025-12-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0033,[SYNTHETIC] GridCore Software 206,billing@gridcoresoft.test,+1-555-532-4006,Singapore,Singapore,Asia/Singapore,Manufacturing & IoT,2025-03-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0034,[SYNTHETIC] Radiant Health 265,billing@radianthealt.test,+1-555-200-1828,Bangalore,India,Asia/Kolkata,Manufacturing & IoT,2026-05-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0035,[SYNTHETIC] Resonant Robotics 866,billing@resonantrobo.test,+1-555-270-7658,Kochi,India,Asia/Kolkata,FinTech & Banking,2025-06-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0036,[SYNTHETIC] Hyperion Fintech 228,billing@hyperionfint.test,+1-555-488-1035,Berlin,Germany,Europe/Berlin,SaaS & Cloud Services,2025-04-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0037,[SYNTHETIC] Aether Analytics 958,billing@aetheranalyt.test,+1-555-813-8973,New York,United States,America/New_York,Logistics & Supply Chain,2026-01-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0038,[SYNTHETIC] Jupiter Media 313,billing@jupitermedia.test,+1-555-853-9883,Singapore,Singapore,Asia/Singapore,SaaS & Cloud Services,2026-06-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0039,[SYNTHETIC] DeltaByte Ventures 68,billing@deltabyteven.test,+1-555-973-9701,Kochi,India,Asia/Kolkata,Manufacturing & IoT,2026-03-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0040,[SYNTHETIC] Krypton Solutions 993,billing@kryptonsolut.test,+1-555-170-2113,San Francisco,United States,America/Los_Angeles,FinTech & Banking,2025-05-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0041,[SYNTHETIC] Titan Software 423,billing@titansoftwar.test,+1-555-708-1651,Bangalore,India,Asia/Kolkata,HealthTech & Life Sciences,2026-06-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0042,[SYNTHETIC] Polaris Networks 439,billing@polarisnetwo.test,+1-555-309-6147,Sydney,Australia,Australia/Sydney,EdTech & E-Learning,2025-07-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0043,[SYNTHETIC] Prism Analytics 415,billing@prismanalyti.test,+1-555-423-2188,Mumbai,India,Asia/Kolkata,Logistics & Supply Chain,2026-02-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0044,[SYNTHETIC] Apex Health 646,billing@apexhealth64.test,+1-555-650-4492,Sydney,Australia,Australia/Sydney,FinTech & Banking,2025-01-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0045,[SYNTHETIC] Infini Analytics 145,billing@infinianalyt.test,+1-555-478-5669,London,United Kingdom,Europe/London,FinTech & Banking,2025-07-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0046,[SYNTHETIC] Krypton Health 863,billing@kryptonhealt.test,+1-555-926-9666,San Francisco,United States,America/Los_Angeles,Logistics & Supply Chain,2026-07-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0047,[SYNTHETIC] Apex Robotics 316,billing@apexrobotics.test,+1-555-218-2753,Bangalore,India,Asia/Kolkata,E-Commerce & Retail,2025-07-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0048,[SYNTHETIC] LogiTech Digital 288,billing@logitechdigi.test,+1-555-308-5325,Dubai,UAE,Asia/Dubai,HealthTech & Life Sciences,2025-10-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0049,[SYNTHETIC] Infini Fintech 267,billing@infinifintec.test,+1-555-533-5533,Kochi,India,Asia/Kolkata,FinTech & Banking,2026-08-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0050,[SYNTHETIC] CloudPeak Technologies 351,billing@cloudpeaktec.test,+1-555-859-8239,Mumbai,India,Asia/Kolkata,Logistics & Supply Chain,2025-04-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0051,[SYNTHETIC] LogiTech Logistics 584,billing@logitechlogi.test,+1-555-807-3442,Kochi,India,Asia/Kolkata,FinTech & Banking,2025-01-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0052,[SYNTHETIC] Kinetic Solutions 864,billing@kineticsolut.test,+1-555-230-1685,London,United Kingdom,Europe/London,E-Commerce & Retail,2026-01-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0053,[SYNTHETIC] TerraData Consulting 930,billing@terradatacon.test,+1-555-798-5088,Kochi,India,Asia/Kolkata,EdTech & E-Learning,2025-06-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0054,[SYNTHETIC] Strata Labs 372,billing@stratalabs37.test,+1-555-867-3532,San Francisco,United States,America/Los_Angeles,Digital Marketing & Media,2026-07-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0055,[SYNTHETIC] Prism Systems 829,billing@prismsystems.test,+1-555-283-6442,Mumbai,India,Asia/Kolkata,Digital Marketing & Media,2024-11-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0056,[SYNTHETIC] Cobalt Software 283,billing@cobaltsoftwa.test,+1-555-993-1634,Mumbai,India,Asia/Kolkata,FinTech & Banking,2025-11-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0057,[SYNTHETIC] Galactic Software 214,billing@galacticsoft.test,+1-555-940-4728,New York,United States,America/New_York,EdTech & E-Learning,2025-09-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0058,[SYNTHETIC] OmniLink Technologies 685,billing@omnilinktech.test,+1-555-385-2137,Singapore,Singapore,Asia/Singapore,Digital Marketing & Media,2025-10-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0059,[SYNTHETIC] Radiant Consulting 666,billing@radiantconsu.test,+1-555-963-9785,San Francisco,United States,America/Los_Angeles,Digital Marketing & Media,2026-09-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0060,[SYNTHETIC] Vanguard Technologies 128,billing@vanguardtech.test,+1-555-371-1626,Dubai,UAE,Asia/Dubai,E-Commerce & Retail,2026-06-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0061,[SYNTHETIC] GridCore Interactive 454,billing@gridcoreinte.test,+1-555-720-9379,London,United Kingdom,Europe/London,EdTech & E-Learning,2026-01-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0062,[SYNTHETIC] Horizon Platform 931,billing@horizonplatf.test,+1-555-145-8144,Sydney,Australia,Australia/Sydney,HealthTech & Life Sciences,2025-07-18,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0063,[SYNTHETIC] Apex Security 957,billing@apexsecurity.test,+1-555-541-2146,San Francisco,United States,America/Los_Angeles,HealthTech & Life Sciences,2025-11-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0064,[SYNTHETIC] Strata Ventures 648,billing@strataventur.test,+1-555-619-6067,London,United Kingdom,Europe/London,FinTech & Banking,2025-09-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0065,[SYNTHETIC] Strata Logistics 344,billing@stratalogist.test,+1-555-230-4143,Berlin,Germany,Europe/Berlin,Logistics & Supply Chain,2026-05-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0066,[SYNTHETIC] Cobalt Platform 703,billing@cobaltplatfo.test,+1-555-661-1006,Mumbai,India,Asia/Kolkata,Logistics & Supply Chain,2025-12-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0067,[SYNTHETIC] TerraData Enterprises 225,billing@terradataent.test,+1-555-552-8244,Berlin,Germany,Europe/Berlin,EdTech & E-Learning,2026-02-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0068,[SYNTHETIC] Titan Media 533,billing@titanmedia53.test,+1-555-186-5649,New York,United States,America/New_York,E-Commerce & Retail,2026-09-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0069,[SYNTHETIC] Infini Interactive 353,billing@infiniintera.test,+1-555-417-4680,Bangalore,India,Asia/Kolkata,HealthTech & Life Sciences,2026-09-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0070,[SYNTHETIC] MetaFlow Digital 35,billing@metaflowdigi.test,+1-555-725-2193,Kochi,India,Asia/Kolkata,HealthTech & Life Sciences,2026-03-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0071,[SYNTHETIC] Fortis Logistics 917,billing@fortislogist.test,+1-555-606-7547,Sydney,Australia,Australia/Sydney,HealthTech & Life Sciences,2025-11-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0072,[SYNTHETIC] Prism Digital 681,billing@prismdigital.test,+1-555-324-3881,Kochi,India,Asia/Kolkata,FinTech & Banking,2026-01-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0073,[SYNTHETIC] JetStream Health 61,billing@jetstreamhea.test,+1-555-567-3184,San Francisco,United States,America/Los_Angeles,HealthTech & Life Sciences,2025-03-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0074,[SYNTHETIC] Fortis Security 582,billing@fortissecuri.test,+1-555-727-9270,Sydney,Australia,Australia/Sydney,EdTech & E-Learning,2026-01-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0075,[SYNTHETIC] Dynamo Robotics 466,billing@dynamoroboti.test,+1-555-365-5050,Mumbai,India,Asia/Kolkata,Manufacturing & IoT,2026-02-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0076,[SYNTHETIC] Quasar Analytics 794,billing@quasaranalyt.test,+1-555-344-5499,San Francisco,United States,America/Los_Angeles,Manufacturing & IoT,2026-08-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0077,[SYNTHETIC] Everest Networks 740,billing@everestnetwo.test,+1-555-443-6238,Dubai,UAE,Asia/Dubai,HealthTech & Life Sciences,2025-08-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0078,[SYNTHETIC] Kinetic Networks 151,billing@kineticnetwo.test,+1-555-810-3503,Mumbai,India,Asia/Kolkata,HealthTech & Life Sciences,2025-11-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0079,[SYNTHETIC] NovaPulse Networks 434,billing@novapulsenet.test,+1-555-577-7812,Berlin,Germany,Europe/Berlin,EdTech & E-Learning,2026-05-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0080,[SYNTHETIC] DeltaByte Media 862,billing@deltabytemed.test,+1-555-812-1320,Berlin,Germany,Europe/Berlin,Digital Marketing & Media,2026-06-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0081,[SYNTHETIC] Matrix Platform 498,billing@matrixplatfo.test,+1-555-871-7389,Kochi,India,Asia/Kolkata,EdTech & E-Learning,2025-09-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0082,[SYNTHETIC] Cobalt Robotics 775,billing@cobaltroboti.test,+1-555-324-5471,San Francisco,United States,America/Los_Angeles,HealthTech & Life Sciences,2026-03-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0083,[SYNTHETIC] Dynamo Fintech 39,billing@dynamofintec.test,+1-555-795-7624,Berlin,Germany,Europe/Berlin,EdTech & E-Learning,2026-09-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0084,[SYNTHETIC] Krypton Health 951,billing@kryptonhealt.test,+1-555-706-1444,Mumbai,India,Asia/Kolkata,SaaS & Cloud Services,2025-12-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0085,[SYNTHETIC] Falcon Logistics 148,billing@falconlogist.test,+1-555-366-7211,New York,United States,America/New_York,E-Commerce & Retail,2024-12-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0086,[SYNTHETIC] Unified Media 475,billing@unifiedmedia.test,+1-555-384-7906,London,United Kingdom,Europe/London,EdTech & E-Learning,2025-11-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0087,[SYNTHETIC] Quantum Networks 491,billing@quantumnetwo.test,+1-555-329-2124,Kochi,India,Asia/Kolkata,SaaS & Cloud Services,2025-10-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0088,[SYNTHETIC] Resonant Solutions 782,billing@resonantsolu.test,+1-555-959-1333,Kochi,India,Asia/Kolkata,HealthTech & Life Sciences,2025-05-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0089,[SYNTHETIC] Polaris Digital 254,billing@polarisdigit.test,+1-555-217-4571,Mumbai,India,Asia/Kolkata,Manufacturing & IoT,2026-09-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0090,[SYNTHETIC] Fortis Analytics 795,billing@fortisanalyt.test,+1-555-721-2876,London,United Kingdom,Europe/London,E-Commerce & Retail,2026-07-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0091,[SYNTHETIC] Krypton Enterprises 120,billing@kryptonenter.test,+1-555-689-7149,Sydney,Australia,Australia/Sydney,SaaS & Cloud Services,2025-09-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0092,[SYNTHETIC] Boreal Media 87,billing@borealmedia8.test,+1-555-813-5941,Sydney,Australia,Australia/Sydney,HealthTech & Life Sciences,2025-02-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0093,[SYNTHETIC] Titan Interactive 834,billing@titaninterac.test,+1-555-645-8018,Bangalore,India,Asia/Kolkata,SaaS & Cloud Services,2025-10-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0094,[SYNTHETIC] Strata Consulting 80,billing@strataconsul.test,+1-555-969-7882,San Francisco,United States,America/Los_Angeles,EdTech & E-Learning,2024-11-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0095,[SYNTHETIC] Hyperion Labs 453,billing@hyperionlabs.test,+1-555-545-3885,London,United Kingdom,Europe/London,Manufacturing & IoT,2025-04-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0096,[SYNTHETIC] JetStream Analytics 640,billing@jetstreamana.test,+1-555-546-5397,San Francisco,United States,America/Los_Angeles,Manufacturing & IoT,2026-02-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0097,[SYNTHETIC] Unified Software 860,billing@unifiedsoftw.test,+1-555-349-8613,Bangalore,India,Asia/Kolkata,Logistics & Supply Chain,2026-02-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0098,[SYNTHETIC] Matrix Interactive 694,billing@matrixintera.test,+1-555-606-6325,Berlin,Germany,Europe/Berlin,EdTech & E-Learning,2024-11-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0099,[SYNTHETIC] Luminary Fintech 227,billing@luminaryfint.test,+1-555-386-5526,London,United Kingdom,Europe/London,Logistics & Supply Chain,2025-10-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0100,[SYNTHETIC] LogiTech Technologies 539,billing@logitechtech.test,+1-555-837-7658,Singapore,Singapore,Asia/Singapore,FinTech & Banking,2025-07-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0101,[SYNTHETIC] Hyperion Robotics 786,billing@hyperionrobo.test,+1-555-828-9041,Singapore,Singapore,Asia/Singapore,Manufacturing & IoT,2026-08-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0102,[SYNTHETIC] Everest Technologies 105,billing@everesttechn.test,+1-555-808-4986,Dubai,UAE,Asia/Dubai,HealthTech & Life Sciences,2025-12-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0103,[SYNTHETIC] TerraData Cloud 387,billing@terradataclo.test,+1-555-863-6419,New York,United States,America/New_York,EdTech & E-Learning,2026-01-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0104,[SYNTHETIC] WarpSpeed Health 287,billing@warpspeedhea.test,+1-555-223-4155,Dubai,UAE,Asia/Dubai,Logistics & Supply Chain,2025-06-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0105,[SYNTHETIC] Unified Labs 770,billing@unifiedlabs7.test,+1-555-321-8933,San Francisco,United States,America/Los_Angeles,E-Commerce & Retail,2025-05-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0106,[SYNTHETIC] Radiant Cloud 788,billing@radiantcloud.test,+1-555-952-4180,San Francisco,United States,America/Los_Angeles,Logistics & Supply Chain,2025-02-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0107,[SYNTHETIC] SyncPulse Software 379,billing@syncpulsesof.test,+1-555-825-9751,Mumbai,India,Asia/Kolkata,Logistics & Supply Chain,2024-11-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0108,[SYNTHETIC] IronClad Analytics 56,billing@ironcladanal.test,+1-555-753-9042,Kochi,India,Asia/Kolkata,Logistics & Supply Chain,2025-03-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0109,[SYNTHETIC] GridCore Technologies 597,billing@gridcoretech.test,+1-555-551-6582,Dubai,UAE,Asia/Dubai,Manufacturing & IoT,2026-03-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0110,[SYNTHETIC] Luminary Solutions 268,billing@luminarysolu.test,+1-555-510-9056,New York,United States,America/New_York,FinTech & Banking,2025-01-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0111,[SYNTHETIC] EchoSphere Cloud 654,billing@echospherecl.test,+1-555-930-5978,Kochi,India,Asia/Kolkata,E-Commerce & Retail,2025-04-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0112,[SYNTHETIC] Falcon Software 131,billing@falconsoftwa.test,+1-555-710-4697,San Francisco,United States,America/Los_Angeles,Digital Marketing & Media,2026-07-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0113,[SYNTHETIC] JetStream Platform 471,billing@jetstreampla.test,+1-555-539-6003,New York,United States,America/New_York,Logistics & Supply Chain,2026-06-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0114,[SYNTHETIC] Matrix Interactive 71,billing@matrixintera.test,+1-555-740-4457,Sydney,Australia,Australia/Sydney,FinTech & Banking,2025-05-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0115,[SYNTHETIC] Quantum Networks 170,billing@quantumnetwo.test,+1-555-176-3564,Singapore,Singapore,Asia/Singapore,E-Commerce & Retail,2026-05-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0116,[SYNTHETIC] Apex Logistics 471,billing@apexlogistic.test,+1-555-133-4792,Sydney,Australia,Australia/Sydney,Manufacturing & IoT,2025-08-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0117,[SYNTHETIC] SyncPulse Enterprises 729,billing@syncpulseent.test,+1-555-370-4241,New York,United States,America/New_York,FinTech & Banking,2025-06-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0118,[SYNTHETIC] Dynamo Labs 567,billing@dynamolabs56.test,+1-555-946-3330,Singapore,Singapore,Asia/Singapore,E-Commerce & Retail,2025-07-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0119,[SYNTHETIC] EchoSphere Solutions 179,billing@echosphereso.test,+1-555-227-8679,Dubai,UAE,Asia/Dubai,Logistics & Supply Chain,2026-01-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0120,[SYNTHETIC] TerraData Platform 975,billing@terradatapla.test,+1-555-182-1653,Dubai,UAE,Asia/Dubai,Manufacturing & IoT,2026-01-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0121,[SYNTHETIC] Dynamo Ventures 628,billing@dynamoventur.test,+1-555-334-1339,Dubai,UAE,Asia/Dubai,SaaS & Cloud Services,2025-02-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0122,[SYNTHETIC] Titan Analytics 600,billing@titananalyti.test,+1-555-631-8245,Kochi,India,Asia/Kolkata,E-Commerce & Retail,2026-02-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0123,[SYNTHETIC] Radiant Systems 609,billing@radiantsyste.test,+1-555-581-6700,Berlin,Germany,Europe/Berlin,Manufacturing & IoT,2025-02-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0124,[SYNTHETIC] Cobalt Ventures 338,billing@cobaltventur.test,+1-555-521-9117,Bangalore,India,Asia/Kolkata,E-Commerce & Retail,2025-10-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0125,[SYNTHETIC] SyncPulse Platform 843,billing@syncpulsepla.test,+1-555-190-6153,San Francisco,United States,America/Los_Angeles,SaaS & Cloud Services,2026-02-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0126,[SYNTHETIC] Quantum Ventures 128,billing@quantumventu.test,+1-555-990-9889,Berlin,Germany,Europe/Berlin,SaaS & Cloud Services,2026-09-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0127,[SYNTHETIC] Fortis Logistics 65,billing@fortislogist.test,+1-555-874-9167,Singapore,Singapore,Asia/Singapore,EdTech & E-Learning,2026-07-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0128,[SYNTHETIC] Quasar Health 788,billing@quasarhealth.test,+1-555-662-3146,Kochi,India,Asia/Kolkata,HealthTech & Life Sciences,2025-07-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0129,[SYNTHETIC] SyncPulse Health 911,billing@syncpulsehea.test,+1-555-745-4920,New York,United States,America/New_York,FinTech & Banking,2024-11-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0130,[SYNTHETIC] Krypton Enterprises 574,billing@kryptonenter.test,+1-555-330-2858,Kochi,India,Asia/Kolkata,Digital Marketing & Media,2025-02-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0131,[SYNTHETIC] Fortis Labs 673,billing@fortislabs67.test,+1-555-621-5479,Mumbai,India,Asia/Kolkata,Manufacturing & IoT,2025-08-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0132,[SYNTHETIC] Cobalt Fintech 493,billing@cobaltfintec.test,+1-555-248-7284,Singapore,Singapore,Asia/Singapore,Manufacturing & IoT,2026-05-18,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0133,[SYNTHETIC] MetaFlow Interactive 530,billing@metaflowinte.test,+1-555-891-7798,Mumbai,India,Asia/Kolkata,FinTech & Banking,2025-08-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0134,[SYNTHETIC] Vanguard Security 283,billing@vanguardsecu.test,+1-555-957-9022,Kochi,India,Asia/Kolkata,Logistics & Supply Chain,2025-09-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0135,[SYNTHETIC] Jupiter Health 561,billing@jupiterhealt.test,+1-555-665-9903,New York,United States,America/New_York,EdTech & E-Learning,2025-10-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0136,[SYNTHETIC] Aether Health 965,billing@aetherhealth.test,+1-555-685-7274,London,United Kingdom,Europe/London,HealthTech & Life Sciences,2025-07-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0137,[SYNTHETIC] OmniLink Logistics 54,billing@omnilinklogi.test,+1-555-495-3492,London,United Kingdom,Europe/London,Manufacturing & IoT,2025-11-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0138,[SYNTHETIC] Hyperion Solutions 139,billing@hyperionsolu.test,+1-555-995-8213,San Francisco,United States,America/Los_Angeles,EdTech & E-Learning,2025-02-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0139,[SYNTHETIC] GridCore Security 942,billing@gridcoresecu.test,+1-555-519-3529,New York,United States,America/New_York,SaaS & Cloud Services,2025-03-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0140,[SYNTHETIC] EchoSphere Fintech 810,billing@echospherefi.test,+1-555-809-7512,Dubai,UAE,Asia/Dubai,EdTech & E-Learning,2026-07-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0141,[SYNTHETIC] Resonant Networks 882,billing@resonantnetw.test,+1-555-741-8994,London,United Kingdom,Europe/London,Digital Marketing & Media,2025-09-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0142,[SYNTHETIC] Kinetic Solutions 642,billing@kineticsolut.test,+1-555-800-5708,Bangalore,India,Asia/Kolkata,HealthTech & Life Sciences,2026-08-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0143,[SYNTHETIC] OmniLink Networks 454,billing@omnilinknetw.test,+1-555-270-5906,Bangalore,India,Asia/Kolkata,FinTech & Banking,2026-01-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0144,[SYNTHETIC] BlueWave Solutions 342,billing@bluewavesolu.test,+1-555-483-8056,Kochi,India,Asia/Kolkata,Logistics & Supply Chain,2025-11-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0145,[SYNTHETIC] Jupiter Software 553,billing@jupitersoftw.test,+1-555-279-2293,Berlin,Germany,Europe/Berlin,E-Commerce & Retail,2025-04-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0146,[SYNTHETIC] Polaris Platform 644,billing@polarisplatf.test,+1-555-246-4804,Singapore,Singapore,Asia/Singapore,Manufacturing & IoT,2026-06-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0147,[SYNTHETIC] Fortis Analytics 480,billing@fortisanalyt.test,+1-555-394-9955,Dubai,UAE,Asia/Dubai,SaaS & Cloud Services,2026-02-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0148,[SYNTHETIC] Krypton Networks 462,billing@kryptonnetwo.test,+1-555-534-5097,London,United Kingdom,Europe/London,Logistics & Supply Chain,2026-08-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0149,[SYNTHETIC] Fortis Enterprises 213,billing@fortisenterp.test,+1-555-342-7248,Berlin,Germany,Europe/Berlin,Manufacturing & IoT,2025-02-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0150,[SYNTHETIC] Matrix Consulting 598,billing@matrixconsul.test,+1-555-949-7484,Dubai,UAE,Asia/Dubai,Logistics & Supply Chain,2024-11-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0151,[SYNTHETIC] Radiant Technologies 589,billing@radianttechn.test,+1-555-894-4770,Kochi,India,Asia/Kolkata,Manufacturing & IoT,2025-08-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0152,[SYNTHETIC] Optima Consulting 234,billing@optimaconsul.test,+1-555-873-3240,Singapore,Singapore,Asia/Singapore,Logistics & Supply Chain,2026-09-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0153,[SYNTHETIC] Quasar Labs 935,billing@quasarlabs93.test,+1-555-134-6977,Kochi,India,Asia/Kolkata,Logistics & Supply Chain,2026-01-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0154,[SYNTHETIC] IronClad Networks 941,billing@ironcladnetw.test,+1-555-279-4289,Dubai,UAE,Asia/Dubai,EdTech & E-Learning,2025-12-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0155,[SYNTHETIC] IronClad Robotics 907,billing@ironcladrobo.test,+1-555-363-8894,London,United Kingdom,Europe/London,Logistics & Supply Chain,2025-04-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0156,[SYNTHETIC] SyncPulse Ventures 833,billing@syncpulseven.test,+1-555-244-4696,Bangalore,India,Asia/Kolkata,Manufacturing & IoT,2025-01-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0157,[SYNTHETIC] Titan Platform 876,billing@titanplatfor.test,+1-555-909-7464,San Francisco,United States,America/Los_Angeles,EdTech & E-Learning,2025-01-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0158,[SYNTHETIC] Apex Analytics 559,billing@apexanalytic.test,+1-555-788-5295,Bangalore,India,Asia/Kolkata,Manufacturing & IoT,2025-11-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0159,[SYNTHETIC] Nexus Platform 852,billing@nexusplatfor.test,+1-555-339-8724,London,United Kingdom,Europe/London,FinTech & Banking,2026-09-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0160,[SYNTHETIC] BlueWave Interactive 915,billing@bluewaveinte.test,+1-555-326-2035,San Francisco,United States,America/Los_Angeles,EdTech & E-Learning,2026-07-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0161,[SYNTHETIC] Quasar Health 941,billing@quasarhealth.test,+1-555-243-1742,Dubai,UAE,Asia/Dubai,Digital Marketing & Media,2025-02-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0162,[SYNTHETIC] CloudPeak Enterprises 514,billing@cloudpeakent.test,+1-555-650-3222,Bangalore,India,Asia/Kolkata,FinTech & Banking,2025-06-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0163,[SYNTHETIC] Aether Health 389,billing@aetherhealth.test,+1-555-860-3531,San Francisco,United States,America/Los_Angeles,Digital Marketing & Media,2026-06-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0164,[SYNTHETIC] Cobalt Labs 863,billing@cobaltlabs86.test,+1-555-133-7070,New York,United States,America/New_York,Digital Marketing & Media,2025-08-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0165,[SYNTHETIC] NovaPulse Health 465,billing@novapulsehea.test,+1-555-802-7018,Singapore,Singapore,Asia/Singapore,EdTech & E-Learning,2025-02-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0166,[SYNTHETIC] Kinetic Consulting 72,billing@kineticconsu.test,+1-555-225-8450,Berlin,Germany,Europe/Berlin,Logistics & Supply Chain,2025-05-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0167,[SYNTHETIC] Falcon Media 667,billing@falconmedia6.test,+1-555-905-6464,Sydney,Australia,Australia/Sydney,SaaS & Cloud Services,2024-12-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0168,[SYNTHETIC] Prism Digital 815,billing@prismdigital.test,+1-555-949-4394,Sydney,Australia,Australia/Sydney,HealthTech & Life Sciences,2025-01-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0169,[SYNTHETIC] Nexus Media 842,billing@nexusmedia84.test,+1-555-907-1046,Singapore,Singapore,Asia/Singapore,EdTech & E-Learning,2025-03-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0170,[SYNTHETIC] Radiant Digital 143,billing@radiantdigit.test,+1-555-212-1422,San Francisco,United States,America/Los_Angeles,Logistics & Supply Chain,2025-04-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0171,[SYNTHETIC] IronClad Technologies 376,billing@ironcladtech.test,+1-555-278-5347,Singapore,Singapore,Asia/Singapore,EdTech & E-Learning,2024-11-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0172,[SYNTHETIC] DeltaByte Digital 769,billing@deltabytedig.test,+1-555-587-8344,Berlin,Germany,Europe/Berlin,FinTech & Banking,2025-01-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0173,[SYNTHETIC] Zenith Security 617,billing@zenithsecuri.test,+1-555-326-1710,Bangalore,India,Asia/Kolkata,Manufacturing & IoT,2026-03-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0174,[SYNTHETIC] Strata Security 318,billing@stratasecuri.test,+1-555-590-7580,New York,United States,America/New_York,SaaS & Cloud Services,2025-01-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0175,[SYNTHETIC] Dynamo Labs 512,billing@dynamolabs51.test,+1-555-429-3430,New York,United States,America/New_York,FinTech & Banking,2025-01-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0176,[SYNTHETIC] EchoSphere Digital 291,billing@echospheredi.test,+1-555-711-9692,Sydney,Australia,Australia/Sydney,EdTech & E-Learning,2025-11-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0177,[SYNTHETIC] SyncPulse Health 527,billing@syncpulsehea.test,+1-555-912-2874,Sydney,Australia,Australia/Sydney,Digital Marketing & Media,2025-02-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0178,[SYNTHETIC] Resonant Robotics 748,billing@resonantrobo.test,+1-555-333-7779,Singapore,Singapore,Asia/Singapore,Digital Marketing & Media,2026-02-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0179,[SYNTHETIC] Vanguard Health 418,billing@vanguardheal.test,+1-555-537-6120,Berlin,Germany,Europe/Berlin,FinTech & Banking,2025-09-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0180,[SYNTHETIC] Strata Analytics 393,billing@strataanalyt.test,+1-555-193-2398,Mumbai,India,Asia/Kolkata,Manufacturing & IoT,2025-01-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0181,[SYNTHETIC] Falcon Logistics 108,billing@falconlogist.test,+1-555-161-6400,London,United Kingdom,Europe/London,E-Commerce & Retail,2026-05-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0182,[SYNTHETIC] Strata Labs 430,billing@stratalabs43.test,+1-555-394-6119,London,United Kingdom,Europe/London,Digital Marketing & Media,2024-12-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0183,[SYNTHETIC] WarpSpeed Labs 601,billing@warpspeedlab.test,+1-555-772-8900,San Francisco,United States,America/Los_Angeles,HealthTech & Life Sciences,2025-04-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0184,[SYNTHETIC] OmniLink Labs 368,billing@omnilinklabs.test,+1-555-880-5564,San Francisco,United States,America/Los_Angeles,EdTech & E-Learning,2025-02-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0185,[SYNTHETIC] Matrix Software 836,billing@matrixsoftwa.test,+1-555-773-5381,Berlin,Germany,Europe/Berlin,SaaS & Cloud Services,2026-07-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0186,[SYNTHETIC] BlueWave Systems 289,billing@bluewavesyst.test,+1-555-106-3972,Dubai,UAE,Asia/Dubai,EdTech & E-Learning,2025-10-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0187,[SYNTHETIC] Jupiter Cloud 683,billing@jupitercloud.test,+1-555-858-1502,Berlin,Germany,Europe/Berlin,FinTech & Banking,2025-03-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0188,[SYNTHETIC] Falcon Security 230,billing@falconsecuri.test,+1-555-449-3578,Berlin,Germany,Europe/Berlin,Digital Marketing & Media,2026-02-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0189,[SYNTHETIC] Zenith Enterprises 748,billing@zenithenterp.test,+1-555-259-3579,London,United Kingdom,Europe/London,FinTech & Banking,2024-12-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0190,[SYNTHETIC] Polaris Solutions 700,billing@polarissolut.test,+1-555-777-7947,Bangalore,India,Asia/Kolkata,Logistics & Supply Chain,2026-01-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0191,[SYNTHETIC] Hyperion Interactive 462,billing@hyperioninte.test,+1-555-873-9394,Berlin,Germany,Europe/Berlin,Logistics & Supply Chain,2025-06-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0192,[SYNTHETIC] Horizon Consulting 450,billing@horizonconsu.test,+1-555-794-8972,Bangalore,India,Asia/Kolkata,Logistics & Supply Chain,2026-09-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0193,[SYNTHETIC] JetStream Enterprises 56,billing@jetstreament.test,+1-555-156-1125,Singapore,Singapore,Asia/Singapore,Digital Marketing & Media,2026-07-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0194,[SYNTHETIC] NovaPulse Enterprises 978,billing@novapulseent.test,+1-555-396-6375,Singapore,Singapore,Asia/Singapore,E-Commerce & Retail,2025-07-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0195,[SYNTHETIC] Horizon Technologies 519,billing@horizontechn.test,+1-555-489-9725,Berlin,Germany,Europe/Berlin,E-Commerce & Retail,2025-03-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0196,[SYNTHETIC] OmniLink Security 582,billing@omnilinksecu.test,+1-555-982-1693,London,United Kingdom,Europe/London,FinTech & Banking,2025-12-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0197,[SYNTHETIC] Dynamo Technologies 480,billing@dynamotechno.test,+1-555-539-7626,Bangalore,India,Asia/Kolkata,EdTech & E-Learning,2026-06-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0198,[SYNTHETIC] Quasar Logistics 306,billing@quasarlogist.test,+1-555-432-3815,Bangalore,India,Asia/Kolkata,Digital Marketing & Media,2024-11-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0199,[SYNTHETIC] Polaris Health 861,billing@polarishealt.test,+1-555-964-2734,London,United Kingdom,Europe/London,FinTech & Banking,2026-01-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0200,[SYNTHETIC] Prism Logistics 613,billing@prismlogisti.test,+1-555-991-6083,Berlin,Germany,Europe/Berlin,FinTech & Banking,2025-12-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0201,[SYNTHETIC] Vanguard Software 351,billing@vanguardsoft.test,+1-555-748-2868,Mumbai,India,Asia/Kolkata,FinTech & Banking,2026-04-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0202,[SYNTHETIC] JetStream Security 208,billing@jetstreamsec.test,+1-555-934-3419,London,United Kingdom,Europe/London,EdTech & E-Learning,2026-08-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0203,[SYNTHETIC] Prism Labs 159,billing@prismlabs159.test,+1-555-716-3504,Dubai,UAE,Asia/Dubai,HealthTech & Life Sciences,2025-04-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0204,[SYNTHETIC] Resonant Networks 191,billing@resonantnetw.test,+1-555-878-8354,New York,United States,America/New_York,Manufacturing & IoT,2026-05-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0205,[SYNTHETIC] Titan Cloud 668,billing@titancloud66.test,+1-555-423-3473,Sydney,Australia,Australia/Sydney,EdTech & E-Learning,2026-08-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0206,[SYNTHETIC] Everest Networks 490,billing@everestnetwo.test,+1-555-705-1920,New York,United States,America/New_York,Logistics & Supply Chain,2025-08-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0207,[SYNTHETIC] WarpSpeed Security 85,billing@warpspeedsec.test,+1-555-138-1932,Dubai,UAE,Asia/Dubai,Manufacturing & IoT,2026-02-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0208,[SYNTHETIC] Zenith Enterprises 88,billing@zenithenterp.test,+1-555-694-1672,Bangalore,India,Asia/Kolkata,Digital Marketing & Media,2026-02-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0209,[SYNTHETIC] Everest Cloud 677,billing@everestcloud.test,+1-555-587-9214,Singapore,Singapore,Asia/Singapore,EdTech & E-Learning,2026-07-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0210,[SYNTHETIC] Jupiter Solutions 471,billing@jupitersolut.test,+1-555-616-3827,Bangalore,India,Asia/Kolkata,EdTech & E-Learning,2025-01-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0211,[SYNTHETIC] CloudPeak Software 734,billing@cloudpeaksof.test,+1-555-635-3600,New York,United States,America/New_York,Manufacturing & IoT,2026-04-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0212,[SYNTHETIC] Zenith Consulting 949,billing@zenithconsul.test,+1-555-893-6543,Dubai,UAE,Asia/Dubai,Digital Marketing & Media,2025-12-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0213,[SYNTHETIC] Titan Interactive 63,billing@titaninterac.test,+1-555-196-7333,London,United Kingdom,Europe/London,FinTech & Banking,2025-10-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0214,[SYNTHETIC] SyncPulse Analytics 751,billing@syncpulseana.test,+1-555-183-3317,Sydney,Australia,Australia/Sydney,E-Commerce & Retail,2025-10-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0215,[SYNTHETIC] WarpSpeed Enterprises 681,billing@warpspeedent.test,+1-555-825-2388,Berlin,Germany,Europe/Berlin,E-Commerce & Retail,2026-07-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0216,[SYNTHETIC] TerraData Robotics 395,billing@terradatarob.test,+1-555-819-9624,London,United Kingdom,Europe/London,E-Commerce & Retail,2026-09-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0217,[SYNTHETIC] Falcon Logistics 530,billing@falconlogist.test,+1-555-416-3953,London,United Kingdom,Europe/London,SaaS & Cloud Services,2025-11-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0218,[SYNTHETIC] NovaPulse Ventures 980,billing@novapulseven.test,+1-555-240-3538,New York,United States,America/New_York,HealthTech & Life Sciences,2025-06-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0219,[SYNTHETIC] EchoSphere Enterprises 874,billing@echosphereen.test,+1-555-444-3147,Bangalore,India,Asia/Kolkata,SaaS & Cloud Services,2026-09-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0220,[SYNTHETIC] Optima Platform 167,billing@optimaplatfo.test,+1-555-928-3712,Mumbai,India,Asia/Kolkata,E-Commerce & Retail,2026-08-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0221,[SYNTHETIC] Everest Solutions 430,billing@everestsolut.test,+1-555-725-5668,London,United Kingdom,Europe/London,HealthTech & Life Sciences,2026-01-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0222,[SYNTHETIC] Everest Software 556,billing@everestsoftw.test,+1-555-955-4178,Singapore,Singapore,Asia/Singapore,Logistics & Supply Chain,2026-02-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0223,[SYNTHETIC] Zenith Cloud 461,billing@zenithcloud4.test,+1-555-614-9641,New York,United States,America/New_York,Logistics & Supply Chain,2025-11-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0224,[SYNTHETIC] Cobalt Systems 846,billing@cobaltsystem.test,+1-555-153-8873,Singapore,Singapore,Asia/Singapore,E-Commerce & Retail,2025-07-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0225,[SYNTHETIC] Zenith Robotics 966,billing@zenithroboti.test,+1-555-185-3626,Bangalore,India,Asia/Kolkata,FinTech & Banking,2025-08-18,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0226,[SYNTHETIC] Radiant Health 937,billing@radianthealt.test,+1-555-193-4637,San Francisco,United States,America/Los_Angeles,E-Commerce & Retail,2026-01-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0227,[SYNTHETIC] Everest Consulting 962,billing@everestconsu.test,+1-555-505-9224,Kochi,India,Asia/Kolkata,Digital Marketing & Media,2024-12-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0228,[SYNTHETIC] Zenith Software 405,billing@zenithsoftwa.test,+1-555-128-6221,Bangalore,India,Asia/Kolkata,EdTech & E-Learning,2025-06-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0229,[SYNTHETIC] GridCore Ventures 820,billing@gridcorevent.test,+1-555-393-8740,Mumbai,India,Asia/Kolkata,E-Commerce & Retail,2024-12-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0230,[SYNTHETIC] IronClad Fintech 469,billing@ironcladfint.test,+1-555-119-5193,Sydney,Australia,Australia/Sydney,SaaS & Cloud Services,2025-01-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0231,[SYNTHETIC] NovaPulse Digital 571,billing@novapulsedig.test,+1-555-894-5720,Sydney,Australia,Australia/Sydney,Digital Marketing & Media,2025-02-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0232,[SYNTHETIC] Prism Enterprises 134,billing@prismenterpr.test,+1-555-754-8489,Kochi,India,Asia/Kolkata,HealthTech & Life Sciences,2026-01-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0233,[SYNTHETIC] EchoSphere Labs 866,billing@echospherela.test,+1-555-627-4963,New York,United States,America/New_York,SaaS & Cloud Services,2026-08-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0234,[SYNTHETIC] Jupiter Enterprises 449,billing@jupiterenter.test,+1-555-684-7825,Kochi,India,Asia/Kolkata,EdTech & E-Learning,2025-07-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0235,[SYNTHETIC] Luminary Networks 546,billing@luminarynetw.test,+1-555-657-9312,London,United Kingdom,Europe/London,FinTech & Banking,2026-04-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0236,[SYNTHETIC] Infini Robotics 30,billing@infiniroboti.test,+1-555-750-7338,Berlin,Germany,Europe/Berlin,Manufacturing & IoT,2024-12-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0237,[SYNTHETIC] Zenith Analytics 775,billing@zenithanalyt.test,+1-555-453-4950,Kochi,India,Asia/Kolkata,EdTech & E-Learning,2025-01-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0238,[SYNTHETIC] Strata Labs 800,billing@stratalabs80.test,+1-555-145-6772,Sydney,Australia,Australia/Sydney,EdTech & E-Learning,2025-03-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0239,[SYNTHETIC] Kinetic Ventures 843,billing@kineticventu.test,+1-555-746-3986,Mumbai,India,Asia/Kolkata,Manufacturing & IoT,2026-03-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0240,[SYNTHETIC] IronClad Networks 743,billing@ironcladnetw.test,+1-555-306-1717,New York,United States,America/New_York,SaaS & Cloud Services,2025-08-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0241,[SYNTHETIC] MetaFlow Solutions 333,billing@metaflowsolu.test,+1-555-584-5150,Dubai,UAE,Asia/Dubai,Digital Marketing & Media,2026-05-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0242,[SYNTHETIC] CloudPeak Media 302,billing@cloudpeakmed.test,+1-555-439-5476,London,United Kingdom,Europe/London,SaaS & Cloud Services,2026-09-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0243,[SYNTHETIC] Horizon Consulting 457,billing@horizonconsu.test,+1-555-447-4060,Berlin,Germany,Europe/Berlin,Manufacturing & IoT,2025-11-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0244,[SYNTHETIC] Hyperion Fintech 386,billing@hyperionfint.test,+1-555-844-7955,San Francisco,United States,America/Los_Angeles,Logistics & Supply Chain,2025-01-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0245,[SYNTHETIC] Falcon Logistics 626,billing@falconlogist.test,+1-555-205-2311,Mumbai,India,Asia/Kolkata,Logistics & Supply Chain,2025-09-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0246,[SYNTHETIC] Unified Enterprises 323,billing@unifiedenter.test,+1-555-806-8272,New York,United States,America/New_York,Digital Marketing & Media,2025-04-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0247,[SYNTHETIC] WarpSpeed Health 53,billing@warpspeedhea.test,+1-555-754-1939,London,United Kingdom,Europe/London,Digital Marketing & Media,2025-08-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0248,[SYNTHETIC] EchoSphere Platform 382,billing@echospherepl.test,+1-555-246-8179,San Francisco,United States,America/Los_Angeles,E-Commerce & Retail,2024-12-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0249,[SYNTHETIC] CloudPeak Digital 78,billing@cloudpeakdig.test,+1-555-492-1530,Singapore,Singapore,Asia/Singapore,EdTech & E-Learning,2025-11-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0250,[SYNTHETIC] Optima Digital 705,billing@optimadigita.test,+1-555-554-2259,New York,United States,America/New_York,EdTech & E-Learning,2025-11-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0251,[SYNTHETIC] Matrix Digital 552,billing@matrixdigita.test,+1-555-765-5566,London,United Kingdom,Europe/London,Digital Marketing & Media,2025-09-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0252,[SYNTHETIC] Prism Labs 36,billing@prismlabs36.test,+1-555-496-2929,Mumbai,India,Asia/Kolkata,Manufacturing & IoT,2026-04-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0253,[SYNTHETIC] Quantum Analytics 730,billing@quantumanaly.test,+1-555-392-9047,New York,United States,America/New_York,HealthTech & Life Sciences,2026-07-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0254,[SYNTHETIC] MetaFlow Labs 148,billing@metaflowlabs.test,+1-555-830-8292,Bangalore,India,Asia/Kolkata,Manufacturing & IoT,2025-04-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0255,[SYNTHETIC] Falcon Ventures 693,billing@falconventur.test,+1-555-655-5757,London,United Kingdom,Europe/London,FinTech & Banking,2026-05-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0256,[SYNTHETIC] TerraData Systems 738,billing@terradatasys.test,+1-555-329-2988,Mumbai,India,Asia/Kolkata,EdTech & E-Learning,2026-04-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0257,[SYNTHETIC] MetaFlow Digital 252,billing@metaflowdigi.test,+1-555-667-7044,New York,United States,America/New_York,SaaS & Cloud Services,2025-11-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0258,[SYNTHETIC] Fortis Robotics 142,billing@fortisroboti.test,+1-555-416-7523,Sydney,Australia,Australia/Sydney,FinTech & Banking,2025-01-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0259,[SYNTHETIC] Galactic Security 430,billing@galacticsecu.test,+1-555-424-2215,Berlin,Germany,Europe/Berlin,FinTech & Banking,2025-03-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0260,[SYNTHETIC] Everest Health 706,billing@everesthealt.test,+1-555-999-3981,San Francisco,United States,America/Los_Angeles,EdTech & E-Learning,2025-03-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0261,[SYNTHETIC] IronClad Logistics 524,billing@ironcladlogi.test,+1-555-256-5982,Kochi,India,Asia/Kolkata,FinTech & Banking,2026-04-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0262,[SYNTHETIC] Krypton Systems 340,billing@kryptonsyste.test,+1-555-390-2292,Singapore,Singapore,Asia/Singapore,EdTech & E-Learning,2026-04-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0263,[SYNTHETIC] Quantum Media 660,billing@quantummedia.test,+1-555-740-5961,San Francisco,United States,America/Los_Angeles,Logistics & Supply Chain,2025-03-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0264,[SYNTHETIC] Polaris Robotics 105,billing@polarisrobot.test,+1-555-694-3526,San Francisco,United States,America/Los_Angeles,E-Commerce & Retail,2026-06-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0265,[SYNTHETIC] Krypton Interactive 747,billing@kryptoninter.test,+1-555-142-1464,Sydney,Australia,Australia/Sydney,EdTech & E-Learning,2026-05-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0266,[SYNTHETIC] Falcon Solutions 981,billing@falconsoluti.test,+1-555-315-7825,Sydney,Australia,Australia/Sydney,Logistics & Supply Chain,2026-08-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0267,[SYNTHETIC] Polaris Technologies 519,billing@polaristechn.test,+1-555-409-8912,San Francisco,United States,America/Los_Angeles,Logistics & Supply Chain,2026-08-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0268,[SYNTHETIC] Prism Platform 314,billing@prismplatfor.test,+1-555-261-8202,New York,United States,America/New_York,FinTech & Banking,2024-12-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0269,[SYNTHETIC] Cobalt Fintech 485,billing@cobaltfintec.test,+1-555-247-6121,Singapore,Singapore,Asia/Singapore,EdTech & E-Learning,2026-07-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0270,[SYNTHETIC] Unified Consulting 418,billing@unifiedconsu.test,+1-555-675-2739,Mumbai,India,Asia/Kolkata,EdTech & E-Learning,2026-04-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0271,[SYNTHETIC] Unified Software 487,billing@unifiedsoftw.test,+1-555-353-3308,Bangalore,India,Asia/Kolkata,Logistics & Supply Chain,2026-02-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0272,[SYNTHETIC] GridCore Solutions 307,billing@gridcoresolu.test,+1-555-986-3616,Berlin,Germany,Europe/Berlin,Digital Marketing & Media,2025-07-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0273,[SYNTHETIC] Unified Cloud 748,billing@unifiedcloud.test,+1-555-610-9433,London,United Kingdom,Europe/London,HealthTech & Life Sciences,2025-04-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0274,[SYNTHETIC] Fortis Fintech 910,billing@fortisfintec.test,+1-555-192-7442,Dubai,UAE,Asia/Dubai,Manufacturing & IoT,2024-11-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0275,[SYNTHETIC] Infini Health 999,billing@infinihealth.test,+1-555-461-1797,Singapore,Singapore,Asia/Singapore,HealthTech & Life Sciences,2026-06-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0276,[SYNTHETIC] DeltaByte Enterprises 516,billing@deltabyteent.test,+1-555-649-1133,Sydney,Australia,Australia/Sydney,Manufacturing & IoT,2025-08-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0277,[SYNTHETIC] GridCore Logistics 147,billing@gridcorelogi.test,+1-555-474-1741,Dubai,UAE,Asia/Dubai,EdTech & E-Learning,2025-12-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0278,[SYNTHETIC] Boreal Solutions 593,billing@borealsoluti.test,+1-555-666-5728,San Francisco,United States,America/Los_Angeles,HealthTech & Life Sciences,2025-11-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0279,[SYNTHETIC] EchoSphere Platform 526,billing@echospherepl.test,+1-555-796-2946,New York,United States,America/New_York,Logistics & Supply Chain,2026-07-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0280,[SYNTHETIC] IronClad Labs 413,billing@ironcladlabs.test,+1-555-474-3363,London,United Kingdom,Europe/London,EdTech & E-Learning,2026-05-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0281,[SYNTHETIC] MetaFlow Interactive 531,billing@metaflowinte.test,+1-555-139-3245,Berlin,Germany,Europe/Berlin,SaaS & Cloud Services,2024-12-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0282,[SYNTHETIC] Vanguard Fintech 541,billing@vanguardfint.test,+1-555-627-3290,New York,United States,America/New_York,E-Commerce & Retail,2026-07-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0283,[SYNTHETIC] Unified Interactive 336,billing@unifiedinter.test,+1-555-857-5902,Mumbai,India,Asia/Kolkata,Digital Marketing & Media,2026-07-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0284,[SYNTHETIC] Nexus Ventures 529,billing@nexusventure.test,+1-555-406-8780,San Francisco,United States,America/Los_Angeles,Manufacturing & IoT,2026-05-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0285,[SYNTHETIC] BlueWave Consulting 349,billing@bluewavecons.test,+1-555-415-1436,Bangalore,India,Asia/Kolkata,Digital Marketing & Media,2026-06-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0286,[SYNTHETIC] Optima Fintech 281,billing@optimafintec.test,+1-555-697-8871,Sydney,Australia,Australia/Sydney,HealthTech & Life Sciences,2024-12-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0287,[SYNTHETIC] Krypton Security 654,billing@kryptonsecur.test,+1-555-941-4968,Sydney,Australia,Australia/Sydney,Digital Marketing & Media,2025-03-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0288,[SYNTHETIC] CloudPeak Cloud 980,billing@cloudpeakclo.test,+1-555-551-6139,Bangalore,India,Asia/Kolkata,HealthTech & Life Sciences,2024-11-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0289,[SYNTHETIC] Cobalt Digital 432,billing@cobaltdigita.test,+1-555-893-8726,Singapore,Singapore,Asia/Singapore,Digital Marketing & Media,2026-03-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0290,[SYNTHETIC] DeltaByte Digital 541,billing@deltabytedig.test,+1-555-589-9609,Singapore,Singapore,Asia/Singapore,EdTech & E-Learning,2026-09-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0291,[SYNTHETIC] Aether Ventures 989,billing@aetherventur.test,+1-555-450-9950,Mumbai,India,Asia/Kolkata,Manufacturing & IoT,2026-04-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0292,[SYNTHETIC] WarpSpeed Analytics 634,billing@warpspeedana.test,+1-555-385-5890,New York,United States,America/New_York,HealthTech & Life Sciences,2025-07-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0293,[SYNTHETIC] OmniLink Enterprises 799,billing@omnilinkente.test,+1-555-424-8861,Dubai,UAE,Asia/Dubai,HealthTech & Life Sciences,2026-03-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0294,[SYNTHETIC] WarpSpeed Robotics 966,billing@warpspeedrob.test,+1-555-687-9899,Dubai,UAE,Asia/Dubai,Logistics & Supply Chain,2025-03-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0295,[SYNTHETIC] Aether Platform 848,billing@aetherplatfo.test,+1-555-143-5712,London,United Kingdom,Europe/London,E-Commerce & Retail,2025-08-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0296,[SYNTHETIC] Falcon Consulting 956,billing@falconconsul.test,+1-555-319-4310,New York,United States,America/New_York,Logistics & Supply Chain,2026-03-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0297,[SYNTHETIC] Kinetic Analytics 965,billing@kineticanaly.test,+1-555-211-4920,San Francisco,United States,America/Los_Angeles,Logistics & Supply Chain,2025-03-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0298,[SYNTHETIC] Prism Solutions 695,billing@prismsolutio.test,+1-555-338-1860,San Francisco,United States,America/Los_Angeles,HealthTech & Life Sciences,2026-08-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0299,[SYNTHETIC] GridCore Logistics 348,billing@gridcorelogi.test,+1-555-889-3252,New York,United States,America/New_York,FinTech & Banking,2026-09-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0300,[SYNTHETIC] Apex Robotics 961,billing@apexrobotics.test,+1-555-999-8793,Mumbai,India,Asia/Kolkata,Digital Marketing & Media,2026-08-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0301,[SYNTHETIC] Galactic Media 784,billing@galacticmedi.test,+1-555-761-1969,Dubai,UAE,Asia/Dubai,EdTech & E-Learning,2025-08-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0302,[SYNTHETIC] Falcon Cloud 247,billing@falconcloud2.test,+1-555-527-3880,San Francisco,United States,America/Los_Angeles,SaaS & Cloud Services,2025-04-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0303,[SYNTHETIC] CloudPeak Platform 816,billing@cloudpeakpla.test,+1-555-997-1613,New York,United States,America/New_York,E-Commerce & Retail,2025-08-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0304,[SYNTHETIC] Apex Enterprises 591,billing@apexenterpri.test,+1-555-391-8444,Sydney,Australia,Australia/Sydney,FinTech & Banking,2025-10-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0305,[SYNTHETIC] Resonant Robotics 546,billing@resonantrobo.test,+1-555-579-5470,New York,United States,America/New_York,E-Commerce & Retail,2026-03-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0306,[SYNTHETIC] MetaFlow Labs 348,billing@metaflowlabs.test,+1-555-363-4050,Mumbai,India,Asia/Kolkata,Manufacturing & IoT,2026-08-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0307,[SYNTHETIC] Apex Ventures 819,billing@apexventures.test,+1-555-725-7643,Dubai,UAE,Asia/Dubai,HealthTech & Life Sciences,2025-04-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0308,[SYNTHETIC] Dynamo Security 345,billing@dynamosecuri.test,+1-555-197-4027,Bangalore,India,Asia/Kolkata,Digital Marketing & Media,2026-09-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0309,[SYNTHETIC] IronClad Fintech 341,billing@ironcladfint.test,+1-555-492-4858,Singapore,Singapore,Asia/Singapore,SaaS & Cloud Services,2025-07-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0310,[SYNTHETIC] Everest Analytics 986,billing@everestanaly.test,+1-555-840-1187,London,United Kingdom,Europe/London,Logistics & Supply Chain,2026-06-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0311,[SYNTHETIC] Quantum Consulting 719,billing@quantumconsu.test,+1-555-221-8625,Singapore,Singapore,Asia/Singapore,SaaS & Cloud Services,2026-09-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0312,[SYNTHETIC] TerraData Systems 425,billing@terradatasys.test,+1-555-754-5833,San Francisco,United States,America/Los_Angeles,Logistics & Supply Chain,2025-02-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0313,[SYNTHETIC] Zenith Interactive 236,billing@zenithintera.test,+1-555-256-8454,Singapore,Singapore,Asia/Singapore,E-Commerce & Retail,2026-03-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0314,[SYNTHETIC] Optima Consulting 435,billing@optimaconsul.test,+1-555-921-4578,San Francisco,United States,America/Los_Angeles,Manufacturing & IoT,2026-05-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0315,[SYNTHETIC] Prism Interactive 904,billing@prisminterac.test,+1-555-820-6927,Bangalore,India,Asia/Kolkata,Manufacturing & IoT,2026-04-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0316,[SYNTHETIC] EchoSphere Cloud 124,billing@echospherecl.test,+1-555-649-3455,Kochi,India,Asia/Kolkata,HealthTech & Life Sciences,2026-06-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0317,[SYNTHETIC] Krypton Ventures 884,billing@kryptonventu.test,+1-555-796-4365,San Francisco,United States,America/Los_Angeles,Manufacturing & IoT,2025-02-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0318,[SYNTHETIC] Nexus Fintech 103,billing@nexusfintech.test,+1-555-564-3161,San Francisco,United States,America/Los_Angeles,Manufacturing & IoT,2024-12-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0319,[SYNTHETIC] Infini Logistics 477,billing@infinilogist.test,+1-555-573-6049,Sydney,Australia,Australia/Sydney,SaaS & Cloud Services,2026-05-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0320,[SYNTHETIC] BlueWave Platform 270,billing@bluewaveplat.test,+1-555-174-1742,Kochi,India,Asia/Kolkata,HealthTech & Life Sciences,2026-06-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0321,[SYNTHETIC] Dynamo Consulting 727,billing@dynamoconsul.test,+1-555-583-1519,Bangalore,India,Asia/Kolkata,SaaS & Cloud Services,2025-01-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0322,[SYNTHETIC] SyncPulse Logistics 194,billing@syncpulselog.test,+1-555-491-8348,Mumbai,India,Asia/Kolkata,Digital Marketing & Media,2025-11-18,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0323,[SYNTHETIC] Aether Platform 92,billing@aetherplatfo.test,+1-555-980-6697,San Francisco,United States,America/Los_Angeles,E-Commerce & Retail,2026-08-31,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0324,[SYNTHETIC] Horizon Systems 560,billing@horizonsyste.test,+1-555-954-1056,Berlin,Germany,Europe/Berlin,E-Commerce & Retail,2025-06-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0325,[SYNTHETIC] BlueWave Enterprises 484,billing@bluewaveente.test,+1-555-488-4762,San Francisco,United States,America/Los_Angeles,Digital Marketing & Media,2026-04-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0326,[SYNTHETIC] Prism Health 364,billing@prismhealth3.test,+1-555-996-2848,Mumbai,India,Asia/Kolkata,Logistics & Supply Chain,2025-05-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0327,[SYNTHETIC] CloudPeak Logistics 639,billing@cloudpeaklog.test,+1-555-168-2653,Kochi,India,Asia/Kolkata,HealthTech & Life Sciences,2025-05-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0328,[SYNTHETIC] Optima Solutions 467,billing@optimasoluti.test,+1-555-858-1724,Sydney,Australia,Australia/Sydney,SaaS & Cloud Services,2025-07-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0329,[SYNTHETIC] Boreal Health 249,billing@borealhealth.test,+1-555-243-9255,San Francisco,United States,America/Los_Angeles,HealthTech & Life Sciences,2024-12-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0330,[SYNTHETIC] SyncPulse Software 845,billing@syncpulsesof.test,+1-555-712-6253,Sydney,Australia,Australia/Sydney,EdTech & E-Learning,2026-06-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0331,[SYNTHETIC] Prism Enterprises 907,billing@prismenterpr.test,+1-555-407-5508,Mumbai,India,Asia/Kolkata,HealthTech & Life Sciences,2025-12-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0332,[SYNTHETIC] DeltaByte Robotics 981,billing@deltabyterob.test,+1-555-795-7999,Sydney,Australia,Australia/Sydney,E-Commerce & Retail,2026-08-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0333,[SYNTHETIC] LogiTech Fintech 58,billing@logitechfint.test,+1-555-426-7821,London,United Kingdom,Europe/London,Digital Marketing & Media,2026-04-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0334,[SYNTHETIC] Cobalt Digital 317,billing@cobaltdigita.test,+1-555-584-4948,Berlin,Germany,Europe/Berlin,E-Commerce & Retail,2026-05-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0335,[SYNTHETIC] OmniLink Enterprises 888,billing@omnilinkente.test,+1-555-675-7761,Mumbai,India,Asia/Kolkata,Manufacturing & IoT,2024-12-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0336,[SYNTHETIC] Cobalt Robotics 552,billing@cobaltroboti.test,+1-555-361-4331,Mumbai,India,Asia/Kolkata,Digital Marketing & Media,2025-07-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0337,[SYNTHETIC] Vanguard Networks 954,billing@vanguardnetw.test,+1-555-648-4120,New York,United States,America/New_York,EdTech & E-Learning,2025-02-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0338,[SYNTHETIC] DeltaByte Analytics 396,billing@deltabyteana.test,+1-555-292-4555,Sydney,Australia,Australia/Sydney,SaaS & Cloud Services,2025-01-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0339,[SYNTHETIC] Galactic Media 900,billing@galacticmedi.test,+1-555-316-4113,London,United Kingdom,Europe/London,Logistics & Supply Chain,2024-11-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0340,[SYNTHETIC] Horizon Fintech 946,billing@horizonfinte.test,+1-555-345-6269,Singapore,Singapore,Asia/Singapore,HealthTech & Life Sciences,2025-12-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0341,[SYNTHETIC] SyncPulse Platform 487,billing@syncpulsepla.test,+1-555-367-6892,San Francisco,United States,America/Los_Angeles,EdTech & E-Learning,2025-09-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0342,[SYNTHETIC] Infini Fintech 487,billing@infinifintec.test,+1-555-308-7073,Bangalore,India,Asia/Kolkata,Manufacturing & IoT,2025-09-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0343,[SYNTHETIC] Unified Logistics 56,billing@unifiedlogis.test,+1-555-116-5272,Sydney,Australia,Australia/Sydney,HealthTech & Life Sciences,2025-03-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0344,[SYNTHETIC] LogiTech Cloud 603,billing@logitechclou.test,+1-555-300-6404,Berlin,Germany,Europe/Berlin,Logistics & Supply Chain,2025-04-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0345,[SYNTHETIC] OmniLink Platform 593,billing@omnilinkplat.test,+1-555-770-6530,Singapore,Singapore,Asia/Singapore,Manufacturing & IoT,2026-05-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0346,[SYNTHETIC] Quantum Fintech 999,billing@quantumfinte.test,+1-555-850-6770,New York,United States,America/New_York,Manufacturing & IoT,2025-04-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0347,[SYNTHETIC] Krypton Digital 747,billing@kryptondigit.test,+1-555-655-1962,San Francisco,United States,America/Los_Angeles,Manufacturing & IoT,2025-05-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0348,[SYNTHETIC] JetStream Solutions 869,billing@jetstreamsol.test,+1-555-522-3252,Bangalore,India,Asia/Kolkata,SaaS & Cloud Services,2024-11-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0349,[SYNTHETIC] Quasar Software 79,billing@quasarsoftwa.test,+1-555-617-8471,Mumbai,India,Asia/Kolkata,SaaS & Cloud Services,2025-06-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0350,[SYNTHETIC] Zenith Solutions 642,billing@zenithsoluti.test,+1-555-599-1257,Sydney,Australia,Australia/Sydney,Manufacturing & IoT,2026-09-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0351,[SYNTHETIC] Apex Robotics 574,billing@apexrobotics.test,+1-555-642-5501,Berlin,Germany,Europe/Berlin,SaaS & Cloud Services,2024-11-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0352,[SYNTHETIC] Kinetic Enterprises 27,billing@kineticenter.test,+1-555-209-2578,San Francisco,United States,America/Los_Angeles,Digital Marketing & Media,2025-05-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0353,[SYNTHETIC] JetStream Digital 256,billing@jetstreamdig.test,+1-555-373-7502,Singapore,Singapore,Asia/Singapore,Logistics & Supply Chain,2025-10-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0354,[SYNTHETIC] Falcon Consulting 992,billing@falconconsul.test,+1-555-349-4700,Berlin,Germany,Europe/Berlin,Manufacturing & IoT,2026-06-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0355,[SYNTHETIC] TerraData Networks 679,billing@terradatanet.test,+1-555-488-7179,Kochi,India,Asia/Kolkata,FinTech & Banking,2025-12-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0356,[SYNTHETIC] LogiTech Fintech 67,billing@logitechfint.test,+1-555-611-8109,Kochi,India,Asia/Kolkata,E-Commerce & Retail,2025-01-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0357,[SYNTHETIC] Resonant Ventures 589,billing@resonantvent.test,+1-555-316-8790,Bangalore,India,Asia/Kolkata,SaaS & Cloud Services,2025-06-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0358,[SYNTHETIC] Radiant Solutions 956,billing@radiantsolut.test,+1-555-677-1539,Bangalore,India,Asia/Kolkata,Logistics & Supply Chain,2026-05-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0359,[SYNTHETIC] Luminary Ventures 26,billing@luminaryvent.test,+1-555-178-5903,Singapore,Singapore,Asia/Singapore,E-Commerce & Retail,2025-12-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0360,[SYNTHETIC] Krypton Cloud 256,billing@kryptoncloud.test,+1-555-653-6435,Sydney,Australia,Australia/Sydney,Digital Marketing & Media,2026-09-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0361,[SYNTHETIC] Aether Digital 819,billing@aetherdigita.test,+1-555-200-8161,Bangalore,India,Asia/Kolkata,EdTech & E-Learning,2024-12-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0362,[SYNTHETIC] OmniLink Networks 358,billing@omnilinknetw.test,+1-555-130-5478,Sydney,Australia,Australia/Sydney,Digital Marketing & Media,2025-09-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0363,[SYNTHETIC] Everest Fintech 243,billing@everestfinte.test,+1-555-290-7227,London,United Kingdom,Europe/London,Digital Marketing & Media,2026-01-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0364,[SYNTHETIC] Falcon Interactive 312,billing@falconintera.test,+1-555-374-3526,Singapore,Singapore,Asia/Singapore,FinTech & Banking,2025-01-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0365,[SYNTHETIC] Aether Digital 767,billing@aetherdigita.test,+1-555-209-2499,Berlin,Germany,Europe/Berlin,EdTech & E-Learning,2025-11-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0366,[SYNTHETIC] Apex Enterprises 465,billing@apexenterpri.test,+1-555-235-2430,London,United Kingdom,Europe/London,Logistics & Supply Chain,2025-02-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0367,[SYNTHETIC] Luminary Logistics 469,billing@luminarylogi.test,+1-555-126-2468,San Francisco,United States,America/Los_Angeles,Digital Marketing & Media,2025-02-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0368,[SYNTHETIC] WarpSpeed Robotics 105,billing@warpspeedrob.test,+1-555-112-5781,Sydney,Australia,Australia/Sydney,EdTech & E-Learning,2025-11-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0369,[SYNTHETIC] Cobalt Platform 807,billing@cobaltplatfo.test,+1-555-633-3778,Bangalore,India,Asia/Kolkata,HealthTech & Life Sciences,2026-06-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0370,[SYNTHETIC] Titan Platform 183,billing@titanplatfor.test,+1-555-374-9079,Mumbai,India,Asia/Kolkata,Logistics & Supply Chain,2025-09-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0371,[SYNTHETIC] Jupiter Networks 181,billing@jupiternetwo.test,+1-555-406-8933,Berlin,Germany,Europe/Berlin,Logistics & Supply Chain,2026-01-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0372,[SYNTHETIC] EchoSphere Consulting 267,billing@echosphereco.test,+1-555-731-4203,Singapore,Singapore,Asia/Singapore,Manufacturing & IoT,2026-07-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0373,[SYNTHETIC] Fortis Labs 148,billing@fortislabs14.test,+1-555-440-7224,Dubai,UAE,Asia/Dubai,SaaS & Cloud Services,2025-12-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0374,[SYNTHETIC] Vanguard Health 352,billing@vanguardheal.test,+1-555-428-4290,Berlin,Germany,Europe/Berlin,E-Commerce & Retail,2025-09-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0375,[SYNTHETIC] Galactic Ventures 191,billing@galacticvent.test,+1-555-852-9044,Berlin,Germany,Europe/Berlin,EdTech & E-Learning,2025-08-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0376,[SYNTHETIC] Matrix Software 343,billing@matrixsoftwa.test,+1-555-473-2865,Berlin,Germany,Europe/Berlin,Logistics & Supply Chain,2025-12-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0377,[SYNTHETIC] Matrix Media 616,billing@matrixmedia6.test,+1-555-886-1440,San Francisco,United States,America/Los_Angeles,E-Commerce & Retail,2026-09-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0378,[SYNTHETIC] Fortis Media 458,billing@fortismedia4.test,+1-555-789-9180,Dubai,UAE,Asia/Dubai,FinTech & Banking,2025-12-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0379,[SYNTHETIC] IronClad Enterprises 257,billing@ironcladente.test,+1-555-908-7176,Dubai,UAE,Asia/Dubai,E-Commerce & Retail,2026-01-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0380,[SYNTHETIC] EchoSphere Health 622,billing@echospherehe.test,+1-555-618-7853,New York,United States,America/New_York,Digital Marketing & Media,2026-05-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0381,[SYNTHETIC] Kinetic Solutions 819,billing@kineticsolut.test,+1-555-887-5067,London,United Kingdom,Europe/London,FinTech & Banking,2025-02-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0382,[SYNTHETIC] Strata Consulting 180,billing@strataconsul.test,+1-555-760-7547,Sydney,Australia,Australia/Sydney,SaaS & Cloud Services,2026-05-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0383,[SYNTHETIC] Vanguard Logistics 118,billing@vanguardlogi.test,+1-555-327-9366,Kochi,India,Asia/Kolkata,FinTech & Banking,2025-07-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0384,[SYNTHETIC] JetStream Robotics 604,billing@jetstreamrob.test,+1-555-483-7408,Sydney,Australia,Australia/Sydney,HealthTech & Life Sciences,2026-01-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0385,[SYNTHETIC] Fortis Cloud 717,billing@fortiscloud7.test,+1-555-125-8909,San Francisco,United States,America/Los_Angeles,E-Commerce & Retail,2025-10-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0386,[SYNTHETIC] GridCore Enterprises 435,billing@gridcoreente.test,+1-555-456-6110,Bangalore,India,Asia/Kolkata,FinTech & Banking,2025-03-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0387,[SYNTHETIC] Vanguard Health 813,billing@vanguardheal.test,+1-555-587-2599,Singapore,Singapore,Asia/Singapore,Manufacturing & IoT,2025-10-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0388,[SYNTHETIC] Everest Health 336,billing@everesthealt.test,+1-555-929-2885,Bangalore,India,Asia/Kolkata,Logistics & Supply Chain,2024-12-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0389,[SYNTHETIC] BlueWave Ventures 673,billing@bluewavevent.test,+1-555-628-3858,Bangalore,India,Asia/Kolkata,E-Commerce & Retail,2025-07-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0390,[SYNTHETIC] LogiTech Systems 348,billing@logitechsyst.test,+1-555-337-7636,San Francisco,United States,America/Los_Angeles,Digital Marketing & Media,2026-02-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0391,[SYNTHETIC] Quasar Systems 200,billing@quasarsystem.test,+1-555-855-4232,Berlin,Germany,Europe/Berlin,Digital Marketing & Media,2024-11-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0392,[SYNTHETIC] Everest Cloud 449,billing@everestcloud.test,+1-555-310-5560,Berlin,Germany,Europe/Berlin,SaaS & Cloud Services,2025-06-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0393,[SYNTHETIC] EchoSphere Cloud 114,billing@echospherecl.test,+1-555-433-4228,San Francisco,United States,America/Los_Angeles,E-Commerce & Retail,2025-11-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0394,[SYNTHETIC] Fortis Labs 278,billing@fortislabs27.test,+1-555-497-7431,New York,United States,America/New_York,EdTech & E-Learning,2026-07-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0395,[SYNTHETIC] Nexus Labs 366,billing@nexuslabs366.test,+1-555-276-5873,London,United Kingdom,Europe/London,Manufacturing & IoT,2026-07-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0396,[SYNTHETIC] Polaris Cloud 96,billing@polariscloud.test,+1-555-344-6003,Mumbai,India,Asia/Kolkata,EdTech & E-Learning,2025-02-28,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0397,[SYNTHETIC] Horizon Systems 392,billing@horizonsyste.test,+1-555-710-3258,Mumbai,India,Asia/Kolkata,Digital Marketing & Media,2026-01-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0398,[SYNTHETIC] Matrix Platform 443,billing@matrixplatfo.test,+1-555-650-3838,Mumbai,India,Asia/Kolkata,Manufacturing & IoT,2026-08-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0399,[SYNTHETIC] LogiTech Systems 511,billing@logitechsyst.test,+1-555-422-8389,Dubai,UAE,Asia/Dubai,E-Commerce & Retail,2025-05-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0400,[SYNTHETIC] Polaris Solutions 896,billing@polarissolut.test,+1-555-239-4196,London,United Kingdom,Europe/London,SaaS & Cloud Services,2026-03-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0401,[SYNTHETIC] Aether Robotics 527,billing@aetherroboti.test,+1-555-525-8272,New York,United States,America/New_York,Digital Marketing & Media,2026-03-18,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0402,[SYNTHETIC] Hyperion Systems 94,billing@hyperionsyst.test,+1-555-399-1535,Sydney,Australia,Australia/Sydney,SaaS & Cloud Services,2025-06-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0403,[SYNTHETIC] Radiant Software 560,billing@radiantsoftw.test,+1-555-679-9115,Dubai,UAE,Asia/Dubai,E-Commerce & Retail,2026-02-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0404,[SYNTHETIC] LogiTech Security 125,billing@logitechsecu.test,+1-555-893-9898,Sydney,Australia,Australia/Sydney,FinTech & Banking,2025-08-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0405,[SYNTHETIC] Zenith Robotics 852,billing@zenithroboti.test,+1-555-323-7965,Kochi,India,Asia/Kolkata,Manufacturing & IoT,2026-05-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0406,[SYNTHETIC] GridCore Software 314,billing@gridcoresoft.test,+1-555-456-2425,Kochi,India,Asia/Kolkata,Manufacturing & IoT,2025-07-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0407,[SYNTHETIC] Everest Labs 804,billing@everestlabs8.test,+1-555-805-6744,Singapore,Singapore,Asia/Singapore,HealthTech & Life Sciences,2026-06-25,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0408,[SYNTHETIC] Polaris Logistics 179,billing@polarislogis.test,+1-555-933-4390,Sydney,Australia,Australia/Sydney,E-Commerce & Retail,2025-05-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0409,[SYNTHETIC] DeltaByte Cloud 369,billing@deltabyteclo.test,+1-555-651-3758,San Francisco,United States,America/Los_Angeles,Logistics & Supply Chain,2026-07-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0410,[SYNTHETIC] Unified Enterprises 306,billing@unifiedenter.test,+1-555-795-2560,Sydney,Australia,Australia/Sydney,Logistics & Supply Chain,2026-04-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0411,[SYNTHETIC] IronClad Logistics 950,billing@ironcladlogi.test,+1-555-229-3174,Kochi,India,Asia/Kolkata,Logistics & Supply Chain,2026-09-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0412,[SYNTHETIC] Prism Digital 738,billing@prismdigital.test,+1-555-502-9019,London,United Kingdom,Europe/London,HealthTech & Life Sciences,2026-09-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0413,[SYNTHETIC] Jupiter Cloud 657,billing@jupitercloud.test,+1-555-562-2237,Dubai,UAE,Asia/Dubai,Digital Marketing & Media,2025-11-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0414,[SYNTHETIC] Quasar Networks 422,billing@quasarnetwor.test,+1-555-565-8996,San Francisco,United States,America/Los_Angeles,Logistics & Supply Chain,2025-11-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0415,[SYNTHETIC] Unified Cloud 12,billing@unifiedcloud.test,+1-555-780-6869,Bangalore,India,Asia/Kolkata,Manufacturing & IoT,2026-08-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0416,[SYNTHETIC] EchoSphere Robotics 417,billing@echospherero.test,+1-555-606-5399,Singapore,Singapore,Asia/Singapore,Digital Marketing & Media,2025-06-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0417,[SYNTHETIC] Unified Enterprises 355,billing@unifiedenter.test,+1-555-972-8951,San Francisco,United States,America/Los_Angeles,E-Commerce & Retail,2026-06-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0418,[SYNTHETIC] Vanguard Solutions 57,billing@vanguardsolu.test,+1-555-227-3588,Bangalore,India,Asia/Kolkata,Manufacturing & IoT,2024-11-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0419,[SYNTHETIC] Everest Health 10,billing@everesthealt.test,+1-555-765-5945,Berlin,Germany,Europe/Berlin,HealthTech & Life Sciences,2025-03-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0420,[SYNTHETIC] Krypton Analytics 105,billing@kryptonanaly.test,+1-555-480-3711,London,United Kingdom,Europe/London,Logistics & Supply Chain,2025-01-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0421,[SYNTHETIC] DeltaByte Platform 650,billing@deltabytepla.test,+1-555-771-2494,Dubai,UAE,Asia/Dubai,HealthTech & Life Sciences,2026-01-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0422,[SYNTHETIC] GridCore Technologies 228,billing@gridcoretech.test,+1-555-707-4705,New York,United States,America/New_York,FinTech & Banking,2025-03-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0423,[SYNTHETIC] JetStream Health 19,billing@jetstreamhea.test,+1-555-980-7919,Kochi,India,Asia/Kolkata,EdTech & E-Learning,2025-03-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0424,[SYNTHETIC] IronClad Fintech 82,billing@ironcladfint.test,+1-555-848-2678,Singapore,Singapore,Asia/Singapore,Digital Marketing & Media,2025-01-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0425,[SYNTHETIC] GridCore Ventures 386,billing@gridcorevent.test,+1-555-892-3181,Dubai,UAE,Asia/Dubai,E-Commerce & Retail,2025-11-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0426,[SYNTHETIC] Resonant Digital 80,billing@resonantdigi.test,+1-555-765-3688,San Francisco,United States,America/Los_Angeles,SaaS & Cloud Services,2026-07-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0427,[SYNTHETIC] Everest Consulting 749,billing@everestconsu.test,+1-555-730-8248,Singapore,Singapore,Asia/Singapore,E-Commerce & Retail,2025-12-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0428,[SYNTHETIC] NovaPulse Networks 928,billing@novapulsenet.test,+1-555-703-7291,Bangalore,India,Asia/Kolkata,E-Commerce & Retail,2025-03-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0429,[SYNTHETIC] WarpSpeed Logistics 332,billing@warpspeedlog.test,+1-555-760-2380,Mumbai,India,Asia/Kolkata,HealthTech & Life Sciences,2025-08-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0430,[SYNTHETIC] Prism Robotics 625,billing@prismrobotic.test,+1-555-968-5942,Sydney,Australia,Australia/Sydney,Logistics & Supply Chain,2024-11-27,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0431,[SYNTHETIC] NovaPulse Security 631,billing@novapulsesec.test,+1-555-402-1894,San Francisco,United States,America/Los_Angeles,HealthTech & Life Sciences,2025-12-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0432,[SYNTHETIC] Prism Fintech 405,billing@prismfintech.test,+1-555-753-2163,Bangalore,India,Asia/Kolkata,HealthTech & Life Sciences,2026-03-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0433,[SYNTHETIC] JetStream Technologies 379,billing@jetstreamtec.test,+1-555-981-7895,London,United Kingdom,Europe/London,E-Commerce & Retail,2025-12-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0434,[SYNTHETIC] Zenith Robotics 709,billing@zenithroboti.test,+1-555-117-2106,Mumbai,India,Asia/Kolkata,Manufacturing & IoT,2025-01-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0435,[SYNTHETIC] Apex Analytics 230,billing@apexanalytic.test,+1-555-618-5693,Kochi,India,Asia/Kolkata,SaaS & Cloud Services,2025-12-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0436,[SYNTHETIC] Quasar Security 795,billing@quasarsecuri.test,+1-555-184-9791,Berlin,Germany,Europe/Berlin,Digital Marketing & Media,2025-12-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0437,[SYNTHETIC] Kinetic Interactive 166,billing@kineticinter.test,+1-555-180-9377,Dubai,UAE,Asia/Dubai,FinTech & Banking,2025-09-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0438,[SYNTHETIC] NovaPulse Digital 559,billing@novapulsedig.test,+1-555-749-2083,London,United Kingdom,Europe/London,Digital Marketing & Media,2026-06-23,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0439,[SYNTHETIC] TerraData Logistics 757,billing@terradatalog.test,+1-555-188-8118,Singapore,Singapore,Asia/Singapore,SaaS & Cloud Services,2025-07-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0440,[SYNTHETIC] Horizon Health 636,billing@horizonhealt.test,+1-555-782-3877,Sydney,Australia,Australia/Sydney,SaaS & Cloud Services,2025-09-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0441,[SYNTHETIC] Horizon Technologies 734,billing@horizontechn.test,+1-555-608-6680,Mumbai,India,Asia/Kolkata,SaaS & Cloud Services,2025-04-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0442,[SYNTHETIC] JetStream Security 811,billing@jetstreamsec.test,+1-555-229-5403,Dubai,UAE,Asia/Dubai,E-Commerce & Retail,2025-11-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0443,[SYNTHETIC] Horizon Technologies 353,billing@horizontechn.test,+1-555-165-5308,Berlin,Germany,Europe/Berlin,Logistics & Supply Chain,2026-04-20,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0444,[SYNTHETIC] Matrix Networks 518,billing@matrixnetwor.test,+1-555-611-3734,New York,United States,America/New_York,EdTech & E-Learning,2024-12-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0445,[SYNTHETIC] Zenith Systems 271,billing@zenithsystem.test,+1-555-858-9336,Bangalore,India,Asia/Kolkata,FinTech & Banking,2025-06-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0446,[SYNTHETIC] Apex Solutions 889,billing@apexsolution.test,+1-555-583-6963,Kochi,India,Asia/Kolkata,HealthTech & Life Sciences,2024-12-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0447,[SYNTHETIC] Aether Digital 193,billing@aetherdigita.test,+1-555-429-5067,Kochi,India,Asia/Kolkata,Digital Marketing & Media,2025-06-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0448,[SYNTHETIC] Cobalt Ventures 287,billing@cobaltventur.test,+1-555-614-1862,Bangalore,India,Asia/Kolkata,EdTech & E-Learning,2025-03-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0449,[SYNTHETIC] Luminary Software 833,billing@luminarysoft.test,+1-555-170-8620,San Francisco,United States,America/Los_Angeles,SaaS & Cloud Services,2025-12-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0450,[SYNTHETIC] SyncPulse Enterprises 345,billing@syncpulseent.test,+1-555-477-4287,Bangalore,India,Asia/Kolkata,Manufacturing & IoT,2024-11-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0451,[SYNTHETIC] SyncPulse Cloud 813,billing@syncpulseclo.test,+1-555-477-9083,Dubai,UAE,Asia/Dubai,HealthTech & Life Sciences,2026-02-18,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0452,[SYNTHETIC] MetaFlow Robotics 788,billing@metaflowrobo.test,+1-555-519-1391,Singapore,Singapore,Asia/Singapore,E-Commerce & Retail,2024-11-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0453,[SYNTHETIC] OmniLink Robotics 364,billing@omnilinkrobo.test,+1-555-877-7164,Kochi,India,Asia/Kolkata,EdTech & E-Learning,2024-11-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0454,[SYNTHETIC] TerraData Labs 220,billing@terradatalab.test,+1-555-603-1981,San Francisco,United States,America/Los_Angeles,HealthTech & Life Sciences,2026-01-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0455,[SYNTHETIC] Jupiter Analytics 105,billing@jupiteranaly.test,+1-555-522-7102,Kochi,India,Asia/Kolkata,HealthTech & Life Sciences,2026-04-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0456,[SYNTHETIC] Fortis Networks 604,billing@fortisnetwor.test,+1-555-939-7461,Bangalore,India,Asia/Kolkata,E-Commerce & Retail,2026-08-14,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0457,[SYNTHETIC] EchoSphere Cloud 591,billing@echospherecl.test,+1-555-233-4879,Kochi,India,Asia/Kolkata,Digital Marketing & Media,2026-09-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0458,[SYNTHETIC] SyncPulse Analytics 881,billing@syncpulseana.test,+1-555-425-8417,London,United Kingdom,Europe/London,Digital Marketing & Media,2025-09-30,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0459,[SYNTHETIC] Radiant Software 86,billing@radiantsoftw.test,+1-555-211-3546,Singapore,Singapore,Asia/Singapore,E-Commerce & Retail,2026-06-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0460,[SYNTHETIC] GridCore Systems 470,billing@gridcoresyst.test,+1-555-223-9780,New York,United States,America/New_York,EdTech & E-Learning,2025-12-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0461,[SYNTHETIC] WarpSpeed Media 472,billing@warpspeedmed.test,+1-555-972-2964,Dubai,UAE,Asia/Dubai,Manufacturing & IoT,2025-07-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0462,[SYNTHETIC] Falcon Systems 836,billing@falconsystem.test,+1-555-955-6370,Dubai,UAE,Asia/Dubai,SaaS & Cloud Services,2025-06-08,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0463,[SYNTHETIC] Jupiter Networks 738,billing@jupiternetwo.test,+1-555-625-1802,Singapore,Singapore,Asia/Singapore,EdTech & E-Learning,2025-12-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0464,[SYNTHETIC] Titan Enterprises 276,billing@titanenterpr.test,+1-555-975-8408,Mumbai,India,Asia/Kolkata,SaaS & Cloud Services,2025-12-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0465,[SYNTHETIC] LogiTech Robotics 265,billing@logitechrobo.test,+1-555-923-3290,Bangalore,India,Asia/Kolkata,Manufacturing & IoT,2025-02-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0466,[SYNTHETIC] Horizon Technologies 73,billing@horizontechn.test,+1-555-943-7563,Singapore,Singapore,Asia/Singapore,E-Commerce & Retail,2025-05-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0467,[SYNTHETIC] Zenith Networks 606,billing@zenithnetwor.test,+1-555-122-2056,Sydney,Australia,Australia/Sydney,Logistics & Supply Chain,2025-01-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0468,[SYNTHETIC] MetaFlow Health 838,billing@metaflowheal.test,+1-555-225-1699,Mumbai,India,Asia/Kolkata,FinTech & Banking,2025-10-05,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0469,[SYNTHETIC] Fortis Solutions 182,billing@fortissoluti.test,+1-555-608-1483,Sydney,Australia,Australia/Sydney,Digital Marketing & Media,2025-12-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0470,[SYNTHETIC] Aether Logistics 186,billing@aetherlogist.test,+1-555-381-5585,London,United Kingdom,Europe/London,HealthTech & Life Sciences,2025-05-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0471,[SYNTHETIC] Everest Digital 45,billing@everestdigit.test,+1-555-402-9173,Sydney,Australia,Australia/Sydney,HealthTech & Life Sciences,2026-08-24,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0472,[SYNTHETIC] Cobalt Robotics 500,billing@cobaltroboti.test,+1-555-492-3248,Kochi,India,Asia/Kolkata,FinTech & Banking,2025-08-13,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0473,[SYNTHETIC] Cobalt Media 668,billing@cobaltmedia6.test,+1-555-921-9907,San Francisco,United States,America/Los_Angeles,HealthTech & Life Sciences,2026-08-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0474,[SYNTHETIC] BlueWave Platform 810,billing@bluewaveplat.test,+1-555-900-8940,London,United Kingdom,Europe/London,Manufacturing & IoT,2026-05-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0475,[SYNTHETIC] WarpSpeed Cloud 524,billing@warpspeedclo.test,+1-555-284-1427,London,United Kingdom,Europe/London,Digital Marketing & Media,2025-08-03,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0476,[SYNTHETIC] Unified Interactive 234,billing@unifiedinter.test,+1-555-928-8728,Kochi,India,Asia/Kolkata,Logistics & Supply Chain,2024-12-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0477,[SYNTHETIC] JetStream Consulting 795,billing@jetstreamcon.test,+1-555-202-5060,Sydney,Australia,Australia/Sydney,HealthTech & Life Sciences,2025-04-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0478,[SYNTHETIC] Strata Software 282,billing@stratasoftwa.test,+1-555-689-7363,San Francisco,United States,America/Los_Angeles,SaaS & Cloud Services,2025-06-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0479,[SYNTHETIC] WarpSpeed Systems 190,billing@warpspeedsys.test,+1-555-705-1462,Singapore,Singapore,Asia/Singapore,EdTech & E-Learning,2025-11-02,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0480,[SYNTHETIC] WarpSpeed Cloud 587,billing@warpspeedclo.test,+1-555-655-6063,Mumbai,India,Asia/Kolkata,HealthTech & Life Sciences,2026-03-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0481,[SYNTHETIC] Luminary Fintech 48,billing@luminaryfint.test,+1-555-716-4584,Bangalore,India,Asia/Kolkata,SaaS & Cloud Services,2025-06-26,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0482,[SYNTHETIC] BlueWave Security 499,billing@bluewavesecu.test,+1-555-306-3137,Kochi,India,Asia/Kolkata,EdTech & E-Learning,2026-07-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0483,[SYNTHETIC] Vanguard Systems 950,billing@vanguardsyst.test,+1-555-251-3320,London,United Kingdom,Europe/London,SaaS & Cloud Services,2024-11-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0484,[SYNTHETIC] Horizon Security 891,billing@horizonsecur.test,+1-555-821-7481,London,United Kingdom,Europe/London,FinTech & Banking,2025-11-17,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0485,[SYNTHETIC] Nexus Labs 354,billing@nexuslabs354.test,+1-555-261-8157,Dubai,UAE,Asia/Dubai,EdTech & E-Learning,2025-03-19,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0486,[SYNTHETIC] Quasar Fintech 674,billing@quasarfintec.test,+1-555-810-6846,London,United Kingdom,Europe/London,E-Commerce & Retail,2026-05-29,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0487,[SYNTHETIC] OmniLink Cloud 844,billing@omnilinkclou.test,+1-555-851-5825,Mumbai,India,Asia/Kolkata,Digital Marketing & Media,2025-09-10,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0488,[SYNTHETIC] IronClad Systems 756,billing@ironcladsyst.test,+1-555-133-3983,Kochi,India,Asia/Kolkata,Digital Marketing & Media,2026-06-04,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0489,[SYNTHETIC] Optima Ventures 953,billing@optimaventur.test,+1-555-679-2705,Sydney,Australia,Australia/Sydney,HealthTech & Life Sciences,2026-08-16,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0490,[SYNTHETIC] Hyperion Digital 349,billing@hyperiondigi.test,+1-555-427-3750,Bangalore,India,Asia/Kolkata,HealthTech & Life Sciences,2025-10-21,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0491,[SYNTHETIC] Quasar Networks 851,billing@quasarnetwor.test,+1-555-371-4435,London,United Kingdom,Europe/London,Manufacturing & IoT,2024-11-11,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0492,[SYNTHETIC] Prism Networks 368,billing@prismnetwork.test,+1-555-149-7323,Dubai,UAE,Asia/Dubai,FinTech & Banking,2024-11-01,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0493,[SYNTHETIC] Everest Logistics 180,billing@everestlogis.test,+1-555-459-9946,Berlin,Germany,Europe/Berlin,Manufacturing & IoT,2025-11-22,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0494,[SYNTHETIC] Aether Labs 858,billing@aetherlabs85.test,+1-555-562-2207,New York,United States,America/New_York,HealthTech & Life Sciences,2025-04-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0495,[SYNTHETIC] CloudPeak Enterprises 30,billing@cloudpeakent.test,+1-555-175-6600,London,United Kingdom,Europe/London,Logistics & Supply Chain,2025-02-15,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0496,[SYNTHETIC] Krypton Platform 174,billing@kryptonplatf.test,+1-555-708-8909,Bangalore,India,Asia/Kolkata,FinTech & Banking,2025-10-12,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0497,[SYNTHETIC] BlueWave Logistics 975,billing@bluewavelogi.test,+1-555-154-2659,Mumbai,India,Asia/Kolkata,Digital Marketing & Media,2025-04-09,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0498,[SYNTHETIC] Vanguard Media 204,billing@vanguardmedi.test,+1-555-388-5872,Berlin,Germany,Europe/Berlin,Logistics & Supply Chain,2026-09-07,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0499,[SYNTHETIC] Prism Labs 60,billing@prismlabs60.test,+1-555-155-6911,Berlin,Germany,Europe/Berlin,Manufacturing & IoT,2025-04-06,True,SYNTHETIC_DEV_DATA
+CUST-SYNTH-0500,[SYNTHETIC] Apex Logistics 99,billing@apexlogistic.test,+1-555-199-1421,Dubai,UAE,Asia/Dubai,Manufacturing & IoT,2025-05-23,True,SYNTHETIC_DEV_DATA

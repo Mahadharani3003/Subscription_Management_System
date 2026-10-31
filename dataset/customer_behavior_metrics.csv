@@ -1,0 +1,501 @@
+customer_id,customer_name,industry,country,tenure_days,subscription_count,active_subscription_count,total_invoices,total_invoices_paid,total_invoices_failed,total_revenue_paid,upgrades_count,downgrades_count,support_tickets_count,avg_platform_logins_monthly,is_churned,churn_reason,payment_failure_rate,is_synthetic
+CUST-SYNTH-0001,[SYNTHETIC] Quasar Labs 35,HealthTech & Life Sciences,UAE,502,3,1,16,16,0,3594.0,0,0,6,10.3,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0002,[SYNTHETIC] Titan Robotics 99,Digital Marketing & Media,Australia,698,2,1,11,10,1,570.0,0,0,9,47.0,1,Feature Limitations / Missing Capabilities,0.091,True
+CUST-SYNTH-0003,[SYNTHETIC] NovaPulse Software 527,SaaS & Cloud Services,Australia,156,2,2,7,7,0,6873.0,0,0,15,40.9,0,N/A,0.0,True
+CUST-SYNTH-0004,[SYNTHETIC] Cobalt Software 469,Logistics & Supply Chain,Australia,724,5,4,23,21,2,1739.0,0,0,9,38.2,0,N/A,0.087,True
+CUST-SYNTH-0005,[SYNTHETIC] Dynamo Ventures 294,HealthTech & Life Sciences,India,386,2,2,10,10,0,2490.0,0,0,15,24.8,0,N/A,0.0,True
+CUST-SYNTH-0006,[SYNTHETIC] Aether Labs 377,Logistics & Supply Chain,United Kingdom,686,3,2,14,12,2,1608.0,2,0,8,6.6,1,Budget Constraints / Downsizing,0.143,True
+CUST-SYNTH-0007,[SYNTHETIC] Kinetic Labs 954,FinTech & Banking,Germany,165,2,2,10,10,0,1030.0,0,0,12,10.9,0,N/A,0.0,True
+CUST-SYNTH-0008,[SYNTHETIC] Matrix Media 731,SaaS & Cloud Services,India,53,0,0,0,0,0,0.0,0,0,12,19.3,0,N/A,0.0,True
+CUST-SYNTH-0009,[SYNTHETIC] Falcon Software 897,Digital Marketing & Media,India,446,2,1,7,7,0,4303.0,0,0,14,4.5,0,N/A,0.0,True
+CUST-SYNTH-0010,[SYNTHETIC] Krypton Consulting 373,Logistics & Supply Chain,Singapore,31,1,1,8,8,0,792.0,0,0,14,23.7,0,N/A,0.0,True
+CUST-SYNTH-0011,[SYNTHETIC] Optima Systems 556,E-Commerce & Retail,Singapore,257,2,1,9,7,2,2173.0,0,0,7,40.6,0,N/A,0.222,True
+CUST-SYNTH-0012,[SYNTHETIC] Quasar Robotics 234,SaaS & Cloud Services,United Kingdom,496,4,2,27,26,1,2769.0,1,0,1,9.4,1,Budget Constraints / Downsizing,0.037,True
+CUST-SYNTH-0013,[SYNTHETIC] Unified Platform 284,HealthTech & Life Sciences,India,150,3,1,15,15,0,4555.0,0,0,3,6.4,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0014,[SYNTHETIC] NovaPulse Fintech 415,E-Commerce & Retail,United States,459,3,3,12,11,1,12359.0,0,0,11,39.3,0,N/A,0.083,True
+CUST-SYNTH-0015,[SYNTHETIC] LogiTech Robotics 279,Digital Marketing & Media,Australia,133,4,3,28,26,2,3614.0,1,0,13,46.7,1,Migrated to Competitor,0.071,True
+CUST-SYNTH-0016,[SYNTHETIC] OmniLink Digital 531,FinTech & Banking,United States,682,2,1,12,12,0,2458.0,0,0,7,27.7,0,N/A,0.0,True
+CUST-SYNTH-0017,[SYNTHETIC] Jupiter Systems 821,FinTech & Banking,Germany,336,2,1,5,5,0,885.0,1,0,12,39.7,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0018,[SYNTHETIC] JetStream Analytics 576,FinTech & Banking,India,32,0,0,0,0,0,0.0,0,0,13,46.4,0,N/A,0.0,True
+CUST-SYNTH-0019,[SYNTHETIC] Resonant Ventures 124,Digital Marketing & Media,UAE,569,2,2,6,5,1,3035.0,0,0,15,28.6,0,N/A,0.167,True
+CUST-SYNTH-0020,[SYNTHETIC] Quantum Security 790,FinTech & Banking,India,90,3,2,17,17,0,933.0,1,0,7,24.2,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0021,[SYNTHETIC] Optima Media 166,E-Commerce & Retail,United Kingdom,178,1,1,8,8,0,1472.0,0,0,2,20.5,0,N/A,0.0,True
+CUST-SYNTH-0022,[SYNTHETIC] Apex Interactive 341,SaaS & Cloud Services,United States,616,2,1,2,2,0,7028.0,0,0,1,25.3,0,N/A,0.0,True
+CUST-SYNTH-0023,[SYNTHETIC] Prism Solutions 256,FinTech & Banking,Australia,643,2,1,2,2,0,198.0,0,0,4,8.0,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0024,[SYNTHETIC] EchoSphere Robotics 794,E-Commerce & Retail,India,55,5,2,27,25,2,6685.0,1,0,14,10.4,1,Migrated to Competitor,0.074,True
+CUST-SYNTH-0025,[SYNTHETIC] Quantum Security 903,Digital Marketing & Media,Australia,514,3,2,25,21,4,4959.0,1,0,5,46.7,0,N/A,0.16,True
+CUST-SYNTH-0026,[SYNTHETIC] TerraData Platform 697,Manufacturing & IoT,United Kingdom,201,2,1,8,8,0,2092.0,0,0,6,8.2,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0027,[SYNTHETIC] Prism Software 75,SaaS & Cloud Services,United Kingdom,128,3,2,3,3,0,2347.0,0,0,13,6.1,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0028,[SYNTHETIC] Nexus Software 17,SaaS & Cloud Services,India,496,2,2,7,6,1,294.0,0,0,13,11.7,0,N/A,0.143,True
+CUST-SYNTH-0029,[SYNTHETIC] Vanguard Networks 536,Logistics & Supply Chain,Singapore,45,0,0,0,0,0,0.0,0,0,4,40.5,0,N/A,0.0,True
+CUST-SYNTH-0030,[SYNTHETIC] Kinetic Digital 750,Manufacturing & IoT,Australia,482,1,1,11,9,2,1296.0,0,0,8,17.0,0,N/A,0.182,True
+CUST-SYNTH-0031,[SYNTHETIC] Cobalt Media 106,Digital Marketing & Media,India,368,1,1,6,6,0,594.0,0,0,2,6.5,0,N/A,0.0,True
+CUST-SYNTH-0032,[SYNTHETIC] Fortis Solutions 699,SaaS & Cloud Services,India,318,1,1,8,8,0,232.0,0,0,12,27.6,0,N/A,0.0,True
+CUST-SYNTH-0033,[SYNTHETIC] GridCore Software 206,Manufacturing & IoT,Singapore,587,3,2,14,14,0,1686.0,1,0,8,26.1,0,N/A,0.0,True
+CUST-SYNTH-0034,[SYNTHETIC] Radiant Health 265,Manufacturing & IoT,India,167,2,1,6,5,1,1185.0,0,0,0,38.3,1,Budget Constraints / Downsizing,0.167,True
+CUST-SYNTH-0035,[SYNTHETIC] Resonant Robotics 866,FinTech & Banking,India,488,1,0,2,2,0,58.0,0,0,13,7.6,0,N/A,0.0,True
+CUST-SYNTH-0036,[SYNTHETIC] Hyperion Fintech 228,SaaS & Cloud Services,Germany,562,1,1,7,7,0,203.0,0,0,4,9.2,0,N/A,0.0,True
+CUST-SYNTH-0037,[SYNTHETIC] Aether Analytics 958,Logistics & Supply Chain,United States,297,0,0,0,0,0,0.0,0,0,3,44.6,0,N/A,0.0,True
+CUST-SYNTH-0038,[SYNTHETIC] Jupiter Media 313,SaaS & Cloud Services,Singapore,137,1,1,0,0,0,0.0,0,0,3,38.3,0,N/A,0.0,True
+CUST-SYNTH-0039,[SYNTHETIC] DeltaByte Ventures 68,Manufacturing & IoT,India,216,1,1,11,11,0,2739.0,0,0,11,42.4,0,N/A,0.0,True
+CUST-SYNTH-0040,[SYNTHETIC] Krypton Solutions 993,FinTech & Banking,United States,540,1,0,1,1,0,4999.0,0,0,8,19.9,1,Project Terminated / Engagement Ended,0.0,True
+CUST-SYNTH-0041,[SYNTHETIC] Titan Software 423,HealthTech & Life Sciences,India,138,2,1,5,4,1,5086.0,0,1,15,28.5,1,Involuntary Churn (Repeated Payment Failures),0.2,True
+CUST-SYNTH-0042,[SYNTHETIC] Polaris Networks 439,EdTech & E-Learning,Australia,463,0,0,0,0,0,0.0,0,0,15,4.2,0,N/A,0.0,True
+CUST-SYNTH-0043,[SYNTHETIC] Prism Analytics 415,Logistics & Supply Chain,India,262,2,1,9,9,0,5231.0,0,0,8,20.8,0,N/A,0.0,True
+CUST-SYNTH-0044,[SYNTHETIC] Apex Health 646,FinTech & Banking,Australia,655,3,2,12,10,2,5260.0,1,0,12,4.3,0,N/A,0.167,True
+CUST-SYNTH-0045,[SYNTHETIC] Infini Analytics 145,FinTech & Banking,United Kingdom,480,2,0,5,4,1,1066.0,1,0,10,33.9,1,Budget Constraints / Downsizing,0.2,True
+CUST-SYNTH-0046,[SYNTHETIC] Krypton Health 863,Logistics & Supply Chain,United States,104,3,1,7,6,1,2794.0,0,0,1,36.4,1,Feature Limitations / Missing Capabilities,0.143,True
+CUST-SYNTH-0047,[SYNTHETIC] Apex Robotics 316,E-Commerce & Retail,India,460,1,0,13,11,2,649.0,0,0,8,43.3,0,N/A,0.154,True
+CUST-SYNTH-0048,[SYNTHETIC] LogiTech Digital 288,HealthTech & Life Sciences,UAE,379,3,1,23,21,2,3459.0,0,0,0,17.9,0,N/A,0.087,True
+CUST-SYNTH-0049,[SYNTHETIC] Infini Fintech 267,FinTech & Banking,India,81,4,2,20,19,1,2451.0,2,0,9,16.6,1,Migrated to Competitor,0.05,True
+CUST-SYNTH-0050,[SYNTHETIC] CloudPeak Technologies 351,Logistics & Supply Chain,India,565,0,0,0,0,0,0.0,0,0,15,41.5,0,N/A,0.0,True
+CUST-SYNTH-0051,[SYNTHETIC] LogiTech Logistics 584,FinTech & Banking,India,653,2,1,10,9,1,1641.0,0,0,3,46.7,1,Feature Limitations / Missing Capabilities,0.1,True
+CUST-SYNTH-0052,[SYNTHETIC] Kinetic Solutions 864,E-Commerce & Retail,United Kingdom,290,5,3,16,16,0,1334.0,2,0,7,8.6,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0053,[SYNTHETIC] TerraData Consulting 930,EdTech & E-Learning,India,515,2,2,5,5,0,945.0,0,0,14,37.7,0,N/A,0.0,True
+CUST-SYNTH-0054,[SYNTHETIC] Strata Labs 372,Digital Marketing & Media,United States,95,2,0,3,3,0,5057.0,0,0,10,14.8,1,Project Terminated / Engagement Ended,0.0,True
+CUST-SYNTH-0055,[SYNTHETIC] Prism Systems 829,Digital Marketing & Media,India,705,0,0,0,0,0,0.0,0,0,13,30.0,0,N/A,0.0,True
+CUST-SYNTH-0056,[SYNTHETIC] Cobalt Software 283,FinTech & Banking,India,339,2,2,6,6,0,474.0,0,0,2,11.1,0,N/A,0.0,True
+CUST-SYNTH-0057,[SYNTHETIC] Galactic Software 214,EdTech & E-Learning,United States,418,0,0,0,0,0,0.0,0,0,6,44.1,0,N/A,0.0,True
+CUST-SYNTH-0058,[SYNTHETIC] OmniLink Technologies 685,Digital Marketing & Media,Singapore,394,0,0,0,0,0,0.0,0,0,13,36.2,0,N/A,0.0,True
+CUST-SYNTH-0059,[SYNTHETIC] Radiant Consulting 666,Digital Marketing & Media,United States,35,1,0,2,0,2,0.0,0,0,11,39.9,1,Involuntary Churn (Repeated Payment Failures),1.0,True
+CUST-SYNTH-0060,[SYNTHETIC] Vanguard Technologies 128,E-Commerce & Retail,UAE,136,4,1,5,3,2,357.0,0,0,5,5.5,1,Migrated to Competitor,0.4,True
+CUST-SYNTH-0061,[SYNTHETIC] GridCore Interactive 454,EdTech & E-Learning,United Kingdom,284,4,4,18,17,1,4663.0,0,1,12,8.7,0,N/A,0.056,True
+CUST-SYNTH-0062,[SYNTHETIC] Horizon Platform 931,HealthTech & Life Sciences,Australia,470,2,0,7,4,3,996.0,0,0,0,10.4,1,Involuntary Churn (Repeated Payment Failures),0.429,True
+CUST-SYNTH-0063,[SYNTHETIC] Apex Security 957,HealthTech & Life Sciences,United States,358,4,3,18,18,0,4052.0,1,0,6,40.6,0,N/A,0.0,True
+CUST-SYNTH-0064,[SYNTHETIC] Strata Ventures 648,FinTech & Banking,United Kingdom,423,0,0,0,0,0,0.0,0,0,7,4.0,0,N/A,0.0,True
+CUST-SYNTH-0065,[SYNTHETIC] Strata Logistics 344,Logistics & Supply Chain,Germany,163,3,3,5,5,0,2115.0,1,0,1,44.3,0,N/A,0.0,True
+CUST-SYNTH-0066,[SYNTHETIC] Cobalt Platform 703,Logistics & Supply Chain,India,315,1,1,10,8,2,1992.0,0,0,6,15.0,0,N/A,0.2,True
+CUST-SYNTH-0067,[SYNTHETIC] TerraData Enterprises 225,EdTech & E-Learning,Germany,254,0,0,0,0,0,0.0,0,0,14,25.5,0,N/A,0.0,True
+CUST-SYNTH-0068,[SYNTHETIC] Titan Media 533,E-Commerce & Retail,United States,56,1,1,0,0,0,0.0,1,0,3,33.5,0,N/A,0.0,True
+CUST-SYNTH-0069,[SYNTHETIC] Infini Interactive 353,HealthTech & Life Sciences,India,42,0,0,0,0,0,0.0,0,0,7,19.4,0,N/A,0.0,True
+CUST-SYNTH-0070,[SYNTHETIC] MetaFlow Digital 35,HealthTech & Life Sciences,India,244,3,1,21,19,2,3021.0,2,0,14,10.6,1,Migrated to Competitor,0.095,True
+CUST-SYNTH-0071,[SYNTHETIC] Fortis Logistics 917,HealthTech & Life Sciences,Australia,337,5,4,8,7,1,2243.0,1,0,15,29.2,0,N/A,0.125,True
+CUST-SYNTH-0072,[SYNTHETIC] Prism Digital 681,FinTech & Banking,India,295,2,1,10,8,2,442.0,0,0,11,18.2,0,N/A,0.2,True
+CUST-SYNTH-0073,[SYNTHETIC] JetStream Health 61,HealthTech & Life Sciences,United States,606,3,2,24,22,2,718.0,0,0,8,36.6,0,N/A,0.083,True
+CUST-SYNTH-0074,[SYNTHETIC] Fortis Security 582,EdTech & E-Learning,Australia,277,2,1,2,0,2,0.0,0,0,2,15.5,1,Involuntary Churn (Repeated Payment Failures),1.0,True
+CUST-SYNTH-0075,[SYNTHETIC] Dynamo Robotics 466,Manufacturing & IoT,India,270,1,1,4,3,1,747.0,0,0,12,4.8,0,N/A,0.25,True
+CUST-SYNTH-0076,[SYNTHETIC] Quasar Analytics 794,Manufacturing & IoT,United States,89,2,1,15,14,1,956.0,0,0,6,41.5,0,N/A,0.067,True
+CUST-SYNTH-0077,[SYNTHETIC] Everest Networks 740,HealthTech & Life Sciences,UAE,452,3,0,12,10,2,1990.0,1,0,7,33.3,1,Involuntary Churn (Repeated Payment Failures),0.167,True
+CUST-SYNTH-0078,[SYNTHETIC] Kinetic Networks 151,HealthTech & Life Sciences,India,338,2,1,12,9,3,2051.0,0,0,8,32.1,0,N/A,0.25,True
+CUST-SYNTH-0079,[SYNTHETIC] NovaPulse Networks 434,EdTech & E-Learning,Germany,175,1,1,8,8,0,232.0,0,0,0,41.8,0,N/A,0.0,True
+CUST-SYNTH-0080,[SYNTHETIC] DeltaByte Media 862,Digital Marketing & Media,Germany,132,1,1,8,7,1,2443.0,0,0,0,24.1,0,N/A,0.125,True
+CUST-SYNTH-0081,[SYNTHETIC] Matrix Platform 498,EdTech & E-Learning,India,425,1,0,12,12,0,1608.0,0,0,4,32.0,0,N/A,0.0,True
+CUST-SYNTH-0082,[SYNTHETIC] Cobalt Robotics 775,HealthTech & Life Sciences,United States,231,3,0,15,14,1,6461.0,0,0,0,12.7,1,Budget Constraints / Downsizing,0.067,True
+CUST-SYNTH-0083,[SYNTHETIC] Dynamo Fintech 39,EdTech & E-Learning,Germany,46,3,2,21,20,1,2730.0,0,0,9,34.9,1,Budget Constraints / Downsizing,0.048,True
+CUST-SYNTH-0084,[SYNTHETIC] Krypton Health 951,SaaS & Cloud Services,India,327,1,1,1,1,0,1999.0,1,0,8,21.8,0,N/A,0.0,True
+CUST-SYNTH-0085,[SYNTHETIC] Falcon Logistics 148,E-Commerce & Retail,United States,679,3,1,10,8,2,1412.0,1,1,12,41.2,1,Project Terminated / Engagement Ended,0.2,True
+CUST-SYNTH-0086,[SYNTHETIC] Unified Media 475,EdTech & E-Learning,United Kingdom,342,1,1,4,4,0,916.0,0,0,14,14.0,0,N/A,0.0,True
+CUST-SYNTH-0087,[SYNTHETIC] Quantum Networks 491,SaaS & Cloud Services,India,372,3,2,11,11,0,2289.0,0,1,14,16.2,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0088,[SYNTHETIC] Resonant Solutions 782,HealthTech & Life Sciences,India,526,1,1,9,9,0,801.0,0,0,12,29.1,0,N/A,0.0,True
+CUST-SYNTH-0089,[SYNTHETIC] Polaris Digital 254,Manufacturing & IoT,India,45,1,0,4,2,2,498.0,0,0,0,25.8,1,Budget Constraints / Downsizing,0.5,True
+CUST-SYNTH-0090,[SYNTHETIC] Fortis Analytics 795,E-Commerce & Retail,United Kingdom,110,2,1,3,3,0,227.0,0,0,11,28.0,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0091,[SYNTHETIC] Krypton Enterprises 120,SaaS & Cloud Services,Australia,411,3,2,26,25,1,2355.0,0,1,9,16.1,1,Budget Constraints / Downsizing,0.038,True
+CUST-SYNTH-0092,[SYNTHETIC] Boreal Media 87,HealthTech & Life Sciences,Australia,626,2,2,14,14,0,1566.0,0,0,3,24.4,0,N/A,0.0,True
+CUST-SYNTH-0093,[SYNTHETIC] Titan Interactive 834,SaaS & Cloud Services,India,375,0,0,0,0,0,0.0,0,0,10,47.5,0,N/A,0.0,True
+CUST-SYNTH-0094,[SYNTHETIC] Strata Consulting 80,EdTech & E-Learning,United States,718,1,1,4,3,1,747.0,0,0,10,41.7,0,N/A,0.25,True
+CUST-SYNTH-0095,[SYNTHETIC] Hyperion Labs 453,Manufacturing & IoT,United Kingdom,574,3,3,2,2,0,358.0,0,0,8,32.4,0,N/A,0.0,True
+CUST-SYNTH-0096,[SYNTHETIC] JetStream Analytics 640,Manufacturing & IoT,United States,254,3,2,18,18,0,4802.0,0,0,9,11.1,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0097,[SYNTHETIC] Unified Software 860,Logistics & Supply Chain,India,269,1,0,1,0,1,0.0,0,0,7,43.4,1,Involuntary Churn (Repeated Payment Failures),1.0,True
+CUST-SYNTH-0098,[SYNTHETIC] Matrix Interactive 694,EdTech & E-Learning,Germany,701,2,1,12,10,2,4310.0,0,0,12,32.6,0,N/A,0.167,True
+CUST-SYNTH-0099,[SYNTHETIC] Luminary Fintech 227,Logistics & Supply Chain,United Kingdom,382,4,1,12,12,0,5458.0,0,0,4,35.3,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0100,[SYNTHETIC] LogiTech Technologies 539,FinTech & Banking,Singapore,483,2,1,7,7,0,443.0,0,0,15,47.9,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0101,[SYNTHETIC] Hyperion Robotics 786,Manufacturing & IoT,Singapore,69,3,2,23,19,4,761.0,1,1,8,43.8,0,N/A,0.174,True
+CUST-SYNTH-0102,[SYNTHETIC] Everest Technologies 105,HealthTech & Life Sciences,UAE,316,5,3,30,26,4,2914.0,0,0,12,20.2,1,Involuntary Churn (Repeated Payment Failures),0.133,True
+CUST-SYNTH-0103,[SYNTHETIC] TerraData Cloud 387,EdTech & E-Learning,United States,295,2,2,7,7,0,623.0,0,0,1,29.0,0,N/A,0.0,True
+CUST-SYNTH-0104,[SYNTHETIC] WarpSpeed Health 287,Logistics & Supply Chain,UAE,494,6,5,41,39,2,7006.0,2,0,6,18.1,1,Budget Constraints / Downsizing,0.049,True
+CUST-SYNTH-0105,[SYNTHETIC] Unified Labs 770,E-Commerce & Retail,United States,534,3,1,7,7,0,4223.0,0,0,7,33.7,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0106,[SYNTHETIC] Radiant Cloud 788,Logistics & Supply Chain,United States,628,1,1,1,1,0,2139.0,0,0,15,43.7,0,N/A,0.0,True
+CUST-SYNTH-0107,[SYNTHETIC] SyncPulse Software 379,Logistics & Supply Chain,India,716,1,1,8,7,1,693.0,0,0,11,25.6,0,N/A,0.125,True
+CUST-SYNTH-0108,[SYNTHETIC] IronClad Analytics 56,Logistics & Supply Chain,India,601,3,1,25,23,2,3917.0,1,0,5,40.7,1,Feature Limitations / Missing Capabilities,0.08,True
+CUST-SYNTH-0109,[SYNTHETIC] GridCore Technologies 597,Manufacturing & IoT,UAE,240,4,3,34,30,4,6720.0,1,0,5,15.9,1,Project Terminated / Engagement Ended,0.118,True
+CUST-SYNTH-0110,[SYNTHETIC] Luminary Solutions 268,FinTech & Banking,United States,664,3,2,15,13,2,4887.0,1,0,15,8.3,1,Involuntary Churn (Repeated Payment Failures),0.133,True
+CUST-SYNTH-0111,[SYNTHETIC] EchoSphere Cloud 654,E-Commerce & Retail,India,578,2,2,3,3,0,297.0,1,0,8,35.5,0,N/A,0.0,True
+CUST-SYNTH-0112,[SYNTHETIC] Falcon Software 131,Digital Marketing & Media,United States,110,1,0,1,1,0,1999.0,0,1,5,45.6,0,N/A,0.0,True
+CUST-SYNTH-0113,[SYNTHETIC] JetStream Platform 471,Logistics & Supply Chain,United States,128,3,2,22,22,0,953.0,0,0,10,32.3,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0114,[SYNTHETIC] Matrix Interactive 71,FinTech & Banking,Australia,518,1,1,7,7,0,203.0,0,0,7,18.7,0,N/A,0.0,True
+CUST-SYNTH-0115,[SYNTHETIC] Quantum Networks 170,E-Commerce & Retail,Singapore,165,4,2,18,15,3,4480.0,0,0,9,21.6,0,N/A,0.167,True
+CUST-SYNTH-0116,[SYNTHETIC] Apex Logistics 471,Manufacturing & IoT,Australia,432,4,3,30,25,5,4645.0,0,1,10,19.4,0,N/A,0.167,True
+CUST-SYNTH-0117,[SYNTHETIC] SyncPulse Enterprises 729,FinTech & Banking,United States,491,2,0,16,15,1,1485.0,0,0,9,23.6,0,N/A,0.062,True
+CUST-SYNTH-0118,[SYNTHETIC] Dynamo Labs 567,E-Commerce & Retail,Singapore,458,1,1,0,0,0,0.0,0,0,3,23.9,0,N/A,0.0,True
+CUST-SYNTH-0119,[SYNTHETIC] EchoSphere Solutions 179,Logistics & Supply Chain,UAE,281,2,2,13,12,1,2088.0,0,0,2,24.0,0,N/A,0.077,True
+CUST-SYNTH-0120,[SYNTHETIC] TerraData Platform 975,Manufacturing & IoT,UAE,282,3,2,3,3,0,9377.0,1,0,6,25.3,1,Involuntary Churn (Repeated Payment Failures),0.0,True
+CUST-SYNTH-0121,[SYNTHETIC] Dynamo Ventures 628,SaaS & Cloud Services,UAE,637,1,0,1,1,0,99.0,1,0,12,26.6,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0122,[SYNTHETIC] Titan Analytics 600,E-Commerce & Retail,India,249,2,1,5,4,1,1206.0,2,0,13,5.0,1,Migrated to Competitor,0.2,True
+CUST-SYNTH-0123,[SYNTHETIC] Radiant Systems 609,Manufacturing & IoT,Germany,637,2,2,5,5,0,795.0,1,0,4,8.8,0,N/A,0.0,True
+CUST-SYNTH-0124,[SYNTHETIC] Cobalt Ventures 338,E-Commerce & Retail,India,393,1,0,5,5,0,145.0,0,0,6,18.1,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0125,[SYNTHETIC] SyncPulse Platform 843,SaaS & Cloud Services,United States,265,3,2,14,14,0,7376.0,0,0,14,9.0,0,N/A,0.0,True
+CUST-SYNTH-0126,[SYNTHETIC] Quantum Ventures 128,SaaS & Cloud Services,Germany,57,1,1,0,0,0,0.0,0,0,5,37.9,0,N/A,0.0,True
+CUST-SYNTH-0127,[SYNTHETIC] Fortis Logistics 65,EdTech & E-Learning,Singapore,93,1,0,12,11,1,319.0,0,0,15,17.6,0,N/A,0.083,True
+CUST-SYNTH-0128,[SYNTHETIC] Quasar Health 788,HealthTech & Life Sciences,India,457,2,0,4,4,0,236.0,0,0,5,16.8,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0129,[SYNTHETIC] SyncPulse Health 911,FinTech & Banking,United States,701,2,1,4,4,0,116.0,0,0,1,2.7,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0130,[SYNTHETIC] Krypton Enterprises 574,Digital Marketing & Media,India,635,1,0,10,8,2,712.0,1,0,8,12.0,1,Involuntary Churn (Repeated Payment Failures),0.2,True
+CUST-SYNTH-0131,[SYNTHETIC] Fortis Labs 673,Manufacturing & IoT,India,432,1,1,2,2,0,58.0,0,0,5,28.7,0,N/A,0.0,True
+CUST-SYNTH-0132,[SYNTHETIC] Cobalt Fintech 493,Manufacturing & IoT,Singapore,166,3,2,11,11,0,2289.0,0,0,5,24.8,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0133,[SYNTHETIC] MetaFlow Interactive 530,FinTech & Banking,India,448,0,0,0,0,0,0.0,0,0,2,8.4,0,N/A,0.0,True
+CUST-SYNTH-0134,[SYNTHETIC] Vanguard Security 283,Logistics & Supply Chain,India,425,6,4,32,29,3,4341.0,0,0,13,31.3,1,Migrated to Competitor,0.094,True
+CUST-SYNTH-0135,[SYNTHETIC] Jupiter Health 561,EdTech & E-Learning,United States,390,3,3,15,14,1,3726.0,1,0,12,22.0,0,N/A,0.067,True
+CUST-SYNTH-0136,[SYNTHETIC] Aether Health 965,HealthTech & Life Sciences,United Kingdom,486,4,3,17,16,1,12044.0,0,0,15,19.9,1,Migrated to Competitor,0.059,True
+CUST-SYNTH-0137,[SYNTHETIC] OmniLink Logistics 54,Manufacturing & IoT,United Kingdom,340,3,2,9,9,0,831.0,0,0,1,26.8,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0138,[SYNTHETIC] Hyperion Solutions 139,EdTech & E-Learning,United States,628,5,3,19,15,4,3950.0,2,1,11,45.7,1,Budget Constraints / Downsizing,0.211,True
+CUST-SYNTH-0139,[SYNTHETIC] GridCore Security 942,SaaS & Cloud Services,United States,583,2,2,12,11,1,459.0,0,0,10,36.9,0,N/A,0.083,True
+CUST-SYNTH-0140,[SYNTHETIC] EchoSphere Fintech 810,EdTech & E-Learning,UAE,92,1,1,0,0,0,0.0,0,0,6,3.3,0,N/A,0.0,True
+CUST-SYNTH-0141,[SYNTHETIC] Resonant Networks 882,Digital Marketing & Media,United Kingdom,406,3,2,16,16,0,2434.0,0,0,0,31.0,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0142,[SYNTHETIC] Kinetic Solutions 642,HealthTech & Life Sciences,India,84,1,1,1,1,0,4999.0,0,0,7,12.8,0,N/A,0.0,True
+CUST-SYNTH-0143,[SYNTHETIC] OmniLink Networks 454,FinTech & Banking,India,276,0,0,0,0,0,0.0,0,0,11,16.7,0,N/A,0.0,True
+CUST-SYNTH-0144,[SYNTHETIC] BlueWave Solutions 342,Logistics & Supply Chain,India,363,9,4,46,42,4,18438.0,0,0,3,20.0,1,Migrated to Competitor,0.087,True
+CUST-SYNTH-0145,[SYNTHETIC] Jupiter Software 553,E-Commerce & Retail,Germany,556,3,0,8,7,1,5623.0,1,1,9,10.1,1,Migrated to Competitor,0.125,True
+CUST-SYNTH-0146,[SYNTHETIC] Polaris Platform 644,Manufacturing & IoT,Singapore,133,3,1,9,5,4,585.0,0,0,1,16.1,1,Involuntary Churn (Repeated Payment Failures),0.444,True
+CUST-SYNTH-0147,[SYNTHETIC] Fortis Analytics 480,SaaS & Cloud Services,UAE,254,2,2,8,8,0,1992.0,2,0,9,23.2,0,N/A,0.0,True
+CUST-SYNTH-0148,[SYNTHETIC] Krypton Networks 462,Logistics & Supply Chain,United Kingdom,76,1,1,2,1,1,289.0,1,0,10,22.2,0,N/A,0.5,True
+CUST-SYNTH-0149,[SYNTHETIC] Fortis Enterprises 213,Manufacturing & IoT,Germany,621,2,1,4,3,1,10027.0,0,0,4,18.1,0,N/A,0.25,True
+CUST-SYNTH-0150,[SYNTHETIC] Matrix Consulting 598,Logistics & Supply Chain,UAE,708,2,2,10,9,1,261.0,0,0,15,18.8,0,N/A,0.1,True
+CUST-SYNTH-0151,[SYNTHETIC] Radiant Technologies 589,Manufacturing & IoT,India,437,2,2,10,10,0,990.0,0,0,6,10.0,0,N/A,0.0,True
+CUST-SYNTH-0152,[SYNTHETIC] Optima Consulting 234,Logistics & Supply Chain,Singapore,36,0,0,0,0,0,0.0,0,0,12,3.4,0,N/A,0.0,True
+CUST-SYNTH-0153,[SYNTHETIC] Quasar Labs 935,Logistics & Supply Chain,India,279,5,5,27,25,2,4400.0,0,0,7,35.6,0,N/A,0.074,True
+CUST-SYNTH-0154,[SYNTHETIC] IronClad Networks 941,EdTech & E-Learning,UAE,305,3,1,12,11,1,389.0,0,0,4,12.1,1,Budget Constraints / Downsizing,0.083,True
+CUST-SYNTH-0155,[SYNTHETIC] IronClad Robotics 907,Logistics & Supply Chain,United Kingdom,562,4,2,18,17,1,3828.0,0,0,0,29.3,1,Migrated to Competitor,0.056,True
+CUST-SYNTH-0156,[SYNTHETIC] SyncPulse Ventures 833,Manufacturing & IoT,India,653,0,0,0,0,0,0.0,0,0,5,8.1,0,N/A,0.0,True
+CUST-SYNTH-0157,[SYNTHETIC] Titan Platform 876,EdTech & E-Learning,United States,638,3,0,17,17,0,2538.0,0,0,1,19.6,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0158,[SYNTHETIC] Apex Analytics 559,Manufacturing & IoT,India,353,0,0,0,0,0,0.0,0,0,8,37.6,0,N/A,0.0,True
+CUST-SYNTH-0159,[SYNTHETIC] Nexus Platform 852,FinTech & Banking,United Kingdom,39,3,1,14,13,1,5777.0,1,0,1,29.5,1,Budget Constraints / Downsizing,0.071,True
+CUST-SYNTH-0160,[SYNTHETIC] BlueWave Interactive 915,EdTech & E-Learning,United States,106,1,0,2,2,0,58.0,0,0,1,32.6,1,Project Terminated / Engagement Ended,0.0,True
+CUST-SYNTH-0161,[SYNTHETIC] Quasar Health 941,Digital Marketing & Media,UAE,611,0,0,0,0,0,0.0,0,0,0,4.7,0,N/A,0.0,True
+CUST-SYNTH-0162,[SYNTHETIC] CloudPeak Enterprises 514,FinTech & Banking,India,490,2,2,1,1,0,5059.0,0,0,3,21.5,0,N/A,0.0,True
+CUST-SYNTH-0163,[SYNTHETIC] Aether Health 389,Digital Marketing & Media,United States,129,6,3,37,35,2,13465.0,1,1,12,8.1,1,Migrated to Competitor,0.054,True
+CUST-SYNTH-0164,[SYNTHETIC] Cobalt Labs 863,Digital Marketing & Media,United States,444,5,3,24,24,0,1816.0,0,0,8,24.1,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0165,[SYNTHETIC] NovaPulse Health 465,EdTech & E-Learning,Singapore,629,2,2,13,12,1,2378.0,1,0,4,11.9,0,N/A,0.077,True
+CUST-SYNTH-0166,[SYNTHETIC] Kinetic Consulting 72,Logistics & Supply Chain,Germany,536,5,2,19,18,1,2232.0,1,0,0,16.2,1,Feature Limitations / Missing Capabilities,0.053,True
+CUST-SYNTH-0167,[SYNTHETIC] Falcon Media 667,SaaS & Cloud Services,Australia,679,2,2,4,4,0,2746.0,1,0,3,32.6,0,N/A,0.0,True
+CUST-SYNTH-0168,[SYNTHETIC] Prism Digital 815,HealthTech & Life Sciences,Australia,660,1,1,4,3,1,207.0,0,0,8,30.8,0,N/A,0.25,True
+CUST-SYNTH-0169,[SYNTHETIC] Nexus Media 842,EdTech & E-Learning,Singapore,579,4,2,3,2,1,4303.0,1,0,4,21.6,1,Project Terminated / Engagement Ended,0.333,True
+CUST-SYNTH-0170,[SYNTHETIC] Radiant Digital 143,Logistics & Supply Chain,United States,552,2,1,10,6,4,594.0,0,0,3,25.8,1,Involuntary Churn (Repeated Payment Failures),0.4,True
+CUST-SYNTH-0171,[SYNTHETIC] IronClad Technologies 376,EdTech & E-Learning,Singapore,714,2,2,16,13,3,2547.0,0,1,3,15.4,0,N/A,0.188,True
+CUST-SYNTH-0172,[SYNTHETIC] DeltaByte Digital 769,FinTech & Banking,Germany,665,0,0,0,0,0,0.0,0,0,3,25.1,0,N/A,0.0,True
+CUST-SYNTH-0173,[SYNTHETIC] Zenith Security 617,Manufacturing & IoT,India,215,3,2,20,20,0,8080.0,0,0,6,37.9,1,Project Terminated / Engagement Ended,0.0,True
+CUST-SYNTH-0174,[SYNTHETIC] Strata Security 318,SaaS & Cloud Services,United States,668,2,1,15,13,2,1287.0,1,0,6,18.8,0,N/A,0.133,True
+CUST-SYNTH-0175,[SYNTHETIC] Dynamo Labs 512,FinTech & Banking,United States,648,1,0,10,8,2,1992.0,0,0,13,15.9,1,Involuntary Churn (Repeated Payment Failures),0.2,True
+CUST-SYNTH-0176,[SYNTHETIC] EchoSphere Digital 291,EdTech & E-Learning,Australia,340,0,0,0,0,0,0.0,0,0,1,27.4,0,N/A,0.0,True
+CUST-SYNTH-0177,[SYNTHETIC] SyncPulse Health 527,Digital Marketing & Media,Australia,629,2,1,17,17,0,1263.0,0,0,6,33.8,0,N/A,0.0,True
+CUST-SYNTH-0178,[SYNTHETIC] Resonant Robotics 748,Digital Marketing & Media,Singapore,268,1,1,9,9,0,981.0,0,0,15,17.5,0,N/A,0.0,True
+CUST-SYNTH-0179,[SYNTHETIC] Vanguard Health 418,FinTech & Banking,Germany,410,6,4,24,24,0,11311.0,0,0,0,3.1,1,Project Terminated / Engagement Ended,0.0,True
+CUST-SYNTH-0180,[SYNTHETIC] Strata Analytics 393,Manufacturing & IoT,India,662,0,0,0,0,0,0.0,0,0,2,43.8,0,N/A,0.0,True
+CUST-SYNTH-0181,[SYNTHETIC] Falcon Logistics 108,E-Commerce & Retail,United Kingdom,161,3,0,9,8,1,1302.0,1,0,15,9.3,1,Migrated to Competitor,0.111,True
+CUST-SYNTH-0182,[SYNTHETIC] Strata Labs 430,Digital Marketing & Media,United Kingdom,678,1,1,4,4,0,756.0,0,0,2,38.0,0,N/A,0.0,True
+CUST-SYNTH-0183,[SYNTHETIC] WarpSpeed Labs 601,HealthTech & Life Sciences,United States,572,1,0,6,3,3,237.0,0,0,2,35.4,1,Involuntary Churn (Repeated Payment Failures),0.5,True
+CUST-SYNTH-0184,[SYNTHETIC] OmniLink Labs 368,EdTech & E-Learning,United States,613,3,2,21,21,0,5109.0,1,0,3,43.7,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0185,[SYNTHETIC] Matrix Software 836,SaaS & Cloud Services,Germany,107,0,0,0,0,0,0.0,0,0,7,23.3,0,N/A,0.0,True
+CUST-SYNTH-0186,[SYNTHETIC] BlueWave Systems 289,EdTech & E-Learning,UAE,371,1,0,6,6,0,174.0,0,0,9,14.5,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0187,[SYNTHETIC] Jupiter Cloud 683,FinTech & Banking,Germany,585,2,1,10,8,2,332.0,0,0,1,7.0,1,Involuntary Churn (Repeated Payment Failures),0.2,True
+CUST-SYNTH-0188,[SYNTHETIC] Falcon Security 230,Digital Marketing & Media,Germany,266,1,1,11,10,1,290.0,0,0,5,42.3,0,N/A,0.091,True
+CUST-SYNTH-0189,[SYNTHETIC] Zenith Enterprises 748,FinTech & Banking,United Kingdom,677,0,0,0,0,0,0.0,0,0,9,18.9,0,N/A,0.0,True
+CUST-SYNTH-0190,[SYNTHETIC] Polaris Solutions 700,Logistics & Supply Chain,India,277,3,2,22,19,3,5091.0,0,0,10,21.9,1,Migrated to Competitor,0.136,True
+CUST-SYNTH-0191,[SYNTHETIC] Hyperion Interactive 462,Logistics & Supply Chain,Germany,510,3,3,12,10,2,2890.0,0,0,3,6.8,0,N/A,0.167,True
+CUST-SYNTH-0192,[SYNTHETIC] Horizon Consulting 450,Logistics & Supply Chain,India,36,1,0,5,5,0,695.0,0,0,1,2.9,1,Project Terminated / Engagement Ended,0.0,True
+CUST-SYNTH-0193,[SYNTHETIC] JetStream Enterprises 56,Digital Marketing & Media,Singapore,117,2,2,12,12,0,348.0,0,1,4,32.7,0,N/A,0.0,True
+CUST-SYNTH-0194,[SYNTHETIC] NovaPulse Enterprises 978,E-Commerce & Retail,Singapore,469,3,2,20,17,3,1013.0,0,0,5,17.5,0,N/A,0.15,True
+CUST-SYNTH-0195,[SYNTHETIC] Horizon Technologies 519,E-Commerce & Retail,Germany,598,1,0,5,5,0,495.0,0,0,14,46.0,0,N/A,0.0,True
+CUST-SYNTH-0196,[SYNTHETIC] OmniLink Security 582,FinTech & Banking,United Kingdom,324,5,4,14,13,1,4237.0,0,0,8,42.5,1,Budget Constraints / Downsizing,0.071,True
+CUST-SYNTH-0197,[SYNTHETIC] Dynamo Technologies 480,EdTech & E-Learning,India,141,0,0,0,0,0,0.0,0,0,2,19.5,0,N/A,0.0,True
+CUST-SYNTH-0198,[SYNTHETIC] Quasar Logistics 306,Digital Marketing & Media,India,709,1,1,8,7,1,693.0,0,0,10,10.8,0,N/A,0.125,True
+CUST-SYNTH-0199,[SYNTHETIC] Polaris Health 861,FinTech & Banking,United Kingdom,283,4,4,12,12,0,3878.0,1,0,12,20.7,0,N/A,0.0,True
+CUST-SYNTH-0200,[SYNTHETIC] Prism Logistics 613,FinTech & Banking,Germany,325,1,1,0,0,0,0.0,0,0,14,14.9,0,N/A,0.0,True
+CUST-SYNTH-0201,[SYNTHETIC] Vanguard Software 351,FinTech & Banking,India,208,2,1,13,13,0,1727.0,0,2,12,33.9,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0202,[SYNTHETIC] JetStream Security 208,EdTech & E-Learning,United Kingdom,70,2,1,3,3,0,747.0,0,0,15,38.9,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0203,[SYNTHETIC] Prism Labs 159,HealthTech & Life Sciences,UAE,553,3,2,15,12,3,1393.0,0,0,5,7.6,0,N/A,0.2,True
+CUST-SYNTH-0204,[SYNTHETIC] Resonant Networks 191,Manufacturing & IoT,United States,153,3,2,22,18,4,4812.0,1,0,1,47.2,1,Involuntary Churn (Repeated Payment Failures),0.182,True
+CUST-SYNTH-0205,[SYNTHETIC] Titan Cloud 668,EdTech & E-Learning,Australia,88,3,3,10,10,0,3370.0,1,0,5,7.2,0,N/A,0.0,True
+CUST-SYNTH-0206,[SYNTHETIC] Everest Networks 490,Logistics & Supply Chain,United States,449,4,1,17,16,1,2164.0,0,1,15,39.0,1,Project Terminated / Engagement Ended,0.059,True
+CUST-SYNTH-0207,[SYNTHETIC] WarpSpeed Security 85,Manufacturing & IoT,UAE,268,1,0,1,1,0,99.0,1,0,14,10.7,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0208,[SYNTHETIC] Zenith Enterprises 88,Digital Marketing & Media,India,257,0,0,0,0,0,0.0,0,0,12,38.0,0,N/A,0.0,True
+CUST-SYNTH-0209,[SYNTHETIC] Everest Cloud 677,EdTech & E-Learning,Singapore,111,1,1,1,1,0,99.0,0,0,0,41.7,0,N/A,0.0,True
+CUST-SYNTH-0210,[SYNTHETIC] Jupiter Solutions 471,EdTech & E-Learning,India,644,2,2,13,13,0,1682.0,0,0,4,24.5,0,N/A,0.0,True
+CUST-SYNTH-0211,[SYNTHETIC] CloudPeak Software 734,Manufacturing & IoT,United States,194,2,1,2,2,0,7038.0,0,0,15,7.6,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0212,[SYNTHETIC] Zenith Consulting 949,Digital Marketing & Media,UAE,312,1,1,5,5,0,1395.0,0,0,13,22.6,0,N/A,0.0,True
+CUST-SYNTH-0213,[SYNTHETIC] Titan Interactive 63,FinTech & Banking,United Kingdom,393,2,1,20,18,2,1782.0,0,1,2,14.4,0,N/A,0.1,True
+CUST-SYNTH-0214,[SYNTHETIC] SyncPulse Analytics 751,E-Commerce & Retail,Australia,389,3,1,9,9,0,1911.0,0,0,10,3.1,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0215,[SYNTHETIC] WarpSpeed Enterprises 681,E-Commerce & Retail,Germany,121,3,2,11,11,0,5839.0,0,0,7,47.0,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0216,[SYNTHETIC] TerraData Robotics 395,E-Commerce & Retail,United Kingdom,44,1,1,5,5,0,495.0,0,0,10,26.1,0,N/A,0.0,True
+CUST-SYNTH-0217,[SYNTHETIC] Falcon Logistics 530,SaaS & Cloud Services,United Kingdom,359,2,2,5,5,0,1195.0,0,0,3,22.2,0,N/A,0.0,True
+CUST-SYNTH-0218,[SYNTHETIC] NovaPulse Ventures 980,HealthTech & Life Sciences,United States,499,1,0,4,4,0,716.0,1,0,7,24.4,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0219,[SYNTHETIC] EchoSphere Enterprises 874,SaaS & Cloud Services,India,53,4,3,10,9,1,1671.0,1,0,12,9.3,1,Project Terminated / Engagement Ended,0.1,True
+CUST-SYNTH-0220,[SYNTHETIC] Optima Platform 167,E-Commerce & Retail,India,91,3,2,17,16,1,2809.0,1,0,1,3.0,1,Migrated to Competitor,0.059,True
+CUST-SYNTH-0221,[SYNTHETIC] Everest Solutions 430,HealthTech & Life Sciences,United Kingdom,276,4,4,28,26,2,1554.0,1,2,5,25.5,0,N/A,0.071,True
+CUST-SYNTH-0222,[SYNTHETIC] Everest Software 556,Logistics & Supply Chain,Singapore,250,0,0,0,0,0,0.0,0,0,15,41.3,0,N/A,0.0,True
+CUST-SYNTH-0223,[SYNTHETIC] Zenith Cloud 461,Logistics & Supply Chain,United States,339,6,2,20,19,1,9371.0,1,1,5,5.9,1,Migrated to Competitor,0.05,True
+CUST-SYNTH-0224,[SYNTHETIC] Cobalt Systems 846,E-Commerce & Retail,Singapore,474,3,2,15,13,2,2467.0,1,0,15,17.1,1,Budget Constraints / Downsizing,0.133,True
+CUST-SYNTH-0225,[SYNTHETIC] Zenith Robotics 966,FinTech & Banking,India,439,1,1,3,3,0,747.0,0,0,10,46.6,0,N/A,0.0,True
+CUST-SYNTH-0226,[SYNTHETIC] Radiant Health 937,E-Commerce & Retail,United States,283,0,0,0,0,0,0.0,0,0,1,25.6,0,N/A,0.0,True
+CUST-SYNTH-0227,[SYNTHETIC] Everest Consulting 962,Digital Marketing & Media,India,676,2,1,12,11,1,614.0,0,0,12,20.8,0,N/A,0.083,True
+CUST-SYNTH-0228,[SYNTHETIC] Zenith Software 405,EdTech & E-Learning,India,501,1,0,11,9,2,1341.0,0,0,7,6.1,1,Involuntary Churn (Repeated Payment Failures),0.182,True
+CUST-SYNTH-0229,[SYNTHETIC] GridCore Ventures 820,E-Commerce & Retail,India,691,2,0,4,4,0,116.0,0,0,14,39.0,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0230,[SYNTHETIC] IronClad Fintech 469,SaaS & Cloud Services,Australia,649,1,1,7,5,2,495.0,0,0,14,6.5,0,N/A,0.286,True
+CUST-SYNTH-0231,[SYNTHETIC] NovaPulse Digital 571,Digital Marketing & Media,Australia,617,1,1,7,7,0,693.0,0,0,15,22.8,0,N/A,0.0,True
+CUST-SYNTH-0232,[SYNTHETIC] Prism Enterprises 134,HealthTech & Life Sciences,India,301,1,1,1,0,1,0.0,0,0,3,47.1,0,N/A,1.0,True
+CUST-SYNTH-0233,[SYNTHETIC] EchoSphere Labs 866,SaaS & Cloud Services,United States,83,0,0,0,0,0,0.0,0,0,0,7.2,0,N/A,0.0,True
+CUST-SYNTH-0234,[SYNTHETIC] Jupiter Enterprises 449,EdTech & E-Learning,India,484,1,0,4,4,0,716.0,0,0,13,4.1,1,Project Terminated / Engagement Ended,0.0,True
+CUST-SYNTH-0235,[SYNTHETIC] Luminary Networks 546,FinTech & Banking,United Kingdom,192,1,0,5,5,0,1245.0,0,0,0,40.1,0,N/A,0.0,True
+CUST-SYNTH-0236,[SYNTHETIC] Infini Robotics 30,Manufacturing & IoT,Germany,686,3,1,22,21,1,3059.0,0,0,9,43.0,1,Budget Constraints / Downsizing,0.045,True
+CUST-SYNTH-0237,[SYNTHETIC] Zenith Analytics 775,EdTech & E-Learning,India,661,4,2,26,23,3,2257.0,0,0,6,32.3,1,Budget Constraints / Downsizing,0.115,True
+CUST-SYNTH-0238,[SYNTHETIC] Strata Labs 800,EdTech & E-Learning,Australia,594,2,2,13,11,2,319.0,1,0,14,45.7,0,N/A,0.154,True
+CUST-SYNTH-0239,[SYNTHETIC] Kinetic Ventures 843,Manufacturing & IoT,India,240,1,1,10,10,0,290.0,0,0,11,40.1,0,N/A,0.0,True
+CUST-SYNTH-0240,[SYNTHETIC] IronClad Networks 743,SaaS & Cloud Services,United States,430,1,1,8,8,0,552.0,0,0,7,40.9,0,N/A,0.0,True
+CUST-SYNTH-0241,[SYNTHETIC] MetaFlow Solutions 333,Digital Marketing & Media,UAE,174,1,0,1,1,0,1999.0,0,0,10,28.0,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0242,[SYNTHETIC] CloudPeak Media 302,SaaS & Cloud Services,United Kingdom,59,3,2,11,9,2,2411.0,0,0,15,35.1,1,Involuntary Churn (Repeated Payment Failures),0.182,True
+CUST-SYNTH-0243,[SYNTHETIC] Horizon Consulting 457,Manufacturing & IoT,Germany,335,2,2,10,10,0,290.0,0,0,11,35.1,0,N/A,0.0,True
+CUST-SYNTH-0244,[SYNTHETIC] Hyperion Fintech 386,Logistics & Supply Chain,United States,646,2,2,12,11,1,1629.0,0,0,3,6.9,0,N/A,0.083,True
+CUST-SYNTH-0245,[SYNTHETIC] Falcon Logistics 626,Logistics & Supply Chain,India,402,1,1,0,0,0,0.0,0,0,7,2.6,0,N/A,0.0,True
+CUST-SYNTH-0246,[SYNTHETIC] Unified Enterprises 323,Digital Marketing & Media,United States,560,0,0,0,0,0,0.0,0,0,11,40.3,0,N/A,0.0,True
+CUST-SYNTH-0247,[SYNTHETIC] WarpSpeed Health 53,Digital Marketing & Media,United Kingdom,449,2,1,4,1,3,5059.0,0,0,9,27.4,1,Involuntary Churn (Repeated Payment Failures),0.75,True
+CUST-SYNTH-0248,[SYNTHETIC] EchoSphere Platform 382,E-Commerce & Retail,United States,699,2,2,2,2,0,458.0,0,0,11,34.4,0,N/A,0.0,True
+CUST-SYNTH-0249,[SYNTHETIC] CloudPeak Digital 78,EdTech & E-Learning,Singapore,360,3,3,4,3,1,4157.0,0,0,1,43.3,0,N/A,0.25,True
+CUST-SYNTH-0250,[SYNTHETIC] Optima Digital 705,EdTech & E-Learning,United States,350,0,0,0,0,0,0.0,0,0,15,8.9,0,N/A,0.0,True
+CUST-SYNTH-0251,[SYNTHETIC] Matrix Digital 552,Digital Marketing & Media,United Kingdom,409,1,0,5,4,1,996.0,0,0,13,7.4,0,N/A,0.2,True
+CUST-SYNTH-0252,[SYNTHETIC] Prism Labs 36,Manufacturing & IoT,India,200,1,1,1,1,0,1999.0,0,0,6,11.0,0,N/A,0.0,True
+CUST-SYNTH-0253,[SYNTHETIC] Quantum Analytics 730,HealthTech & Life Sciences,United States,104,4,4,15,14,1,1466.0,0,1,12,12.3,0,N/A,0.067,True
+CUST-SYNTH-0254,[SYNTHETIC] MetaFlow Labs 148,Manufacturing & IoT,India,554,3,2,13,12,1,1833.0,2,1,6,35.1,1,Feature Limitations / Missing Capabilities,0.077,True
+CUST-SYNTH-0255,[SYNTHETIC] Falcon Ventures 693,FinTech & Banking,United Kingdom,167,5,2,21,17,4,493.0,1,0,3,37.0,1,Involuntary Churn (Repeated Payment Failures),0.19,True
+CUST-SYNTH-0256,[SYNTHETIC] TerraData Systems 738,EdTech & E-Learning,India,210,1,1,6,6,0,1074.0,0,0,1,44.7,0,N/A,0.0,True
+CUST-SYNTH-0257,[SYNTHETIC] MetaFlow Digital 252,SaaS & Cloud Services,United States,361,2,0,12,11,1,1689.0,0,0,3,37.6,1,Migrated to Competitor,0.083,True
+CUST-SYNTH-0258,[SYNTHETIC] Fortis Robotics 142,FinTech & Banking,Australia,663,3,2,8,8,0,2692.0,0,0,14,23.3,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0259,[SYNTHETIC] Galactic Security 430,FinTech & Banking,Germany,602,2,1,12,12,0,3088.0,0,1,4,46.4,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0260,[SYNTHETIC] Everest Health 706,EdTech & E-Learning,United States,599,0,0,0,0,0,0.0,0,0,0,26.6,0,N/A,0.0,True
+CUST-SYNTH-0261,[SYNTHETIC] IronClad Logistics 524,FinTech & Banking,India,200,1,0,1,1,0,99.0,0,0,1,27.7,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0262,[SYNTHETIC] Krypton Systems 340,EdTech & E-Learning,Singapore,199,3,3,27,24,3,696.0,1,0,13,40.7,0,N/A,0.111,True
+CUST-SYNTH-0263,[SYNTHETIC] Quantum Media 660,Logistics & Supply Chain,United States,602,2,1,17,15,2,1995.0,0,0,15,44.6,0,N/A,0.118,True
+CUST-SYNTH-0264,[SYNTHETIC] Polaris Robotics 105,E-Commerce & Retail,United States,124,0,0,0,0,0,0.0,0,0,5,34.0,0,N/A,0.0,True
+CUST-SYNTH-0265,[SYNTHETIC] Krypton Interactive 747,EdTech & E-Learning,Australia,153,4,4,32,32,0,6328.0,1,0,5,35.7,0,N/A,0.0,True
+CUST-SYNTH-0266,[SYNTHETIC] Falcon Solutions 981,Logistics & Supply Chain,Australia,64,1,0,4,4,0,996.0,0,0,4,7.2,1,Project Terminated / Engagement Ended,0.0,True
+CUST-SYNTH-0267,[SYNTHETIC] Polaris Technologies 519,Logistics & Supply Chain,United States,73,2,1,5,4,1,1996.0,0,0,10,25.4,0,N/A,0.2,True
+CUST-SYNTH-0268,[SYNTHETIC] Prism Platform 314,FinTech & Banking,United States,669,1,0,9,8,1,232.0,0,0,12,21.5,0,N/A,0.111,True
+CUST-SYNTH-0269,[SYNTHETIC] Cobalt Fintech 485,EdTech & E-Learning,Singapore,109,3,1,15,15,0,3625.0,1,0,7,14.9,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0270,[SYNTHETIC] Unified Consulting 418,EdTech & E-Learning,India,203,1,1,2,2,0,198.0,0,0,10,46.7,0,N/A,0.0,True
+CUST-SYNTH-0271,[SYNTHETIC] Unified Software 487,Logistics & Supply Chain,India,270,3,1,17,14,3,2686.0,1,0,14,39.1,1,Migrated to Competitor,0.176,True
+CUST-SYNTH-0272,[SYNTHETIC] GridCore Solutions 307,Digital Marketing & Media,Germany,476,2,0,9,8,1,2567.0,0,0,4,21.3,1,Feature Limitations / Missing Capabilities,0.111,True
+CUST-SYNTH-0273,[SYNTHETIC] Unified Cloud 748,HealthTech & Life Sciences,United Kingdom,567,0,0,0,0,0,0.0,0,0,9,40.9,0,N/A,0.0,True
+CUST-SYNTH-0274,[SYNTHETIC] Fortis Fintech 910,Manufacturing & IoT,UAE,707,6,2,31,30,1,6590.0,0,0,10,34.9,1,Migrated to Competitor,0.032,True
+CUST-SYNTH-0275,[SYNTHETIC] Infini Health 999,HealthTech & Life Sciences,Singapore,133,1,0,1,1,0,2199.0,0,0,6,11.6,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0276,[SYNTHETIC] DeltaByte Enterprises 516,Manufacturing & IoT,Australia,438,2,2,9,9,0,1951.0,0,0,9,33.7,0,N/A,0.0,True
+CUST-SYNTH-0277,[SYNTHETIC] GridCore Logistics 147,EdTech & E-Learning,UAE,318,2,0,10,8,2,912.0,0,0,4,47.2,1,Involuntary Churn (Repeated Payment Failures),0.2,True
+CUST-SYNTH-0278,[SYNTHETIC] Boreal Solutions 593,HealthTech & Life Sciences,United States,359,2,1,14,10,4,2270.0,0,0,5,25.4,0,N/A,0.286,True
+CUST-SYNTH-0279,[SYNTHETIC] EchoSphere Platform 526,Logistics & Supply Chain,United States,92,2,1,14,14,0,3286.0,0,0,10,34.8,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0280,[SYNTHETIC] IronClad Labs 413,EdTech & E-Learning,United Kingdom,159,4,3,24,24,0,7106.0,0,0,11,28.1,0,N/A,0.0,True
+CUST-SYNTH-0281,[SYNTHETIC] MetaFlow Interactive 531,SaaS & Cloud Services,Germany,684,1,1,3,3,0,297.0,0,0,13,33.2,0,N/A,0.0,True
+CUST-SYNTH-0282,[SYNTHETIC] Vanguard Fintech 541,E-Commerce & Retail,United States,110,2,1,4,3,1,5557.0,0,0,9,42.4,0,N/A,0.25,True
+CUST-SYNTH-0283,[SYNTHETIC] Unified Interactive 336,Digital Marketing & Media,India,99,3,1,13,13,0,867.0,0,0,13,39.3,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0284,[SYNTHETIC] Nexus Ventures 529,Manufacturing & IoT,United States,154,0,0,0,0,0,0.0,0,0,3,3.6,0,N/A,0.0,True
+CUST-SYNTH-0285,[SYNTHETIC] BlueWave Consulting 349,Digital Marketing & Media,India,133,2,1,15,12,3,1148.0,0,0,4,4.9,1,Involuntary Churn (Repeated Payment Failures),0.2,True
+CUST-SYNTH-0286,[SYNTHETIC] Optima Fintech 281,HealthTech & Life Sciences,Australia,678,4,1,23,21,2,5029.0,0,0,1,11.6,1,Budget Constraints / Downsizing,0.087,True
+CUST-SYNTH-0287,[SYNTHETIC] Krypton Security 654,Digital Marketing & Media,Australia,579,0,0,0,0,0,0.0,0,0,5,47.3,0,N/A,0.0,True
+CUST-SYNTH-0288,[SYNTHETIC] CloudPeak Cloud 980,HealthTech & Life Sciences,India,711,0,0,0,0,0,0.0,0,0,8,9.2,0,N/A,0.0,True
+CUST-SYNTH-0289,[SYNTHETIC] Cobalt Digital 432,Digital Marketing & Media,Singapore,217,1,0,4,4,0,996.0,0,0,1,33.9,0,N/A,0.0,True
+CUST-SYNTH-0290,[SYNTHETIC] DeltaByte Digital 541,EdTech & E-Learning,Singapore,52,1,1,10,8,2,2512.0,0,0,9,11.8,0,N/A,0.2,True
+CUST-SYNTH-0291,[SYNTHETIC] Aether Ventures 989,Manufacturing & IoT,India,185,0,0,0,0,0,0.0,0,0,1,18.8,0,N/A,0.0,True
+CUST-SYNTH-0292,[SYNTHETIC] WarpSpeed Analytics 634,HealthTech & Life Sciences,United States,478,4,1,14,12,2,2048.0,1,0,14,7.2,1,Budget Constraints / Downsizing,0.143,True
+CUST-SYNTH-0293,[SYNTHETIC] OmniLink Enterprises 799,HealthTech & Life Sciences,UAE,230,7,5,50,48,2,6462.0,0,1,7,36.3,1,Migrated to Competitor,0.04,True
+CUST-SYNTH-0294,[SYNTHETIC] WarpSpeed Robotics 966,Logistics & Supply Chain,UAE,606,2,1,5,5,0,2115.0,0,0,12,13.3,1,Involuntary Churn (Repeated Payment Failures),0.0,True
+CUST-SYNTH-0295,[SYNTHETIC] Aether Platform 848,E-Commerce & Retail,United Kingdom,433,3,1,13,9,4,821.0,1,0,9,34.0,1,Involuntary Churn (Repeated Payment Failures),0.308,True
+CUST-SYNTH-0296,[SYNTHETIC] Falcon Consulting 956,Logistics & Supply Chain,United States,240,3,2,14,13,1,3237.0,1,0,1,44.7,0,N/A,0.071,True
+CUST-SYNTH-0297,[SYNTHETIC] Kinetic Analytics 965,Logistics & Supply Chain,United States,590,2,2,7,7,0,203.0,0,0,12,21.5,0,N/A,0.0,True
+CUST-SYNTH-0298,[SYNTHETIC] Prism Solutions 695,HealthTech & Life Sciences,United States,77,4,4,10,9,1,1911.0,1,1,10,46.4,0,N/A,0.1,True
+CUST-SYNTH-0299,[SYNTHETIC] GridCore Logistics 348,FinTech & Banking,United States,33,0,0,0,0,0,0.0,0,0,1,3.1,0,N/A,0.0,True
+CUST-SYNTH-0300,[SYNTHETIC] Apex Robotics 961,Digital Marketing & Media,India,62,1,0,1,1,0,29.0,0,0,8,11.7,0,N/A,0.0,True
+CUST-SYNTH-0301,[SYNTHETIC] Galactic Media 784,EdTech & E-Learning,UAE,438,1,1,4,3,1,87.0,0,0,14,40.3,0,N/A,0.25,True
+CUST-SYNTH-0302,[SYNTHETIC] Falcon Cloud 247,SaaS & Cloud Services,United States,551,2,2,23,21,2,1309.0,0,1,11,36.9,0,N/A,0.087,True
+CUST-SYNTH-0303,[SYNTHETIC] CloudPeak Platform 816,E-Commerce & Retail,United States,434,4,3,7,5,2,585.0,0,0,6,37.8,0,N/A,0.286,True
+CUST-SYNTH-0304,[SYNTHETIC] Apex Enterprises 591,FinTech & Banking,Australia,387,4,2,32,29,3,981.0,0,0,6,15.9,1,Budget Constraints / Downsizing,0.094,True
+CUST-SYNTH-0305,[SYNTHETIC] Resonant Robotics 546,E-Commerce & Retail,United States,214,0,0,0,0,0,0.0,0,0,5,47.2,0,N/A,0.0,True
+CUST-SYNTH-0306,[SYNTHETIC] MetaFlow Labs 348,Manufacturing & IoT,India,67,0,0,0,0,0,0.0,0,0,2,11.0,0,N/A,0.0,True
+CUST-SYNTH-0307,[SYNTHETIC] Apex Ventures 819,HealthTech & Life Sciences,UAE,551,3,3,19,17,2,4473.0,0,0,5,35.9,0,N/A,0.105,True
+CUST-SYNTH-0308,[SYNTHETIC] Dynamo Security 345,Digital Marketing & Media,India,45,0,0,0,0,0,0.0,0,0,3,19.7,0,N/A,0.0,True
+CUST-SYNTH-0309,[SYNTHETIC] IronClad Fintech 341,SaaS & Cloud Services,Singapore,463,2,1,18,17,1,4923.0,0,0,13,15.2,0,N/A,0.056,True
+CUST-SYNTH-0310,[SYNTHETIC] Everest Analytics 986,Logistics & Supply Chain,United Kingdom,134,0,0,0,0,0,0.0,0,0,8,8.4,0,N/A,0.0,True
+CUST-SYNTH-0311,[SYNTHETIC] Quantum Consulting 719,SaaS & Cloud Services,Singapore,47,3,2,16,13,3,2417.0,0,1,8,2.8,1,Budget Constraints / Downsizing,0.188,True
+CUST-SYNTH-0312,[SYNTHETIC] TerraData Systems 425,Logistics & Supply Chain,United States,610,0,0,0,0,0,0.0,0,0,14,34.8,0,N/A,0.0,True
+CUST-SYNTH-0313,[SYNTHETIC] Zenith Interactive 236,E-Commerce & Retail,Singapore,241,3,2,12,12,0,9508.0,1,1,4,4.3,0,N/A,0.0,True
+CUST-SYNTH-0314,[SYNTHETIC] Optima Consulting 435,Manufacturing & IoT,United States,180,0,0,0,0,0,0.0,0,0,10,29.7,0,N/A,0.0,True
+CUST-SYNTH-0315,[SYNTHETIC] Prism Interactive 904,Manufacturing & IoT,India,190,0,0,0,0,0,0.0,0,0,9,24.8,0,N/A,0.0,True
+CUST-SYNTH-0316,[SYNTHETIC] EchoSphere Cloud 124,HealthTech & Life Sciences,India,144,4,3,18,15,3,6950.0,2,0,11,5.8,0,N/A,0.167,True
+CUST-SYNTH-0317,[SYNTHETIC] Krypton Ventures 884,Manufacturing & IoT,United States,611,1,1,8,7,1,1113.0,0,0,10,26.4,0,N/A,0.125,True
+CUST-SYNTH-0318,[SYNTHETIC] Nexus Fintech 103,Manufacturing & IoT,United States,674,1,1,6,6,0,174.0,1,0,5,26.2,0,N/A,0.0,True
+CUST-SYNTH-0319,[SYNTHETIC] Infini Logistics 477,SaaS & Cloud Services,Australia,158,5,5,24,24,0,6516.0,0,0,5,21.4,0,N/A,0.0,True
+CUST-SYNTH-0320,[SYNTHETIC] BlueWave Platform 270,HealthTech & Life Sciences,India,138,3,3,6,5,1,4635.0,0,0,12,6.7,0,N/A,0.167,True
+CUST-SYNTH-0321,[SYNTHETIC] Dynamo Consulting 727,SaaS & Cloud Services,India,660,1,1,0,0,0,0.0,0,0,7,42.7,0,N/A,0.0,True
+CUST-SYNTH-0322,[SYNTHETIC] SyncPulse Logistics 194,Digital Marketing & Media,India,347,3,2,14,13,1,2127.0,0,0,10,17.6,0,N/A,0.071,True
+CUST-SYNTH-0323,[SYNTHETIC] Aether Platform 92,E-Commerce & Retail,United States,61,3,3,21,20,1,6135.0,0,0,9,12.4,0,N/A,0.048,True
+CUST-SYNTH-0324,[SYNTHETIC] Horizon Systems 560,E-Commerce & Retail,Germany,502,3,2,19,19,0,7821.0,1,0,15,47.8,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0325,[SYNTHETIC] BlueWave Enterprises 484,Digital Marketing & Media,United States,186,1,1,13,12,1,1548.0,0,0,0,7.7,0,N/A,0.077,True
+CUST-SYNTH-0326,[SYNTHETIC] Prism Health 364,Logistics & Supply Chain,India,537,1,0,3,3,0,87.0,1,0,11,22.8,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0327,[SYNTHETIC] CloudPeak Logistics 639,HealthTech & Life Sciences,India,519,1,0,2,0,2,0.0,0,0,7,46.1,1,Involuntary Churn (Repeated Payment Failures),1.0,True
+CUST-SYNTH-0328,[SYNTHETIC] Optima Solutions 467,SaaS & Cloud Services,Australia,480,2,1,11,10,1,390.0,0,0,10,19.9,1,Budget Constraints / Downsizing,0.091,True
+CUST-SYNTH-0329,[SYNTHETIC] Boreal Health 249,HealthTech & Life Sciences,United States,673,2,1,13,11,2,1949.0,0,0,3,20.1,1,Involuntary Churn (Repeated Payment Failures),0.154,True
+CUST-SYNTH-0330,[SYNTHETIC] SyncPulse Software 845,EdTech & E-Learning,Australia,139,1,0,4,4,0,116.0,1,0,9,3.6,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0331,[SYNTHETIC] Prism Enterprises 907,HealthTech & Life Sciences,India,307,2,2,13,13,0,927.0,1,0,11,25.9,0,N/A,0.0,True
+CUST-SYNTH-0332,[SYNTHETIC] DeltaByte Robotics 981,E-Commerce & Retail,Australia,89,3,1,23,21,2,2639.0,2,0,14,24.6,0,N/A,0.087,True
+CUST-SYNTH-0333,[SYNTHETIC] LogiTech Fintech 58,Digital Marketing & Media,United Kingdom,193,1,1,9,9,0,2961.0,0,0,9,43.4,0,N/A,0.0,True
+CUST-SYNTH-0334,[SYNTHETIC] Cobalt Digital 317,E-Commerce & Retail,Germany,180,0,0,0,0,0,0.0,0,0,6,17.1,0,N/A,0.0,True
+CUST-SYNTH-0335,[SYNTHETIC] OmniLink Enterprises 888,Manufacturing & IoT,India,671,2,1,12,11,1,1509.0,0,0,2,45.6,0,N/A,0.083,True
+CUST-SYNTH-0336,[SYNTHETIC] Cobalt Robotics 552,Digital Marketing & Media,India,482,3,2,3,2,1,198.0,1,0,5,46.7,1,Feature Limitations / Missing Capabilities,0.333,True
+CUST-SYNTH-0337,[SYNTHETIC] Vanguard Networks 954,EdTech & E-Learning,United States,636,6,4,39,37,2,7958.0,1,0,0,31.0,1,Feature Limitations / Missing Capabilities,0.051,True
+CUST-SYNTH-0338,[SYNTHETIC] DeltaByte Analytics 396,SaaS & Cloud Services,Australia,656,5,3,17,16,1,7699.0,1,0,6,33.0,1,Migrated to Competitor,0.059,True
+CUST-SYNTH-0339,[SYNTHETIC] Galactic Media 900,Logistics & Supply Chain,United Kingdom,715,3,1,11,8,3,4592.0,0,0,6,41.9,1,Budget Constraints / Downsizing,0.273,True
+CUST-SYNTH-0340,[SYNTHETIC] Horizon Fintech 946,HealthTech & Life Sciences,Singapore,324,3,2,10,10,0,4590.0,1,0,13,40.5,1,Project Terminated / Engagement Ended,0.0,True
+CUST-SYNTH-0341,[SYNTHETIC] SyncPulse Platform 487,EdTech & E-Learning,United States,415,1,1,1,1,0,4999.0,0,0,6,27.0,0,N/A,0.0,True
+CUST-SYNTH-0342,[SYNTHETIC] Infini Fintech 487,Manufacturing & IoT,India,403,1,0,1,0,1,0.0,0,0,13,31.9,1,Involuntary Churn (Repeated Payment Failures),1.0,True
+CUST-SYNTH-0343,[SYNTHETIC] Unified Logistics 56,HealthTech & Life Sciences,Australia,581,4,2,19,17,2,2528.0,0,0,2,36.5,1,Migrated to Competitor,0.105,True
+CUST-SYNTH-0344,[SYNTHETIC] LogiTech Cloud 603,Logistics & Supply Chain,Germany,574,2,2,10,10,0,3450.0,1,0,4,3.6,0,N/A,0.0,True
+CUST-SYNTH-0345,[SYNTHETIC] OmniLink Platform 593,Manufacturing & IoT,Singapore,167,2,1,2,1,1,5019.0,0,0,10,4.2,0,N/A,0.5,True
+CUST-SYNTH-0346,[SYNTHETIC] Quantum Fintech 999,Manufacturing & IoT,United States,558,1,0,12,12,0,1188.0,0,0,2,5.0,0,N/A,0.0,True
+CUST-SYNTH-0347,[SYNTHETIC] Krypton Digital 747,Manufacturing & IoT,United States,542,3,1,29,27,2,3393.0,0,0,8,27.9,1,Feature Limitations / Missing Capabilities,0.069,True
+CUST-SYNTH-0348,[SYNTHETIC] JetStream Solutions 869,SaaS & Cloud Services,India,724,2,1,14,14,0,5516.0,0,0,7,43.9,0,N/A,0.0,True
+CUST-SYNTH-0349,[SYNTHETIC] Quasar Software 79,SaaS & Cloud Services,India,507,2,1,10,10,0,7255.0,0,1,13,20.2,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0350,[SYNTHETIC] Zenith Solutions 642,Manufacturing & IoT,Australia,55,1,0,1,1,0,2044.0,0,0,12,22.2,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0351,[SYNTHETIC] Apex Robotics 574,SaaS & Cloud Services,Germany,713,0,0,0,0,0,0.0,0,0,0,20.2,0,N/A,0.0,True
+CUST-SYNTH-0352,[SYNTHETIC] Kinetic Enterprises 27,Digital Marketing & Media,United States,547,1,0,2,2,0,58.0,0,0,3,26.8,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0353,[SYNTHETIC] JetStream Digital 256,Logistics & Supply Chain,Singapore,368,4,3,15,15,0,10465.0,0,0,2,36.9,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0354,[SYNTHETIC] Falcon Consulting 992,Manufacturing & IoT,Germany,152,0,0,0,0,0,0.0,0,0,1,34.4,0,N/A,0.0,True
+CUST-SYNTH-0355,[SYNTHETIC] TerraData Networks 679,FinTech & Banking,India,315,0,0,0,0,0,0.0,0,0,2,18.8,0,N/A,0.0,True
+CUST-SYNTH-0356,[SYNTHETIC] LogiTech Fintech 67,E-Commerce & Retail,India,646,1,1,5,5,0,495.0,0,0,3,15.7,0,N/A,0.0,True
+CUST-SYNTH-0357,[SYNTHETIC] Resonant Ventures 589,SaaS & Cloud Services,India,495,2,1,11,11,0,1499.0,0,0,9,30.1,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0358,[SYNTHETIC] Radiant Solutions 956,Logistics & Supply Chain,India,174,3,0,9,7,2,6393.0,2,0,9,37.3,1,Budget Constraints / Downsizing,0.222,True
+CUST-SYNTH-0359,[SYNTHETIC] Luminary Ventures 26,E-Commerce & Retail,Singapore,323,0,0,0,0,0,0.0,0,0,14,19.9,0,N/A,0.0,True
+CUST-SYNTH-0360,[SYNTHETIC] Krypton Cloud 256,Digital Marketing & Media,Australia,37,2,2,19,19,0,4391.0,1,0,0,24.1,0,N/A,0.0,True
+CUST-SYNTH-0361,[SYNTHETIC] Aether Digital 819,EdTech & E-Learning,India,676,1,1,6,6,0,1494.0,0,0,7,8.7,0,N/A,0.0,True
+CUST-SYNTH-0362,[SYNTHETIC] OmniLink Networks 358,Digital Marketing & Media,Australia,396,3,2,12,11,1,2709.0,2,0,12,38.8,1,Migrated to Competitor,0.083,True
+CUST-SYNTH-0363,[SYNTHETIC] Everest Fintech 243,Digital Marketing & Media,United Kingdom,288,2,2,2,1,1,159.0,1,0,9,46.2,0,N/A,0.5,True
+CUST-SYNTH-0364,[SYNTHETIC] Falcon Interactive 312,FinTech & Banking,Singapore,646,2,1,10,9,1,2121.0,0,0,4,16.1,0,N/A,0.1,True
+CUST-SYNTH-0365,[SYNTHETIC] Aether Digital 767,EdTech & E-Learning,Germany,361,5,3,27,24,3,3191.0,0,1,11,46.1,0,N/A,0.111,True
+CUST-SYNTH-0366,[SYNTHETIC] Apex Enterprises 465,Logistics & Supply Chain,United Kingdom,626,1,0,3,3,0,297.0,0,0,0,27.7,0,N/A,0.0,True
+CUST-SYNTH-0367,[SYNTHETIC] Luminary Logistics 469,Digital Marketing & Media,United States,625,1,1,6,6,0,594.0,0,0,4,8.1,0,N/A,0.0,True
+CUST-SYNTH-0368,[SYNTHETIC] WarpSpeed Robotics 105,EdTech & E-Learning,Australia,336,0,0,0,0,0,0.0,0,0,0,28.6,0,N/A,0.0,True
+CUST-SYNTH-0369,[SYNTHETIC] Cobalt Platform 807,HealthTech & Life Sciences,India,145,1,1,1,1,0,1999.0,0,0,12,26.9,0,N/A,0.0,True
+CUST-SYNTH-0370,[SYNTHETIC] Titan Platform 183,Logistics & Supply Chain,India,422,1,1,6,6,0,744.0,1,0,2,16.4,0,N/A,0.0,True
+CUST-SYNTH-0371,[SYNTHETIC] Jupiter Networks 181,Logistics & Supply Chain,Germany,299,1,0,12,9,3,891.0,0,1,11,12.1,1,Involuntary Churn (Repeated Payment Failures),0.25,True
+CUST-SYNTH-0372,[SYNTHETIC] EchoSphere Consulting 267,Manufacturing & IoT,Singapore,122,2,1,3,3,0,5057.0,1,0,4,9.8,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0373,[SYNTHETIC] Fortis Labs 148,SaaS & Cloud Services,UAE,325,1,1,4,4,0,116.0,0,0,7,30.6,0,N/A,0.0,True
+CUST-SYNTH-0374,[SYNTHETIC] Vanguard Health 352,E-Commerce & Retail,Germany,423,1,1,7,7,0,1253.0,0,0,8,11.3,0,N/A,0.0,True
+CUST-SYNTH-0375,[SYNTHETIC] Galactic Ventures 191,EdTech & E-Learning,Germany,432,3,2,21,19,2,3531.0,0,1,5,33.0,0,N/A,0.095,True
+CUST-SYNTH-0376,[SYNTHETIC] Matrix Software 343,Logistics & Supply Chain,Germany,328,3,2,13,11,2,854.0,0,0,1,41.2,0,N/A,0.154,True
+CUST-SYNTH-0377,[SYNTHETIC] Matrix Media 616,E-Commerce & Retail,United States,32,2,1,9,7,2,533.0,0,0,14,31.8,0,N/A,0.222,True
+CUST-SYNTH-0378,[SYNTHETIC] Fortis Media 458,FinTech & Banking,UAE,312,1,1,1,1,0,4999.0,0,0,2,15.7,0,N/A,0.0,True
+CUST-SYNTH-0379,[SYNTHETIC] IronClad Enterprises 257,E-Commerce & Retail,UAE,297,1,1,8,8,0,792.0,0,0,2,13.9,0,N/A,0.0,True
+CUST-SYNTH-0380,[SYNTHETIC] EchoSphere Health 622,Digital Marketing & Media,United States,183,3,3,12,12,0,7798.0,0,0,6,35.5,0,N/A,0.0,True
+CUST-SYNTH-0381,[SYNTHETIC] Kinetic Solutions 819,FinTech & Banking,United Kingdom,619,0,0,0,0,0,0.0,0,0,15,45.8,0,N/A,0.0,True
+CUST-SYNTH-0382,[SYNTHETIC] Strata Consulting 180,SaaS & Cloud Services,Australia,154,1,0,7,7,0,1743.0,0,0,11,8.3,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0383,[SYNTHETIC] Vanguard Logistics 118,FinTech & Banking,India,466,2,0,5,4,1,116.0,0,0,7,7.1,1,Migrated to Competitor,0.2,True
+CUST-SYNTH-0384,[SYNTHETIC] JetStream Robotics 604,HealthTech & Life Sciences,Australia,274,1,0,1,1,0,239.0,0,0,2,43.5,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0385,[SYNTHETIC] Fortis Cloud 717,E-Commerce & Retail,United States,377,1,1,9,9,0,621.0,0,0,10,24.6,0,N/A,0.0,True
+CUST-SYNTH-0386,[SYNTHETIC] GridCore Enterprises 435,FinTech & Banking,India,585,3,2,6,6,0,7894.0,0,1,10,30.5,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0387,[SYNTHETIC] Vanguard Health 813,Manufacturing & IoT,Singapore,374,1,1,7,6,1,2454.0,0,0,9,34.1,0,N/A,0.143,True
+CUST-SYNTH-0388,[SYNTHETIC] Everest Health 336,Logistics & Supply Chain,India,685,1,0,4,2,2,198.0,0,0,4,28.2,0,N/A,0.5,True
+CUST-SYNTH-0389,[SYNTHETIC] BlueWave Ventures 673,E-Commerce & Retail,India,481,1,1,1,1,0,2249.0,0,0,11,39.3,0,N/A,0.0,True
+CUST-SYNTH-0390,[SYNTHETIC] LogiTech Systems 348,Digital Marketing & Media,United States,257,1,1,4,4,0,116.0,0,0,13,10.2,0,N/A,0.0,True
+CUST-SYNTH-0391,[SYNTHETIC] Quasar Systems 200,Digital Marketing & Media,Germany,701,2,0,5,4,1,366.0,0,0,10,13.7,1,Budget Constraints / Downsizing,0.2,True
+CUST-SYNTH-0392,[SYNTHETIC] Everest Cloud 449,SaaS & Cloud Services,Germany,511,4,3,5,5,0,5525.0,2,0,7,34.9,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0393,[SYNTHETIC] EchoSphere Cloud 114,E-Commerce & Retail,United States,356,1,0,7,6,1,1194.0,0,0,13,15.1,1,Feature Limitations / Missing Capabilities,0.143,True
+CUST-SYNTH-0394,[SYNTHETIC] Fortis Labs 278,EdTech & E-Learning,United States,119,2,0,12,12,0,2688.0,0,0,11,8.6,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0395,[SYNTHETIC] Nexus Labs 366,Manufacturing & IoT,United Kingdom,98,3,1,9,9,0,936.0,0,0,10,42.4,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0396,[SYNTHETIC] Polaris Cloud 96,EdTech & E-Learning,India,610,3,3,12,11,1,2609.0,0,0,14,22.8,0,N/A,0.083,True
+CUST-SYNTH-0397,[SYNTHETIC] Horizon Systems 392,Digital Marketing & Media,India,302,1,1,0,0,0,0.0,0,0,9,24.7,0,N/A,0.0,True
+CUST-SYNTH-0398,[SYNTHETIC] Matrix Platform 443,Manufacturing & IoT,India,80,1,1,10,10,0,2490.0,0,0,3,10.5,0,N/A,0.0,True
+CUST-SYNTH-0399,[SYNTHETIC] LogiTech Systems 511,E-Commerce & Retail,UAE,539,6,4,27,20,7,3240.0,0,1,2,40.8,1,Involuntary Churn (Repeated Payment Failures),0.259,True
+CUST-SYNTH-0400,[SYNTHETIC] Polaris Solutions 896,SaaS & Cloud Services,United Kingdom,234,1,0,4,3,1,747.0,0,0,4,43.1,1,Migrated to Competitor,0.25,True
+CUST-SYNTH-0401,[SYNTHETIC] Aether Robotics 527,Digital Marketing & Media,United States,227,0,0,0,0,0,0.0,0,0,6,14.5,0,N/A,0.0,True
+CUST-SYNTH-0402,[SYNTHETIC] Hyperion Systems 94,SaaS & Cloud Services,Australia,505,0,0,0,0,0,0.0,0,0,2,35.6,0,N/A,0.0,True
+CUST-SYNTH-0403,[SYNTHETIC] Radiant Software 560,E-Commerce & Retail,UAE,262,3,1,12,7,5,203.0,0,0,0,41.2,1,Involuntary Churn (Repeated Payment Failures),0.417,True
+CUST-SYNTH-0404,[SYNTHETIC] LogiTech Security 125,FinTech & Banking,Australia,456,1,0,7,7,0,203.0,0,0,0,39.5,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0405,[SYNTHETIC] Zenith Robotics 852,Manufacturing & IoT,India,171,2,1,12,10,2,2340.0,0,0,12,37.5,1,Involuntary Churn (Repeated Payment Failures),0.167,True
+CUST-SYNTH-0406,[SYNTHETIC] GridCore Software 314,Manufacturing & IoT,India,461,4,3,31,29,2,3866.0,2,0,6,43.7,0,N/A,0.065,True
+CUST-SYNTH-0407,[SYNTHETIC] Everest Labs 804,HealthTech & Life Sciences,Singapore,128,0,0,0,0,0,0.0,0,0,8,27.2,0,N/A,0.0,True
+CUST-SYNTH-0408,[SYNTHETIC] Polaris Logistics 179,E-Commerce & Retail,Australia,519,1,1,4,4,0,996.0,0,0,15,32.3,0,N/A,0.0,True
+CUST-SYNTH-0409,[SYNTHETIC] DeltaByte Cloud 369,Logistics & Supply Chain,United States,119,3,3,30,28,2,7602.0,0,0,4,19.1,0,N/A,0.067,True
+CUST-SYNTH-0410,[SYNTHETIC] Unified Enterprises 306,Logistics & Supply Chain,Australia,204,2,1,7,5,2,565.0,0,0,7,43.1,0,N/A,0.286,True
+CUST-SYNTH-0411,[SYNTHETIC] IronClad Logistics 950,Logistics & Supply Chain,India,59,2,1,9,8,1,792.0,0,0,9,8.6,1,Budget Constraints / Downsizing,0.111,True
+CUST-SYNTH-0412,[SYNTHETIC] Prism Digital 738,HealthTech & Life Sciences,United Kingdom,38,3,1,27,26,1,5284.0,1,0,2,20.6,1,Budget Constraints / Downsizing,0.037,True
+CUST-SYNTH-0413,[SYNTHETIC] Jupiter Cloud 657,Digital Marketing & Media,UAE,346,3,2,15,13,2,2147.0,0,1,0,32.7,1,Budget Constraints / Downsizing,0.133,True
+CUST-SYNTH-0414,[SYNTHETIC] Quasar Networks 422,Logistics & Supply Chain,United States,353,3,3,20,19,1,1731.0,2,0,5,37.0,0,N/A,0.05,True
+CUST-SYNTH-0415,[SYNTHETIC] Unified Cloud 12,Manufacturing & IoT,India,80,7,4,26,25,1,10495.0,1,0,4,22.8,0,N/A,0.038,True
+CUST-SYNTH-0416,[SYNTHETIC] EchoSphere Robotics 417,Digital Marketing & Media,Singapore,514,2,1,13,13,0,6187.0,0,0,5,28.3,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0417,[SYNTHETIC] Unified Enterprises 355,E-Commerce & Retail,United States,151,3,2,20,16,4,1254.0,0,0,4,36.0,1,Involuntary Churn (Repeated Payment Failures),0.2,True
+CUST-SYNTH-0418,[SYNTHETIC] Vanguard Solutions 57,Manufacturing & IoT,India,714,1,1,7,7,0,903.0,0,0,15,45.2,0,N/A,0.0,True
+CUST-SYNTH-0419,[SYNTHETIC] Everest Health 10,HealthTech & Life Sciences,Germany,595,1,1,11,9,2,441.0,0,0,1,12.5,0,N/A,0.182,True
+CUST-SYNTH-0420,[SYNTHETIC] Krypton Analytics 105,Logistics & Supply Chain,United Kingdom,646,2,1,11,11,0,1104.0,0,0,15,13.0,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0421,[SYNTHETIC] DeltaByte Platform 650,HealthTech & Life Sciences,UAE,291,1,1,1,1,0,1999.0,0,0,8,19.3,0,N/A,0.0,True
+CUST-SYNTH-0422,[SYNTHETIC] GridCore Technologies 228,FinTech & Banking,United States,595,0,0,0,0,0,0.0,0,0,1,32.9,0,N/A,0.0,True
+CUST-SYNTH-0423,[SYNTHETIC] JetStream Health 19,EdTech & E-Learning,India,607,1,0,6,6,0,1494.0,1,0,11,20.2,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0424,[SYNTHETIC] IronClad Fintech 82,Digital Marketing & Media,Singapore,639,1,1,10,10,0,290.0,1,0,14,42.6,0,N/A,0.0,True
+CUST-SYNTH-0425,[SYNTHETIC] GridCore Ventures 386,E-Commerce & Retail,UAE,339,3,3,16,16,0,2444.0,1,0,1,47.1,0,N/A,0.0,True
+CUST-SYNTH-0426,[SYNTHETIC] Resonant Digital 80,SaaS & Cloud Services,United States,106,2,2,17,16,1,3234.0,0,0,10,7.2,0,N/A,0.059,True
+CUST-SYNTH-0427,[SYNTHETIC] Everest Consulting 749,E-Commerce & Retail,Singapore,309,1,1,0,0,0,0.0,0,0,8,40.5,0,N/A,0.0,True
+CUST-SYNTH-0428,[SYNTHETIC] NovaPulse Networks 928,E-Commerce & Retail,India,604,1,1,0,0,0,0.0,0,0,8,28.8,0,N/A,0.0,True
+CUST-SYNTH-0429,[SYNTHETIC] WarpSpeed Logistics 332,HealthTech & Life Sciences,India,447,1,1,2,2,0,498.0,0,0,5,19.6,0,N/A,0.0,True
+CUST-SYNTH-0430,[SYNTHETIC] Prism Robotics 625,Logistics & Supply Chain,Australia,703,0,0,0,0,0,0.0,0,0,12,19.1,0,N/A,0.0,True
+CUST-SYNTH-0431,[SYNTHETIC] NovaPulse Security 631,HealthTech & Life Sciences,United States,329,2,2,2,2,0,6998.0,1,0,2,26.0,0,N/A,0.0,True
+CUST-SYNTH-0432,[SYNTHETIC] Prism Fintech 405,HealthTech & Life Sciences,India,219,2,1,2,2,0,6998.0,2,0,12,46.8,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0433,[SYNTHETIC] JetStream Technologies 379,E-Commerce & Retail,United Kingdom,334,0,0,0,0,0,0.0,0,0,7,26.0,0,N/A,0.0,True
+CUST-SYNTH-0434,[SYNTHETIC] Zenith Robotics 709,Manufacturing & IoT,India,656,3,2,19,18,1,1962.0,0,1,11,39.7,1,Project Terminated / Engagement Ended,0.053,True
+CUST-SYNTH-0435,[SYNTHETIC] Apex Analytics 230,SaaS & Cloud Services,India,323,4,3,14,14,0,2736.0,0,1,11,24.7,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0436,[SYNTHETIC] Quasar Security 795,Digital Marketing & Media,Germany,319,0,0,0,0,0,0.0,0,0,15,42.9,0,N/A,0.0,True
+CUST-SYNTH-0437,[SYNTHETIC] Kinetic Interactive 166,FinTech & Banking,UAE,413,2,2,14,14,0,896.0,1,0,0,25.3,0,N/A,0.0,True
+CUST-SYNTH-0438,[SYNTHETIC] NovaPulse Digital 559,Digital Marketing & Media,United Kingdom,130,0,0,0,0,0,0.0,0,0,4,22.5,0,N/A,0.0,True
+CUST-SYNTH-0439,[SYNTHETIC] TerraData Logistics 757,SaaS & Cloud Services,Singapore,480,1,1,1,1,0,1999.0,1,0,7,6.0,0,N/A,0.0,True
+CUST-SYNTH-0440,[SYNTHETIC] Horizon Health 636,SaaS & Cloud Services,Australia,414,2,1,12,11,1,319.0,0,0,8,12.1,0,N/A,0.083,True
+CUST-SYNTH-0441,[SYNTHETIC] Horizon Technologies 734,SaaS & Cloud Services,India,563,2,1,2,2,0,3998.0,1,0,5,9.7,0,N/A,0.0,True
+CUST-SYNTH-0442,[SYNTHETIC] JetStream Security 811,E-Commerce & Retail,UAE,350,4,2,18,18,0,9582.0,0,0,3,32.6,0,N/A,0.0,True
+CUST-SYNTH-0443,[SYNTHETIC] Horizon Technologies 353,Logistics & Supply Chain,Germany,194,0,0,0,0,0,0.0,0,0,13,39.4,0,N/A,0.0,True
+CUST-SYNTH-0444,[SYNTHETIC] Matrix Networks 518,EdTech & E-Learning,United States,674,2,0,7,6,1,2494.0,0,0,3,24.4,1,Budget Constraints / Downsizing,0.143,True
+CUST-SYNTH-0445,[SYNTHETIC] Zenith Systems 271,FinTech & Banking,India,497,4,3,28,27,1,6153.0,0,1,15,24.3,0,N/A,0.036,True
+CUST-SYNTH-0446,[SYNTHETIC] Apex Solutions 889,HealthTech & Life Sciences,India,683,2,1,7,7,0,2593.0,0,0,5,32.0,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0447,[SYNTHETIC] Aether Digital 193,Digital Marketing & Media,India,501,4,2,13,13,0,1977.0,0,0,13,3.5,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0448,[SYNTHETIC] Cobalt Ventures 287,EdTech & E-Learning,India,608,1,0,1,0,1,0.0,0,0,1,8.3,1,Involuntary Churn (Repeated Payment Failures),1.0,True
+CUST-SYNTH-0449,[SYNTHETIC] Luminary Software 833,SaaS & Cloud Services,United States,320,3,1,5,3,2,462.0,1,0,5,8.6,1,Migrated to Competitor,0.4,True
+CUST-SYNTH-0450,[SYNTHETIC] SyncPulse Enterprises 345,Manufacturing & IoT,India,722,2,2,12,12,0,558.0,1,0,1,43.0,0,N/A,0.0,True
+CUST-SYNTH-0451,[SYNTHETIC] SyncPulse Cloud 813,HealthTech & Life Sciences,UAE,255,2,2,24,24,0,2486.0,1,0,4,5.0,0,N/A,0.0,True
+CUST-SYNTH-0452,[SYNTHETIC] MetaFlow Robotics 788,E-Commerce & Retail,Singapore,724,4,2,7,6,1,3469.0,0,0,8,44.5,1,Migrated to Competitor,0.143,True
+CUST-SYNTH-0453,[SYNTHETIC] OmniLink Robotics 364,EdTech & E-Learning,India,729,2,1,2,2,0,128.0,0,0,12,29.8,1,Project Terminated / Engagement Ended,0.0,True
+CUST-SYNTH-0454,[SYNTHETIC] TerraData Labs 220,HealthTech & Life Sciences,United States,301,3,2,22,20,2,5000.0,1,0,0,42.5,1,Budget Constraints / Downsizing,0.091,True
+CUST-SYNTH-0455,[SYNTHETIC] Jupiter Analytics 105,HealthTech & Life Sciences,India,198,1,0,1,1,0,114.0,0,0,9,45.6,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0456,[SYNTHETIC] Fortis Networks 604,E-Commerce & Retail,India,78,0,0,0,0,0,0.0,0,0,6,22.9,0,N/A,0.0,True
+CUST-SYNTH-0457,[SYNTHETIC] EchoSphere Cloud 591,Digital Marketing & Media,India,52,1,0,6,5,1,1245.0,1,0,15,42.0,0,N/A,0.167,True
+CUST-SYNTH-0458,[SYNTHETIC] SyncPulse Analytics 881,Digital Marketing & Media,United Kingdom,396,1,0,5,5,0,1395.0,0,0,5,12.5,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0459,[SYNTHETIC] Radiant Software 86,E-Commerce & Retail,Singapore,132,2,2,16,14,2,2386.0,0,0,13,29.8,0,N/A,0.125,True
+CUST-SYNTH-0460,[SYNTHETIC] GridCore Systems 470,EdTech & E-Learning,United States,314,1,1,2,2,0,58.0,1,0,5,30.9,0,N/A,0.0,True
+CUST-SYNTH-0461,[SYNTHETIC] WarpSpeed Media 472,Manufacturing & IoT,UAE,459,1,0,4,4,0,116.0,0,0,8,10.1,1,Migrated to Competitor,0.0,True
+CUST-SYNTH-0462,[SYNTHETIC] Falcon Systems 836,SaaS & Cloud Services,UAE,510,3,3,9,9,0,5581.0,0,1,10,44.5,0,N/A,0.0,True
+CUST-SYNTH-0463,[SYNTHETIC] Jupiter Networks 738,EdTech & E-Learning,Singapore,325,1,0,3,3,0,297.0,0,0,2,13.0,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0464,[SYNTHETIC] Titan Enterprises 276,SaaS & Cloud Services,India,316,0,0,0,0,0,0.0,0,0,12,8.5,0,N/A,0.0,True
+CUST-SYNTH-0465,[SYNTHETIC] LogiTech Robotics 265,Manufacturing & IoT,India,626,1,1,7,7,0,1813.0,0,0,0,11.7,0,N/A,0.0,True
+CUST-SYNTH-0466,[SYNTHETIC] Horizon Technologies 73,E-Commerce & Retail,Singapore,528,0,0,0,0,0,0.0,0,0,13,40.1,0,N/A,0.0,True
+CUST-SYNTH-0467,[SYNTHETIC] Zenith Networks 606,Logistics & Supply Chain,Australia,654,1,1,10,10,0,1290.0,0,0,3,10.6,0,N/A,0.0,True
+CUST-SYNTH-0468,[SYNTHETIC] MetaFlow Health 838,FinTech & Banking,India,391,2,1,8,8,0,2202.0,1,0,1,42.4,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0469,[SYNTHETIC] Fortis Solutions 182,Digital Marketing & Media,Australia,326,0,0,0,0,0,0.0,0,0,3,6.7,0,N/A,0.0,True
+CUST-SYNTH-0470,[SYNTHETIC] Aether Logistics 186,HealthTech & Life Sciences,United Kingdom,539,2,1,4,3,1,647.0,0,0,4,43.5,1,Migrated to Competitor,0.25,True
+CUST-SYNTH-0471,[SYNTHETIC] Everest Digital 45,HealthTech & Life Sciences,Australia,68,3,2,5,4,1,186.0,1,0,0,43.3,1,Project Terminated / Engagement Ended,0.2,True
+CUST-SYNTH-0472,[SYNTHETIC] Cobalt Robotics 500,FinTech & Banking,India,444,0,0,0,0,0,0.0,0,0,13,26.3,0,N/A,0.0,True
+CUST-SYNTH-0473,[SYNTHETIC] Cobalt Media 668,HealthTech & Life Sciences,United States,85,4,3,11,9,2,751.0,0,1,11,42.3,0,N/A,0.182,True
+CUST-SYNTH-0474,[SYNTHETIC] BlueWave Platform 810,Manufacturing & IoT,United Kingdom,173,4,3,8,7,1,2363.0,0,0,13,12.9,1,Migrated to Competitor,0.125,True
+CUST-SYNTH-0475,[SYNTHETIC] WarpSpeed Cloud 524,Digital Marketing & Media,United Kingdom,454,4,2,21,20,1,7580.0,1,0,15,38.4,1,Budget Constraints / Downsizing,0.048,True
+CUST-SYNTH-0476,[SYNTHETIC] Unified Interactive 234,Logistics & Supply Chain,India,671,2,2,6,5,1,145.0,0,0,12,18.4,0,N/A,0.167,True
+CUST-SYNTH-0477,[SYNTHETIC] JetStream Consulting 795,HealthTech & Life Sciences,Australia,567,0,0,0,0,0,0.0,0,0,3,21.9,0,N/A,0.0,True
+CUST-SYNTH-0478,[SYNTHETIC] Strata Software 282,SaaS & Cloud Services,United States,506,0,0,0,0,0,0.0,0,0,8,24.2,0,N/A,0.0,True
+CUST-SYNTH-0479,[SYNTHETIC] WarpSpeed Systems 190,EdTech & E-Learning,Singapore,363,1,1,1,1,0,249.0,0,0,7,43.9,0,N/A,0.0,True
+CUST-SYNTH-0480,[SYNTHETIC] WarpSpeed Cloud 587,HealthTech & Life Sciences,India,226,2,2,10,9,1,261.0,0,0,2,15.4,0,N/A,0.1,True
+CUST-SYNTH-0481,[SYNTHETIC] Luminary Fintech 48,SaaS & Cloud Services,India,492,2,1,13,11,2,3839.0,1,0,13,14.2,0,N/A,0.154,True
+CUST-SYNTH-0482,[SYNTHETIC] BlueWave Security 499,EdTech & E-Learning,India,102,0,0,0,0,0,0.0,0,0,0,34.8,0,N/A,0.0,True
+CUST-SYNTH-0483,[SYNTHETIC] Vanguard Systems 950,SaaS & Cloud Services,United Kingdom,708,2,2,9,9,0,3021.0,0,0,0,28.8,0,N/A,0.0,True
+CUST-SYNTH-0484,[SYNTHETIC] Horizon Security 891,FinTech & Banking,United Kingdom,348,3,3,15,14,1,6461.0,1,0,3,26.1,0,N/A,0.067,True
+CUST-SYNTH-0485,[SYNTHETIC] Nexus Labs 354,EdTech & E-Learning,UAE,591,4,2,26,23,3,2027.0,0,0,12,32.3,0,N/A,0.115,True
+CUST-SYNTH-0486,[SYNTHETIC] Quasar Fintech 674,E-Commerce & Retail,United Kingdom,155,1,0,1,1,0,129.0,0,0,10,21.1,1,Budget Constraints / Downsizing,0.0,True
+CUST-SYNTH-0487,[SYNTHETIC] OmniLink Cloud 844,Digital Marketing & Media,India,416,1,0,4,4,0,996.0,0,0,3,9.5,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0488,[SYNTHETIC] IronClad Systems 756,Digital Marketing & Media,India,149,4,3,31,30,1,1700.0,0,0,8,14.4,1,Migrated to Competitor,0.032,True
+CUST-SYNTH-0489,[SYNTHETIC] Optima Ventures 953,HealthTech & Life Sciences,Australia,76,0,0,0,0,0,0.0,0,0,13,28.2,0,N/A,0.0,True
+CUST-SYNTH-0490,[SYNTHETIC] Hyperion Digital 349,HealthTech & Life Sciences,India,375,1,1,1,1,0,1999.0,0,0,8,47.6,0,N/A,0.0,True
+CUST-SYNTH-0491,[SYNTHETIC] Quasar Networks 851,Manufacturing & IoT,United Kingdom,719,3,1,10,9,1,2246.0,0,1,12,36.9,1,Migrated to Competitor,0.1,True
+CUST-SYNTH-0492,[SYNTHETIC] Prism Networks 368,FinTech & Banking,UAE,729,5,0,12,11,1,3379.0,0,0,13,27.6,1,Project Terminated / Engagement Ended,0.083,True
+CUST-SYNTH-0493,[SYNTHETIC] Everest Logistics 180,Manufacturing & IoT,Germany,343,3,2,3,3,0,6302.0,0,0,15,10.6,0,N/A,0.0,True
+CUST-SYNTH-0494,[SYNTHETIC] Aether Labs 858,HealthTech & Life Sciences,United States,564,2,1,2,2,0,198.0,0,0,15,14.0,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0495,[SYNTHETIC] CloudPeak Enterprises 30,Logistics & Supply Chain,United Kingdom,623,3,2,3,3,0,5347.0,1,0,9,28.8,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0496,[SYNTHETIC] Krypton Platform 174,FinTech & Banking,India,384,2,1,9,7,2,1873.0,0,0,12,36.0,1,Project Terminated / Engagement Ended,0.222,True
+CUST-SYNTH-0497,[SYNTHETIC] BlueWave Logistics 975,Digital Marketing & Media,India,570,7,5,34,34,0,5606.0,1,0,3,36.5,0,N/A,0.0,True
+CUST-SYNTH-0498,[SYNTHETIC] Vanguard Media 204,Logistics & Supply Chain,Germany,54,1,0,1,1,0,2149.0,0,0,14,38.1,1,Feature Limitations / Missing Capabilities,0.0,True
+CUST-SYNTH-0499,[SYNTHETIC] Prism Labs 60,Manufacturing & IoT,Germany,573,2,2,4,3,1,297.0,1,0,5,7.1,0,N/A,0.25,True
+CUST-SYNTH-0500,[SYNTHETIC] Apex Logistics 99,Manufacturing & IoT,UAE,526,4,4,12,11,1,749.0,1,0,12,38.3,0,N/A,0.083,True

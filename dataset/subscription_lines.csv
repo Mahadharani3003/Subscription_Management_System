@@ -1,0 +1,603 @@
+subscription_ref,product_name,quantity,unit_price,subtotal,is_synthetic
+SUB/2026/00002,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00002,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00004,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00006,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00009,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00009,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00012,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00012,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00013,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00014,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00017,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00017,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00020,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00021,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00022,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00022,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00025,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00025,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00026,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00026,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00030,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00033,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00033,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00035,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00035,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00037,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00037,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00042,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00042,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00043,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00050,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00058,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00060,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00060,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00068,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00068,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00072,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00073,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00074,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00075,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00075,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00076,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00076,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00078,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00079,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00080,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00083,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00083,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00087,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00089,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00089,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00096,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00096,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00098,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00100,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00107,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00113,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00113,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00114,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00117,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00117,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00118,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00124,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00124,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00125,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00126,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00131,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00131,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00132,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00133,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00133,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00135,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00136,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00139,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00139,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00141,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00142,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00142,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00144,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00144,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00145,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00147,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00147,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00149,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00149,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00157,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00158,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00158,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00160,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00160,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00161,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00167,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00171,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00176,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00176,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00179,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00184,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00184,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00185,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00189,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00189,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00190,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00194,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00194,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00195,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00200,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00200,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00202,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00202,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00203,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00203,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00205,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00206,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00206,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00207,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00207,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00211,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00212,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00214,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00215,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00218,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00218,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00220,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00220,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00221,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00227,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00227,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00229,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00229,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00234,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00234,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00236,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00236,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00237,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00243,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00244,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00244,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00245,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00246,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00248,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00252,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00253,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00254,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00254,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00258,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00261,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00262,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00262,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00264,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00266,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00268,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00268,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00269,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00270,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00270,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00272,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00272,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00274,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00275,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00277,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00278,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00278,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00280,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00280,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00286,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00288,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00288,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00289,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00290,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00290,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00291,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00291,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00292,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00292,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00293,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00293,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00294,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00296,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00301,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00302,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00304,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00304,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00307,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00308,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00311,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00313,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00322,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00323,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00327,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00327,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00330,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00333,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00333,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00334,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00334,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00338,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00339,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00339,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00342,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00342,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00343,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00343,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00344,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00346,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00346,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00348,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00349,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00349,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00350,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00350,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00353,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00356,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00356,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00358,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00358,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00360,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00367,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00368,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00370,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00370,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00371,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00371,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00373,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00373,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00374,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00374,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00378,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00379,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00380,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00380,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00381,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00384,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00386,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00389,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00389,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00390,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00390,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00391,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00391,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00393,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00396,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00396,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00399,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00400,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00402,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00404,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00404,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00406,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00406,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00410,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00416,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00416,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00417,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00420,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00420,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00424,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00426,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00426,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00427,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00429,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00431,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00431,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00433,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00433,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00436,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00437,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00438,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00442,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00442,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00443,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00446,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00447,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00449,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00449,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00453,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00455,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00455,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00456,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00458,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00458,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00459,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00459,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00462,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00462,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00463,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00464,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00464,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00466,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00466,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00467,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00467,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00469,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00469,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00470,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00471,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00471,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00475,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00478,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00478,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00482,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00487,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00493,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00493,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00496,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00497,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00497,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00498,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00506,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00507,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00507,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00512,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00512,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00514,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00515,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00515,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00516,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00516,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00521,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00522,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00530,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00530,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00531,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00534,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00534,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00536,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00536,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00543,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00546,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00549,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00550,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00551,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00551,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00554,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00554,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00558,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00561,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00562,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00562,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00566,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00567,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00572,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00572,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00574,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00574,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00576,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00582,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00582,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00584,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00588,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00590,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00590,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00591,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00591,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00592,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00592,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00594,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00595,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00600,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00603,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00603,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00604,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00605,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00608,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00610,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00610,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00612,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00612,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00613,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00616,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00616,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00617,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00620,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00622,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00622,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00626,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00626,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00632,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00632,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00635,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00636,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00638,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00638,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00640,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00640,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00641,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00643,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00643,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00647,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00650,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00650,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00652,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00652,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00654,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00661,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00661,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00663,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00666,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00666,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00669,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00670,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00671,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00671,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00673,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00678,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00680,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00683,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00687,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00688,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00688,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00693,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00694,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00698,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00698,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00699,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00699,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00701,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00701,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00703,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00703,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00707,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00708,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00709,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00709,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00711,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00711,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00712,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00714,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00714,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00715,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00715,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00716,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00716,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00718,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00718,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00720,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00721,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00722,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00723,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00724,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00729,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00729,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00730,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00730,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00731,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00731,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00740,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00740,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00742,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00743,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00746,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00747,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00747,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00749,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00749,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00752,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00752,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00755,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00756,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00757,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00762,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00764,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00765,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00765,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00766,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00766,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00767,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00769,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00773,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00773,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00776,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00777,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00777,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00778,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00779,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00780,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00782,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00782,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00788,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00788,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00789,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00789,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00791,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00793,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00795,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00796,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00800,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00806,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00809,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00809,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00810,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00810,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00815,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00815,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00818,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00818,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00826,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00826,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00831,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00837,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00837,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00841,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00843,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00843,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00846,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00846,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00847,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00847,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00851,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00852,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00853,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00855,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00855,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00858,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00860,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00861,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00861,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00862,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00864,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00864,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00867,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00867,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00872,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00872,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00873,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00874,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00875,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00877,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00878,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00881,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00889,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00889,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00892,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00894,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00896,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00896,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00898,100GB Redundant Storage,4.0,15.0,60.0,True
+SUB/2026/00898,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00900,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00901,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00901,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00903,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00903,Dedicated IP & SSL,2.0,20.0,40.0,True
+SUB/2026/00904,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00909,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00909,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00912,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00914,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00914,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00915,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00916,Additional Seat Meter,1.0,10.0,10.0,True
+SUB/2026/00916,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00917,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00919,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00922,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00925,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00929,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00929,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00930,Dedicated IP & SSL,5.0,20.0,100.0,True
+SUB/2026/00930,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00931,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00932,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00932,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00934,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00934,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00936,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00937,Additional Seat Meter,2.0,10.0,20.0,True
+SUB/2026/00937,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00941,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00941,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00942,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00943,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00943,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00945,Priority Support SLA,3.0,50.0,150.0,True
+SUB/2026/00945,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00946,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00946,100GB Redundant Storage,5.0,15.0,75.0,True
+SUB/2026/00956,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00958,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00965,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00965,Dedicated IP & SSL,3.0,20.0,60.0,True
+SUB/2026/00966,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00974,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00974,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00975,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00976,Additional Seat Meter,5.0,10.0,50.0,True
+SUB/2026/00979,Priority Support SLA,2.0,50.0,100.0,True
+SUB/2026/00979,Priority Support SLA,5.0,50.0,250.0,True
+SUB/2026/00982,Priority Support SLA,4.0,50.0,200.0,True
+SUB/2026/00982,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00985,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00985,100GB Redundant Storage,2.0,15.0,30.0,True
+SUB/2026/00990,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00990,100GB Redundant Storage,1.0,15.0,15.0,True
+SUB/2026/00993,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00993,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00995,Additional Seat Meter,4.0,10.0,40.0,True
+SUB/2026/00995,Priority Support SLA,1.0,50.0,50.0,True
+SUB/2026/00997,Additional Seat Meter,3.0,10.0,30.0,True
+SUB/2026/00997,Dedicated IP & SSL,1.0,20.0,20.0,True
+SUB/2026/00998,Dedicated IP & SSL,4.0,20.0,80.0,True
+SUB/2026/00998,100GB Redundant Storage,3.0,15.0,45.0,True
+SUB/2026/00999,Dedicated IP & SSL,3.0,20.0,60.0,True
