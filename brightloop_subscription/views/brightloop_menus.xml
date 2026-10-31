@@ -155,6 +155,12 @@
               action="action_brightloop_retention_watchlist"
               sequence="25"/>
 
+    <menuitem id="menu_brightloop_report_ai_assistant"
+              name="AI Business Assistant"
+              parent="menu_brightloop_reporting_root"
+              action="action_brightloop_ai_assistant"
+              sequence="30"/>
+
     <!-- 4. Configuration Menu (Admins only) -->
     <menuitem id="menu_brightloop_configuration_root"
               name="Configuration"

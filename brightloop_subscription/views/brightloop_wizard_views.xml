@@ -97,4 +97,54 @@
         <field name="binding_model_id" ref="model_brightloop_subscription"/>
         <field name="binding_view_types">form</field>
     </record>
+
+    <!-- ============================================== -->
+    <!-- 3. AI BUSINESS ASSISTANT WIZARD VIEW           -->
+    <!-- ============================================== -->
+    <record id="view_brightloop_ai_assistant_form" model="ir.ui.view">
+        <field name="name">brightloop.ai.assistant.form</field>
+        <field name="model">brightloop.ai.assistant</field>
+        <field name="arch" type="xml">
+            <form string="Brightloop AI Business Intelligence Assistant">
+                <sheet>
+                    <div class="alert alert-primary d-flex align-items-center mb-3" role="alert">
+                        <i class="fa fa-magic fs-3 me-3 text-primary"/>
+                        <div>
+                            <strong>Brightloop AI Intelligence Engine:</strong> Ask real-time strategic questions regarding MRR, renewals, high churn hazards, plan profitability, and revenue loss. All analyses are 100% explainable and computed strictly from live, authorized Odoo ERP records without cloud leakage or fabrication.
+                        </div>
+                    </div>
+
+                    <group>
+                        <group string="Analytical Query Selection">
+                            <field name="query_type" widget="radio"/>
+                        </group>
+                        <group string="Query Parameters &amp; Audit Trail">
+                            <field name="custom_prompt" invisible="query_type != 'custom_query'" placeholder="e.g. Which customers are past due and at risk of churn?"/>
+                            <field name="records_analyzed" readonly="1" invisible="not analysis_timestamp"/>
+                            <field name="analysis_timestamp" readonly="1" invisible="not analysis_timestamp"/>
+                        </group>
+                    </group>
+
+                    <div class="text-center my-3">
+                        <button name="action_ask" string="Run AI Analysis" type="object" class="btn btn-primary btn-lg shadow-sm">
+                            <i class="fa fa-flash me-1"/> Ask Intelligence Assistant
+                        </button>
+                    </div>
+
+                    <separator string="Live Intelligence &amp; Retention Matrix" invisible="not response_html"/>
+                    <field name="response_html" widget="html" readonly="1" invisible="not response_html"/>
+                </sheet>
+                <footer>
+                    <button string="Close" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_brightloop_ai_assistant" model="ir.actions.act_window">
+        <field name="name">AI Business Assistant</field>
+        <field name="res_model">brightloop.ai.assistant</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
 </odoo>

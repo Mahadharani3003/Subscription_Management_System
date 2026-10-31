@@ -109,6 +109,44 @@ class BrightloopPlan(models.Model):
         help="Total number of active or registered subscriptions on this plan."
     )
 
+    # --- Commercial SaaS Packaging & Limits ---
+    tier_package = fields.Selection(
+        selection=[
+            ('starter', 'Starter Package'),
+            ('professional', 'Professional Package'),
+            ('enterprise', 'Enterprise Package'),
+        ],
+        string='Commercial SaaS Tier',
+        default='starter',
+        required=True,
+        help="Target commercial customer segment packaging."
+    )
+    max_subscribers_limit = fields.Integer(
+        string='Max Subscriber Limit',
+        default=100,
+        help="Configurable limit of subscribers allowed under this tier (0 = unlimited)."
+    )
+    has_api_access = fields.Boolean(
+        string='REST / Webhook API Access',
+        default=False,
+        help="Permits programmatic subscription management via external REST API."
+    )
+    has_ai_intelligence = fields.Boolean(
+        string='AI Churn & Assistant Access',
+        default=False,
+        help="Enables predictive churn diagnostics and AI business assistant."
+    )
+    support_sla_hours = fields.Integer(
+        string='Support SLA Response (Hours)',
+        default=48,
+        help="Contractual customer support turnaround guarantee."
+    )
+    is_public_portal = fields.Boolean(
+        string='Visible in Customer Portal',
+        default=True,
+        help="Flag indicating if prospective or existing customers can select this plan via portal."
+    )
+
     _sql_constraints = [
         ('code_company_uniq', 'unique(code, company_id)', 'The Plan Code must be unique per company!'),
         ('price_positive', 'CHECK(price >= 0)', 'The plan price must be positive or zero!'),

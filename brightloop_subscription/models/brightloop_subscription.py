@@ -211,6 +211,56 @@ class BrightloopSubscription(models.Model):
         store=True,
         help="Estimated statistical likelihood that the contract successfully renews."
     )
+    retention_recommendation = fields.Text(
+        string='Actionable Retention Recommendation',
+        compute='_compute_churn_risk',
+        store=True,
+        help="Automated AI-recommended action to mitigate churn risk."
+    )
+    predicted_loss_arr = fields.Monetary(
+        string='ARR at Risk of Churn',
+        currency_field='currency_id',
+        compute='_compute_churn_risk',
+        store=True,
+        help="Estimated annual revenue loss if this account churns."
+    )
+    expected_renewal_revenue = fields.Monetary(
+        string='Expected Renewal Revenue',
+        currency_field='currency_id',
+        compute='_compute_churn_risk',
+        store=True,
+        help="Next cycle revenue weighted by renewal probability."
+    )
+    churn_confidence = fields.Selection(
+        selection=[
+            ('high', 'High Confidence (95% - Rich Data)'),
+            ('medium', 'Medium Confidence (80% - Moderate Data)'),
+            ('standard', 'Standard Baseline (70% - Limited History)'),
+        ],
+        string='Prediction Confidence',
+        compute='_compute_churn_risk',
+        store=True,
+        help="Reliability indicator based on depth of historical customer data."
+    )
+    days_to_renewal = fields.Integer(
+        string='Days to Renewal',
+        compute='_compute_renewal_timeline',
+        store=True,
+        index=True,
+        help="Number of days remaining until next scheduled renewal."
+    )
+    renewal_urgency = fields.Selection(
+        selection=[
+            ('immediate', 'Immediate Attention (<= 3 Days)'),
+            ('upcoming', 'Upcoming Renewal (4-14 Days)'),
+            ('normal', 'Standard Cadence (> 14 Days)'),
+        ],
+        string='Renewal Urgency',
+        compute='_compute_renewal_timeline',
+        store=True,
+        index=True,
+        help="Urgency indicator for sales and account managers."
+    )
 
     churn_reason_id = fields.Many2one(
         comodel_name='brightloop.churn.reason',
@@ -285,6 +335,10 @@ class BrightloopSubscription(models.Model):
                 sub.health_score = 0
                 sub.churn_risk_level = 'high'
                 sub.renewal_probability = 0.0
+                sub.predicted_loss_arr = 0.0
+                sub.expected_renewal_revenue = 0.0
+                sub.churn_confidence = 'high'
+                sub.retention_recommendation = _("Contract discontinued or expired.")
                 sub.churn_risk_factors = _("Contract discontinued or expired.")
                 continue
 
@@ -303,6 +357,7 @@ class BrightloopSubscription(models.Model):
                 factors.append(_("Auto-renew disabled by subscriber."))
 
             # 4. Tenure Loyalty Factor
+            tenure_months = 0
             if sub.start_date:
                 tenure_months = (today - sub.start_date).days // 30
                 if tenure_months >= 6:
@@ -316,14 +371,56 @@ class BrightloopSubscription(models.Model):
             if score >= 75:
                 sub.churn_risk_level = 'low'
                 sub.renewal_probability = round(85.0 + (score - 75) * 0.5, 1)
+                sub.retention_recommendation = _("Account in healthy standing: Target for plan tier upgrade or add-on seat upsell.")
             elif score >= 50:
                 sub.churn_risk_level = 'medium'
                 sub.renewal_probability = round(55.0 + (score - 50) * 0.8, 1)
+                sub.retention_recommendation = _("Moderate Hazard: Send proactive check-in; share product feature guides and offer customer success consultation.")
             else:
                 sub.churn_risk_level = 'high'
                 sub.renewal_probability = round(max(10.0, score * 0.6), 1)
+                if sub.state == 'past_due':
+                    sub.retention_recommendation = _("Critical Delinquency: Contact billing contact immediately; offer 7-day payment extension and update payment method.")
+                elif not sub.auto_renew:
+                    sub.retention_recommendation = _("Cancellation Intent: Auto-renew disabled. Dispatch retention specialist; offer 15% discount on annual renewal.")
+                else:
+                    sub.retention_recommendation = _("High Churn Hazard: Schedule executive health review; audit support tickets and usage bottlenecks.")
 
             sub.churn_risk_factors = " | ".join(factors) if factors else _("Healthy engagement; flawless payment record.")
+
+            # Revenue Forecast & Risk Loss
+            if sub.state in ('active', 'past_due', 'paused'):
+                sub.predicted_loss_arr = round(sub.arr * (1.0 - (sub.renewal_probability / 100.0)), 2)
+                sub.expected_renewal_revenue = round(sub.recurring_total * (sub.renewal_probability / 100.0), 2)
+            else:
+                sub.predicted_loss_arr = 0.0
+                sub.expected_renewal_revenue = 0.0
+
+            # Confidence based on historical data depth
+            inv_count = len(sub.invoice_ids)
+            if tenure_months >= 6 and inv_count >= 3:
+                sub.churn_confidence = 'high'
+            elif tenure_months >= 2 or inv_count >= 1:
+                sub.churn_confidence = 'medium'
+            else:
+                sub.churn_confidence = 'standard'
+
+    @api.depends('next_billing_date')
+    def _compute_renewal_timeline(self):
+        today = fields.Date.context_today(self)
+        for sub in self:
+            if sub.next_billing_date:
+                delta = (sub.next_billing_date - today).days
+                sub.days_to_renewal = delta
+                if delta <= 3:
+                    sub.renewal_urgency = 'immediate'
+                elif delta <= 14:
+                    sub.renewal_urgency = 'upcoming'
+                else:
+                    sub.renewal_urgency = 'normal'
+            else:
+                sub.days_to_renewal = 999
+                sub.renewal_urgency = 'normal'
 
     @api.constrains('start_date', 'end_date', 'next_billing_date')
     def _check_dates_consistency(self):

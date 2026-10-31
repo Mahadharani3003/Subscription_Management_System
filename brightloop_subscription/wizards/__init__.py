@@ -4,3 +4,4 @@
 
 from . import brightloop_change_plan_wizard
 from . import brightloop_cancel_wizard
+from . import brightloop_ai_assistant

@@ -210,4 +210,211 @@
             </div>
         </t>
     </template>
+
+    <!-- ========================================================================= -->
+    <!-- 4. FLOATING AI CHATBOT WIDGET FOR CUSTOMER PORTAL                         -->
+    <!-- ========================================================================= -->
+    <template id="brightloop_chatbot_widget" name="Brightloop AI Chatbot Widget">
+        <!-- Floating Chatbot Launcher Button -->
+        <div id="brightloop-chatbot-launcher" class="position-fixed" style="bottom: 24px; right: 24px; z-index: 9999;">
+            <button id="brightloop-btn-toggle" class="btn btn-primary rounded-circle shadow-lg d-flex align-items-center justify-content-center" 
+                    style="width: 58px; height: 58px; background: linear-gradient(135deg, #714B67 0%, #017E84 100%); border: none; cursor: pointer; transition: transform 0.2s;"
+                    title="Open Brightloop AI Assistant">
+                <i class="fa fa-magic fs-4 text-white"></i>
+            </button>
+        </div>
+
+        <!-- Floating Chatbot Window -->
+        <div id="brightloop-chatbot-window" class="position-fixed shadow-lg rounded-4 overflow-hidden d-none flex-column" 
+             style="bottom: 92px; right: 24px; width: 380px; max-width: calc(100vw - 32px); height: 530px; max-height: calc(100vh - 110px); z-index: 10000; background: #ffffff; border: 1px solid rgba(0,0,0,0.12);">
+            
+            <!-- Chat Header -->
+            <div class="p-3 text-white d-flex justify-content-between align-items-center" style="background: linear-gradient(135deg, #714B67 0%, #017E84 100%);">
+                <div class="d-flex align-items-center gap-2">
+                    <div class="bg-white rounded-circle p-1 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                        <i class="fa fa-robot text-primary fs-5" style="color: #714B67 !important;"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-bold text-white">Brightloop AI Assistant</h6>
+                        <small class="text-white-50" style="font-size: 0.75rem;">
+                            <span class="badge bg-success rounded-circle p-1 me-1" style="font-size: 0.35rem;"> </span>
+                            Live Account Records Verified
+                        </small>
+                    </div>
+                </div>
+                <button id="brightloop-btn-close" class="btn btn-sm text-white p-0 border-0 fs-5" style="opacity: 0.85;" title="Minimize Chat">&#215;</button>
+            </div>
+
+            <!-- Chat Messages Scrollable Area -->
+            <div id="brightloop-chat-messages" class="flex-grow-1 p-3 overflow-auto" style="background: #f8f9fa; font-size: 0.875rem;">
+                <!-- Initial Welcome Bubble -->
+                <div class="d-flex gap-2 mb-3">
+                    <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 28px; height: 28px; font-size: 0.75rem; background: #714B67 !important;">
+                        AI
+                    </div>
+                    <div class="p-3 rounded-3 shadow-sm bg-white border text-dark" style="max-width: 85%;">
+                        <p class="mb-2">
+                            Hello <strong><t t-out="request.env.user.partner_id.name or 'Subscriber'"/></strong>! I am your <strong>Brightloop AI Assistant</strong>.
+                        </p>
+                        <p class="mb-2 text-muted" style="font-size: 0.82rem;">
+                            I can look up your live subscription status, upcoming billing dates, recent invoices, or guide you through plan changes.
+                        </p>
+                        <div class="d-flex flex-wrap gap-1 mt-2">
+                            <button class="btn btn-outline-secondary btn-sm rounded-pill py-0 px-2 brightloop-chip" style="font-size: 0.75rem;" data-prompt="What is my current subscription status?">
+                                📊 Subscription Status
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm rounded-pill py-0 px-2 brightloop-chip" style="font-size: 0.75rem;" data-prompt="When is my next billing date?">
+                                📅 Next Billing Date
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm rounded-pill py-0 px-2 brightloop-chip" style="font-size: 0.75rem;" data-prompt="Show my recent invoices">
+                                💳 Recent Invoices
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm rounded-pill py-0 px-2 brightloop-chip" style="font-size: 0.75rem;" data-prompt="How do I upgrade or downgrade my plan?">
+                                🚀 Upgrade / Change Plan
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm rounded-pill py-0 px-2 brightloop-chip" style="font-size: 0.75rem;" data-prompt="What subscription plans are available?">
+                                🌟 Available Plans
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typing Indicator (Hidden by default) -->
+            <div id="brightloop-typing" class="px-3 py-2 bg-light border-top d-none" style="font-size: 0.75rem; color: #6c757d;">
+                <i class="fa fa-circle-o-notch fa-spin me-1"></i> Checking your authorized account records...
+            </div>
+
+            <!-- Chat Input Area -->
+            <div class="p-2 border-top bg-white d-flex gap-2 align-items-center">
+                <input id="brightloop-chat-input" type="text" class="form-control form-control-sm border-0 bg-light" 
+                       placeholder="Ask about billing, renewals, or plans..." autocomplete="off"/>
+                <button id="brightloop-btn-send" class="btn btn-sm btn-primary rounded-circle d-flex align-items-center justify-content-center" 
+                        style="width: 34px; height: 34px; background: #714B67; border: none;" title="Send Message">
+                    <i class="fa fa-paper-plane text-white" style="font-size: 0.75rem;"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chatbot JavaScript Controller -->
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                var toggleBtn = document.getElementById('brightloop-btn-toggle');
+                var closeBtn = document.getElementById('brightloop-btn-close');
+                var chatWindow = document.getElementById('brightloop-chatbot-window');
+                var chatInput = document.getElementById('brightloop-chat-input');
+                var sendBtn = document.getElementById('brightloop-btn-send');
+                var msgBox = document.getElementById('brightloop-chat-messages');
+                var typingBox = document.getElementById('brightloop-typing');
+
+                if (!toggleBtn || !chatWindow) return;
+
+                function toggleChat() {
+                    if (chatWindow.classList.contains('d-none')) {
+                        chatWindow.classList.remove('d-none');
+                        chatWindow.classList.add('d-flex');
+                        chatInput.focus();
+                    } else {
+                        chatWindow.classList.remove('d-flex');
+                        chatWindow.classList.add('d-none');
+                    }
+                }
+
+                toggleBtn.addEventListener('click', toggleChat);
+                closeBtn.addEventListener('click', toggleChat);
+
+                function formatReply(text) {
+                    if (!text) return '';
+                    // Convert markdown bold to strong and linebreaks to br
+                    var formatted = text
+                        .replace(/\*\*(.*?)\*\*/g, '&lt;strong&gt;$1&lt;/strong&gt;')
+                        .replace(/\*(.*?)\*/g, '&lt;em&gt;$1&lt;/em&gt;')
+                        .replace(/\n\n/g, '&lt;br/&gt;&lt;br/&gt;')
+                        .replace(/\n/g, '&lt;br/&gt;');
+                    return formatted;
+                }
+
+                function appendMessage(sender, text) {
+                    var div = document.createElement('div');
+                    div.className = 'd-flex gap-2 mb-3 ' + (sender === 'user' ? 'justify-content-end' : '');
+                    
+                    if (sender === 'user') {
+                        div.innerHTML = '&lt;div class="p-2 px-3 rounded-3 shadow-sm text-white" style="background: #017E84; max-width: 80%;"&gt;' +
+                                        text + '&lt;/div&gt;';
+                    } else {
+                        div.innerHTML = '&lt;div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" style="width: 28px; height: 28px; font-size: 0.75rem; background: #714B67 !important;"&gt;AI&lt;/div&gt;' +
+                                        '&lt;div class="p-3 rounded-3 shadow-sm bg-white border text-dark" style="max-width: 85%;"&gt;' +
+                                        formatReply(text) + '&lt;/div&gt;';
+                    }
+                    msgBox.appendChild(div);
+                    msgBox.scrollTop = msgBox.scrollHeight;
+                }
+
+                function sendMessage(text) {
+                    var query = (text || chatInput.value || '').trim();
+                    if (!query) return;
+
+                    appendMessage('user', query);
+                    chatInput.value = '';
+                    typingBox.classList.remove('d-none');
+                    msgBox.scrollTop = msgBox.scrollHeight;
+
+                    // Send JSON-RPC request to Odoo backend endpoint
+                    fetch('/brightloop/chatbot/query', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-Requested-With': 'XMLHttpRequest'
+                        },
+                        body: JSON.stringify({
+                            jsonrpc: '2.0',
+                            method: 'call',
+                            params: { message: query },
+                            id: new Date().getTime()
+                        })
+                    })
+                    .then(function(res) { return res.json(); })
+                    .then(function(data) {
+                        typingBox.classList.add('d-none');
+                        if (data.result &amp;&amp; data.result.reply) {
+                            appendMessage('bot', data.result.reply);
+                        } else if (data.error) {
+                            appendMessage('bot', 'We encountered an error processing your query. Please refresh or try again.');
+                        } else {
+                            appendMessage('bot', 'No response received. Please try again.');
+                        }
+                    })
+                    .catch(function(err) {
+                        typingBox.classList.add('d-none');
+                        appendMessage('bot', 'Network connection error. Please verify your internet connection.');
+                    });
+                }
+
+                sendBtn.addEventListener('click', function() { sendMessage(); });
+                chatInput.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        sendMessage();
+                    }
+                });
+
+                // Attach click listeners to suggestion chips
+                document.addEventListener('click', function(e) {
+                    if (e.target &amp;&amp; e.target.classList.contains('brightloop-chip')) {
+                        var prompt = e.target.getAttribute('data-prompt');
+                        if (prompt) {
+                            sendMessage(prompt);
+                        }
+                    }
+                });
+            });
+        </script>
+    </template>
+
+    <!-- 5. Inject Floating AI Chatbot into Customer Portal Layout -->
+    <template id="portal_layout_chatbot_injector" inherit_id="portal.portal_layout" priority="40">
+        <xpath expr="//div[@id='wrap']" position="after">
+            <t t-call="brightloop_subscription.brightloop_chatbot_widget"/>
+        </xpath>
+    </template>
 </odoo>

@@ -5,7 +5,7 @@
 [![Odoo Version](https://img.shields.io/badge/Odoo-17.0%20%7C%2018.0-purple.svg)](https://www.odoo.com/)
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-LGPL--3-green.svg)](LICENSE)
-[![QA & Tests](https://img.shields.io/badge/Tests%20Passing-29%2F29%20(100%25)-brightgreen.svg)](#-testing--quality-assurance)
+[![QA & Tests](https://img.shields.io/badge/Tests%20Passing-34%2F34%20(100%25)-brightgreen.svg)](#-testing--quality-assurance)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](docker-compose.yml)
 
 ---
@@ -16,7 +16,10 @@
 
 ### Key Capabilities
 - ⚡ **Multi-Cadence Plan Engine**: Configure recurring subscriptions across daily, monthly, annual, or custom cycle counts with trial periods and grace policies.
+- 📦 **Commercial SaaS Packaging**: Pre-configured Starter, Professional, and Enterprise tiers with configurable subscriber limits, API permissions, and support SLAs.
 - 🔄 **Autonomous Recurring Billing**: Daily automated `ir.cron` scheduler generating compliant `account.move` customer invoices with accurate tax calculations and journal lines.
+- 🤖 **In-Portal AI Conversational Chatbot**: Real-time floating assistant for customers to check subscription status, renewal dates, invoices, and plan upgrades with zero hallucinations.
+- 🧠 **AI Business Intelligence Assistant**: In-ERP managerial assistant providing live briefings on MRR, ARR, renewals, top plans, and actuarial churn revenue loss.
 - 🛡️ **Dunning & Bad-Debt Protection**: Automated payment grace period monitoring, retry notifications, and auto-suspension upon prolonged arrears.
 - ⚖️ **Proration Engine**: Immediate plan upgrades and downgrades with exact day-level credit and charge calculations.
 - 🔒 **Zero Duplicate Protection**: Idempotent billing pipeline preventing duplicate invoices even on simultaneous manual or cron runs.

@@ -152,6 +152,20 @@
                         <page string="Description &amp; Feature Benefits" name="description_page">
                             <field name="description" placeholder="List all features, SLA guarantees, and capabilities included in this tier..."/>
                         </page>
+                        <page string="SaaS Packaging &amp; Entitlements" name="saas_packaging_page">
+                            <group>
+                                <group string="Commercial Tier &amp; Limits">
+                                    <field name="tier_package" widget="radio"/>
+                                    <field name="max_subscribers_limit"/>
+                                    <field name="support_sla_hours"/>
+                                </group>
+                                <group string="Entitlements &amp; Visibility">
+                                    <field name="has_api_access"/>
+                                    <field name="has_ai_intelligence"/>
+                                    <field name="is_public_portal"/>
+                                </group>
+                            </group>
+                        </page>
                         <page string="Subscribers" name="subscribers_page">
                             <field name="subscription_ids" readonly="1">
                                 <tree string="Subscribers" limit="10">
