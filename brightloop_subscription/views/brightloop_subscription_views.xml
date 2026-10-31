@@ -148,12 +148,20 @@
                             class="btn-primary" invisible="state not in ('draft', 'trial')"/>
                     <button name="action_renew" string="Generate Recurring Invoice" type="object" 
                             class="btn-outline-primary" invisible="state not in ('active', 'past_due')"/>
+                    
+                    <!-- Upgrade / Change Plan Wizard Trigger -->
+                    <button name="%(action_brightloop_change_plan_wizard)d" string="Upgrade / Change Plan" 
+                            type="action" class="btn-outline-primary" invisible="state in ('cancelled', 'closed')"/>
+
                     <button name="action_pause" string="Pause Subscription" type="object" 
                             class="btn-secondary" invisible="state != 'active'"/>
                     <button name="action_resume" string="Resume Subscription" type="object" 
                             class="btn-success" invisible="state != 'paused'"/>
-                    <button name="action_cancel" string="Cancel Contract" type="object" 
-                            class="btn-outline-danger" invisible="state in ('cancelled', 'closed')"/>
+
+                    <!-- Cancellation Wizard Trigger -->
+                    <button name="%(action_brightloop_cancel_wizard)d" string="Cancel Contract" 
+                            type="action" class="btn-outline-danger" invisible="state in ('cancelled', 'closed')"/>
+
                     <button name="action_close" string="Close / Expire" type="object" 
                             class="btn-secondary" invisible="state not in ('past_due', 'active')"/>
 
@@ -206,6 +214,8 @@
                             <field name="start_date"/>
                             <field name="trial_end_date" invisible="state != 'trial' and not trial_end_date"/>
                             <field name="next_billing_date"/>
+                            <field name="last_invoiced_date" optional="hide"/>
+                            <field name="last_renewal_reminder_date" optional="hide"/>
                         </group>
                         <group string="Contract Term &amp; Pauses">
                             <field name="end_date" invisible="not end_date"/>
@@ -317,7 +327,6 @@
     <!-- ========================================== -->
     <!-- 8. WINDOW ACTIONS                         -->
     <!-- ========================================== -->
-    <!-- Action: All Subscriptions -->
     <record id="action_brightloop_subscription_all" model="ir.actions.act_window">
         <field name="name">All Subscriptions</field>
         <field name="res_model">brightloop.subscription</field>
@@ -334,7 +343,6 @@
         </field>
     </record>
 
-    <!-- Action: Active Subscriptions -->
     <record id="action_brightloop_subscription_active" model="ir.actions.act_window">
         <field name="name">Active Contracts</field>
         <field name="res_model">brightloop.subscription</field>
@@ -344,7 +352,6 @@
         <field name="context">{'default_state': 'active'}</field>
     </record>
 
-    <!-- Action: Pending Renewal & Past Due -->
     <record id="action_brightloop_subscription_pending" model="ir.actions.act_window">
         <field name="name">Pending Renewal &amp; Past Due</field>
         <field name="res_model">brightloop.subscription</field>
@@ -353,7 +360,6 @@
         <field name="domain">[('state', 'in', ('trial', 'past_due', 'paused'))]</field>
     </record>
 
-    <!-- Action: Cancelled & Churned -->
     <record id="action_brightloop_subscription_churned" model="ir.actions.act_window">
         <field name="name">Cancelled &amp; Churned</field>
         <field name="res_model">brightloop.subscription</field>

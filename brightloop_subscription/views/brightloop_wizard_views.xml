@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ============================================== -->
+    <!-- 1. UPGRADE / DOWNGRADE PLAN WIZARD VIEW        -->
+    <!-- ============================================== -->
+    <record id="view_brightloop_change_plan_wizard_form" model="ir.ui.view">
+        <field name="name">brightloop.subscription.change.plan.wizard.form</field>
+        <field name="model">brightloop.subscription.change.plan.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Modify Subscription Plan">
+                <sheet>
+                    <div class="alert alert-info d-flex align-items-center mb-3" role="alert">
+                        <i class="fa fa-info-circle fs-4 me-2"/>
+                        <div>
+                            Switching subscription plans automatically recalculates MRR/ARR and adjusts billing schedules.
+                        </div>
+                    </div>
+
+                    <group>
+                        <group string="Current Subscription Plan">
+                            <field name="subscription_id" readonly="1"/>
+                            <field name="current_plan_id"/>
+                            <field name="current_price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                        <group string="Target Subscription Plan">
+                            <field name="new_plan_id" domain="[('id', '!=', current_plan_id)]" options="{'no_create': True}"/>
+                            <field name="new_price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="change_type" widget="badge" 
+                                   decoration-success="change_type == 'upgrade'" 
+                                   decoration-warning="change_type == 'downgrade'"
+                                   decoration-info="change_type == 'lateral'"/>
+                        </group>
+                    </group>
+
+                    <group string="Proration &amp; Execution Timing">
+                        <field name="apply_immediately"/>
+                        <field name="estimated_proration" widget="monetary" options="{'currency_field': 'currency_id'}" 
+                               invisible="not apply_immediately"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_confirm_change_plan" string="Confirm Plan Change" type="object" class="btn-primary"/>
+                    <button string="Discard" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_brightloop_change_plan_wizard" model="ir.actions.act_window">
+        <field name="name">Upgrade / Downgrade Plan</field>
+        <field name="res_model">brightloop.subscription.change.plan.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_brightloop_subscription"/>
+        <field name="binding_view_types">form</field>
+    </record>
+
+    <!-- ============================================== -->
+    <!-- 2. SUBSCRIPTION CANCELLATION WIZARD VIEW       -->
+    <!-- ============================================== -->
+    <record id="view_brightloop_cancel_wizard_form" model="ir.ui.view">
+        <field name="name">brightloop.subscription.cancel.wizard.form</field>
+        <field name="model">brightloop.subscription.cancel.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Cancel Subscription Contract">
+                <sheet>
+                    <div class="alert alert-warning d-flex align-items-center mb-3" role="alert">
+                        <i class="fa fa-exclamation-triangle fs-4 me-2 text-warning"/>
+                        <div>
+                            Please capture churn feedback to maintain clean retention and cohort metrics.
+                        </div>
+                    </div>
+
+                    <group>
+                        <field name="subscription_id" readonly="1"/>
+                        <field name="churn_reason_id" options="{'no_create': True}"/>
+                        <field name="cancel_immediately"/>
+                    </group>
+                    <group string="Customer Feedback &amp; Retention Notes">
+                        <field name="cancellation_notes" placeholder="Summarize feedback or reason given by the customer..."/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_confirm_cancellation" string="Confirm Cancellation" type="object" class="btn-danger"/>
+                    <button string="Keep Subscription" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_brightloop_cancel_wizard" model="ir.actions.act_window">
+        <field name="name">Cancel Subscription</field>
+        <field name="res_model">brightloop.subscription.cancel.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_brightloop_subscription"/>
+        <field name="binding_view_types">form</field>
+    </record>
+</odoo>
