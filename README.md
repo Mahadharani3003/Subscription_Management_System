@@ -128,6 +128,10 @@ flowchart TD
 │   ├── SECURITY_AND_QA_AUDIT_REPORT.md      # Security Audit, ACL Matrix & QA Report
 │   ├── PRODUCT_INNOVATION_AND_INTELLIGENT_ANALYTICS.md # Innovation & Predictive Scoring
 │   └── HACKATHON_PRESENTATION_AND_EVALUATION_GUIDE.md  # Presentation & Evaluation Script
+├── scripts/
+│   ├── health_check_and_audit.py            # Automated health check diagnostic utility
+│   ├── backup_brightloop.sh                 # Production PostgreSQL & filestore backup script
+│   └── restore_brightloop.sh                # Automated disaster recovery restoration script
 ├── tests/
 │   ├── test_subscription_workflows.py       # 10 lifecycle & workflow automated test scenarios
 │   ├── test_full_system_integration.py      # 9 integration QA & performance benchmark tests
@@ -206,6 +210,7 @@ Detailed guides are located in the [`docs/`](docs/) directory:
 - [Judge Q&A & Defense Guide](docs/JUDGE_QA_AND_DEFENSE_GUIDE.md): 28 technical, architectural, and business defense questions with answers.
 - [Hackathon Live Demonstration Guide](docs/HACKATHON_PRESENTATION_AND_EVALUATION_GUIDE.md): 5-min & 10-min demo scripts with sample accounts.
 - [Known Limitations & Future Roadmap](docs/KNOWN_LIMITATIONS_AND_FUTURE_SCOPE.md): Constraints, trade-offs, and multi-phase engineering roadmap.
+- [Production Maintenance & Operations Manual](docs/MAINTENANCE_AND_OPERATIONS_MANUAL.md): Health monitoring, backup/recovery, bug triage SLAs, and troubleshooting runbooks.
 
 ---
 
