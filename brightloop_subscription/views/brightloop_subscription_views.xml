@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================== -->
+    <!-- 1. SEARCH / FILTER VIEW                   -->
+    <!-- ========================================== -->
+    <record id="view_brightloop_subscription_search" model="ir.ui.view">
+        <field name="name">brightloop.subscription.search</field>
+        <field name="model">brightloop.subscription</field>
+        <field name="arch" type="xml">
+            <search string="Search Subscriptions">
+                <field name="name" string="Subscription / Customer" 
+                       filter_domain="['|', ('name', 'ilike', self), ('partner_id', 'ilike', self)]"/>
+                <field name="partner_id"/>
+                <field name="plan_id"/>
+                <field name="user_id"/>
+                <separator/>
+                <!-- Status Filters -->
+                <filter string="Active" name="filter_active" domain="[('state', '=', 'active')]"/>
+                <filter string="In Free Trial" name="filter_trial" domain="[('state', '=', 'trial')]"/>
+                <filter string="Past Due / In Arrears" name="filter_past_due" domain="[('state', '=', 'past_due')]"/>
+                <filter string="Paused" name="filter_paused" domain="[('state', '=', 'paused')]"/>
+                <filter string="Draft" name="filter_draft" domain="[('state', '=', 'draft')]"/>
+                <filter string="Cancelled / Churned" name="filter_cancelled" domain="[('state', 'in', ('cancelled', 'closed'))]"/>
+                <separator/>
+                <filter string="Auto-Renew Enabled" name="filter_auto_renew" domain="[('auto_renew', '=', True)]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter string="Stage / Status" name="group_state" domain="[]" context="{'group_by': 'state'}"/>
+                    <filter string="Subscription Plan" name="group_plan" domain="[]" context="{'group_by': 'plan_id'}"/>
+                    <filter string="Customer" name="group_partner" domain="[]" context="{'group_by': 'partner_id'}"/>
+                    <filter string="Account Manager" name="group_user" domain="[]" context="{'group_by': 'user_id'}"/>
+                    <filter string="Next Billing Date" name="group_billing_date" domain="[]" context="{'group_by': 'next_billing_date:month'}"/>
+                    <filter string="Company" name="group_company" domain="[]" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- 2. KANBAN VIEW                            -->
+    <!-- ========================================== -->
+    <record id="view_brightloop_subscription_kanban" model="ir.ui.view">
+        <field name="name">brightloop.subscription.kanban</field>
+        <field name="model">brightloop.subscription</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column o_opportunity_kanban" sample="1" quick_create="false">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="plan_id"/>
+                <field name="state"/>
+                <field name="recurring_total"/>
+                <field name="currency_id"/>
+                <field name="mrr"/>
+                <field name="next_billing_date"/>
+                <field name="user_id"/>
+                <field name="activity_state"/>
+                <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click p-3 rounded shadow-sm border bg-white mb-2">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <span class="fw-bold text-primary"><field name="name"/></span>
+                                <field name="state" widget="badge" 
+                                       decoration-success="state == 'active'" 
+                                       decoration-info="state == 'trial'" 
+                                       decoration-warning="state == 'paused'" 
+                                       decoration-danger="state == 'past_due'"
+                                       decoration-secondary="state in ('cancelled', 'closed')"/>
+                            </div>
+                            <div class="fw-semibold text-dark fs-6 text-truncate mb-2">
+                                <i class="fa fa-building-o me-1 text-muted"/><field name="partner_id"/>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center my-2 p-2 bg-light rounded">
+                                <div>
+                                    <span class="badge text-bg-primary-subtle border text-primary"><field name="plan_id"/></span>
+                                </div>
+                                <div class="text-end">
+                                    <div class="fw-bold text-dark">
+                                        <field name="recurring_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    </div>
+                                    <div class="text-muted small">MRR: <field name="mrr" widget="monetary" options="{'currency_field': 'currency_id'}"/></div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center pt-2 border-top small text-muted">
+                                <div>
+                                    <i class="fa fa-calendar me-1"/>
+                                    <t t-if="record.next_billing_date.raw_value">
+                                        <field name="next_billing_date"/>
+                                    </t>
+                                    <t t-else="">-</t>
+                                </div>
+                                <div>
+                                    <field name="activity_ids" widget="kanban_activity"/>
+                                    <field name="user_id" widget="many2one_avatar_user"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- 3. TREE / LIST VIEW                       -->
+    <!-- ========================================== -->
+    <record id="view_brightloop_subscription_tree" model="ir.ui.view">
+        <field name="name">brightloop.subscription.tree</field>
+        <field name="model">brightloop.subscription</field>
+        <field name="arch" type="xml">
+            <tree string="Subscriptions" sample="1" decoration-danger="state == 'past_due'" decoration-muted="state in ('cancelled', 'closed')">
+                <field name="name" font_weight="bold"/>
+                <field name="partner_id"/>
+                <field name="plan_id"/>
+                <field name="state" widget="badge" 
+                       decoration-success="state == 'active'" 
+                       decoration-info="state == 'trial'" 
+                       decoration-warning="state == 'paused'" 
+                       decoration-danger="state == 'past_due'"
+                       decoration-secondary="state in ('cancelled', 'closed')"/>
+                <field name="start_date"/>
+                <field name="next_billing_date"/>
+                <field name="recurring_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                <field name="mrr" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                <field name="currency_id" column_invisible="True"/>
+                <field name="auto_renew" widget="boolean_toggle"/>
+                <field name="user_id" widget="many2one_avatar_user" optional="show"/>
+                <field name="company_id" groups="base.group_multi_company" optional="hide"/>
+                <field name="activity_ids" widget="list_activity" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- 4. FORM VIEW                              -->
+    <!-- ========================================== -->
+    <record id="view_brightloop_subscription_form" model="ir.ui.view">
+        <field name="name">brightloop.subscription.form</field>
+        <field name="model">brightloop.subscription</field>
+        <field name="arch" type="xml">
+            <form string="Subscription Contract">
+                <header>
+                    <!-- State Action Buttons -->
+                    <button name="action_start_trial" string="Start Free Trial" type="object" 
+                            class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_activate" string="Activate Subscription" type="object" 
+                            class="btn-primary" invisible="state not in ('draft', 'trial')"/>
+                    <button name="action_renew" string="Generate Recurring Invoice" type="object" 
+                            class="btn-outline-primary" invisible="state not in ('active', 'past_due')"/>
+                    <button name="action_pause" string="Pause Subscription" type="object" 
+                            class="btn-secondary" invisible="state != 'active'"/>
+                    <button name="action_resume" string="Resume Subscription" type="object" 
+                            class="btn-success" invisible="state != 'paused'"/>
+                    <button name="action_cancel" string="Cancel Contract" type="object" 
+                            class="btn-outline-danger" invisible="state in ('cancelled', 'closed')"/>
+                    <button name="action_close" string="Close / Expire" type="object" 
+                            class="btn-secondary" invisible="state not in ('past_due', 'active')"/>
+
+                    <!-- Status Bar -->
+                    <field name="state" widget="statusbar" statusbar_visible="draft,trial,active,cancelled"/>
+                </header>
+                <sheet>
+                    <!-- Visual State Ribbons -->
+                    <widget name="web_ribbon" title="Active" bg_color="text-bg-success" invisible="state != 'active'"/>
+                    <widget name="web_ribbon" title="Free Trial" bg_color="text-bg-info" invisible="state != 'trial'"/>
+                    <widget name="web_ribbon" title="Past Due" bg_color="text-bg-danger" invisible="state != 'past_due'"/>
+                    <widget name="web_ribbon" title="Paused" bg_color="text-bg-warning" invisible="state != 'paused'"/>
+                    <widget name="web_ribbon" title="Cancelled" bg_color="text-bg-secondary" invisible="state != 'cancelled'"/>
+                    <widget name="web_ribbon" title="Closed" bg_color="text-bg-dark" invisible="state != 'closed'"/>
+
+                    <!-- Smart Buttons Box -->
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_invoices" icon="fa-pencil-square-o">
+                            <field string="Invoices" name="invoice_count" widget="statinfo"/>
+                        </button>
+                    </div>
+
+                    <!-- Title & Reference -->
+                    <div class="oe_title">
+                        <span class="text-muted fw-bold">Subscription Reference</span>
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+
+                    <!-- Key Information Grid -->
+                    <group>
+                        <group string="Contract &amp; Subscriber">
+                            <field name="partner_id" widget="res_partner_many2one" options="{'no_create': True}"/>
+                            <field name="plan_id" options="{'no_create': True}"/>
+                            <field name="user_id" widget="many2one_avatar_user"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        </group>
+                        <group string="Cadence &amp; Financials">
+                            <field name="recurring_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="mrr" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="arr" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="auto_renew" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+
+                    <group>
+                        <group string="Billing Timeline">
+                            <field name="start_date"/>
+                            <field name="trial_end_date" invisible="state != 'trial' and not trial_end_date"/>
+                            <field name="next_billing_date"/>
+                        </group>
+                        <group string="Contract Term &amp; Pauses">
+                            <field name="end_date" invisible="not end_date"/>
+                            <field name="paused_date" invisible="not paused_date"/>
+                        </group>
+                    </group>
+
+                    <!-- Notebook & Detailed Tabs -->
+                    <notebook>
+                        <page string="Add-on Lines &amp; Seat Metering" name="lines_page">
+                            <field name="line_ids">
+                                <tree editable="bottom" string="Subscription Add-ons">
+                                    <field name="product_id" options="{'no_create': True}"/>
+                                    <field name="name"/>
+                                    <field name="quantity"/>
+                                    <field name="unit_price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="subtotal" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                    <field name="currency_id" column_invisible="True"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Invoices &amp; Billing History" name="invoices_page">
+                            <field name="invoice_ids" readonly="1">
+                                <tree string="Billing Invoices" limit="10">
+                                    <field name="name"/>
+                                    <field name="invoice_date"/>
+                                    <field name="invoice_date_due"/>
+                                    <field name="amount_total_signed" string="Total"/>
+                                    <field name="payment_state" widget="badge" 
+                                           decoration-success="payment_state in ('paid', 'in_payment')" 
+                                           decoration-warning="payment_state == 'partial'" 
+                                           decoration-danger="payment_state == 'not_paid'"/>
+                                    <field name="state" widget="badge"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Offboarding &amp; Churn Feedback" name="churn_page" 
+                              invisible="state not in ('cancelled', 'closed') and not churn_reason_id">
+                            <group>
+                                <field name="churn_reason_id" options="{'no_create': True}"/>
+                                <field name="cancellation_notes" placeholder="Customer cancellation notes or reasons..."/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <!-- Chatter & Communication History -->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- 5. CALENDAR VIEW                          -->
+    <!-- ========================================== -->
+    <record id="view_brightloop_subscription_calendar" model="ir.ui.view">
+        <field name="name">brightloop.subscription.calendar</field>
+        <field name="model">brightloop.subscription</field>
+        <field name="arch" type="xml">
+            <calendar string="Renewal Schedule" 
+                      date_start="next_billing_date" 
+                      color="plan_id" 
+                      mode="month" 
+                      quick_create="false">
+                <field name="partner_id"/>
+                <field name="recurring_total"/>
+                <field name="state"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- 6. PIVOT VIEW (FINANCIAL & BI ANALYTICS)   -->
+    <!-- ========================================== -->
+    <record id="view_brightloop_subscription_pivot" model="ir.ui.view">
+        <field name="name">brightloop.subscription.pivot</field>
+        <field name="model">brightloop.subscription</field>
+        <field name="arch" type="xml">
+            <pivot string="Subscription BI &amp; Revenue Analytics" sample="1">
+                <field name="plan_id" type="row"/>
+                <field name="state" type="col"/>
+                <field name="mrr" type="measure"/>
+                <field name="arr" type="measure"/>
+                <field name="recurring_total" type="measure"/>
+                <field name="invoice_count" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- 7. GRAPH VIEW (MRR VISUALIZATION)         -->
+    <!-- ========================================== -->
+    <record id="view_brightloop_subscription_graph" model="ir.ui.view">
+        <field name="name">brightloop.subscription.graph</field>
+        <field name="model">brightloop.subscription</field>
+        <field name="arch" type="xml">
+            <graph string="Monthly Recurring Revenue by Plan" type="bar" sample="1">
+                <field name="plan_id"/>
+                <field name="mrr" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- 8. WINDOW ACTIONS                         -->
+    <!-- ========================================== -->
+    <!-- Action: All Subscriptions -->
+    <record id="action_brightloop_subscription_all" model="ir.actions.act_window">
+        <field name="name">All Subscriptions</field>
+        <field name="res_model">brightloop.subscription</field>
+        <field name="view_mode">kanban,tree,form,calendar,pivot,graph</field>
+        <field name="search_view_id" ref="view_brightloop_subscription_search"/>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Manage your recurring subscriptions effortlessly!
+            </p>
+            <p>
+                Track active contracts, automated renewals, seat upgrades, and churn analysis in one unified hub.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action: Active Subscriptions -->
+    <record id="action_brightloop_subscription_active" model="ir.actions.act_window">
+        <field name="name">Active Contracts</field>
+        <field name="res_model">brightloop.subscription</field>
+        <field name="view_mode">kanban,tree,form,calendar,pivot,graph</field>
+        <field name="search_view_id" ref="view_brightloop_subscription_search"/>
+        <field name="domain">[('state', '=', 'active')]</field>
+        <field name="context">{'default_state': 'active'}</field>
+    </record>
+
+    <!-- Action: Pending Renewal & Past Due -->
+    <record id="action_brightloop_subscription_pending" model="ir.actions.act_window">
+        <field name="name">Pending Renewal &amp; Past Due</field>
+        <field name="res_model">brightloop.subscription</field>
+        <field name="view_mode">kanban,tree,form,calendar</field>
+        <field name="search_view_id" ref="view_brightloop_subscription_search"/>
+        <field name="domain">[('state', 'in', ('trial', 'past_due', 'paused'))]</field>
+    </record>
+
+    <!-- Action: Cancelled & Churned -->
+    <record id="action_brightloop_subscription_churned" model="ir.actions.act_window">
+        <field name="name">Cancelled &amp; Churned</field>
+        <field name="res_model">brightloop.subscription</field>
+        <field name="view_mode">tree,kanban,form,pivot</field>
+        <field name="search_view_id" ref="view_brightloop_subscription_search"/>
+        <field name="domain">[('state', 'in', ('cancelled', 'closed'))]</field>
+    </record>
+</odoo>
