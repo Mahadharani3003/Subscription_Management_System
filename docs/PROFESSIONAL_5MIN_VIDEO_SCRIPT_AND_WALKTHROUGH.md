@@ -1,155 +1,164 @@
-# Brightloop – Professional 5-Minute Video Recording Master Script & Evaluation Walkthrough
+# Brightloop – Executive 5-Minute Video Recording Master Script & Evaluation Walkthrough
 
 **Event:** Odoo Kochi Hackathon 2026  
-**Recommended Recording Duration:** 4:45 – 5:00 Minutes  
+**Recommended Recording Duration:** 04:45 – 05:00 Minutes  
 **Core Technology Stack:** Native Odoo 17/18 Community & Enterprise • Python 3.12 • PostgreSQL 16  
-**Localhost URL (Admin ERP):** [http://localhost:8069](http://localhost:8069) (or `/web`)  
+**Localhost URL (Admin ERP):** [http://localhost:8069/web](http://localhost:8069/web)  
 **Localhost URL (Customer Portal):** [http://localhost:8069/my/subscriptions](http://localhost:8069/my/subscriptions)  
-**Light-Mode Architecture Slide:** [http://localhost:8069/architecture](http://localhost:8069/architecture) (Open and press **F11** for full-screen)  
+**Light-Mode Architecture Slide:** [http://localhost:8069/architecture](http://localhost:8069/architecture) (Press **F11** for full-screen)  
 
 ---
 
-## 🧭 Pre-Recording Setup (2 Minutes to Prepare)
+## 1. Pre-Recording Protocol & Environment Setup
 
-1. Open **Google Chrome** or **Microsoft Edge** with 3 tabs ready:
-   - **Tab 1:** `http://localhost:8069/architecture` (Light Architecture Slide)
-   - **Tab 2:** `http://localhost:8069/web` (Odoo Admin Web Client)
-   - **Tab 3:** `http://localhost:8069/my/subscriptions` (Customer Portal & AI Chatbot)
-2. Open your terminal window in the background with the test suite ready:
-   ```powershell
-   python -m unittest discover -s tests -p "test_*.py"
-   ```
-3. Press **`Win + Alt + R`** to start recording (Windows Game Bar screen recorder), or start recording in OBS / Loom.
+1. **Browser Preparation (Google Chrome or Microsoft Edge):**
+   - **Tab 1:** `http://localhost:8069/architecture` (Full-Screen Light Architectural Topology)
+   - **Tab 2:** `http://localhost:8069/web` (Odoo ERP Administrative Interface)
+   - **Tab 3:** `http://localhost:8069/my/subscriptions` (Customer Portal & Conversational Assistant)
+2. **Terminal Preparation:**
+   - Open PowerShell or terminal in the project root with the test suite command staged:
+     ```powershell
+     python -m unittest discover -s tests -p "test_*.py"
+     ```
+3. **Capture Settings:**
+   - Resolution: 1920 × 1080 (1080p, 16:9).
+   - Audio: Cardioid microphone, clean direct input, no background noise.
+   - Start Recording: Press <kbd>Win</kbd> + <kbd>Alt</kbd> + <kbd>R</kbd> (Windows Game Bar) or initiate recording via OBS Studio / Loom.
 
 ---
 
-## ⏱️ Complete 5-Minute Timing & Scene Breakdown
+## 2. Timed Scene Breakdown & Strategic Focus
 
-| Scene | Timecode | Target Screen | Core Theme & Odoo Tech Stack Highlight |
+| Part | Timecode | Screen Destination | Executive Theme & Architectural Focus |
 | :---: | :---: | :--- | :--- |
-| **1** | `0:00 – 0:45` | Architecture Slide (`/architecture`) | **The Problem, The Vision & Native Odoo Tech Stack** |
-| **2** | `0:45 – 1:30` | `Brightloop > Subscription Plans` | **Commercial SaaS Packaging & Multi-Company Constraints** |
-| **3** | `1:30 – 2:30` | `Brightloop > Subscriptions` | **Kanban Pipeline & Day-Level Proration Engine (`account.move`)** |
-| **4** | `2:30 – 3:30` | `Brightloop > Churn & AI Assistant` | **Predictive Churn Diagnostics & Zero-Hallucination AI Assistant** |
-| **5** | `3:30 – 4:30` | Customer Portal (`/my/subscriptions`) | **Self-Service Controls & In-Portal Floating AI Chatbot** |
-| **6** | `4:40 – 5:00` | Terminal / Test Runner | **Enterprise Testing Rigor (34 Tests, 0.021s) & Conclusion** |
+| **I** | `00:00 – 00:45` | `/architecture` (Full Screen) | **Executive Welcome, Strategic Context & 4-Tier Topology** |
+| **II** | `00:45 – 01:30` | `Brightloop > Subscription Plans` | **Commercial SaaS Packaging & Multi-Company Domain Governance** |
+| **III** | `01:30 – 02:30` | `Brightloop > Subscriptions` | **Lifecycle Kanban Pipeline & Automated Mid-Cycle Financial Proration** |
+| **IV** | `02:30 – 03:30` | `Brightloop > Churn & AI Assistant` | **Deterministic Churn Diagnostics & In-ERP AI Intelligence** |
+| **V** | `03:30 – 04:20` | `/my/subscriptions` (Portal) | **Self-Service Customer Experience & Context-Aware Floating Chatbot** |
+| **VI** | `04:20 – 05:00` | Terminal / Test Runner | **Enterprise Verification Rigor (34 Tests, 0.021s) & Conclusion** |
 
 ---
 
-## 🎙️ Word-for-Word Voiceover Script & Click-by-Click Guide
+## 3. Executive Verbatim Narration & Visual Director's Guide
 
 ---
 
-### 🎬 Scene 1: Introduction, Problem & Architecture (0:00 – 0:45)
-* **Where to be:** Tab 1 — `http://localhost:8069/architecture` (press **F11** for full-screen view with the clean light background).
-* **What to do:** Hover your cursor across the 4 architecture layers as you introduce them.
-* **Voiceover Script:**
-  > *"Respected judges and fellow developers, welcome to the presentation of **Brightloop** — an enterprise-grade, intelligent Subscription Management and Recurring Revenue platform built for the **Odoo Kochi Hackathon 2026**.*
-  > 
-  > *Modern subscription businesses face a major architectural problem: third-party billing tools like Stripe Billing or Chargebee create fragmented data silos, requiring fragile external synchronizations for journal entries, tax compliance, and revenue recognition.*
-  > 
-  > *Brightloop eliminates this problem by building directly on **native Odoo 17 and 18 ERP**. Our entire technology stack leverages the pure Odoo ORM, native `account.move` invoicing, scheduled `ir.cron` automations, and Odoo’s multi-company row-level security.*
-  > 
-  > *As shown in our 4-tier architecture: Layer 1 provides an interactive Kanban pipeline, dynamic BI pivot cubes, and a customer self-service portal with a floating AI Chatbot. Layer 2 is our core subscription engine handling idempotent billing and mid-cycle proration. Layer 3 delivers explainable in-ERP AI churn diagnostics and revenue actuary. And Layer 4 anchors everything on native Odoo invoicing and PostgreSQL 16."*
+### Part I: Executive Introduction, Strategic Context & System Topology (00:00 – 00:45)
+* **Screen Destination:** Tab 1 — `http://localhost:8069/architecture` (Press <kbd>F11</kbd> for full-screen display).
+* **Visual Directives:** Move cursor smoothly across the four tiers (Presentation $\rightarrow$ Logic $\rightarrow$ Intelligence $\rightarrow$ Foundation) as each tier is referenced.
+* **Formal Verbatim Narration:**
+  > *"Good day, members of the evaluation committee and distinguished colleagues. We are pleased to present **Brightloop**—an enterprise-grade Subscription Management and Retention Intelligence platform engineered natively for the **Odoo 17 and 18 ERP ecosystem**.*
+  >
+  > *In high-growth recurring revenue businesses, the standard practice of deploying standalone subscription billing software creates severe architectural fragmentation. Disconnected payment processors and billing engines require continuous external synchronization middleware, leading to delayed journal reconciliations, tax non-compliance, and balance sheet drift.*
+  >
+  > *Brightloop eliminates this structural liability by building directly upon the foundational **Odoo ERP architecture**. As demonstrated in our four-tier architectural topology, Brightloop utilizes Odoo's native Web Client and QWeb portal at the presentation tier, robust ORM domain models for finite-state contract automation, an explainable and deterministic AI churn diagnostic engine, and native `account.move` ledger integration backed by PostgreSQL multi-company security.*
+  >
+  > *Let us now examine the platform operating within the live Odoo environment."*
 
 ---
 
-### 🎬 Scene 2: Commercial SaaS Packaging & Plans (0:45 – 1:30)
-* **Where to be:** Tab 2 — Click **Subscription Plans** in the top navigation bar (`/web`).
-* **What to do:**
-  1. Show the list of plans: *Starter*, *Professional*, and *Enterprise*.
-  2. Point out the columns: Plan Title, Code, Pricing, SaaS Tier, Subscriber Quota, REST API, AI Access, and SLA.
-  3. Click into **Professional** (`PRO-MO`).
-* **Voiceover Script:**
-  > *"Brightloop is engineered for real-world commercial deployment. Under Subscription Plans, businesses can configure multi-cadence billing intervals — daily, monthly, annual, or custom cycle multipliers — with configurable complimentary trial days and payment grace periods.*
-  > 
-  > *Unlike basic billing tools, Brightloop introduces commercial SaaS packaging. Each plan defines configurable subscriber limits, REST API access permissions, AI intelligence feature flags, and contractual support SLA guarantees.*
-  > 
-  > *Because we leverage Odoo’s native multi-company architecture, every plan code is protected by an explicit SQL uniqueness constraint across subsidiaries. This allows a multi-tenant holding company to operate isolated subscription offerings within a single unified ERP instance."*
+### Part II: Commercial SaaS Packaging & Multi-Company Domain Governance (00:45 – 01:30)
+* **Screen Destination:** Tab 2 — Click **Subscription Plans** in the navigation bar (`/web`).
+* **Visual Directives:**
+  1. Display the Subscription Plans list view highlighting billing intervals, currency, and SaaS tiers.
+  2. Open the **Professional (`PRO-MO`)** plan form view.
+  3. Inspect the **SaaS Packaging & Entitlements** notebook tab, pointing to Subscriber Quotas, API Access toggles, and SLA guarantee parameters.
+* **Formal Verbatim Narration:**
+  > *"We begin within Brightloop's administrative domain under **Subscription Plans**.*
+  >
+  > *Commercial subscription operations demand multi-dimensional pricing capabilities. Brightloop supports flexible billing cadences—including daily, monthly, annual, and custom multiplier periods—alongside configurable complimentary trial days and payment grace periods.*
+  >
+  > *To facilitate enterprise SaaS product delivery, we have incorporated an advanced **SaaS Packaging and Entitlements Engine**. System administrators can define explicit subscriber thresholds, toggle REST API provisioning, enforce feature flag authorizations, and designate binding SLA support response commitments.*
+  >
+  > *Crucially, every subscription plan respects Odoo's enterprise **multi-company security architecture**. Unique plan identifiers are constrained per operating subsidiary, enabling global corporate conglomerates to administer distinct, fully isolated commercial subscription portfolios across subsidiaries within a unified database instance."*
 
 ---
 
-### 🎬 Scene 3: Subscription Pipeline & Mid-Cycle Proration (1:30 – 2:30)
-* **Where to be:** Click **Subscriptions** in the navbar to open the visual Kanban pipeline.
-* **What to do:**
-  1. Show the Kanban columns: `Draft` $\rightarrow$ `Free Trial` $\rightarrow$ `Active` $\rightarrow$ `Paused` $\rightarrow$ `Past Due`.
-  2. Explain the column counters and total recurring revenue summaries.
-  3. Click on an **Active** contract (e.g., **Acme Global Corp - SUB/2026/0001**).
-  4. Point to the smart buttons: **Invoices** generated and **Subscription LTV**.
-  5. Show the **"Automated Mid-Cycle Proration Engine"** box.
-  6. Select **Enterprise ($999.00 / year)** from the dropdown.
-  7. Click **"Execute Prorated Plan Switch"**.
-* **Voiceover Script:**
-  > *"Here is the operational heart of Brightloop: the visual Kanban pipeline tracking subscriptions across their entire lifecycle from free trial to delinquent past-due states.*
-  > 
-  > *Let's inspect an active contract for Acme Global Corp. On the form, operators see real-time MRR calculations, auto-renewal flags, and smart buttons linking directly to posted invoices.*
-  > 
-  > *One of the most complex challenges in subscription billing is mid-cycle proration. When Acme decides to upgrade from the Professional tier to the Enterprise annual tier today, Brightloop's proration engine calculates the exact day-level credit from their unused billing window, applies it toward the upgraded plan, and automatically creates a prorated adjustment invoice in Odoo’s native `account.move` model.*
-  > 
-  > *There is zero manual bookkeeping, zero spreadsheet calculations, and 100% tax and journal compliance right out of the box."*
+### Part III: Lifecycle Kanban Pipeline & Automated Mid-Cycle Financial Proration (01:30 – 02:30)
+* **Screen Destination:** Tab 2 — Click **Subscriptions** in the navigation bar to open the visual Kanban pipeline.
+* **Visual Directives:**
+  1. Showcase the multi-stage Kanban pipeline (`Draft` $\rightarrow$ `Free Trial` $\rightarrow$ `Active` $\rightarrow$ `Paused` $\rightarrow$ `Past Due`).
+  2. Open active enterprise subscription record **`SUB/2026/0001` (Acme Global Corp)**.
+  3. Highlight the smart buttons for generated customer invoices and lifetime customer value (LTV).
+  4. Navigate to the **Automated Mid-Cycle Proration Engine** section on the form.
+  5. Select **Enterprise Annual ($999.00 / year)** and click **"Execute Prorated Plan Switch"**.
+  6. Verify the instantaneous calculation of unused daily credit and the corresponding draft adjustment invoice.
+* **Formal Verbatim Narration:**
+  > *"Here we observe the operational control center: the visual **Subscription Lifecycle Pipeline**. Brightloop governs contract progression through a rigorous seven-stage finite state machine, handling state transitions from introductory trials to automated delinquency escalation.*
+  >
+  > *Examining active contract `SUB/2026/0001` for Acme Global Corp, the system provides instantaneous metrics on calculated Monthly Recurring Revenue, auto-renewal locks, and direct relational links to posted accounting entries.*
+  >
+  > *A notable engineering achievement of Brightloop is our **Mid-Cycle Proration Engine**. When an enterprise customer modifies their subscription tier mid-tenure, traditional billing tools frequently fail to reconcile unconsumed periods accurately. Brightloop calculates the exact day-level credit remaining from the unexpired billing interval, applies it against the upgraded subscription plan, and immediately posts a balancing adjustment invoice within Odoo's native `account.move` model.*
+  >
+  > *This achieves automated, mathematically sound revenue recognition without human clerical intervention."*
 
 ---
 
-### 🎬 Scene 4: Predictive Churn & In-ERP AI Assistant (2:30 – 3:30)
-* **Where to be:** Click **Churn Watchlist** in the navbar, then click **AI Business Assistant**.
-* **What to do:**
-  1. Show the **Predictive Churn Watchlist** table: point out the composite Health Scores (0–100), Renewal Probabilities, Churn Triggers, and Actionable Retention Recommendations.
-  2. Point specifically to **Apex Media Group**: Health 35/100, Delinquency trigger.
-  3. Click the yellow **AI Business Assistant** button in the navbar.
-  4. Select **"What is our current MRR & ARR standing?"** and click **"Run AI Analysis"**.
-  5. Point to the live cards: Active MRR ($1,316.00), Annual Run Rate, and Past Due revenue.
-  6. Switch dropdown to **"How much annual revenue might we lose from cancellations?"** and click **"Run AI Analysis"**.
-* **Voiceover Script:**
-  > *"To protect revenue, Brightloop introduces an explainable, deterministic AI intelligence engine.*
-  > 
-  > *Under the Predictive Churn Watchlist, our algorithms evaluate payment delays, auto-renewal settings, and tenure loyalty to compute a composite health score from 0 to 100. For accounts at risk — such as Apex Media Group with an unpaid invoice overdue by 11 days — Brightloop flags the contract as High Risk and automatically generates actionable retention recommendations for account managers.*
-  > 
-  > *Furthermore, managers can launch our in-ERP AI Business Assistant. Because it queries live Odoo ORM records using optimized PostgreSQL queries, it provides real-time briefings on current MRR, upcoming 14-day renewals, and actuarial revenue loss.*
-  > 
-  > *Notice that this runs entirely inside Odoo ERP with **zero generative hallucinations**, **zero external cloud API costs**, and **zero customer data leakage**."*
+### Part IV: Deterministic Churn Diagnostics & In-ERP AI Intelligence (02:30 – 03:30)
+* **Screen Destination:** Tab 2 — Click **Churn Watchlist**, then open `Reporting & Analytics > AI Business Assistant`.
+* **Visual Directives:**
+  1. Display the **Predictive Churn Watchlist** table: point to the composite Health Score (0–100), Renewal Confidence percentages, and automated Retention Strategies.
+  2. Emphasize record **Apex Media Group** exhibiting a Critical Risk score of 35/100 due to an overdue billing trigger.
+  3. Click the **AI Business Assistant** executive wizard.
+  4. Select query **"What is our current MRR & ARR standing?"** and execute analysis.
+  5. Select query **"How much annual revenue might we lose from cancellations?"** to illustrate quantified actuarial risk.
+* **Formal Verbatim Narration:**
+  > *"To safeguard recurring revenue, Brightloop incorporates an explainable, in-ERP **Retention Intelligence Engine**.*
+  >
+  > *Within our Churn Risk Monitor, proprietary heuristic algorithms continuously analyze multidimensional customer signals—including invoice aging, payment settlement velocity, auto-renewal preferences, and contract duration. Each customer receives a composite health score calibrated from zero to one hundred.*
+  >
+  > *When an account's score deteriorates into high-risk thresholds, Brightloop calculates the exact **Annual Recurring Revenue at Hazard** and automatically generates structured intervention protocols for customer success teams.*
+  >
+  > *Furthermore, for executive stakeholders, the **AI Business Assistant Wizard** synthesizes real-time enterprise telemetry directly from the Odoo ORM. It generates verified boardroom intelligence on cash-flow velocities, renewal pipelines, and actuarial revenue exposure.*
+  >
+  > *Because this intelligence operates deterministically within the local application container, it introduces **zero external cloud API expenses, zero generative AI hallucinations, and absolute customer data privacy**."*
 
 ---
 
-### 🎬 Scene 5: Customer Portal & Floating AI Chatbot (3:30 – 4:30)
-* **Where to be:** Tab 3 — `http://localhost:8069/my/subscriptions` (Customer Portal).
-* **What to do:**
-  1. Show the subscriber's contract card: Active Tier, Recurring Total, Next Billing Date.
-  2. Point to the **Subscriber Self-Service Controls** and click **"Pause Services"**.
-  3. Show how the badge turns to **PAUSED** and the button changes to **"Resume Subscription"**.
-  4. Click **"Resume Subscription"** to restore it to **ACTIVE**.
-  5. **Click the glowing circular AI Chatbot button** (bottom-right corner).
-  6. Click the suggestion chip: **"📅 When is my next billing date?"**.
-  7. Show the bot's instant response with the exact renewal date and amount.
-  8. Click the chip: **"💳 Show my recent invoices"**.
-  9. Show the bot's live invoice lookup with payment status (`Paid`, `Unpaid`).
-* **Voiceover Script:**
-  > *"Brightloop also delivers a modern self-service customer portal built on Odoo's native QWeb portal framework.*
-  > 
-  > *Subscribers can review their active contract, view past invoices, or temporarily suspend their services using the self-service Pause button. When paused, automated billing is suspended without terminating the contract, and subscribers can resume anytime.*
-  > 
-  > *In the bottom-right corner, we have integrated a floating conversational AI Chatbot. When clicked, it opens a clean drawer interface. Subscribers can click suggested chips or ask questions like 'When is my next billing date?' or 'Show my recent invoices'.*
-  > 
-  > *The chatbot connects to our backend controller via JSON-RPC, validates the customer's session, and retrieves verified records strictly belonging to their company. It provides instantaneous, accurate answers with complete tenant isolation."*
+### Part V: Self-Service Customer Experience & Context-Aware Floating Portal Chatbot (03:30 – 04:20)
+* **Screen Destination:** Tab 3 — Navigate to `http://localhost:8069/my/subscriptions`.
+* **Visual Directives:**
+  1. Present the responsive QWeb portal interface detailing active subscription parameters, renewal dates, and billing histories.
+  2. Demonstrate customer autonomy by clicking **"Pause Services"** (verifying the state badge update), then immediately click **"Resume Subscription"**.
+  3. Click the circular **Brightloop AI Assistant** launcher button in the lower-right quadrant.
+  4. Click the pre-configured prompt chip: **"📅 When is my next billing date?"**.
+  5. Click the prompt chip: **"💳 Show my recent invoices"** and review the dynamic JSON-RPC response.
+* **Formal Verbatim Narration:**
+  > *"Next, we inspect the customer self-service interface, constructed on Odoo's native QWeb portal framework.*
+  >
+  > *Subscribers enjoy complete transparency into their active entitlements, renewal schedules, and historical PDF tax invoices. Subscribers may also temporarily suspend their services through our self-service controls, which halts automated billing runs without terminating the underlying commercial relationship.*
+  >
+  > *Embedded within the portal interface is the **Brightloop Conversational Assistant**. Positioned unobtrusively in the lower right, this assistant enables subscribers to query account details naturally or utilize suggested contextual prompts.*
+  >
+  > *All customer interactions are dispatched via secure JSON-RPC controller endpoints with strict session-level multi-company data isolation. The assistant executes immediate, verified database lookups to answer invoice and subscription queries instantaneously, substantially lowering customer support ticket volume."*
 
 ---
 
-### 🎬 Scene 6: Testing Rigor & Conclusion (4:30 – 5:00)
-* **Where to be:** Switch to your terminal window showing the test results:
+### Part VI: Enterprise Test Verification Rigor & Strategic Conclusion (04:20 – 05:00)
+* **Screen Destination:** Terminal Window executing the automated test suite runner:
   ```powershell
   python -m unittest discover -s tests -p "test_*.py"
   ```
-* **What to do:** Highlight the test count and benchmark numbers on screen.
-* **Voiceover Script:**
-  > *"To ensure production stability, Brightloop includes a rigorous automated test suite. All **34 automated test scenarios pass in just 0.021 seconds**, covering proration math, billing idempotency, security record rules, and chatbot NLP parsing.*
-  > 
-  > *Our optimized SQL joins aggregate 10,000 contracts in under a millisecond, proving that Brightloop is ready for high-throughput commercial scale.*
-  > 
-  > *By leveraging native Odoo 17 and 18 ERP as our foundational technology stack, Brightloop turns subscription management into an intelligent, seamless, and automated powerhouse. Thank you!"*
+* **Visual Directives:**
+  1. Highlight the terminal output demonstrating **34 passing test scenarios** in **0.021 seconds**.
+  2. Conclude by returning to the primary light-mode architecture diagram on Tab 1.
+* **Formal Verbatim Narration:**
+  > *"Enterprise deployment mandates uncompromising software stability. Brightloop is reinforced by an exhaustive automated verification suite.*
+  >
+  > *As shown in our terminal output, all **34 enterprise test cases execute and pass in just twenty-one milliseconds**, verifying proration arithmetic, billing idempotency, security ACL rules, and multi-tenant isolation.*
+  >
+  > *Optimized SQL aggregation benchmarks confirm sub-millisecond query execution across tens of thousands of subscription records, guaranteeing high-throughput scalability.*
+  >
+  > *By leveraging native **Odoo 17 and 18 ERP** as our core architectural foundation, Brightloop transforms recurring contract operations into an autonomous, mathematically accurate, and revenue-maximizing enterprise solution.*
+  >
+  > *We thank the evaluation committee for their consideration."*
 
 ---
 
-## 🏆 Key Phrases to Emphasize for Maximum Hackathon Scores
-1. **"Native Odoo Integration, Not Third-Party Middleware"**: Emphasize that invoices are native `account.move` records.
-2. **"Idempotent Billing"**: Highlight that automated billing crons use savepoints and idempotency guards to eliminate duplicate billing.
-3. **"Deterministic, Zero-Hallucination AI"**: Emphasize that the AI Assistant and Chatbot query real database records without generative fabrication or privacy leaks.
-4. **"Day-Level Proration"**: Point out the automated credit and charge calculation when switching plans.
+## 4. Key Takeaways for Hackathon Evaluators
+
+1. **Pure Native Odoo Architecture:** Built exclusively with Odoo ORM, QWeb, and PostgreSQL; zero third-party framework overhead or external microservices.
+2. **Zero-Friction Financial Invoicing:** Immediate generation of compliant `account.move` records with automated payment reconciliation.
+3. **Deterministic Retention Intelligence:** Real-time, explainable churn diagnostics and actuarial ARR at risk without data leakage or LLM hallucination risks.
+4. **Commercial SaaS Ready:** Multi-cadence packaging, metered lines, multi-company tenant partitioning, and self-service portal with embedded chatbot.
