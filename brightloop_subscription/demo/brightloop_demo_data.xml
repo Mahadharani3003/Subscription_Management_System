@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- 1. Recurring Service Products for Plans -->
+        <record id="product_service_brightloop_basic" model="product.product">
+            <field name="name">Brightloop Basic Plan Service</field>
+            <field name="type">service</field>
+            <field name="invoice_policy">order</field>
+            <field name="list_price">29.00</field>
+            <field name="default_code">BL-SERV-BASIC</field>
+        </record>
+
+        <record id="product_service_brightloop_pro" model="product.product">
+            <field name="name">Brightloop Professional Plan Service</field>
+            <field name="type">service</field>
+            <field name="invoice_policy">order</field>
+            <field name="list_price">99.00</field>
+            <field name="default_code">BL-SERV-PRO</field>
+        </record>
+
+        <record id="product_service_brightloop_enterprise" model="product.product">
+            <field name="name">Brightloop Enterprise Plan Service</field>
+            <field name="type">service</field>
+            <field name="invoice_policy">order</field>
+            <field name="list_price">999.00</field>
+            <field name="default_code">BL-SERV-ENT</field>
+        </record>
+
+        <!-- 2. Add-on Products -->
+        <record id="product_addon_user_seat" model="product.product">
+            <field name="name">Brightloop Additional User Seat</field>
+            <field name="type">service</field>
+            <field name="invoice_policy">order</field>
+            <field name="list_price">10.00</field>
+            <field name="default_code">BL-ADDON-SEAT</field>
+        </record>
+
+        <record id="product_addon_storage_100gb" model="product.product">
+            <field name="name">Brightloop 100GB High-Speed Storage</field>
+            <field name="type">service</field>
+            <field name="invoice_policy">order</field>
+            <field name="list_price">15.00</field>
+            <field name="default_code">BL-ADDON-STOR</field>
+        </record>
+
+        <!-- 3. Churn Reasons -->
+        <record id="churn_reason_budget" model="brightloop.churn.reason">
+            <field name="name">Budget Constraints / Downsizing</field>
+            <field name="code">BUDGET</field>
+            <field name="sequence">1</field>
+            <field name="description">Customer experienced financial cutbacks or company downsizing.</field>
+        </record>
+
+        <record id="churn_reason_competitor" model="brightloop.churn.reason">
+            <field name="name">Migrated to Competitor</field>
+            <field name="code">COMPETITOR</field>
+            <field name="sequence">2</field>
+            <field name="description">Customer chose an alternative provider or legacy vendor.</field>
+        </record>
+
+        <record id="churn_reason_features" model="brightloop.churn.reason">
+            <field name="name">Feature Limitations</field>
+            <field name="code">FEATURES</field>
+            <field name="sequence">3</field>
+            <field name="description">Lacked specific workflows or integrations needed by the client.</field>
+        </record>
+
+        <record id="churn_reason_project_complete" model="brightloop.churn.reason">
+            <field name="name">Project Terminated / Completed</field>
+            <field name="code">PROJECT_DONE</field>
+            <field name="sequence">4</field>
+            <field name="description">The specific initiative or temporary engagement was finished.</field>
+        </record>
+
+        <!-- 4. Subscription Plans -->
+        <record id="plan_basic_monthly" model="brightloop.plan">
+            <field name="name">Starter (Monthly)</field>
+            <field name="code">STARTER-MO</field>
+            <field name="sequence">10</field>
+            <field name="product_id" ref="product_service_brightloop_basic"/>
+            <field name="billing_interval">month</field>
+            <field name="billing_interval_count">1</field>
+            <field name="price">29.00</field>
+            <field name="trial_period_days">14</field>
+            <field name="grace_period_days">7</field>
+            <field name="auto_close_unpaid" eval="True"/>
+            <field name="description">&lt;p&gt;Ideal for small teams and early-stage startups needing essential tools.&lt;/p&gt;</field>
+        </record>
+
+        <record id="plan_pro_monthly" model="brightloop.plan">
+            <field name="name">Growth Pro (Monthly)</field>
+            <field name="code">GROWTH-MO</field>
+            <field name="sequence">20</field>
+            <field name="product_id" ref="product_service_brightloop_pro"/>
+            <field name="billing_interval">month</field>
+            <field name="billing_interval_count">1</field>
+            <field name="price">99.00</field>
+            <field name="trial_period_days">14</field>
+            <field name="grace_period_days">7</field>
+            <field name="auto_close_unpaid" eval="True"/>
+            <field name="description">&lt;p&gt;Comprehensive recurring suite for scaling enterprises with high volume.&lt;/p&gt;</field>
+        </record>
+
+        <record id="plan_enterprise_annual" model="brightloop.plan">
+            <field name="name">Enterprise Premium (Annual)</field>
+            <field name="code">ENT-YR</field>
+            <field name="sequence">30</field>
+            <field name="product_id" ref="product_service_brightloop_enterprise"/>
+            <field name="billing_interval">year</field>
+            <field name="billing_interval_count">1</field>
+            <field name="price">999.00</field>
+            <field name="trial_period_days">30</field>
+            <field name="grace_period_days">14</field>
+            <field name="auto_close_unpaid" eval="True"/>
+            <field name="description">&lt;p&gt;Dedicated SLA, priority support, and multi-tenant capabilities billed annually.&lt;/p&gt;</field>
+        </record>
+
+        <!-- 5. Realistic Subscriptions Across Diverse Lifecycle States -->
+        <!-- Subscription 1: Active Growth Plan with Extra Seats -->
+        <record id="sub_demo_active_growth" model="brightloop.subscription">
+            <field name="name">SUB/2026/00001</field>
+            <field name="partner_id" ref="base.res_partner_1"/>
+            <field name="plan_id" ref="plan_pro_monthly"/>
+            <field name="state">active</field>
+            <field name="start_date" eval="(datetime.now() - relativedelta(months=2)).strftime('%Y-%m-%d')"/>
+            <field name="next_billing_date" eval="(datetime.now() + relativedelta(days=12)).strftime('%Y-%m-%d')"/>
+            <field name="auto_renew" eval="True"/>
+        </record>
+
+        <record id="sub_line_demo_1_seats" model="brightloop.subscription.line">
+            <field name="subscription_id" ref="sub_demo_active_growth"/>
+            <field name="product_id" ref="product_addon_user_seat"/>
+            <field name="name">5 Additional Operator Seats</field>
+            <field name="quantity">5.0</field>
+            <field name="unit_price">10.00</field>
+        </record>
+
+        <!-- Subscription 2: Active Enterprise Annual Plan with Storage -->
+        <record id="sub_demo_active_enterprise" model="brightloop.subscription">
+            <field name="name">SUB/2026/00002</field>
+            <field name="partner_id" ref="base.res_partner_2"/>
+            <field name="plan_id" ref="plan_enterprise_annual"/>
+            <field name="state">active</field>
+            <field name="start_date" eval="(datetime.now() - relativedelta(months=5)).strftime('%Y-%m-%d')"/>
+            <field name="next_billing_date" eval="(datetime.now() + relativedelta(months=7)).strftime('%Y-%m-%d')"/>
+            <field name="auto_renew" eval="True"/>
+        </record>
+
+        <record id="sub_line_demo_2_storage" model="brightloop.subscription.line">
+            <field name="subscription_id" ref="sub_demo_active_enterprise"/>
+            <field name="product_id" ref="product_addon_storage_100gb"/>
+            <field name="name">2x 100GB Redundant Cloud Storage</field>
+            <field name="quantity">2.0</field>
+            <field name="unit_price">15.00</field>
+        </record>
+
+        <!-- Subscription 3: Free Trial Contract -->
+        <record id="sub_demo_trial_starter" model="brightloop.subscription">
+            <field name="name">SUB/2026/00003</field>
+            <field name="partner_id" ref="base.res_partner_3"/>
+            <field name="plan_id" ref="plan_basic_monthly"/>
+            <field name="state">trial</field>
+            <field name="start_date" eval="(datetime.now() - relativedelta(days=4)).strftime('%Y-%m-%d')"/>
+            <field name="trial_end_date" eval="(datetime.now() + relativedelta(days=10)).strftime('%Y-%m-%d')"/>
+            <field name="next_billing_date" eval="(datetime.now() + relativedelta(days=10)).strftime('%Y-%m-%d')"/>
+            <field name="auto_renew" eval="True"/>
+        </record>
+
+        <!-- Subscription 4: Past Due Contract for Dunning Testing -->
+        <record id="sub_demo_past_due" model="brightloop.subscription">
+            <field name="name">SUB/2026/00004</field>
+            <field name="partner_id" ref="base.res_partner_4"/>
+            <field name="plan_id" ref="plan_pro_monthly"/>
+            <field name="state">past_due</field>
+            <field name="start_date" eval="(datetime.now() - relativedelta(months=3)).strftime('%Y-%m-%d')"/>
+            <field name="next_billing_date" eval="(datetime.now() - relativedelta(days=5)).strftime('%Y-%m-%d')"/>
+            <field name="auto_renew" eval="True"/>
+        </record>
+
+        <!-- Subscription 5: Paused Contract -->
+        <record id="sub_demo_paused" model="brightloop.subscription">
+            <field name="name">SUB/2026/00005</field>
+            <field name="partner_id" ref="base.res_partner_12"/>
+            <field name="plan_id" ref="plan_basic_monthly"/>
+            <field name="state">paused</field>
+            <field name="start_date" eval="(datetime.now() - relativedelta(months=1)).strftime('%Y-%m-%d')"/>
+            <field name="paused_date" eval="(datetime.now() - relativedelta(days=6)).strftime('%Y-%m-%d')"/>
+            <field name="next_billing_date" eval="(datetime.now() + relativedelta(days=15)).strftime('%Y-%m-%d')"/>
+        </record>
+
+        <!-- Subscription 6: Cancelled Contract with Churn Tag -->
+        <record id="sub_demo_cancelled" model="brightloop.subscription">
+            <field name="name">SUB/2026/00006</field>
+            <field name="partner_id" ref="base.res_partner_10"/>
+            <field name="plan_id" ref="plan_basic_monthly"/>
+            <field name="state">cancelled</field>
+            <field name="start_date" eval="(datetime.now() - relativedelta(months=4)).strftime('%Y-%m-%d')"/>
+            <field name="end_date" eval="(datetime.now() - relativedelta(days=14)).strftime('%Y-%m-%d')"/>
+            <field name="churn_reason_id" ref="churn_reason_competitor"/>
+            <field name="cancellation_notes">Client migrated internal stack to existing vendor suite.</field>
+        </record>
+    </data>
+</odoo>
