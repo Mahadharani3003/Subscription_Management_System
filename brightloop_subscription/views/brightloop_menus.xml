@@ -47,6 +47,25 @@
         <field name="context">{'pivot_row_groupby': ['churn_reason_id'], 'pivot_column_groupby': ['plan_id'], 'pivot_measures': ['mrr']}</field>
     </record>
 
+    <!-- Action: Predictive Churn Watchlist -->
+    <record id="action_brightloop_retention_watchlist" model="ir.actions.act_window">
+        <field name="name">Predictive Churn Watchlist</field>
+        <field name="res_model">brightloop.subscription</field>
+        <field name="view_mode">tree,kanban,form,pivot</field>
+        <field name="domain">[('state', '=', 'active'), ('churn_risk_level', 'in', ('high', 'medium'))]</field>
+        <field name="context">{'search_default_filter_high_risk': 1, 'order': 'health_score asc'}</field>
+    </record>
+
+    <!-- Action: Revenue Forecast Analytics -->
+    <record id="action_brightloop_analytics_forecast" model="ir.actions.act_window">
+        <field name="name">Revenue Forecast by Renewal Cadence</field>
+        <field name="res_model">brightloop.subscription</field>
+        <field name="view_mode">graph,pivot,tree</field>
+        <field name="view_id" ref="view_brightloop_subscription_graph_forecast"/>
+        <field name="domain">[('state', 'in', ('active', 'trial'))]</field>
+        <field name="context">{'group_by': ['next_billing_date:month']}</field>
+    </record>
+
     <!-- ========================================== -->
     <!-- NAVIGATION MENUS HIERARCHY                 -->
     <!-- ========================================== -->
@@ -118,11 +137,23 @@
               action="action_brightloop_analytics_performance"
               sequence="10"/>
 
+    <menuitem id="menu_brightloop_report_forecast"
+              name="Revenue Forecasting"
+              parent="menu_brightloop_reporting_root"
+              action="action_brightloop_analytics_forecast"
+              sequence="15"/>
+
     <menuitem id="menu_brightloop_report_churn"
               name="Churn &amp; Retention Analysis"
               parent="menu_brightloop_reporting_root"
               action="action_brightloop_analytics_churn"
               sequence="20"/>
+
+    <menuitem id="menu_brightloop_report_watchlist"
+              name="Predictive Churn Watchlist"
+              parent="menu_brightloop_reporting_root"
+              action="action_brightloop_retention_watchlist"
+              sequence="25"/>
 
     <!-- 4. Configuration Menu (Admins only) -->
     <menuitem id="menu_brightloop_configuration_root"

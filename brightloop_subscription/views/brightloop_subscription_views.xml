@@ -386,6 +386,18 @@
         </field>
     </record>
 
+    <!-- 8. GRAPH VIEW: REVENUE FORECASTING & BILLING TIMELINE -->
+    <record id="view_brightloop_subscription_graph_forecast" model="ir.ui.view">
+        <field name="name">brightloop.subscription.graph.forecast</field>
+        <field name="model">brightloop.subscription</field>
+        <field name="arch" type="xml">
+            <graph string="Recurring Revenue Forecast by Next Billing Date" type="line" sample="1">
+                <field name="next_billing_date" interval="month"/>
+                <field name="mrr" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
     <!-- ========================================== -->
     <!-- 8. WINDOW ACTIONS                         -->
     <!-- ========================================== -->

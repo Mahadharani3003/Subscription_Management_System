@@ -258,5 +258,26 @@ class TestSystemIntegrationQA(unittest.TestCase):
         self.assertIn('portal_my_subscriptions', t_ids)
         self.assertIn('portal_subscription_page', t_ids)
 
+    # --- 9. Reporting Actions, Views & Watchlist Integration ---
+    def test_09_reporting_forecast_and_watchlist_actions(self):
+        """QA 9: Verify forecast graph view, predictive retention watchlist action, and menus."""
+        sub_views_xml = os.path.join(ADDON_DIR, 'views', 'brightloop_subscription_views.xml')
+        tree = ET.parse(sub_views_xml)
+        forecast_view = tree.find('.//record[@id="view_brightloop_subscription_graph_forecast"]')
+        self.assertIsNotNone(forecast_view, "Forecast graph view must be defined in XML.")
+
+        menus_xml = os.path.join(ADDON_DIR, 'views', 'brightloop_menus.xml')
+        tree_menus = ET.parse(menus_xml)
+        watchlist_action = tree_menus.find('.//record[@id="action_brightloop_retention_watchlist"]')
+        self.assertIsNotNone(watchlist_action, "Predictive retention watchlist action must exist.")
+
+        forecast_action = tree_menus.find('.//record[@id="action_brightloop_analytics_forecast"]')
+        self.assertIsNotNone(forecast_action, "Revenue forecast analytics action must exist.")
+
+        menuitems = tree_menus.findall('.//menuitem')
+        menu_ids = [m.get('id') for m in menuitems]
+        self.assertIn('menu_brightloop_report_forecast', menu_ids)
+        self.assertIn('menu_brightloop_report_watchlist', menu_ids)
+
 if __name__ == '__main__':
     unittest.main()
