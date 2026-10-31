@@ -99,6 +99,18 @@ class BrightloopSubscription(models.Model):
         index=True,
         help="Next scheduled date for automated recurring invoice generation."
     )
+    last_invoiced_date = fields.Date(
+        string='Last Invoiced Date',
+        readonly=True,
+        copy=False,
+        help="Prevents duplicate invoice generation for the same billing window."
+    )
+    last_renewal_reminder_date = fields.Date(
+        string='Last Reminder Date',
+        readonly=True,
+        copy=False,
+        help="Date when upcoming renewal reminder notification was last dispatched."
+    )
     end_date = fields.Date(
         string='End / Termination Date',
         tracking=True,
@@ -238,18 +250,13 @@ class BrightloopSubscription(models.Model):
                 vals['name'] = self.env['ir.sequence'].next_by_code(seq_code) or _('New')
         return super().create(vals_list)
 
-    def write(self, vals):
-        # Automatically update next billing date if plan changes on draft
-        res = super().write(vals)
-        return res
-
     def unlink(self):
         for sub in self:
             if sub.state not in ('draft', 'cancelled'):
                 raise UserError(_("You cannot delete a subscription that is %s. Please cancel it first.", sub.state))
         return super().unlink()
 
-    # --- Business Logic & State Transitions ---
+    # --- Helpers ---
 
     def _get_cadence_delta(self):
         """Helper to return dateutil relativedelta for current plan cadence."""
@@ -264,6 +271,8 @@ class BrightloopSubscription(models.Model):
         elif interval == 'year':
             return relativedelta(years=count)
         return relativedelta(months=count)
+
+    # --- Lifecycle State Machine Actions ---
 
     def action_start_trial(self):
         """Transition from Draft to Free Trial."""
@@ -280,7 +289,9 @@ class BrightloopSubscription(models.Model):
             sub.message_post(body=_("Subscription moved to <b>Free Trial</b> until %s.", sub.trial_end_date))
 
     def action_activate(self):
-        """Confirm and activate the subscription contract."""
+        """Confirm and activate the subscription contract, sending automated welcome email."""
+        template = self.env.ref('brightloop_subscription.mail_template_subscription_activated', raise_if_not_found=False)
+
         for sub in self:
             if sub.state not in ('draft', 'trial'):
                 raise UserError(_("Only Draft or Trial subscriptions can be activated."))
@@ -289,6 +300,13 @@ class BrightloopSubscription(models.Model):
             sub.state = 'active'
             sub.message_post(body=_("Subscription confirmed and <b>Activated</b>. Next billing scheduled for %s.", sub.next_billing_date))
 
+            # Dispatch welcome notification
+            if template:
+                try:
+                    template.send_mail(sub.id, force_send=True)
+                except Exception as e:
+                    _logger.warning("Could not send activation mail for sub %s: %s", sub.name, str(e))
+
     def action_pause(self):
         """Pause recurring services and billing."""
         for sub in self:
@@ -296,7 +314,7 @@ class BrightloopSubscription(models.Model):
                 raise UserError(_("Only Active subscriptions can be paused."))
             sub.state = 'paused'
             sub.paused_date = fields.Date.context_today(sub)
-            sub.message_post(body=_("Subscription has been <b>Paused</b> on %s.", sub.paused_date))
+            sub.message_post(body=_("Subscription has been <b>Paused</b> on %s. Automated billing suspended.", sub.paused_date))
 
     def action_resume(self):
         """Resume paused subscription and adjust billing schedule accordingly."""
@@ -311,10 +329,12 @@ class BrightloopSubscription(models.Model):
                     sub.next_billing_date = sub.next_billing_date + relativedelta(days=paused_duration)
             sub.state = 'active'
             sub.paused_date = False
-            sub.message_post(body=_("Subscription <b>Resumed</b>. Next billing shifted to %s.", sub.next_billing_date))
+            sub.message_post(body=_("Subscription <b>Resumed</b>. Next billing shifted forward to %s.", sub.next_billing_date))
 
     def action_cancel(self, churn_reason_id=None, notes=None):
-        """Terminate the subscription with optional churn feedback."""
+        """Terminate the subscription with churn feedback and send cancellation confirmation."""
+        template = self.env.ref('brightloop_subscription.mail_template_subscription_cancelled', raise_if_not_found=False)
+
         for sub in self:
             if sub.state in ('cancelled', 'closed'):
                 continue
@@ -330,33 +350,133 @@ class BrightloopSubscription(models.Model):
             reason_str = sub.churn_reason_id.name if sub.churn_reason_id else _('Unspecified')
             sub.message_post(body=_("Subscription <b>Cancelled</b>. Reason: %s.", reason_str))
 
+            if template:
+                try:
+                    template.send_mail(sub.id, force_send=True)
+                except Exception as e:
+                    _logger.warning("Could not send cancellation mail for sub %s: %s", sub.name, str(e))
+
     def action_close(self):
         """Close/Expire subscription upon term conclusion or non-payment."""
+        template = self.env.ref('brightloop_subscription.mail_template_subscription_expired', raise_if_not_found=False)
+
         for sub in self:
             sub.state = 'closed'
             sub.end_date = fields.Date.context_today(sub)
             sub.message_post(body=_("Subscription contract marked as <b>Closed / Expired</b>."))
+
+            if template:
+                try:
+                    template.send_mail(sub.id, force_send=True)
+                except Exception as e:
+                    _logger.warning("Could not send expiration mail for sub %s: %s", sub.name, str(e))
 
     def action_renew(self):
         """Manually trigger immediate recurring invoice generation."""
         self.ensure_one()
         return self.action_generate_invoice()
 
+    # --- Upgrade / Downgrade Business Logic & Proration ---
+
+    def action_change_plan(self, new_plan, apply_now=True):
+        """
+        Execute subscription plan change (Upgrade / Downgrade).
+        Calculates proration if immediate, updates plan, and logs audit trail.
+        """
+        self.ensure_one()
+        if not new_plan or new_plan.id == self.plan_id.id:
+            raise UserError(_("Please choose a different plan to upgrade or downgrade."))
+
+        old_plan = self.plan_id
+        is_upgrade = new_plan.price > old_plan.price
+        change_type = _("Upgrade") if is_upgrade else _("Downgrade")
+
+        if apply_now and self.state == 'active' and self.next_billing_date:
+            today = fields.Date.context_today(self)
+            # Calculate remaining days in cycle
+            cycle_delta = self._get_cadence_delta()
+            cycle_start = self.next_billing_date - cycle_delta
+            total_cycle_days = max(1, (self.next_billing_date - cycle_start).days)
+            remaining_days = max(0, (self.next_billing_date - today).days)
+
+            # Proration factor
+            proration_ratio = float(remaining_days) / float(total_cycle_days)
+            unused_old_credit = round(old_plan.price * proration_ratio, 2)
+            prorated_new_charge = round(new_plan.price * proration_ratio, 2)
+            net_adjustment = round(prorated_new_charge - unused_old_credit, 2)
+
+            # Update plan
+            self.plan_id = new_plan.id
+
+            # Create proration invoice if positive adjustment
+            if net_adjustment > 0:
+                inv_vals = {
+                    'move_type': 'out_invoice',
+                    'partner_id': self.partner_id.id,
+                    'currency_id': self.currency_id.id,
+                    'company_id': self.company_id.id,
+                    'invoice_date': today,
+                    'invoice_origin': f"{self.name} ({change_type} Proration)",
+                    'invoice_line_ids': [(0, 0, {
+                        'product_id': new_plan.product_id.id,
+                        'name': f"Prorated {change_type} Adjustment: {old_plan.name} -> {new_plan.name} ({remaining_days}/{total_cycle_days} days)",
+                        'quantity': 1.0,
+                        'price_unit': net_adjustment,
+                    })],
+                }
+                proration_inv = self.env['account.move'].sudo().create(inv_vals)
+                self.invoice_ids = [(4, proration_inv.id)]
+
+            self.message_post(
+                body=_("Plan <b>%s</b> executed: <b>%s</b> &rarr; <b>%s</b>. Net proration adjustment: %s %s (%d days remaining in cycle).") % (
+                    change_type, old_plan.name, new_plan.name, net_adjustment, self.currency_id.symbol, remaining_days
+                )
+            )
+        else:
+            # Change at next cycle
+            self.plan_id = new_plan.id
+            self.message_post(
+                body=_("Plan changed to <b>%s</b>. New pricing takes effect on next billing date (%s).") % (
+                    new_plan.name, self.next_billing_date
+                )
+            )
+
+        # Dispatch notification
+        template = self.env.ref('brightloop_subscription.mail_template_subscription_plan_changed', raise_if_not_found=False)
+        if template:
+            try:
+                template.send_mail(self.id, force_send=True)
+            except Exception as e:
+                _logger.warning("Could not send plan change mail for sub %s: %s", self.name, str(e))
+
+    # --- Automated Billing Engine & Idempotency ---
+
     def action_generate_invoice(self):
         """
-        Generate customer invoice (account.move) for the current billing cycle,
-        advance next_billing_date, and record the invoice link.
+        Generate customer invoice (account.move) for the current billing cycle.
+        Includes strict idempotency to prevent duplicate invoices for the same cycle.
         """
         Invoice = self.env['account.move']
         created_invoices = self.env['account.move']
+        template = self.env.ref('brightloop_subscription.mail_template_subscription_invoiced', raise_if_not_found=False)
 
         for sub in self:
             if sub.state not in ('active', 'past_due'):
                 raise UserError(_("Invoices can only be generated for Active or Past Due subscriptions."))
 
+            today = fields.Date.context_today(sub)
+
+            # --- IDEMPOTENCY GUARD: Check for existing unbilled/open invoice today ---
+            existing_open = sub.invoice_ids.filtered(
+                lambda inv: inv.invoice_date == today and inv.state in ('draft', 'posted')
+            )
+            if existing_open:
+                _logger.info("Invoice already exists today for subscription %s: %s. Skipping duplicate generation.", sub.name, existing_open[0].name)
+                created_invoices |= existing_open[0]
+                continue
+
             # 1. Prepare invoice lines
             invoice_lines = []
-            # Plan base service item
             plan_product = sub.plan_id.product_id
             invoice_lines.append((0, 0, {
                 'product_id': plan_product.id,
@@ -366,7 +486,6 @@ class BrightloopSubscription(models.Model):
                 'tax_ids': [(6, 0, plan_product.taxes_id.filtered(lambda t: t.company_id == sub.company_id).ids)],
             }))
 
-            # Add-on seat items
             for line in sub.line_ids:
                 invoice_lines.append((0, 0, {
                     'product_id': line.product_id.id,
@@ -382,27 +501,35 @@ class BrightloopSubscription(models.Model):
                 'partner_id': sub.partner_id.id,
                 'currency_id': sub.currency_id.id,
                 'company_id': sub.company_id.id,
-                'invoice_date': fields.Date.context_today(sub),
+                'invoice_date': today,
                 'invoice_origin': sub.name,
                 'invoice_line_ids': invoice_lines,
             }
 
-            # 3. Create invoice
-            new_inv = Invoice.sudo().create(inv_vals)
-            sub.invoice_ids = [(4, new_inv.id)]
-            created_invoices |= new_inv
+            # 3. Create invoice with savepoint protection
+            with self.env.cr.savepoint():
+                new_inv = Invoice.sudo().create(inv_vals)
+                sub.invoice_ids = [(4, new_inv.id)]
+                sub.last_invoiced_date = today
+                created_invoices |= new_inv
 
-            # 4. Advance next_billing_date
-            current_next = sub.next_billing_date or fields.Date.context_today(sub)
-            delta = sub._get_cadence_delta()
-            sub.next_billing_date = current_next + delta
+                # 4. Advance next_billing_date
+                current_next = sub.next_billing_date or today
+                delta = sub._get_cadence_delta()
+                sub.next_billing_date = current_next + delta
 
-            # 5. Post notification
+            # 5. Post notification & send email
             sub.message_post(
-                body=_("Generated recurring billing invoice <a href='#' data-oe-model='account.move' data-oe-id='%s'>%s</a> for amount %s %s. Next billing date: %s.") % (
+                body=_("Generated recurring billing invoice <a href='#' data-oe-model='account.move' data-oe-id='%s'>%s</a> for %s %s. Next billing date: %s.") % (
                     new_inv.id, new_inv.name or _('Draft Invoice'), new_inv.amount_total, sub.currency_id.symbol, sub.next_billing_date
                 )
             )
+
+            if template:
+                try:
+                    template.send_mail(sub.id, force_send=True)
+                except Exception as e:
+                    _logger.warning("Could not send invoice notification mail for sub %s: %s", sub.name, str(e))
 
         if len(created_invoices) == 1:
             return {
@@ -435,20 +562,18 @@ class BrightloopSubscription(models.Model):
             })
         return action
 
-    # --- Automated Cron Schedulers ---
+    # --- Automated Scheduled Actions (Cron Jobs) ---
 
     @api.model
     def _cron_recurring_billing(self):
-        """
-        Daily scheduler: Query active subscriptions due for billing and generate invoices.
-        """
+        """Daily scheduler: Detect active subscriptions due for billing and generate invoices."""
         today = fields.Date.context_today(self)
-        _logger.info("Executing Brightloop recurring billing cron for date: %s", today)
+        _logger.info("Brightloop Cron: Executing recurring billing check for date %s", today)
         due_subscriptions = self.search([
             ('state', '=', 'active'),
             ('next_billing_date', '<=', today),
         ])
-        _logger.info("Found %d subscription(s) due for recurring billing.", len(due_subscriptions))
+        _logger.info("Found %d subscription(s) due for billing.", len(due_subscriptions))
 
         success_count = 0
         for sub in due_subscriptions:
@@ -456,15 +581,44 @@ class BrightloopSubscription(models.Model):
                 sub.action_generate_invoice()
                 success_count += 1
             except Exception as e:
-                _logger.error("Failed to generate recurring invoice for subscription %s: %s", sub.name, str(e))
+                _logger.error("Failed recurring invoice generation for sub %s: %s", sub.name, str(e))
 
-        _logger.info("Completed Brightloop billing cron. Successfully billed %d subscriptions.", success_count)
+        _logger.info("Brightloop Cron: Completed recurring billing. Successfully processed %d contracts.", success_count)
+
+    @api.model
+    def _cron_renewal_reminders(self):
+        """
+        Daily scheduler: Send upcoming renewal reminder notifications 3 days in advance.
+        Guards against duplicate notifications in the same cycle.
+        """
+        today = fields.Date.context_today(self)
+        reminder_target_date = today + relativedelta(days=3)
+        _logger.info("Brightloop Cron: Checking upcoming renewal reminders due on %s", reminder_target_date)
+
+        upcoming_subs = self.search([
+            ('state', '=', 'active'),
+            ('auto_renew', '=', True),
+            ('next_billing_date', '=', reminder_target_date),
+            '|', ('last_renewal_reminder_date', '=', False),
+                 ('last_renewal_reminder_date', '<', today - relativedelta(days=15))
+        ])
+
+        template = self.env.ref('brightloop_subscription.mail_template_subscription_renewal_reminder', raise_if_not_found=False)
+
+        for sub in upcoming_subs:
+            sub.last_renewal_reminder_date = today
+            sub.message_post(body=_("Automated renewal reminder dispatched for upcoming billing on %s.") % sub.next_billing_date)
+            if template:
+                try:
+                    template.send_mail(sub.id, force_send=True)
+                except Exception as e:
+                    _logger.warning("Could not send renewal reminder for sub %s: %s", sub.name, str(e))
 
     @api.model
     def _cron_check_grace_periods(self):
         """
         Daily scheduler: Identify subscriptions with overdue unpaid invoices.
-        Transitions state to 'past_due' or auto-cancels if grace threshold is exceeded.
+        Transitions state to 'past_due' and auto-cancels upon final threshold breach.
         """
         today = fields.Date.context_today(self)
         active_or_due = self.search([('state', 'in', ('active', 'past_due'))])
@@ -472,13 +626,11 @@ class BrightloopSubscription(models.Model):
         for sub in active_or_due:
             unpaid_invoices = sub.invoice_ids.filtered(lambda inv: inv.state == 'posted' and inv.payment_state in ('not_paid', 'partial'))
             if not unpaid_invoices:
-                # If was past_due and all invoices are settled, return to active
                 if sub.state == 'past_due':
                     sub.state = 'active'
                     sub.message_post(body=_("All outstanding invoices settled. Subscription restored to <b>Active</b>."))
                 continue
 
-            # Check oldest overdue invoice
             grace_days = sub.plan_id.grace_period_days or 7
             overdue_candidates = unpaid_invoices.filtered(lambda inv: inv.invoice_date_due and inv.invoice_date_due < today)
             if overdue_candidates:
@@ -503,3 +655,17 @@ class BrightloopSubscription(models.Model):
                     if sub.plan_id.auto_close_unpaid and days_overdue >= (grace_days * 2):
                         sub.action_close()
                         sub.message_post(body=_("Subscription auto-closed due to prolonged non-payment past final threshold."))
+
+    @api.model
+    def _cron_check_expirations(self):
+        """Daily scheduler: Transition expired fixed-term subscriptions to Closed."""
+        today = fields.Date.context_today(self)
+        expired_subs = self.search([
+            ('state', 'in', ('active', 'past_due', 'paused')),
+            ('end_date', '!=', False),
+            ('end_date', '<=', today),
+        ])
+
+        for sub in expired_subs:
+            sub.action_close()
+            sub.message_post(body=_("Subscription term reached end date (%s). Contract automatically expired.") % sub.end_date)

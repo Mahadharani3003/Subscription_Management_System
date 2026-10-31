@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
-        <!-- Mail Template: Subscription Activated / Confirmed -->
+        <!-- 1. Mail Template: Subscription Activated / Confirmed -->
         <record id="mail_template_subscription_activated" model="mail.template">
             <field name="name">Brightloop: Subscription Confirmation</field>
             <field name="model_id" ref="model_brightloop_subscription"/>
@@ -26,7 +26,7 @@
             <field name="auto_delete" eval="True"/>
         </record>
 
-        <!-- Mail Template: Subscription Invoiced -->
+        <!-- 2. Mail Template: Subscription Invoiced -->
         <record id="mail_template_subscription_invoiced" model="mail.template">
             <field name="name">Brightloop: Recurring Invoice Notification</field>
             <field name="model_id" ref="model_brightloop_subscription"/>
@@ -46,7 +46,7 @@
             <field name="auto_delete" eval="True"/>
         </record>
 
-        <!-- Mail Template: Past Due Warning -->
+        <!-- 3. Mail Template: Past Due Warning -->
         <record id="mail_template_subscription_past_due" model="mail.template">
             <field name="name">Brightloop: Payment Past Due Notice</field>
             <field name="model_id" ref="model_brightloop_subscription"/>
@@ -58,7 +58,99 @@
                     <p>Dear <strong t-out="object.partner_id.name or 'Subscriber'">Customer</strong>,</p>
                     <p>Our records indicate that the latest recurring invoice for your subscription <strong><t t-out="object.name"/></strong> is currently past due.</p>
                     <p>Please settle the outstanding balance promptly to avoid interruption or suspension of your services.</p>
-                    <p>If you have already processed this payment, please disregard this notice.</p>
+                    <p>Best regards,<br/><t t-out="object.company_id.name"/></p>
+                </div>
+            </field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+
+        <!-- 4. Mail Template: Upcoming Renewal Reminder -->
+        <record id="mail_template_subscription_renewal_reminder" model="mail.template">
+            <field name="name">Brightloop: Upcoming Renewal Reminder</field>
+            <field name="model_id" ref="model_brightloop_subscription"/>
+            <field name="subject">Upcoming renewal notice for subscription {{ object.name }}</field>
+            <field name="email_from">{{ (object.company_id.email_formatted or user.email_formatted) }}</field>
+            <field name="partner_to">{{ object.partner_id.id }}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                    <p>Dear <strong t-out="object.partner_id.name or 'Subscriber'">Customer</strong>,</p>
+                    <p>This is a friendly reminder that your subscription <strong><t t-out="object.name"/></strong> (<t t-out="object.plan_id.name"/>) will automatically renew on <strong><t t-out="object.next_billing_date"/></strong>.</p>
+                    <p><strong>Renewal Amount:</strong> <t t-out="format_amount(object.recurring_total, object.currency_id)"/></p>
+                    <p>If you need to make changes to your plan or payment method, please visit the portal before the renewal date.</p>
+                    <p>Best regards,<br/><t t-out="object.company_id.name"/></p>
+                </div>
+            </field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+
+        <!-- 5. Mail Template: Payment Confirmation -->
+        <record id="mail_template_subscription_payment_success" model="mail.template">
+            <field name="name">Brightloop: Payment Confirmation Receipt</field>
+            <field name="model_id" ref="model_brightloop_subscription"/>
+            <field name="subject">Payment received for your subscription {{ object.name }}</field>
+            <field name="email_from">{{ (object.company_id.email_formatted or user.email_formatted) }}</field>
+            <field name="partner_to">{{ object.partner_id.id }}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                    <p>Dear <strong t-out="object.partner_id.name or 'Subscriber'">Customer</strong>,</p>
+                    <p>We have successfully processed your payment for subscription <strong><t t-out="object.name"/></strong>.</p>
+                    <p>Your subscription is in good standing and services remain active.</p>
+                    <p>Thank you for choosing <t t-out="object.company_id.name"/>!</p>
+                </div>
+            </field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+
+        <!-- 6. Mail Template: Plan Upgraded / Downgraded -->
+        <record id="mail_template_subscription_plan_changed" model="mail.template">
+            <field name="name">Brightloop: Plan Change Notification</field>
+            <field name="model_id" ref="model_brightloop_subscription"/>
+            <field name="subject">Plan change confirmed for subscription {{ object.name }}</field>
+            <field name="email_from">{{ (object.company_id.email_formatted or user.email_formatted) }}</field>
+            <field name="partner_to">{{ object.partner_id.id }}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                    <p>Dear <strong t-out="object.partner_id.name or 'Subscriber'">Customer</strong>,</p>
+                    <p>Your subscription <strong><t t-out="object.name"/></strong> has been successfully updated to <strong><t t-out="object.plan_id.name"/></strong>.</p>
+                    <p><strong>New Recurring Total:</strong> <t t-out="format_amount(object.recurring_total, object.currency_id)"/></p>
+                    <p><strong>Next Scheduled Billing:</strong> <t t-out="object.next_billing_date"/></p>
+                    <p>Best regards,<br/><t t-out="object.company_id.name"/></p>
+                </div>
+            </field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+
+        <!-- 7. Mail Template: Subscription Cancelled -->
+        <record id="mail_template_subscription_cancelled" model="mail.template">
+            <field name="name">Brightloop: Subscription Cancellation Confirmation</field>
+            <field name="model_id" ref="model_brightloop_subscription"/>
+            <field name="subject">Cancellation confirmed for subscription {{ object.name }}</field>
+            <field name="email_from">{{ (object.company_id.email_formatted or user.email_formatted) }}</field>
+            <field name="partner_to">{{ object.partner_id.id }}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                    <p>Dear <strong t-out="object.partner_id.name or 'Subscriber'">Customer</strong>,</p>
+                    <p>This message confirms that your subscription <strong><t t-out="object.name"/></strong> (<t t-out="object.plan_id.name"/>) has been cancelled.</p>
+                    <p>We are sorry to see you go and appreciate the opportunity to have served you.</p>
+                    <p>If this was done in error or if you wish to reactivate your services, please feel free to reach out to us.</p>
+                    <p>Best regards,<br/><t t-out="object.company_id.name"/></p>
+                </div>
+            </field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+
+        <!-- 8. Mail Template: Subscription Expired -->
+        <record id="mail_template_subscription_expired" model="mail.template">
+            <field name="name">Brightloop: Subscription Expired Notice</field>
+            <field name="model_id" ref="model_brightloop_subscription"/>
+            <field name="subject">Notice: Your subscription {{ object.name }} has expired</field>
+            <field name="email_from">{{ (object.company_id.email_formatted or user.email_formatted) }}</field>
+            <field name="partner_to">{{ object.partner_id.id }}</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+                    <p>Dear <strong t-out="object.partner_id.name or 'Subscriber'">Customer</strong>,</p>
+                    <p>Your subscription <strong><t t-out="object.name"/></strong> has reached its scheduled end date and is now closed.</p>
+                    <p>To resume access to services, please contact our support team or select a new plan.</p>
                     <p>Best regards,<br/><t t-out="object.company_id.name"/></p>
                 </div>
             </field>

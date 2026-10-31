@@ -21,6 +21,8 @@ Key Features:
 * **State Machine & Lifecycle**: Full contract tracking from Draft, Free Trial, Active, Paused, Past Due to Cancellation.
 * **Add-ons & Seat Metering**: Expandable subscription line items for extra seats, quotas, and modular features.
 * **Dunning & Grace Periods**: Automated grace period enforcement, payment retry tracking, and churn management.
+* **Upgrade & Downgrade Engine**: Immediate prorated net balance adjustments and cycle modifications.
+* **Idempotent Automation**: Safe cron schedulers with duplicate invoice prevention and automated recovery on payment.
 * **MRR & ARR Analytics**: Real-time normalized Monthly Recurring Revenue and Annual Recurring Revenue calculations.
 * **Role-Based Security**: Complete access rules for Subscription Officers, Managers, and Portal Subscribers.
 * **Modern UI/UX**: SaaS-inspired Kanban pipelines, status ribbons, smart buttons, renewal calendars, and BI dashboards.
@@ -40,6 +42,7 @@ Key Features:
         'data/ir_sequence_data.xml',
         'data/ir_cron_data.xml',
         'data/mail_template_data.xml',
+        'views/brightloop_wizard_views.xml',
         'views/brightloop_plan_views.xml',
         'views/brightloop_subscription_views.xml',
         'views/brightloop_churn_reason_views.xml',
