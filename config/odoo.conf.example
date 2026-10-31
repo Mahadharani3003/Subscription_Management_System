@@ -1,0 +1,58 @@
+[options]
+; =====================================================================
+; Brightloop - Subscription Management System Production Configuration
+; Odoo Kochi Hackathon 2026 Production Configuration Template
+; =====================================================================
+
+; Database Configuration
+db_host = localhost
+db_port = 5432
+db_user = odoo
+db_password = CHANGE_THIS_PRODUCTION_PASSWORD
+db_name = brightloop_prod
+db_maxconn = 64
+db_sslmode = prefer
+
+; Addons Path
+; Include the parent directory of brightloop_subscription
+addons_path = /opt/odoo/odoo/addons,/opt/odoo/custom_addons
+
+; Server HTTP / Network Settings
+http_interface = 0.0.0.0
+http_port = 8069
+longpolling_port = 8072
+proxy_mode = True
+
+; Multiprocessing & Worker Sizing
+; Formula: (CPU cores * 2) + 1. Example: 4 cores = 9 workers
+workers = 5
+max_cron_threads = 2
+
+; Memory & Time Limits
+limit_memory_hard = 2684354560
+limit_memory_soft = 2147483648
+limit_request = 8192
+limit_time_cpu = 120
+limit_time_real = 240
+limit_time_real_cron = 600
+
+; Logging & Diagnostics
+logfile = /var/log/odoo/brightloop.log
+log_level = info
+log_handler = :INFO,odoo.addons.brightloop_subscription:INFO
+log_db = False
+
+; File Storage
+data_dir = /var/lib/odoo
+
+; Security & Admin Master Password
+; Generate a strong hash: python3 -c "import passlib.hash; print(passlib.hash.pbkdf2_sha512.hash('YOUR_SECRET'))"
+admin_passwd = $pbkdf2-sha512$25000$SET_YOUR_ADMIN_SECRET_HASH_HERE
+
+; Email / Outgoing Mail Gateway
+smtp_server = smtp.yourcompany.com
+smtp_port = 587
+smtp_ssl = False
+smtp_user = notifications@yourcompany.com
+smtp_password = YOUR_SMTP_PASSWORD
+email_from = notifications@yourcompany.com

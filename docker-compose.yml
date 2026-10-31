@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  web:
+    image: odoo:17.0
+    container_name: brightloop_web
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8069:8069"
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=odoo_secure_pass
+    volumes:
+      - odoo_web_data:/var/lib/odoo
+      - ./config/odoo.conf.example:/etc/odoo/odoo.conf:ro
+      - ./:/mnt/extra-addons/brightloop
+    command: -- --config=/etc/odoo/odoo.conf --addons-path=/usr/lib/python3/dist-packages/odoo/addons,/mnt/extra-addons/brightloop -d brightloop_db -i brightloop_subscription
+    restart: unless-stopped
+
+  db:
+    image: postgres:16-alpine
+    container_name: brightloop_db
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo_secure_pass
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    volumes:
+      - odoo_db_data:/var/lib/postgresql/data/pgdata
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  odoo_web_data:
+  odoo_db_data:
