@@ -23,6 +23,7 @@ Key Features:
 * **Dunning & Grace Periods**: Automated grace period enforcement, payment retry tracking, and churn management.
 * **MRR & ARR Analytics**: Real-time normalized Monthly Recurring Revenue and Annual Recurring Revenue calculations.
 * **Role-Based Security**: Complete access rules for Subscription Officers, Managers, and Portal Subscribers.
+* **Modern UI/UX**: SaaS-inspired Kanban pipelines, status ribbons, smart buttons, renewal calendars, and BI dashboards.
     """,
     'author': 'Brightloop Team',
     'website': 'https://brightloop.io',
@@ -39,10 +40,20 @@ Key Features:
         'data/ir_sequence_data.xml',
         'data/ir_cron_data.xml',
         'data/mail_template_data.xml',
+        'views/brightloop_plan_views.xml',
+        'views/brightloop_subscription_views.xml',
+        'views/brightloop_churn_reason_views.xml',
+        'views/res_partner_views.xml',
+        'views/brightloop_menus.xml',
     ],
     'demo': [
         'demo/brightloop_demo_data.xml',
     ],
+    'assets': {
+        'web.assets_backend': [
+            'brightloop_subscription/static/src/scss/brightloop_styles.scss',
+        ],
+    },
     'installable': True,
     'application': True,
     'auto_install': False,

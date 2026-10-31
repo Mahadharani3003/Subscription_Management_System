@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================== -->
+    <!-- SPECIALIZED ACTIONS FOR MENUS & DASHBOARDS -->
+    <!-- ========================================== -->
+
+    <!-- Action: Subscription Invoices (Direct Integration with account.move) -->
+    <record id="action_brightloop_invoices" model="ir.actions.act_window">
+        <field name="name">Subscription Invoices</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">tree,kanban,form,pivot,graph</field>
+        <field name="domain">[('move_type', '=', 'out_invoice'), ('invoice_origin', 'like', 'SUB/%')]</field>
+        <field name="context">{'default_move_type': 'out_invoice'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No subscription billing invoices generated yet.
+            </p>
+            <p>
+                Recurring billing invoices generated via automated crons or manual triggers will appear here.
+            </p>
+        </field>
+    </record>
+
+    <!-- Action: Renewal Schedule Calendar -->
+    <record id="action_brightloop_calendar" model="ir.actions.act_window">
+        <field name="name">Renewal Calendar</field>
+        <field name="res_model">brightloop.subscription</field>
+        <field name="view_mode">calendar,tree,form</field>
+        <field name="domain">[('state', 'in', ('active', 'trial'))]</field>
+        <field name="context">{'search_default_filter_active': 1}</field>
+    </record>
+
+    <!-- Action: BI Analytics Dashboard (Pivot & Graph) -->
+    <record id="action_brightloop_analytics_performance" model="ir.actions.act_window">
+        <field name="name">Subscription Performance (MRR &amp; ARR)</field>
+        <field name="res_model">brightloop.subscription</field>
+        <field name="view_mode">pivot,graph,tree</field>
+        <field name="context">{'search_default_filter_active': 1, 'pivot_row_groupby': ['plan_id'], 'pivot_column_groupby': ['state'], 'pivot_measures': ['mrr', 'arr', 'recurring_total']}</field>
+    </record>
+
+    <!-- Action: Churn & Retention Analytics -->
+    <record id="action_brightloop_analytics_churn" model="ir.actions.act_window">
+        <field name="name">Churn &amp; Retention Matrix</field>
+        <field name="res_model">brightloop.subscription</field>
+        <field name="view_mode">pivot,graph,tree</field>
+        <field name="domain">[('state', 'in', ('cancelled', 'closed'))]</field>
+        <field name="context">{'pivot_row_groupby': ['churn_reason_id'], 'pivot_column_groupby': ['plan_id'], 'pivot_measures': ['mrr']}</field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- NAVIGATION MENUS HIERARCHY                 -->
+    <!-- ========================================== -->
+
+    <!-- Top-Level Root Application Menu -->
+    <menuitem id="menu_brightloop_root"
+              name="Brightloop"
+              web_icon="brightloop_subscription,static/description/icon.png"
+              sequence="15"
+              groups="group_brightloop_user"/>
+
+    <!-- 1. Subscriptions Management Menu -->
+    <menuitem id="menu_brightloop_subscriptions_root"
+              name="Subscriptions"
+              parent="menu_brightloop_root"
+              sequence="10"/>
+
+    <menuitem id="menu_brightloop_sub_all"
+              name="All Subscriptions"
+              parent="menu_brightloop_subscriptions_root"
+              action="action_brightloop_subscription_all"
+              sequence="10"/>
+
+    <menuitem id="menu_brightloop_sub_active"
+              name="Active Contracts"
+              parent="menu_brightloop_subscriptions_root"
+              action="action_brightloop_subscription_active"
+              sequence="20"/>
+
+    <menuitem id="menu_brightloop_sub_pending"
+              name="Pending &amp; Past Due"
+              parent="menu_brightloop_subscriptions_root"
+              action="action_brightloop_subscription_pending"
+              sequence="30"/>
+
+    <menuitem id="menu_brightloop_sub_churned"
+              name="Cancelled &amp; Churned"
+              parent="menu_brightloop_subscriptions_root"
+              action="action_brightloop_subscription_churned"
+              sequence="40"/>
+
+    <menuitem id="menu_brightloop_sub_calendar"
+              name="Renewal Calendar"
+              parent="menu_brightloop_subscriptions_root"
+              action="action_brightloop_calendar"
+              sequence="50"/>
+
+    <!-- 2. Billing & Invoicing Menu -->
+    <menuitem id="menu_brightloop_invoicing_root"
+              name="Billing &amp; Invoices"
+              parent="menu_brightloop_root"
+              sequence="20"/>
+
+    <menuitem id="menu_brightloop_invoices"
+              name="Subscription Invoices"
+              parent="menu_brightloop_invoicing_root"
+              action="action_brightloop_invoices"
+              sequence="10"/>
+
+    <!-- 3. BI Reporting & Analytics Menu -->
+    <menuitem id="menu_brightloop_reporting_root"
+              name="Reporting &amp; Analytics"
+              parent="menu_brightloop_root"
+              sequence="30"/>
+
+    <menuitem id="menu_brightloop_report_performance"
+              name="Revenue Performance (MRR/ARR)"
+              parent="menu_brightloop_reporting_root"
+              action="action_brightloop_analytics_performance"
+              sequence="10"/>
+
+    <menuitem id="menu_brightloop_report_churn"
+              name="Churn &amp; Retention Analysis"
+              parent="menu_brightloop_reporting_root"
+              action="action_brightloop_analytics_churn"
+              sequence="20"/>
+
+    <!-- 4. Configuration Menu (Admins only) -->
+    <menuitem id="menu_brightloop_configuration_root"
+              name="Configuration"
+              parent="menu_brightloop_root"
+              groups="group_brightloop_manager"
+              sequence="100"/>
+
+    <menuitem id="menu_brightloop_config_plans"
+              name="Subscription Plans"
+              parent="menu_brightloop_configuration_root"
+              action="action_brightloop_plan"
+              sequence="10"/>
+
+    <menuitem id="menu_brightloop_config_churn_reasons"
+              name="Churn Reasons"
+              parent="menu_brightloop_configuration_root"
+              action="action_brightloop_churn_reason"
+              sequence="20"/>
+</odoo>
