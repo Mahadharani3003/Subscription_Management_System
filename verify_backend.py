@@ -63,18 +63,19 @@ def test_manifest_and_views():
             
             records = root.findall('.//record')
             menus = root.findall('.//menuitem')
+            templates = root.findall('.//template')
             views = [r for r in records if r.get('model') == 'ir.ui.view']
             actions = [r for r in records if r.get('model') and r.get('model').startswith('ir.actions')]
 
             total_records += len(records)
-            total_views += len(views)
+            total_views += len(views) + len(templates)
             total_actions += len(actions)
             total_menus += len(menus)
 
-            print(f" [PASS] XML verified: {rel_path} ({len(records)} records, {len(views)} views, {len(actions)} actions, {len(menus)} menus)")
+            print(f" [PASS] XML verified: {rel_path} ({len(records)} records, {len(views)} views, {len(templates)} templates, {len(actions)} actions, {len(menus)} menus)")
 
     print(f"\n Frontend Component Totals:")
-    print(f" - Views (Kanban, Form, Tree, Calendar, Pivot, Graph, Search): {total_views}")
+    print(f" - Views & Web Templates (Kanban, Form, Tree, Calendar, Pivot, Graph, Portal): {total_views}")
     print(f" - Window Actions: {total_actions}")
     print(f" - Navigation Menuitems: {total_menus}")
     print(f" - Total XML Data Records: {total_records}")

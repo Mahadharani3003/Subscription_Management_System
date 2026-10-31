@@ -47,6 +47,7 @@ Key Features:
         'views/brightloop_subscription_views.xml',
         'views/brightloop_churn_reason_views.xml',
         'views/res_partner_views.xml',
+        'views/brightloop_subscription_portal_templates.xml',
         'views/brightloop_menus.xml',
     ],
     'demo': [

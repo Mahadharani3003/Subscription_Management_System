@@ -178,6 +178,40 @@ class BrightloopSubscription(models.Model):
         store=True,
         help="Normalized annual recurring value (MRR * 12)."
     )
+
+    # --- Predictive Intelligence & Churn Health Scoring ---
+    health_score = fields.Integer(
+        string='Account Health Score (0-100)',
+        compute='_compute_churn_risk',
+        store=True,
+        help="Predictive composite index representing payment reliability and retention probability."
+    )
+    churn_risk_level = fields.Selection(
+        selection=[
+            ('low', 'Low Risk (Healthy)'),
+            ('medium', 'Moderate Risk (Monitor)'),
+            ('high', 'High Risk (Critical Danger)'),
+        ],
+        string='Churn Risk Category',
+        compute='_compute_churn_risk',
+        store=True,
+        tracking=True,
+        index=True,
+        help="Automated retention assessment powered by behavioral heuristic diagnostics."
+    )
+    churn_risk_factors = fields.Text(
+        string='Risk Diagnostic Factors',
+        compute='_compute_churn_risk',
+        store=True,
+        help="Explainable diagnostic factors influencing the churn risk classification."
+    )
+    renewal_probability = fields.Float(
+        string='Renewal Probability (%)',
+        compute='_compute_churn_risk',
+        store=True,
+        help="Estimated statistical likelihood that the contract successfully renews."
+    )
+
     churn_reason_id = fields.Many2one(
         comodel_name='brightloop.churn.reason',
         string='Churn Reason',
@@ -227,6 +261,69 @@ class BrightloopSubscription(models.Model):
                     sub.mrr = cycle_total
 
             sub.arr = sub.mrr * 12.0
+
+    @api.depends('state', 'invoice_ids.payment_state', 'auto_renew', 'start_date', 'paused_date')
+    def _compute_churn_risk(self):
+        """
+        Explainable Predictive Engine:
+        Evaluates payment timeliness, contract lifecycle state, auto-renew preferences,
+        and account tenure to generate an explainable 0-100 health score.
+        """
+        today = fields.Date.context_today(self)
+        for sub in self:
+            score = 100
+            factors = []
+
+            # 1. Status Factor
+            if sub.state == 'past_due':
+                score -= 35
+                factors.append(_("Delinquent status: Invoices past grace period."))
+            elif sub.state == 'paused':
+                score -= 20
+                factors.append(_("Contract paused: Service usage suspended."))
+            elif sub.state in ('cancelled', 'closed'):
+                sub.health_score = 0
+                sub.churn_risk_level = 'high'
+                sub.renewal_probability = 0.0
+                sub.churn_risk_factors = _("Contract discontinued or expired.")
+                continue
+
+            # 2. Payment History Factor
+            unpaid_invoices = sub.invoice_ids.filtered(lambda i: i.state == 'posted' and i.payment_state in ('not_paid', 'partial'))
+            if len(unpaid_invoices) >= 2:
+                score -= 25
+                factors.append(_("%d unpaid invoices pending settlement.") % len(unpaid_invoices))
+            elif len(unpaid_invoices) == 1:
+                score -= 15
+                factors.append(_("1 unpaid invoice pending settlement."))
+
+            # 3. Auto-Renew Factor
+            if not sub.auto_renew:
+                score -= 30
+                factors.append(_("Auto-renew disabled by subscriber."))
+
+            # 4. Tenure Loyalty Factor
+            if sub.start_date:
+                tenure_months = (today - sub.start_date).days // 30
+                if tenure_months >= 6:
+                    score = min(100, score + 10)
+                    factors.append(_("Loyal tenure (>%d months).") % tenure_months)
+
+            # Clamp score
+            score = max(5, min(100, score))
+            sub.health_score = score
+
+            if score >= 75:
+                sub.churn_risk_level = 'low'
+                sub.renewal_probability = round(85.0 + (score - 75) * 0.5, 1)
+            elif score >= 50:
+                sub.churn_risk_level = 'medium'
+                sub.renewal_probability = round(55.0 + (score - 50) * 0.8, 1)
+            else:
+                sub.churn_risk_level = 'high'
+                sub.renewal_probability = round(max(10.0, score * 0.6), 1)
+
+            sub.churn_risk_factors = " | ".join(factors) if factors else _("Healthy engagement; flawless payment record.")
 
     @api.constrains('start_date', 'end_date', 'next_billing_date')
     def _check_dates_consistency(self):
@@ -278,6 +375,11 @@ class BrightloopSubscription(models.Model):
         elif interval == 'year':
             return relativedelta(years=count)
         return relativedelta(months=count)
+
+    def action_recompute_health_score(self):
+        """Manually refresh health and churn risk diagnostics."""
+        self._compute_churn_risk()
+        return True
 
     # --- Lifecycle State Machine Actions ---
 
@@ -628,7 +730,6 @@ class BrightloopSubscription(models.Model):
         Transitions state to 'past_due' and auto-cancels upon final threshold breach.
         """
         today = fields.Date.context_today(self)
-        # Optimized query: only fetch subscriptions that actually have posted unpaid invoices
         active_or_due = self.search([
             ('state', 'in', ('active', 'past_due')),
             ('invoice_ids.state', '=', 'posted'),
@@ -681,3 +782,26 @@ class BrightloopSubscription(models.Model):
         for sub in expired_subs:
             sub.action_close()
             sub.message_post(body=_("Subscription term reached end date (%s). Contract automatically expired.") % sub.end_date)
+
+    @api.model
+    def _cron_recompute_health_scores(self):
+        """
+        Daily scheduler: Refresh predictive health scores and flag critical churn hazards.
+        Automatically schedules retention activity for Account Managers on high-risk accounts.
+        """
+        active_subs = self.search([('state', '=', 'active')])
+        active_subs._compute_churn_risk()
+
+        high_risk_subs = active_subs.filtered(lambda s: s.churn_risk_level == 'high')
+        for sub in high_risk_subs:
+            # Check if alert activity already scheduled
+            existing_act = sub.activity_ids.filtered(lambda a: "Churn Hazard" in (a.summary or ""))
+            if not existing_act:
+                sub.activity_schedule(
+                    'mail.mail_activity_data_todo',
+                    summary=_("Critical Churn Hazard: Customer Retention Required"),
+                    note=_("Automated Predictive Diagnostic: Health Score %d/100 (Risk: HIGH). Factors: %s") % (
+                        sub.health_score, sub.churn_risk_factors
+                    ),
+                    user_id=sub.user_id.id or self.env.uid
+                )

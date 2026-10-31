@@ -22,10 +22,15 @@
                 <filter string="Draft" name="filter_draft" domain="[('state', '=', 'draft')]"/>
                 <filter string="Cancelled / Churned" name="filter_cancelled" domain="[('state', 'in', ('cancelled', 'closed'))]"/>
                 <separator/>
+                <!-- Predictive Churn & Intelligence Filters -->
+                <filter string="High Churn Hazard" name="filter_high_risk" domain="[('churn_risk_level', '=', 'high'), ('state', '=', 'active')]"/>
+                <filter string="Healthy Accounts" name="filter_low_risk" domain="[('churn_risk_level', '=', 'low'), ('state', '=', 'active')]"/>
+                <separator/>
                 <filter string="Auto-Renew Enabled" name="filter_auto_renew" domain="[('auto_renew', '=', True)]"/>
                 <separator/>
                 <group expand="0" string="Group By">
                     <filter string="Stage / Status" name="group_state" domain="[]" context="{'group_by': 'state'}"/>
+                    <filter string="Churn Risk Level" name="group_risk" domain="[]" context="{'group_by': 'churn_risk_level'}"/>
                     <filter string="Subscription Plan" name="group_plan" domain="[]" context="{'group_by': 'plan_id'}"/>
                     <filter string="Customer" name="group_partner" domain="[]" context="{'group_by': 'partner_id'}"/>
                     <filter string="Account Manager" name="group_user" domain="[]" context="{'group_by': 'user_id'}"/>
@@ -53,6 +58,8 @@
                 <field name="currency_id"/>
                 <field name="mrr"/>
                 <field name="next_billing_date"/>
+                <field name="health_score"/>
+                <field name="churn_risk_level"/>
                 <field name="user_id"/>
                 <field name="activity_state"/>
                 <progressbar field="activity_state" colors='{"planned": "success", "today": "warning", "overdue": "danger"}'/>
@@ -82,6 +89,23 @@
                                     <div class="text-muted small">MRR: <field name="mrr" widget="monetary" options="{'currency_field': 'currency_id'}"/></div>
                                 </div>
                             </div>
+
+                            <!-- Predictive Health Indicator -->
+                            <div class="d-flex justify-content-between align-items-center small py-1 border-top" t-if="record.state.raw_value == 'active'">
+                                <div>
+                                    <span class="text-muted">Health: </span>
+                                    <span t-attf-class="fw-bold #{record.health_score.raw_value &gt;= 75 ? 'text-success' : (record.health_score.raw_value &gt;= 50 ? 'text-warning' : 'text-danger')}">
+                                        <field name="health_score"/>/100
+                                    </span>
+                                </div>
+                                <div>
+                                    <field name="churn_risk_level" widget="badge" 
+                                           decoration-success="churn_risk_level == 'low'" 
+                                           decoration-warning="churn_risk_level == 'medium'" 
+                                           decoration-danger="churn_risk_level == 'high'"/>
+                                </div>
+                            </div>
+
                             <div class="d-flex justify-content-between align-items-center pt-2 border-top small text-muted">
                                 <div>
                                     <i class="fa fa-calendar me-1"/>
@@ -123,6 +147,11 @@
                 <field name="next_billing_date"/>
                 <field name="recurring_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                 <field name="mrr" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                <field name="health_score" widget="progressbar"/>
+                <field name="churn_risk_level" widget="badge" 
+                       decoration-success="churn_risk_level == 'low'" 
+                       decoration-warning="churn_risk_level == 'medium'" 
+                       decoration-danger="churn_risk_level == 'high'"/>
                 <field name="currency_id" column_invisible="True"/>
                 <field name="auto_renew" widget="boolean_toggle"/>
                 <field name="user_id" widget="many2one_avatar_user" optional="show"/>
@@ -223,6 +252,38 @@
                         </group>
                     </group>
 
+                    <!-- Predictive Intelligence Banner -->
+                    <div class="alert alert-light border shadow-sm p-3 my-3" invisible="state != 'active'">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="fw-bold text-dark fs-6">
+                                <i class="fa fa-heartbeat me-2 text-danger"/>Predictive Account Health &amp; Churn Risk
+                            </span>
+                            <button name="action_recompute_health_score" string="Refresh Risk Diagnostic" 
+                                    type="object" class="btn btn-sm btn-outline-secondary"/>
+                        </div>
+                        <div class="row g-2 align-items-center">
+                            <div class="col-md-3">
+                                <span class="text-muted small">Health Score: </span>
+                                <field name="health_score" widget="progressbar"/>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <span class="text-muted small d-block">Churn Risk Level</span>
+                                <field name="churn_risk_level" widget="badge" 
+                                       decoration-success="churn_risk_level == 'low'" 
+                                       decoration-warning="churn_risk_level == 'medium'" 
+                                       decoration-danger="churn_risk_level == 'high'"/>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <span class="text-muted small d-block">Renewal Probability</span>
+                                <span class="fw-bold text-primary fs-6"><field name="renewal_probability"/>%</span>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="text-muted small d-block">Diagnostic Summary</span>
+                                <span class="small text-muted fst-italic"><field name="churn_risk_factors"/></span>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Notebook & Detailed Tabs -->
                     <notebook>
                         <page string="Add-on Lines &amp; Seat Metering" name="lines_page">
@@ -305,6 +366,7 @@
                 <field name="mrr" type="measure"/>
                 <field name="arr" type="measure"/>
                 <field name="recurring_total" type="measure"/>
+                <field name="health_score" type="measure"/>
                 <field name="invoice_count" type="measure"/>
             </pivot>
         </field>
@@ -338,7 +400,7 @@
                 Manage your recurring subscriptions effortlessly!
             </p>
             <p>
-                Track active contracts, automated renewals, seat upgrades, and churn analysis in one unified hub.
+                Track active contracts, automated renewals, seat upgrades, and predictive churn analysis in one unified hub.
             </p>
         </field>
     </record>

@@ -18,9 +18,25 @@
                 </button>
             </xpath>
 
+            <!-- Surface Segment and LTV in Title / Header -->
+            <xpath expr="//div[hasclass('oe_title')]" position="after">
+                <div class="d-flex align-items-center gap-2 mt-2 mb-3" invisible="subscription_count == 0">
+                    <span class="text-muted fw-bold">Subscriber Tier:</span>
+                    <field name="subscription_segment" widget="badge" 
+                           decoration-success="subscription_segment in ('vip', 'growth')" 
+                           decoration-info="subscription_segment == 'starter'" 
+                           decoration-danger="subscription_segment == 'at_risk'" 
+                           decoration-secondary="subscription_segment == 'churned'"/>
+                    <span class="text-muted fw-bold ms-3">Lifetime Subscription Value:</span>
+                    <span class="fw-bold text-success fs-6">
+                        <field name="lifetime_subscription_revenue" widget="monetary"/>
+                    </span>
+                </div>
+            </xpath>
+
             <!-- Add Subscriptions Notebook Tab -->
             <xpath expr="//notebook" position="inside">
-                <page string="Subscriptions" name="brightloop_subscriptions_tab" invisible="subscription_count == 0">
+                <page string="Subscriptions &amp; Contracts" name="brightloop_subscriptions_tab" invisible="subscription_count == 0">
                     <field name="subscription_ids" readonly="1">
                         <tree string="Active &amp; Past Subscriptions">
                             <field name="name"/>
@@ -35,6 +51,11 @@
                             <field name="next_billing_date"/>
                             <field name="recurring_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
                             <field name="mrr" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="health_score" widget="progressbar"/>
+                            <field name="churn_risk_level" widget="badge" 
+                                   decoration-success="churn_risk_level == 'low'" 
+                                   decoration-warning="churn_risk_level == 'medium'" 
+                                   decoration-danger="churn_risk_level == 'high'"/>
                             <field name="currency_id" column_invisible="True"/>
                             <field name="auto_renew" widget="boolean_toggle"/>
                         </tree>
