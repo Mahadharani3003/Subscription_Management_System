@@ -196,12 +196,16 @@ python odoo-bin shell -c /path/to/odoo.conf -d <your_dev_db> < dataset/load_synt
 ## 📖 Complete Documentation Suite
 
 Detailed guides are located in the [`docs/`](docs/) directory:
-- [Technical Documentation](docs/TECHNICAL_DOCUMENTATION.md): Database schema, model relationships, state machines, and APIs.
-- [User Guide](docs/USER_GUIDE.md): Step-by-step manuals for Administrators, Account Managers, and Portal Customers.
-- [Deployment Guide](docs/DEPLOYMENT_GUIDE.md): Production server configuration, PostgreSQL tuning, Docker, and disaster recovery.
-- [Security & QA Audit Report](docs/SECURITY_AND_QA_AUDIT_REPORT.md): Access control matrix, static analysis, and benchmark audit.
-- [Product Innovation & Analytics](docs/PRODUCT_INNOVATION_AND_INTELLIGENT_ANALYTICS.md): Predictive churn scoring and customer segmentation.
-- [Hackathon Presentation Guide](docs/HACKATHON_PRESENTATION_AND_EVALUATION_GUIDE.md): Step-by-step demo script and credentials.
+- [Technical Architecture Documentation](docs/TECHNICAL_DOCUMENTATION.md): System architecture, workflows, and developer manual.
+- [Database Design Specification](docs/DATABASE_DESIGN_DOCUMENT.md): ER diagrams, data dictionary, indexing, and constraint matrix.
+- [User & Administration Manual](docs/USER_GUIDE.md): Step-by-step manuals for Administrators, Account Managers, and Portal Customers.
+- [DevOps & Production Deployment Guide](docs/DEPLOYMENT_GUIDE.md): Production server configuration, PostgreSQL tuning, Docker, and disaster recovery.
+- [Security & QA Audit Report](docs/SECURITY_AND_QA_AUDIT_REPORT.md): Access control matrix, static analysis, and 29 automated test benchmarks.
+- [Product Innovation & Intelligent Analytics](docs/PRODUCT_INNOVATION_AND_INTELLIGENT_ANALYTICS.md): Predictive churn scoring and customer segmentation.
+- [Hackathon Final Submission Presentation Deck](docs/HACKATHON_FINAL_SUBMISSION_SLIDES.md): Professional 15-slide presentation package.
+- [Judge Q&A & Defense Guide](docs/JUDGE_QA_AND_DEFENSE_GUIDE.md): 28 technical, architectural, and business defense questions with answers.
+- [Hackathon Live Demonstration Guide](docs/HACKATHON_PRESENTATION_AND_EVALUATION_GUIDE.md): 5-min & 10-min demo scripts with sample accounts.
+- [Known Limitations & Future Roadmap](docs/KNOWN_LIMITATIONS_AND_FUTURE_SCOPE.md): Constraints, trade-offs, and multi-phase engineering roadmap.
 
 ---
 
