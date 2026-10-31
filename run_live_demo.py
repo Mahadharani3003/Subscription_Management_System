@@ -395,9 +395,6 @@ class BrightloopHandler(BaseHTTPRequestHandler):
                     <a href="/my/subscriptions" target="_blank" class="btn btn-sm btn-outline-light rounded-pill">
                         <i class="fa fa-external-link me-1"></i> Customer Portal &amp; AI Chatbot
                     </a>
-                    <a href="/architecture" target="_blank" class="btn btn-sm btn-light rounded-pill text-dark fw-bold">
-                        <i class="fa fa-sitemap me-1"></i> Architecture Slide
-                    </a>
                 </div>
             </div>
         </div>

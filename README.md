@@ -32,39 +32,47 @@
 
 ---
 
-## 🏗️ Architecture & Native Integration
+## 🏗️ Architecture & Native Odoo ERP Tech Stack
 
 ```mermaid
 flowchart TD
-    subgraph UI_Layer [Presentation & Interaction]
-        Kanban["Kanban Pipeline with Visual Statuses"]
-        Forms["Smart Forms with Ribbons & Chatter"]
-        Wizards["Upgrade / Downgrade & Cancellation Modals"]
-        Pivot["MRR / ARR Analytics & Pivot Views"]
-        Forecast["Revenue Forecasting Line Graph"]
+    subgraph Layer1 [Layer 1: Presentation & Customer Self-Service Portal]
+        Kanban["Kanban Pipeline (Draft ➔ Trial ➔ Active ➔ Paused ➔ Past Due)"]
+        Forms["Smart Forms with Invoices & LTV Badges"]
+        Wizards["Upgrade / Downgrade Proration & Cancellation Modals"]
+        Pivot["MRR / ARR Analytics & Revenue Forecasting Graph"]
         Portal["Customer Self-Service Portal (/my/subscriptions)"]
+        Chatbot["Floating AI Conversational Chatbot Widget"]
     end
 
-    subgraph Business_Engine [Core Engine]
-        StateMachine["Contract State Machine"]
-        BillingCron["Daily Recurring Invoicing Cron"]
-        Dunning["Dunning & Grace Period Engine"]
-        Proration["Prorated Plan Switch Engine"]
-        MRR["Normalized MRR / ARR Engine"]
-        HealthScore["Predictive Churn Health Scoring"]
+    subgraph Layer2 [Layer 2: Brightloop Core Subscription Engine]
+        StateMachine["Lifecycle State Machine & Auto-Renewal"]
+        BillingCron["Idempotent Daily Billing Scheduler (ir.cron)"]
+        Dunning["Automated Dunning & Grace Period Enforcement"]
+        Proration["Mid-Cycle Proration Calculator (Day-Level)"]
+        Packaging["Commercial SaaS Packaging (Starter, Pro, Enterprise)"]
     end
 
-    subgraph Native_Odoo [Odoo Native Integration]
-        Plan["brightloop.plan"]
-        Sub["brightloop.subscription"]
-        Lines["brightloop.subscription.line"]
-        Partner["res.partner <Extended with LTV & Segments>"]
+    subgraph Layer3 [Layer 3: In-ERP AI Revenue Intelligence]
+        AIAssistant["In-ERP AI Business Assistant Wizard"]
+        ChurnScoring["Predictive Churn Health Scoring (0–100)"]
+        ActuarialLoss["Actuarial ARR Loss Risk Forecasting"]
+        Segmentation["Customer Lifecycle & Value Tiering"]
+    end
+
+    subgraph Layer4 [Layer 4: Native Odoo 17/18 Foundation & Infrastructure]
         AccountMove["account.move <Native Invoices & Auto-Recovery>"]
+        MultiCompany["Multi-Company Isolation (ir.rule)"]
+        ResPartner["res.partner <Customer Profiles & LTV>"]
+        MailThread["mail.thread & mail.activity Chatter Audit"]
+        Gateways["Payment Gateways (Stripe, Razorpay, PayPal)"]
     end
 
-    UI_Layer --> Business_Engine
-    Business_Engine --> Native_Odoo
-    BillingCron -->|Generates Invoices| AccountMove
+    Layer1 --> Layer2
+    Layer2 --> Layer3
+    Layer2 --> Layer4
+    Layer3 --> Layer4
+    BillingCron -->|Generates Customer Invoices| AccountMove
     AccountMove -->|Payment Reconciliation Hook| StateMachine
 ```
 
