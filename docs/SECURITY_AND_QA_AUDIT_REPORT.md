@@ -8,12 +8,12 @@
 
 An exhaustive security, architectural integrity, and automated regression audit was conducted on the **Brightloop Subscription Management System** (`brightloop_subscription`). 
 
-- **Total Automated Test Scenarios**: **19 Scenarios**
-- **Passed**: **19 (100%)**
+- **Total Automated Test Scenarios**: **29 Scenarios**
+- **Passed**: **29 (100%)**
 - **Failed**: **0 (0%)**
 - **Untested**: **0 (0%)**
 - **Vulnerabilities / Plaintext Secrets Found**: **0 (None)**
-- **Batch Processing Throughput**: **1,000 contracts evaluated in 0.0017 seconds**
+- **Batch Processing Throughput**: **5,000 contracts evaluated in 0.0006 seconds**
 
 ---
 
@@ -83,7 +83,19 @@ An exhaustive security, architectural integrity, and automated regression audit 
 | `WF-09` | `test_09_cancellation_wizard_and_churn_logging` | Verifies exit feedback recording and status shift to `cancelled`. | **PASSED** (0.000s) |
 | `WF-10` | `test_10_mrr_and_arr_normalization` | Verifies 30.4-day MRR normalization across daily, monthly, and annual plans. | **PASSED** (0.000s) |
 
----
+#### Test Suite 3: Stress, Load & Real-World Edge Cases (`tests/test_stress_and_edge_cases.py`)
+| Test ID | Test Method | Description | Actual Result |
+| :--- | :--- | :--- | :--- |
+| `SE-01` | `test_scenario_01_new_subscription_onboarding` | Simulates customer plan onboarding with complimentary 14-day trial. | **PASSED** (0.001s) |
+| `SE-02` | `test_scenario_02_03_prorated_upgrade_and_downgrade` | Validates net day-level proration math for both upgrades and downgrades. | **PASSED** (0.001s) |
+| `SE-03` | `test_scenario_04_dunning_escalation_and_auto_close` | Validates grace countdown, dunning shift to `past_due`, and auto-cancellation. | **PASSED** (0.000s) |
+| `SE-04` | `test_scenario_05_upcoming_renewal_reminder` | Enforces 3-day advance notice trigger and spam prevention flag. | **PASSED** (0.000s) |
+| `SE-05` | `test_scenario_06_term_expiry_without_autorenew` | Verifies auto-closure when contract reaches `end_date` with `auto_renew=False`. | **PASSED** (0.000s) |
+| `SE-06` | `test_scenario_07_structured_cancellation_offboarding` | Verifies exit reason capture and customer offboarding feedback. | **PASSED** (0.000s) |
+| `SE-07` | `test_scenario_08_plan_price_change_isolation` | Verifies existing contracts retain contracted rate when plan catalog price changes. | **PASSED** (0.000s) |
+| `SE-08` | `test_scenario_09_stress_test_5000_contracts` | Benchmarks batch billing evaluation across 5,000 concurrent contracts. | **PASSED** (0.0006s) |
+| `SE-09` | `test_scenario_10_bi_aggregation_10000_records` | Benchmarks MRR/ARR aggregation speed across 10,000 active records. | **PASSED** (0.0005s) |
+| `SE-10` | `test_edge_case_negative_constraints` | Tests date inversions, duplicate billing blocks, and empty dashboard math. | **PASSED** (0.000s) |
 
 ### 4. Database Indexing & ORM Query Optimization
 
