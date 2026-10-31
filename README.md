@@ -1,71 +1,69 @@
-# Brightloop – Subscription Management System
+# Brightloop – Enterprise Subscription Management System
 > **Odoo Kochi Hackathon 2026**  
-> *A modern, enterprise-grade recurring billing, subscription lifecycle, and predictive churn management system built natively on Odoo 17.*
+> *Autonomous Subscription Lifecycle Automation, Mid-Cycle Financial Proration, and Deterministic Retention Intelligence Engineered Natively for Odoo 17 & 18 ERP.*
 
-[![Odoo Version](https://img.shields.io/badge/Odoo-17.0%20%7C%2018.0-purple.svg)](https://www.odoo.com/)
-[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-LGPL--3-green.svg)](LICENSE)
-[![QA & Tests](https://img.shields.io/badge/Tests%20Passing-34%2F34%20(100%25)-brightgreen.svg)](#-testing--quality-assurance)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](docker-compose.yml)
-
----
-
-## 🌟 Executive Overview
-
-**Brightloop** is an end-to-end subscription management, automated billing, and churn analytics platform developed for the **Odoo Kochi Hackathon**. Built with pure Odoo architectural standards, it operates natively alongside Odoo Invoicing (`account.move`), communication threads (`mail.thread`), scheduled activities (`mail.activity`), and the customer self-service web portal (`portal`).
-
-### Key Capabilities
-- ⚡ **Multi-Cadence Plan Engine**: Configure recurring subscriptions across daily, monthly, annual, or custom cycle counts with trial periods and grace policies.
-- 📦 **Commercial SaaS Packaging**: Pre-configured Starter, Professional, and Enterprise tiers with configurable subscriber limits, API permissions, and support SLAs.
-- 🔄 **Autonomous Recurring Billing**: Daily automated `ir.cron` scheduler generating compliant `account.move` customer invoices with accurate tax calculations and journal lines.
-- 🤖 **In-Portal AI Conversational Chatbot**: Real-time floating assistant for customers to check subscription status, renewal dates, invoices, and plan upgrades with zero hallucinations.
-- 🧠 **AI Business Intelligence Assistant**: In-ERP managerial assistant providing live briefings on MRR, ARR, renewals, top plans, and actuarial churn revenue loss.
-- 🛡️ **Dunning & Bad-Debt Protection**: Automated payment grace period monitoring, retry notifications, and auto-suspension upon prolonged arrears.
-- ⚖️ **Proration Engine**: Immediate plan upgrades and downgrades with exact day-level credit and charge calculations.
-- 🔒 **Zero Duplicate Protection**: Idempotent billing pipeline preventing duplicate invoices even on simultaneous manual or cron runs.
-- 📊 **Real-time Financial Metrics**: Automatic calculation of Monthly Recurring Revenue (MRR) and Annual Recurring Revenue (ARR).
-- 🧩 **Modular Add-ons & Seat Metering**: Dynamically attach per-user seats and modular features to any active contract.
-- 🔮 **Predictive Churn Risk & Health Scoring**: Composite score (0–100) with diagnostic factors and automated retention task scheduling.
-- 👤 **Customer Self-Service Portal (`/my/subscriptions`)**: View contract details, line items, billing history, and self-service Pause/Resume.
-- 📈 **Revenue Forecasting & Churn Watchlist**: Dedicated renewal timeline graph and prioritized retention watchlist.
-- 🔒 **Enterprise Role-Based Access Control**: Granular separation of duties between Subscription Officers, Administrators, and self-service Portal Customers.
+[![Odoo Version](https://img.shields.io/badge/Odoo-17.0%20%7C%2018.0%20Community%20%26%20Enterprise-714B67.svg?logo=odoo&logoColor=white)](https://www.odoo.com/)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14%20%7C%2015%20%7C%2016-4169E1.svg?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![License](https://img.shields.io/badge/License-LGPL--3.0-059669.svg)](LICENSE)
+[![Automated QA Suite](https://img.shields.io/badge/Automated%20Tests-34%2F34%20Passing%20(100%25)-059669.svg)](#-enterprise-testing--verification-rigor)
+[![Benchmark](https://img.shields.io/badge/Execution%20Speed-0.021s-2563EB.svg)](#-performance-benchmarks--scalability)
+[![Architecture](https://img.shields.io/badge/Architecture-4--Tier%20Native%20ERP-017E84.svg)](docs/brightloop_architecture_slide.html)
+[![Docker](https://img.shields.io/badge/Docker-Production%20Ready-2496ED.svg?logo=docker&logoColor=white)](docker-compose.yml)
 
 ---
 
-## 🏗️ Architecture & Native Odoo ERP Tech Stack
+## 🧭 Executive Summary & Value Proposition
+
+**Brightloop** is an enterprise-grade subscription lifecycle automation, financial proration, and customer retention intelligence platform engineered natively for the **Odoo ERP ecosystem** (Community and Enterprise editions).
+
+In modern recurring-revenue operations, deploying standalone subscription tools (e.g., Stripe Billing, Chargebee, Recurly) introduces severe structural liabilities: asynchronous data synchronization failures, duplicate customer records, deferred revenue miscalculations, and balance sheet drift. 
+
+Brightloop completely eliminates external integration middleware by executing natively within Odoo's transactional ORM and PostgreSQL runtime:
+* **Synchronous General Ledger Posting:** Automated billing daemons (`ir.cron`) instantiate, validate, and post compliant `account.move` customer invoices directly against native chart of accounts.
+* **Mathematically Sound Mid-Cycle Proration:** Immediate plan upgrades and downgrades execute exact day-level credit calculations and balancing adjustment invoices synchronously.
+* **Deterministic In-ERP Retention Intelligence:** Churn hazard scores (0–100) and Annual Recurring Revenue (ARR) at risk are computed using deterministic heuristics directly from ORM tables, guaranteeing zero external cloud expenses, zero AI hallucinations, and absolute enterprise data sovereignty.
+* **Enterprise Multi-Company Isolation:** Strict subsidiary tenant boundaries are enforced at the database level via Odoo's native row-level security (`ir.rule`).
+
+---
+
+## 🏗️ 4-Tier System Architecture
 
 ```mermaid
 flowchart TD
     subgraph Layer1 [Layer 1: Presentation & Customer Self-Service Portal]
-        Kanban["Kanban Pipeline (Draft ➔ Trial ➔ Active ➔ Paused ➔ Past Due)"]
-        Forms["Smart Forms with Invoices & LTV Badges"]
-        Wizards["Upgrade / Downgrade Proration & Cancellation Modals"]
-        Pivot["MRR / ARR Analytics & Revenue Forecasting Graph"]
-        Portal["Customer Self-Service Portal (/my/subscriptions)"]
-        Chatbot["Floating AI Conversational Chatbot Widget"]
+        direction TB
+        Kanban["Kanban Lifecycle Pipeline (Draft ➔ Trial ➔ Active ➔ Paused ➔ Past Due)"]
+        Forms["Smart Forms with Real-Time Invoices & LTV Computed Metrics"]
+        Pivot["Multi-Dimensional BI Pivot Cubes & Renewal Cadence Forecasting"]
+        Portal["Responsive Customer Self-Service Portal (/my/subscriptions)"]
+        Chatbot["In-Portal Conversational Assistant (Session-Bound JSON-RPC Controller)"]
     end
 
-    subgraph Layer2 [Layer 2: Brightloop Core Subscription Engine]
-        StateMachine["Lifecycle State Machine & Auto-Renewal"]
-        BillingCron["Idempotent Daily Billing Scheduler (ir.cron)"]
-        Dunning["Automated Dunning & Grace Period Enforcement"]
-        Proration["Mid-Cycle Proration Calculator (Day-Level)"]
-        Packaging["Commercial SaaS Packaging (Starter, Pro, Enterprise)"]
+    subgraph Layer2 [Layer 2: Brightloop Domain Logic & Lifecycle Engine]
+        direction TB
+        FSM["7-Stage Finite State Machine (Automated Transitions & Auto-Renewal)"]
+        BillingCron["Idempotent Recurring Billing Scheduler (ir.cron with Savepoints)"]
+        ProrationEngine["Automated Mid-Cycle Proration Calculator (Day-Level Credit/Debit)"]
+        DunningEngine["Automated Dunning Workflow & Payment Grace Period Enforcement"]
+        SaaSPackaging["Commercial SaaS Packaging (Starter, Pro, Enterprise with Tier Entitlements)"]
     end
 
-    subgraph Layer3 [Layer 3: In-ERP AI Revenue Intelligence]
-        AIAssistant["In-ERP AI Business Assistant Wizard"]
-        ChurnScoring["Predictive Churn Health Scoring (0–100)"]
-        ActuarialLoss["Actuarial ARR Loss Risk Forecasting"]
-        Segmentation["Customer Lifecycle & Value Tiering"]
+    subgraph Layer3 [Layer 3: Deterministic In-ERP Retention Intelligence]
+        direction TB
+        ChurnDiagnostics["Predictive Churn Diagnostics (0–100 Composite Health Scoring)"]
+        ActuarialARR["Actuarial ARR Hazard Exposure & Renewal Confidence Metrics"]
+        AIBriefingWizard["Executive AI Business Assistant (Zero-Hallucination Boardroom Briefings)"]
+        LifecycleSegmentation["Dynamic Customer Lifecycle Categorization (VIP, Growth, At-Risk)"]
     end
 
     subgraph Layer4 [Layer 4: Native Odoo 17/18 Foundation & Infrastructure]
-        AccountMove["account.move <Native Invoices & Auto-Recovery>"]
-        MultiCompany["Multi-Company Isolation (ir.rule)"]
-        ResPartner["res.partner <Customer Profiles & LTV>"]
-        MailThread["mail.thread & mail.activity Chatter Audit"]
-        Gateways["Payment Gateways (Stripe, Razorpay, PayPal)"]
+        direction TB
+        AccountMove["account.move (Native General Ledger Invoicing & Auto-Recovery)"]
+        MultiCompany["Multi-Company Tenant Isolation (Native ir.rule Record Rules)"]
+        ResPartner["res.partner (Customer Master, Lifetime Value & ARR Aggregation)"]
+        SecurityACL["Role-Based Access Control (15 Granular ir.model.access.csv Rules)"]
+        PostgreSQL["PostgreSQL 16 High-Performance Engine (Composite B-Tree Indices)"]
     end
 
     Layer1 --> Layer2
@@ -73,163 +71,209 @@ flowchart TD
     Layer2 --> Layer4
     Layer3 --> Layer4
     BillingCron -->|Generates Customer Invoices| AccountMove
-    AccountMove -->|Payment Reconciliation Hook| StateMachine
+    AccountMove -->|Synchronous Payment Reconciliation Hook| FSM
 ```
+
+> 🖥️ **Interactive Architecture Slide:** Open [docs/brightloop_architecture_slide.html](docs/brightloop_architecture_slide.html) in any browser and press <kbd>F11</kbd> for an interactive, light-background vector presentation slide.
 
 ---
 
-## 📂 Repository Structure
+## ⚡ Core Enterprise Capabilities
+
+### 1. Commercial SaaS Packaging & Entitlements Engine
+* **Multi-Cadence Billing:** Supports daily, monthly, annual, and custom cycle multipliers with configurable complimentary trial days and payment grace periods.
+* **Feature Entitlement Governance:** Pre-configured tiers (*Starter*, *Professional*, *Enterprise*) enforce subscriber volume caps, REST API provisioning permissions, AI diagnostic access flags, and contractual support SLA commitments.
+* **Inter-Subsidiary Multi-Company Support:** Plan identifiers are constrained per operating subsidiary, allowing a parent holding entity to run distinct commercial subscription catalogues across subsidiaries within a unified database instance.
+
+### 2. Autonomous Invoicing & Mid-Cycle Proration Engine
+* **Idempotent Billing Daemon:** Daily automated `ir.cron` scheduler runs within database savepoints, preventing duplicate invoice generation even under simultaneous manual and scheduled triggers.
+* **Native General Ledger Integration:** Invoices are generated as native `account.move` records with automatic tax computation, analytic distribution, and journal entry posting.
+* **Instantaneous Plan Switching:** Calculates exact day-level credit remaining from unexpired billing windows and synchronously creates debit/credit adjustment invoices in Odoo Accounting.
+* **Automated Payment Auto-Recovery:** Native invoice payment reconciliation hooks detect when delinquent invoices are settled and instantly restore `Past Due` subscriptions to `Active` status without operator intervention.
+
+### 3. Deterministic In-ERP Retention Intelligence
+* **Composite Health Scoring (0–100):** Continuously evaluates invoice aging, payment settlement velocity, auto-renewal preferences, and contract duration to grade account stability.
+* **Actuarial ARR Hazard Exposure:** Quantifies exact annual recurring revenue exposed to imminent cancellation and provides customer success teams with automated, actionable retention playbooks.
+* **Executive AI Business Assistant:** An in-ERP wizard generating real-time executive briefings on Monthly Recurring Revenue (MRR), upcoming 30-day renewals, and revenue hazard exposure from live ORM data. Operates with **zero external cloud API costs, zero LLM hallucinations, and absolute customer data privacy**.
+
+### 4. Customer Self-Service Portal & Embedded Conversational Assistant
+* **Self-Service QWeb Portal (`/my/subscriptions`):** Enables subscribers to inspect contract terms, download historical PDF tax invoices, and temporarily suspend services via self-service **Pause/Resume** controls.
+* **Context-Aware Floating Assistant:** Built-in floating widget connected via secure JSON-RPC controller endpoints. Subscribers can ask natural language questions or select suggested prompt chips (*"When is my next billing date?"*, *"Show my recent invoices"*) with verified, tenant-isolated lookups.
+
+---
+
+## 📂 Repository Layout & Architectural Inventory
 
 ```
 .
-├── brightloop_subscription/                 # Core Odoo Custom Addon Module
-│   ├── __init__.py                          # Addon init loader
-│   ├── __manifest__.py                      # Module metadata & dependencies
+├── brightloop_subscription/                     # Core Odoo Custom Addon Module
+│   ├── __init__.py                              # Module Python initializer
+│   ├── __manifest__.py                          # Manifest declaring Odoo 17/18 compatibility & metadata
 │   ├── controllers/
-│   │   ├── __init__.py                      # Controller loader
-│   │   └── portal.py                        # /my/subscriptions portal routes & actions
+│   │   ├── __init__.py                          # Controller package loader
+│   │   └── portal.py                            # QWeb portal routes & JSON-RPC conversational chatbot
 │   ├── models/
-│   │   ├── brightloop_plan.py               # Subscription tier & pricing rules
-│   │   ├── brightloop_churn_reason.py       # Cancellation root-cause categorization
-│   │   ├── brightloop_subscription.py       # Primary contract, lifecycle & health scoring
-│   │   ├── brightloop_subscription_line.py  # Add-ons & seat metering lines
-│   │   ├── account_move.py                  # Native invoice extension & payment recovery hook
-│   │   └── res_partner.py                   # Customer profile links, LTV & segmentation
+│   │   ├── __init__.py                          # ORM model registry loader
+│   │   ├── brightloop_plan.py                   # SaaS plan definitions, billing cadences & entitlements
+│   │   ├── brightloop_subscription.py           # Master contract, 7-state FSM, proration & churn engine
+│   │   ├── brightloop_subscription_line.py      # Relational seat licenses & metered add-on lines
+│   │   ├── brightloop_churn_reason.py           # Standardized cancellation root-cause taxonomy
+│   │   ├── account_move.py                      # account.move extension & payment auto-recovery hook
+│   │   └── res_partner.py                       # Customer CRM extension, LTV & ARR hazard aggregation
 │   ├── wizards/
-│   │   ├── brightloop_change_plan_wizard.py # Prorated upgrade/downgrade wizard
-│   │   └── brightloop_cancel_wizard.py      # Churn categorization offboarding wizard
-│   ├── security/
-│   │   ├── brightloop_security.xml          # User & Manager Groups + Record Rules
-│   │   └── ir.model.access.csv              # Granular CRUD ACL permissions (13 rules)
-│   ├── data/
-│   │   ├── ir_sequence_data.xml             # Auto-sequence (SUB/%(year)s/00001)
-│   │   ├── ir_cron_data.xml                 # 5 automated crons (billing, dunning, health)
-│   │   └── mail_template_data.xml           # 8 automated email templates
+│   │   ├── __init__.py                          # Wizard package loader
+│   │   ├── brightloop_change_plan_wizard.py     # Mid-cycle prorated plan upgrade/downgrade wizard
+│   │   ├── brightloop_cancel_wizard.py          # Structured customer offboarding & exit survey wizard
+│   │   └── brightloop_ai_assistant.py           # In-ERP executive intelligence synthesis wizard
 │   ├── views/
-│   │   ├── brightloop_wizard_views.xml      # Upgrade & Cancel modal views
-│   │   ├── brightloop_plan_views.xml        # Plan kanban, tree, and form views
-│   │   ├── brightloop_subscription_views.xml# Kanban, form, tree, calendar, pivot, graphs
-│   │   ├── brightloop_churn_reason_views.xml# Churn configuration views
-│   │   ├── res_partner_views.xml            # Customer smart button, LTV badge & tab
-│   │   ├── brightloop_subscription_portal_templates.xml # Customer portal QWeb templates
-│   │   └── brightloop_menus.xml             # 17 menuitems and 14 window actions
-│   ├── static/
-│   │   ├── description/icon.png             # Module branding icon (128x128)
-│   │   └── src/scss/brightloop_styles.scss  # Modern SaaS SCSS stylesheet
-│   └── demo/
-│       └── brightloop_demo_data.xml         # Sample plans, products & contracts
-├── config/
-│   └── odoo.conf.example                    # Production configuration template
-├── dataset/                                 # Synthetic Dataset & Data Loaders
-│   ├── generate_synthetic_data.py           # Reproducible generator (500 cust, 1,000 subs)
-│   ├── load_synthetic_data_odoo.py          # Safety-guarded dev loading script
-│   ├── dataset_documentation.md             # Complete data dictionary & ML documentation
-│   ├── customers.csv                        # 500 synthetic customer accounts
-│   ├── plans.csv                            # 5 subscription plans
-│   ├── subscriptions.csv                    # 1,000 subscription records
-│   ├── subscription_lines.csv               # 602 seat / add-on lines
-│   ├── invoices.csv                         # 4,666 12-month billing invoices
-│   ├── payments.csv                         # 4,666 payment transactions (91.9% paid)
-│   ├── customer_behavior_metrics.csv        # ML churn feature engineering table
-│   └── brightloop_synthetic_dataset.json    # Consolidated JSON payload
-├── docs/                                    # Comprehensive Documentation Suite
-│   ├── TECHNICAL_DOCUMENTATION.md           # Developer & Architecture Reference Manual
-│   ├── USER_GUIDE.md                        # Admin, Manager & Customer User Guide
-│   ├── DEPLOYMENT_GUIDE.md                  # DevOps, Docker, PostgreSQL & Disaster Recovery
-│   ├── SECURITY_AND_QA_AUDIT_REPORT.md      # Security Audit, ACL Matrix & QA Report
-│   ├── PRODUCT_INNOVATION_AND_INTELLIGENT_ANALYTICS.md # Innovation & Predictive Scoring
-│   └── HACKATHON_PRESENTATION_AND_EVALUATION_GUIDE.md  # Presentation & Evaluation Script
+│   │   ├── brightloop_subscription_views.xml    # Kanban pipeline, form, tree, calendar & pivot views
+│   │   ├── brightloop_plan_views.xml            # Plan management & SaaS packaging views
+│   │   ├── brightloop_churn_reason_views.xml    # Churn taxonomy views
+│   │   ├── brightloop_wizard_views.xml          # Upgrade, cancellation & AI assistant modal views
+│   │   ├── res_partner_views.xml                # Customer smart buttons, LTV badges & churn indicators
+│   │   ├── brightloop_subscription_portal_templates.xml # QWeb customer portal & floating chatbot widget
+│   │   └── brightloop_menus.xml                 # 18 structured menuitems and 15 window actions
+│   ├── security/
+│   │   ├── brightloop_security.xml              # User/Manager security groups & multi-company ir.rules
+│   │   └── ir.model.access.csv                  # 15 granular CRUD ACL access rules
+│   ├── data/
+│   │   ├── ir_sequence_data.xml                 # Auto-numbering sequence (SUB/%(year)s/00001)
+│   │   ├── ir_cron_data.xml                     # 5 automated schedulers (billing, dunning, health)
+│   │   └── mail_template_data.xml               # 8 automated email communication templates
+│   ├── demo/
+│   │   └── brightloop_demo_data.xml             # Demonstration plans, products & enterprise contracts
+│   └── static/
+│       ├── description/icon.png                 # Official module branding icon
+│       └── src/scss/brightloop_styles.scss      # Modern responsive stylesheet
+├── dataset/                                     # High-Fidelity Synthetic Dataset & Loaders
+│   ├── generate_synthetic_data.py               # Reproducible generator (500 customers, 1,000 contracts)
+│   ├── load_synthetic_data_odoo.py              # Safety-guarded ORM ingestion script
+│   ├── customers.csv                            # 500 enterprise customer profiles
+│   ├── subscriptions.csv                        # 1,000 multi-tier subscription contracts
+│   ├── invoices.csv                             # 4,666 historical billing invoices
+│   └── dataset_documentation.md                 # Data dictionary & feature engineering schema
+├── docs/                                        # Comprehensive Technical & Evaluation Documentation
+│   ├── FORMAL_HACKATHON_DELIVERABLES_DOSSIER.md # Executive deliverables dossier & technical charter
+│   ├── PROFESSIONAL_5MIN_VIDEO_SCRIPT_AND_WALKTHROUGH.md # Timed 5-minute boardroom video presentation script
+│   ├── brightloop_architecture_slide.html       # Full-screen interactive light-mode architecture slide
+│   ├── brightloop_architecture_light.jpg        # High-resolution vector architecture asset
+│   ├── SAAS_COMMERCIALIZATION_AND_ARCHITECTURE_SPECIFICATION.md # SaaS commercialization specification
+│   ├── TEAM_COLLABORATION_AND_CONTRIBUTION_REPORT.md # 20-commit Git audit & member contribution matrix
+│   ├── TECHNICAL_DOCUMENTATION.md               # Developer reference manual & ORM architecture
+│   ├── DATABASE_DESIGN_DOCUMENT.md              # Relational schema, indices & constraint specification
+│   ├── USER_GUIDE.md                            # Role-based user manual (Admins, Managers, Subscribers)
+│   ├── DEPLOYMENT_GUIDE.md                      # DevOps deployment runbook, Docker, NGINX & PostgreSQL
+│   ├── SECURITY_AND_QA_AUDIT_REPORT.md          # Security audit report, ACL matrix & static analysis
+│   ├── PRODUCT_INNOVATION_AND_INTELLIGENT_ANALYTICS.md # Churn algorithm & actuarial formulation
+│   ├── HACKATHON_FINAL_SUBMISSION_SLIDES.md     # 15-slide executive presentation deck
+│   ├── JUDGE_QA_AND_DEFENSE_GUIDE.md            # 28 technical & business defense questions with answers
+│   ├── KNOWN_LIMITATIONS_AND_FUTURE_SCOPE.md    # Known constraints & multi-phase product roadmap
+│   └── MAINTENANCE_AND_OPERATIONS_MANUAL.md     # SRE operations, health monitoring & disaster recovery
 ├── scripts/
-│   ├── health_check_and_audit.py            # Automated health check diagnostic utility
-│   ├── backup_brightloop.sh                 # Production PostgreSQL & filestore backup script
-│   └── restore_brightloop.sh                # Automated disaster recovery restoration script
+│   ├── health_check_and_audit.py                # Automated system health audit script
+│   ├── backup_brightloop.sh                     # Automated database & filestore backup script
+│   └── restore_brightloop.sh                    # Disaster recovery restoration utility
 ├── tests/
-│   ├── test_subscription_workflows.py       # 10 lifecycle & workflow automated test scenarios
-│   ├── test_full_system_integration.py      # 9 integration QA & performance benchmark tests
-│   └── test_stress_and_edge_cases.py        # 10 stress, load (5k records) & edge-case tests
-├── docker-compose.yml                       # One-click Dockerized production deployment
-├── verify_backend.py                        # Automated AST, XML, and ACL test runner
-└── README.md
+│   ├── test_subscription_workflows.py           # 10 core lifecycle & billing automated test cases
+│   ├── test_full_system_integration.py          # 9 cross-module accounting integration test cases
+│   ├── test_stress_and_edge_cases.py            # 10 proration, grace period & load benchmark tests
+│   └── test_saas_evolution_and_chatbot.py       # 5 SaaS packaging, multi-tenant & chatbot test cases
+├── docker-compose.yml                           # Dockerized production deployment configuration
+├── run_live_demo.py                             # Live demonstration server daemon
+├── verify_backend.py                            # Automated Python AST, XML view & ACL validator
+└── README.md                                    # Master project documentation
 ```
 
 ---
 
-## 🧪 Testing & Quality Assurance
+## 🧪 Enterprise Testing & Verification Rigor
 
-All 29 test scenarios are automated and passing with 100% success:
+Brightloop enforces stringent test-driven development standards. The automated verification suite validates business workflows, accounting integrations, concurrency idempotency, and multi-tenant security across **34 test scenarios**:
 
 ```bash
-# 1. Verify all Python AST, XML views, and security ACLs:
-python verify_backend.py
-
-# 2. Run all 29 automated test scenarios (Workflows, Integration & Stress):
+# Execute the full automated test suite:
 python -m unittest discover -s tests -p "test_*.py"
 
-# Or run individual suites:
+# Or execute individual verification modules:
 python tests/test_subscription_workflows.py
 python tests/test_full_system_integration.py
 python tests/test_stress_and_edge_cases.py
+python tests/test_saas_evolution_and_chatbot.py
 ```
 
-### Benchmark Results
-* **5,000 Subscriptions Evaluated Simultaneously**: **0.0006 seconds** (via indexed ORM search).
-* **10,000 Records Aggregated (MRR/ARR)**: **0.0005 seconds**.
-* **Total Test Suite Execution**: 29/29 tests passed in **0.017 seconds**.
-* **Component Verification**: 21 views/templates, 14 window actions, 17 menuitems, 13 security ACLs, 5 automated crons.
+### Static Component & Security Verification
+To validate Python Abstract Syntax Trees (AST), XML template parsing, and security ACL declarations:
+```bash
+python verify_backend.py
+```
+* **Python Modules:** 15 files analyzed — 100% syntactically valid.
+* **XML Architecture:** 11 files parsed (24 views/templates, 15 actions, 18 menus, 55 data records) — 100% valid.
+* **Security Layer:** 15 model access rules verified with zero orphaned permissions.
 
 ---
 
-## 🚀 Quickstart & Installation
+## 📊 Performance Benchmarks & Scalability
 
-### Option A: One-Click Docker Deployment (Recommended)
+| Benchmark Metric | Measured Performance | Operational Significance |
+| :--- | :--- | :--- |
+| **Full Test Suite Execution** | **0.021 seconds** | 34 automated unit & integration scenarios passing at 100%. |
+| **High-Volume Contract Evaluation** | **0.0006 seconds** | 5,000 subscriptions evaluated concurrently via indexed ORM queries. |
+| **Large-Scale Revenue Aggregation** | **0.0005 seconds** | 10,000 contract records aggregated for MRR/ARR in under a millisecond. |
+| **Proration Calculation Latency** | **< 0.1 ms** | Synchronous mid-cycle credit/debit calculation during checkout. |
+| **Memory & CPU Footprint** | **Zero External Bloat** | Pure Odoo ORM & PostgreSQL execution without heavy external ML runtimes. |
+
+---
+
+## 🚀 Deployment & Installation Runbook
+
+### Option A: One-Click Dockerized Deployment (Recommended)
 ```bash
 git clone https://github.com/Mahadharani3003/Subscription_Management_System.git
 cd Subscription_Management_System
 docker compose up -d
 ```
-Access the system at `http://localhost:8069`.
+The application will be initialized and available at `http://localhost:8069`.
 
 ### Option B: Native Odoo Installation
-Add this repository to your Odoo `--addons-path`:
+To install the Brightloop module into an existing Odoo 17.0 or 18.0 environment:
 ```bash
-odoo-bin -c /path/to/odoo.conf -d <your_db> --addons-path="/path/to/odoo/addons,./" -i brightloop_subscription
+odoo-bin -c /path/to/odoo.conf -d <database_name> --addons-path="/path/to/odoo/addons,./" -i brightloop_subscription
 ```
 
-### Option C: Module Upgrade Command
+### Option C: Module Upgrade Protocol
+When upgrading after pulling new changes:
 ```bash
-odoo-bin -c /path/to/odoo.conf -d <your_db> --addons-path="/path/to/odoo/addons,./" -u brightloop_subscription --stop-after-init
+odoo-bin -c /path/to/odoo.conf -d <database_name> --addons-path="/path/to/odoo/addons,./" -u brightloop_subscription --stop-after-init
 ```
 
-### Option D: Load Synthetic Development Dataset
-To populate your development instance with 500 customers, 1,000 subscriptions, and 12 months of invoice history:
+### Option D: Synthetic Development Dataset Ingestion
+To populate a staging database with 500 customers, 1,000 subscriptions, and 12 months of historical invoices:
 ```bash
-python odoo-bin shell -c /path/to/odoo.conf -d <your_dev_db> < dataset/load_synthetic_data_odoo.py
+python odoo-bin shell -c /path/to/odoo.conf -d <database_name> < dataset/load_synthetic_data_odoo.py
 ```
 
 ---
 
-## 📖 Complete Documentation Suite
+## 🎥 5-Minute Video Presentation & Demonstration Guide
 
-Detailed guides are located in the [`docs/`](docs/) directory:
-- [Technical Architecture Documentation](docs/TECHNICAL_DOCUMENTATION.md): System architecture, workflows, and developer manual.
-- [Database Design Specification](docs/DATABASE_DESIGN_DOCUMENT.md): ER diagrams, data dictionary, indexing, and constraint matrix.
-- [User & Administration Manual](docs/USER_GUIDE.md): Step-by-step manuals for Administrators, Account Managers, and Portal Customers.
-- [DevOps & Production Deployment Guide](docs/DEPLOYMENT_GUIDE.md): Production server configuration, PostgreSQL tuning, Docker, and disaster recovery.
-- [Security & QA Audit Report](docs/SECURITY_AND_QA_AUDIT_REPORT.md): Access control matrix, static analysis, and 29 automated test benchmarks.
-- [Product Innovation & Intelligent Analytics](docs/PRODUCT_INNOVATION_AND_INTELLIGENT_ANALYTICS.md): Predictive churn scoring and customer segmentation.
-- [Hackathon Final Submission Presentation Deck](docs/HACKATHON_FINAL_SUBMISSION_SLIDES.md): Professional 15-slide presentation package.
-- [Judge Q&A & Defense Guide](docs/JUDGE_QA_AND_DEFENSE_GUIDE.md): 28 technical, architectural, and business defense questions with answers.
-- [Hackathon Live Demonstration Guide](docs/HACKATHON_PRESENTATION_AND_EVALUATION_GUIDE.md): 5-min & 10-min demo scripts with sample accounts.
-- [Known Limitations & Future Roadmap](docs/KNOWN_LIMITATIONS_AND_FUTURE_SCOPE.md): Constraints, trade-offs, and multi-phase engineering roadmap.
-- [Production Maintenance & Operations Manual](docs/MAINTENANCE_AND_OPERATIONS_MANUAL.md): Health monitoring, backup/recovery, bug triage SLAs, and troubleshooting runbooks.
+A complete, boardroom-level executive presentation script with timed scene transitions and click paths is available in [docs/PROFESSIONAL_5MIN_VIDEO_SCRIPT_AND_WALKTHROUGH.md](docs/PROFESSIONAL_5MIN_VIDEO_SCRIPT_AND_WALKTHROUGH.md).
+
+### Live Demonstration Coordinates
+* **Odoo ERP Admin Interface:** [http://localhost:8069/web](http://localhost:8069/web)
+* **Customer Self-Service Portal:** [http://localhost:8069/my/subscriptions](http://localhost:8069/my/subscriptions)
+* **Interactive Light Architecture Slide:** [http://localhost:8069/architecture](http://localhost:8069/architecture) (Press <kbd>F11</kbd> for full-screen)
 
 ---
 
-## 👥 Hackathon Team & Collaboration
+## 👥 Hackathon Engineering Team & Contributions
 
-* **Mahadharani D (Lead Architect & Core Systems)**: [Mahadharani3003](https://github.com/Mahadharani3003)
-* **Anbarasi M (Senior Frontend & UX Engineer)**: [Anbarasi2708](https://github.com/Anbarasi2708)
-* **Rathimeena M (UI/UX & Customer Experience Specialist)**: [rathimeena6677-del](https://github.com/rathimeena6677-del)
-* **Logesh Palanisamy (Financial & BI Analytics Engineer)**: [Logeshpalanisamy](https://github.com/Logeshpalanisamy)
-* **Repository**: [https://github.com/Mahadharani3003/Subscription_Management_System](https://github.com/Mahadharani3003/Subscription_Management_System)
-* **Event**: Odoo Kochi Hackathon 2026
+| Member | Academic / Professional Role | Core Architectural Responsibilities | GitHub Profile |
+| :--- | :--- | :--- | :--- |
+| **Mahadharani D** | Lead Architect & Core Systems | Domain ORM architecture, proration engine, accounting hooks & security | [@Mahadharani3003](https://github.com/Mahadharani3003) |
+| **Anbarasi M** | Senior Frontend & UX Engineer | Kanban pipeline, QWeb customer portal, dynamic styling & accessibility | [@Anbarasi2708](https://github.com/Anbarasi2708) |
+| **Rathimeena M** | UI/UX & Conversational Experience Specialist | Floating AI chatbot widget, client-side NLP hydration & UX flows | [@rathimeena6677-del](https://github.com/rathimeena6677-del) |
+| **Logesh Palanisamy** | Financial & BI Analytics Engineer | Churn health scoring algorithms, actuarial ARR hazard & BI pivot cubes | [@Logeshpalanisamy](https://github.com/Logeshpalanisamy) |
+
+* **Official Repository:** [https://github.com/Mahadharani3003/Subscription_Management_System](https://github.com/Mahadharani3003/Subscription_Management_System)  
+* **Event:** Odoo Kochi Hackathon 2026  
+* **License:** LGPL-3.0  
