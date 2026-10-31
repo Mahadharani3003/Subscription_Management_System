@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ========================================== -->
+    <!-- 1. SEARCH / FILTER VIEW                   -->
+    <!-- ========================================== -->
+    <record id="view_brightloop_plan_search" model="ir.ui.view">
+        <field name="name">brightloop.plan.search</field>
+        <field name="model">brightloop.plan</field>
+        <field name="arch" type="xml">
+            <search string="Search Subscription Plans">
+                <field name="name" string="Plan" filter_domain="['|', ('name', 'ilike', self), ('code', 'ilike', self)]"/>
+                <field name="code"/>
+                <field name="product_id"/>
+                <separator/>
+                <filter string="Active Plans" name="active_plans" domain="[('active', '=', True)]"/>
+                <filter string="Archived Plans" name="archived_plans" domain="[('active', '=', False)]"/>
+                <separator/>
+                <filter string="Monthly Cadence" name="monthly_plans" domain="[('billing_interval', '=', 'month')]"/>
+                <filter string="Annual Cadence" name="annual_plans" domain="[('billing_interval', '=', 'year')]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Billing Interval" name="group_interval" domain="[]" context="{'group_by': 'billing_interval'}"/>
+                    <filter string="Company" name="group_company" domain="[]" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- 2. TREE / LIST VIEW                       -->
+    <!-- ========================================== -->
+    <record id="view_brightloop_plan_tree" model="ir.ui.view">
+        <field name="name">brightloop.plan.tree</field>
+        <field name="model">brightloop.plan</field>
+        <field name="arch" type="xml">
+            <tree string="Subscription Plans" sample="1">
+                <field name="sequence" widget="handle"/>
+                <field name="name" font_weight="bold"/>
+                <field name="code" widget="badge"/>
+                <field name="product_id"/>
+                <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                <field name="currency_id" column_invisible="True"/>
+                <field name="billing_interval_count"/>
+                <field name="billing_interval"/>
+                <field name="trial_period_days" string="Trial Days"/>
+                <field name="grace_period_days" string="Grace Days"/>
+                <field name="subscription_count" string="Subscribers" widget="badge" decoration-info="subscription_count &gt; 0"/>
+                <field name="company_id" groups="base.group_multi_company" optional="hide"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- 3. KANBAN VIEW                            -->
+    <!-- ========================================== -->
+    <record id="view_brightloop_plan_kanban" model="ir.ui.view">
+        <field name="name">brightloop.plan.kanban</field>
+        <field name="model">brightloop.plan</field>
+        <field name="arch" type="xml">
+            <kanban string="Subscription Plans" class="o_kanban_dashboard" sample="1">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="price"/>
+                <field name="currency_id"/>
+                <field name="billing_interval"/>
+                <field name="billing_interval_count"/>
+                <field name="trial_period_days"/>
+                <field name="grace_period_days"/>
+                <field name="subscription_count"/>
+                <field name="active"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click shadow-sm p-3 mb-2 rounded border #{record.active.raw_value ? 'border-primary-subtle' : 'opacity-75 bg-light'}">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h4 class="m-0 text-primary fw-bold"><field name="name"/></h4>
+                                <span class="badge text-bg-light border px-2 py-1"><field name="code"/></span>
+                            </div>
+                            <div class="my-2">
+                                <span class="fs-4 fw-bolder text-dark">
+                                    <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                                </span>
+                                <span class="text-muted fs-6">
+                                    / <t t-if="record.billing_interval_count.raw_value &gt; 1"><field name="billing_interval_count"/> </t>
+                                    <field name="billing_interval"/>
+                                </span>
+                            </div>
+                            <div class="small text-muted mb-3">
+                                <div><i class="fa fa-clock-o me-1 text-info"/> Trial: <field name="trial_period_days"/> day(s)</div>
+                                <div><i class="fa fa-shield me-1 text-warning"/> Grace: <field name="grace_period_days"/> day(s)</div>
+                            </div>
+                            <div class="border-top pt-2 d-flex justify-content-between align-items-center">
+                                <a type="object" name="action_view_subscriptions" class="btn btn-sm btn-outline-primary">
+                                    <i class="fa fa-users me-1"/> <field name="subscription_count"/> Subscribers
+                                </a>
+                                <field name="active" widget="boolean_toggle"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- 4. FORM VIEW                              -->
+    <!-- ========================================== -->
+    <record id="view_brightloop_plan_form" model="ir.ui.view">
+        <field name="name">brightloop.plan.form</field>
+        <field name="model">brightloop.plan</field>
+        <field name="arch" type="xml">
+            <form string="Subscription Plan">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="action_view_subscriptions" icon="fa-users">
+                            <field string="Subscribers" name="subscription_count" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <div class="oe_title">
+                        <label for="name" string="Plan Title"/>
+                        <h1>
+                            <field name="name" placeholder="e.g. Starter, Growth Pro, Enterprise..."/>
+                        </h1>
+                        <div class="d-flex align-items-center gap-2 mt-2">
+                            <span class="text-muted fw-bold">Code:</span>
+                            <field name="code" placeholder="e.g. STARTER-MO" class="w-auto"/>
+                        </div>
+                    </div>
+
+                    <group>
+                        <group string="Billing &amp; Cadence">
+                            <field name="product_id" options="{'no_create': True}"/>
+                            <label for="billing_interval_count" string="Billing Cycle"/>
+                            <div class="o_row">
+                                <field name="billing_interval_count" class="oe_inline"/>
+                                <field name="billing_interval" class="oe_inline ms-2"/>
+                            </div>
+                            <field name="price" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                        <group string="Policies &amp; Enforcement">
+                            <field name="trial_period_days"/>
+                            <field name="grace_period_days"/>
+                            <field name="auto_close_unpaid"/>
+                            <field name="active" invisible="1"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Description &amp; Feature Benefits" name="description_page">
+                            <field name="description" placeholder="List all features, SLA guarantees, and capabilities included in this tier..."/>
+                        </page>
+                        <page string="Subscribers" name="subscribers_page">
+                            <field name="subscription_ids" readonly="1">
+                                <tree string="Subscribers" limit="10">
+                                    <field name="name"/>
+                                    <field name="partner_id"/>
+                                    <field name="state" widget="badge" 
+                                           decoration-success="state == 'active'" 
+                                           decoration-info="state == 'trial'" 
+                                           decoration-warning="state == 'paused'" 
+                                           decoration-danger="state == 'past_due'"/>
+                                    <field name="next_billing_date"/>
+                                    <field name="recurring_total"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ========================================== -->
+    <!-- 5. WINDOW ACTION                          -->
+    <!-- ========================================== -->
+    <record id="action_brightloop_plan" model="ir.actions.act_window">
+        <field name="name">Subscription Plans</field>
+        <field name="res_model">brightloop.plan</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="search_view_id" ref="view_brightloop_plan_search"/>
+        <field name="context">{'search_default_active_plans': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Brightloop Subscription Plan!
+            </p>
+            <p>
+                Define recurring billing frequencies, trial periods, grace limits, and pricing tiers for your service.
+            </p>
+        </field>
+    </record>
+</odoo>

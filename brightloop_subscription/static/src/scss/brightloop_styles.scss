@@ -1,0 +1,36 @@
+/* Brightloop Modern SaaS Design System & UI Overrides */
+
+.o_brightloop_badge_mrr {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border-radius: 4px;
+    padding: 2px 6px;
+    background: rgba(13, 110, 253, 0.1);
+    color: #0d6efd;
+}
+
+.o_brightloop_kanban_card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.o_brightloop_kanban_card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Status Indicator Accents */
+.badge.text-bg-primary-subtle {
+    background-color: #e7f1ff !important;
+    color: #0c63e4 !important;
+}
+
+.badge.text-bg-success-subtle {
+    background-color: #e6f7ec !important;
+    color: #0f7b3b !important;
+}
+
+.badge.text-bg-danger-subtle {
+    background-color: #fde8e8 !important;
+    color: #c81e1e !important;
+}

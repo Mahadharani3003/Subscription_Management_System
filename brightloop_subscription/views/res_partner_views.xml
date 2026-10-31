@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_brightloop_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.brightloop.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <!-- Add Smart Button in partner button box -->
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" type="object" name="action_view_subscriptions" 
+                        icon="fa-refresh" invisible="subscription_count == 0">
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="active_subscription_count"/> / <field name="subscription_count"/>
+                        </span>
+                        <span class="o_stat_text">Subscriptions</span>
+                    </div>
+                </button>
+            </xpath>
+
+            <!-- Add Subscriptions Notebook Tab -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Subscriptions" name="brightloop_subscriptions_tab" invisible="subscription_count == 0">
+                    <field name="subscription_ids" readonly="1">
+                        <tree string="Active &amp; Past Subscriptions">
+                            <field name="name"/>
+                            <field name="plan_id"/>
+                            <field name="state" widget="badge" 
+                                   decoration-success="state == 'active'" 
+                                   decoration-info="state == 'trial'" 
+                                   decoration-warning="state == 'paused'" 
+                                   decoration-danger="state == 'past_due'"
+                                   decoration-secondary="state in ('cancelled', 'closed')"/>
+                            <field name="start_date"/>
+                            <field name="next_billing_date"/>
+                            <field name="recurring_total" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="mrr" widget="monetary" options="{'currency_field': 'currency_id'}"/>
+                            <field name="currency_id" column_invisible="True"/>
+                            <field name="auto_renew" widget="boolean_toggle"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

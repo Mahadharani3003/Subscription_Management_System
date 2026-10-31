@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Churn Reason Tree View -->
+    <record id="view_brightloop_churn_reason_tree" model="ir.ui.view">
+        <field name="name">brightloop.churn.reason.tree</field>
+        <field name="model">brightloop.churn.reason</field>
+        <field name="arch" type="xml">
+            <tree string="Churn Reasons" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="code" widget="badge"/>
+                <field name="description"/>
+                <field name="subscription_count" string="Churned Subscriptions" widget="badge" decoration-danger="subscription_count &gt; 0"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Churn Reason Form View -->
+    <record id="view_brightloop_churn_reason_form" model="ir.ui.view">
+        <field name="name">brightloop.churn.reason.form</field>
+        <field name="model">brightloop.churn.reason</field>
+        <field name="arch" type="xml">
+            <form string="Churn Reason">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" string="Cancellation Reason"/>
+                        <h1>
+                            <field name="name" placeholder="e.g. Budget Constraints, Migrated to Competitor..."/>
+                        </h1>
+                        <div class="d-flex align-items-center gap-2 mt-2">
+                            <span class="text-muted fw-bold">Code:</span>
+                            <field name="code" placeholder="e.g. BUDGET, COMPETITOR" class="w-auto"/>
+                        </div>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="sequence"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="subscription_count"/>
+                        </group>
+                    </group>
+                    <group string="Detailed Context">
+                        <field name="description" placeholder="Explain the criteria and common triggers for this churn classification..."/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Churn Reason Action -->
+    <record id="action_brightloop_churn_reason" model="ir.actions.act_window">
+        <field name="name">Churn Reasons</field>
+        <field name="res_model">brightloop.churn.reason</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Define standardized reasons for customer offboarding and churn analysis.
+            </p>
+        </field>
+    </record>
+</odoo>
